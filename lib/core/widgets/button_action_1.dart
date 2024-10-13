@@ -11,9 +11,10 @@ class ButtonAction1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
+        overlayColor: AppColors.white,
         backgroundColor: AppColors.primary,
         padding: EdgeInsets.symmetric(
-          vertical: 14.sp,
+          vertical: 8.sp,
           horizontal: 70.sp,
         ),
       ),

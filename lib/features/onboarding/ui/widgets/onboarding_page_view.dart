@@ -8,18 +8,38 @@ class OnboardingPageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ExpandablePageView.builder(
+        physics: const BouncingScrollPhysics(),
+        // clipBehavior: Clip.none,
         controller: pageController,
         itemCount: 3,
         itemBuilder: (context, index) {
           if (index == 0) {
-            return Image.asset(
-              AppImages.onboarding1,
-              fit: BoxFit.fill,
+            return AspectRatio(
+              aspectRatio: 1,
+              child: Image.asset(
+                AppImages.onboarding1,
+                fit: BoxFit.contain,
+              ),
             );
           } else if (index == 1) {
-            return Image.asset(AppImages.onboarding2);
+            return AspectRatio(
+              aspectRatio: 1,
+              child: Image.asset(
+                AppImages.onboarding2,
+                fit: BoxFit.contain,
+              ),
+            );
           } else {
-            return Image.asset(AppImages.onboarding3);
+            return AspectRatio(
+              aspectRatio: 1,
+              child: Transform.translate(
+                offset: const Offset(0, 10),
+                child: Image.asset(
+                  AppImages.onboarding3,
+                  fit: BoxFit.fill,
+                ),
+              ),
+            );
           }
         });
   }

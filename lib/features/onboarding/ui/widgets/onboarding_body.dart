@@ -1,9 +1,6 @@
-import 'package:client_app/core/helpers/spacing.dart';
-import 'package:client_app/core/theming/app_styles.dart';
-import 'package:client_app/core/widgets/button_action_1.dart';
-import 'package:client_app/features/onboarding/ui/widgets/custom_page_view_barr.dart';
+import 'package:client_app/features/onboarding/ui/widgets/onboarding_bottom_section.dart';
 import 'package:client_app/features/onboarding/ui/widgets/onboarding_middle_section.dart';
-import 'package:client_app/features/onboarding/ui/widgets/onboarding_page_view.dart';
+import 'package:client_app/features/onboarding/ui/widgets/onboarding_top_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -44,56 +41,20 @@ class _OnboardingBodyState extends State<OnboardingBody> {
           physics: const BouncingScrollPhysics(),
           slivers: [
             SliverToBoxAdapter(
-              child: verticalSpace(
-                16,
+                child: OnboardingTopSection(
+              pageController: pageController,
+              currentIdx: currentIdx,
+            )),
+            SliverToBoxAdapter(
+              child: OnboardingMiddleSection(
+                currentIdx: currentIdx,
               ),
             ),
-            SliverToBoxAdapter(
-              child: Align(
-                alignment: Alignment.topRight,
-                child: Text(
-                  'Skip',
-                  style: AppStyles.gilroyRegular17,
-                ),
-              ),
-            ),
-            SliverToBoxAdapter(
-              child: verticalSpace(
-                12,
-              ),
-            ),
-            SliverToBoxAdapter(
-              child: OnboardingPageView(
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child: OnboardingBottomSection(
+                currentIdx: currentIdx,
                 pageController: pageController,
-              ),
-            ),
-            const SliverToBoxAdapter(
-              child: OnboardingMiddleSection(),
-            ),
-            SliverToBoxAdapter(
-              child: CustomPageViewBar(
-                index: currentIdx,
-              ),
-            ),
-            SliverToBoxAdapter(
-              child: verticalSpace(
-                48,
-              ),
-            ),
-            SliverToBoxAdapter(
-              child: Align(
-                alignment: Alignment.centerRight,
-                child: ButtonAction1(
-                  text: 'Next',
-                  onPressed: () {
-                    pageController.nextPage(
-                      curve: Curves.easeIn,
-                      duration: const Duration(
-                        milliseconds: 200,
-                      ),
-                    );
-                  },
-                ),
               ),
             )
           ],

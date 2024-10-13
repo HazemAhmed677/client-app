@@ -8,8 +8,8 @@ platform :android do
       firebase_cli_token: '1//03TgpH3ZGhU9kCgYIARAAGAMSNwF-L9IrsNAFZ15vAdElmeMY52znvJYGsBKaDCW2JXup_hSWl5H92DnNpUEwbYMg7EgOBOJdgdU',
       android_artifact_type: 'APK',
       android_artifact_path: "../build/app/outputs/flutter-apk/app-development-release.apk",
-      testers: "hazmahmd677@gmail.com",
-      release_notes: "Lots of amazing new features to test out!",
+      testers: "hazmahmd677@gmail.com, esraaa.elgazzar12@gmail.com",
+      release_notes: "Splash and onboarding version",
       )
   end
 end

@@ -1,5 +1,6 @@
 import 'package:client_app/features/onboarding/ui/widgets/custom_dot_indicaror.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomPageViewBar extends StatelessWidget {
   const CustomPageViewBar({super.key, required this.index});
@@ -12,7 +13,9 @@ class CustomPageViewBar extends StatelessWidget {
         3,
         (idx) => Padding(
           padding: (idx == 1)
-              ? const EdgeInsets.symmetric(horizontal: 8.0)
+              ? EdgeInsets.symmetric(
+                  horizontal: 8.0.sp,
+                )
               : EdgeInsets.zero,
           child: CustomDotIndicaror(
             isActive: (idx == index),
