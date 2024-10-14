@@ -18,7 +18,7 @@ class OnboardingBottomSection extends StatelessWidget {
       children: [
         Expanded(
           child: verticalSpace(
-            12,
+            22,
           ),
         ),
         CustomPageViewBar(
@@ -26,7 +26,7 @@ class OnboardingBottomSection extends StatelessWidget {
         ),
         Expanded(
           child: verticalSpace(
-            (currentIdx != 2) ? 12 : 8,
+            (currentIdx != 2) ? 18 : 12,
           ),
         ),
         CustomBottomRowAndColumn(
@@ -35,7 +35,7 @@ class OnboardingBottomSection extends StatelessWidget {
         ),
         Expanded(
           child: verticalSpace(
-            12,
+            18,
           ),
         ),
       ],

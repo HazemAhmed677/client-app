@@ -54,7 +54,7 @@ class CustomBottomRowAndColumn extends StatelessWidget {
                     onPressed: () {
                       context.push(Routes.loginView);
                     },
-                    text: 'Login',
+                    text: 'Log In',
                     textColor: AppColors.white,
                     buttonColor: AppColors.primary,
                     overlayColor: AppColors.white,
@@ -67,13 +67,16 @@ class CustomBottomRowAndColumn extends StatelessWidget {
                   width: MediaQuery.sizeOf(context).width,
                   child: CustomRegisterButton(
                     onPressed: () {
-                      context.push(Routes.loginView);
+                      context.push(Routes.signUpView);
                     },
                     text: 'Sign Up',
                     textColor: AppColors.primary,
                     buttonColor: AppColors.white,
-                    overlayColor: AppColors.secondary,
+                    overlayColor: AppColors.lightGrey,
                   ),
+                ),
+                verticalSpace(
+                  16,
                 ),
               ],
             ),
