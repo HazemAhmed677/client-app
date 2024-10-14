@@ -1,4 +1,7 @@
+import 'package:client_app/features/authentication/ui/widgets/sign_up_view_body.dart';
 import 'package:flutter/material.dart';
+
+import '../../../core/theming/app_colors.dart';
 
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});
@@ -6,9 +9,8 @@ class SignUpView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(
-        child: Text('Sign up In development...'),
-      ),
+      backgroundColor: AppColors.background,
+      body: SignUpViewBody(),
     );
   }
 }

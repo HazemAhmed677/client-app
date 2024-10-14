@@ -1,3 +1,4 @@
+import 'package:client_app/features/authentication/ui/widgets/login_view_body.dart';
 import 'package:flutter/material.dart';
 
 class LoginView extends StatelessWidget {
@@ -5,10 +6,6 @@ class LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Log in In development...'),
-      ),
-    );
+    return const LogInViewBody();
   }
 }

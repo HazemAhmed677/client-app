@@ -33,7 +33,7 @@ class CustomPrevButton extends StatelessWidget {
       onPressed: onPressed,
       child: Icon(
         FontAwesomeIcons.arrowLeft,
-        color: AppColors.secondary,
+        color: AppColors.lightGrey,
         size: 18.sp,
       ),
     );
