@@ -1,4 +1,4 @@
-package com.example.client_app
+package com.aimatrix.client_app
 
 import io.flutter.embedding.android.FlutterActivity
 

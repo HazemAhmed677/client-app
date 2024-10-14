@@ -1,0 +1,15 @@
+default_platform(:android)
+
+platform :android do
+  desc "Client app automated release"
+  lane :distribute do
+    firebase_app_distribution(
+      app: "1:855744427685:android:f4f3cae3a5384528553f4c",
+      firebase_cli_token: '1//03TgpH3ZGhU9kCgYIARAAGAMSNwF-L9IrsNAFZ15vAdElmeMY52znvJYGsBKaDCW2JXup_hSWl5H92DnNpUEwbYMg7EgOBOJdgdU',
+      android_artifact_type: 'APK',
+      android_artifact_path: "../build/app/outputs/flutter-apk/app-development-release.apk",
+      testers: "hazmahmd677@gmail.com, esraaa.elgazzar12@gmail.com",
+      release_notes: "Splash and onboarding version",
+      )
+  end
+end
