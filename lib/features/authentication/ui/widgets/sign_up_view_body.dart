@@ -37,6 +37,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
         child: Center(
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
+            clipBehavior: Clip.none,
             child: Column(
               children: [
                 const SignUpTopSection(),

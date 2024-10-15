@@ -48,6 +48,7 @@ class _LogInViewBodyState extends State<LogInViewBody> {
             child: Center(
               child: SingleChildScrollView(
                 physics: const BouncingScrollPhysics(),
+                clipBehavior: Clip.none,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
