@@ -18,7 +18,7 @@ class OnboardingHeader extends StatelessWidget {
     return Column(
       children: [
         verticalSpace(
-          16,
+          8,
         ),
         SizedBox(
           height: 44.sp,

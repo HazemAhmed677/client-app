@@ -11,4 +11,6 @@ class AppColors {
   static const grey = Colors.grey;
   static const black = Colors.black;
   static const bottomNavBarColor = Color(0xff243642);
+  static const redDegree = Color(0xffA64242);
+  static const greenDegree = Color(0xff387478);
 }
