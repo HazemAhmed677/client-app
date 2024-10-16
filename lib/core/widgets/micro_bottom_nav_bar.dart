@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../core/helpers/build_circles_of_nav_bar.dart';
+import '../helpers/build_circles_of_nav_bar.dart';
 
 class MicroBottomNavBar extends StatefulWidget {
   const MicroBottomNavBar({super.key});

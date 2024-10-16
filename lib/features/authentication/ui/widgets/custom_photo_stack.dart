@@ -61,7 +61,9 @@ class _CustomPhotoStackState extends State<CustomPhotoStack> {
                 setState(() {});
                 await selectImage();
               },
-              highlightColor: AppColors.white.withOpacity(0.3),
+              highlightColor: AppColors.grey.shade400.withOpacity(
+                0.4,
+              ),
               icon: Visibility(
                 visible: selectedImage == null,
                 child: Icon(

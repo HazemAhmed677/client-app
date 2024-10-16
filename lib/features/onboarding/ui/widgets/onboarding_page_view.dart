@@ -1,6 +1,7 @@
 import 'package:client_app/core/theming/app_images.dart';
 import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnboardingPageView extends StatelessWidget {
   const OnboardingPageView({super.key, required this.pageController});
@@ -9,16 +10,19 @@ class OnboardingPageView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ExpandablePageView.builder(
         physics: const BouncingScrollPhysics(),
-        // clipBehavior: Clip.none,
+        clipBehavior: Clip.none,
         controller: pageController,
         itemCount: 3,
         itemBuilder: (context, index) {
           if (index == 0) {
-            return AspectRatio(
-              aspectRatio: 1,
-              child: Image.asset(
-                AppImages.onboarding1,
-                fit: BoxFit.contain,
+            return Transform.translate(
+              offset: Offset(-10.sp, 0),
+              child: AspectRatio(
+                aspectRatio: 1,
+                child: Image.asset(
+                  AppImages.onboarding1,
+                  fit: BoxFit.contain,
+                ),
               ),
             );
           } else if (index == 1) {

@@ -21,7 +21,7 @@ class AppRouter {
         pageBuilder: (context, state) => CustomZoomingTransition(
           child: const LoginView(),
           key: state.pageKey,
-          duration: 140,
+          duration: 300,
         ),
       ),
 
@@ -31,7 +31,7 @@ class AppRouter {
         pageBuilder: (context, state) => CustomZoomingTransition(
           child: const SignUpView(),
           key: state.pageKey,
-          duration: 140,
+          duration: 300,
         ),
       ),
 
