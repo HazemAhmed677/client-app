@@ -8,7 +8,7 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-        'Under construction...',
+        'Home Under Construction...',
         style: AppStyles.poppinsSemiBold18,
       ),
     );

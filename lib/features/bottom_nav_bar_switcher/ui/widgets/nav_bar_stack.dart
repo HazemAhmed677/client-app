@@ -1,10 +1,12 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:iconly/iconly.dart';
 
-import '../theming/app_colors.dart';
+import '../../../../core/theming/app_colors.dart';
+import '../../logic/switch_views_cubit/switch_views_cubit.dart';
 import 'switch_micro.dart';
 
 class NavBarStack extends StatefulWidget {
@@ -75,9 +77,8 @@ class _NavBarStackState extends State<NavBarStack> {
           ),
 
           onTap: (index) {
-            // BlocProvider.of<SwitchScreensCubit>(context).currentIndex = index;
-            // BlocProvider.of<SwitchScreensCubit>(context).getScreen();
             currentScreenIdx = index;
+            BlocProvider.of<SwitchViewsCubit>(context).setIndex(index);
             if (index == 2) {
               flag = !flag;
             } else {
