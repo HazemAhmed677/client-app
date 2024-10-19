@@ -53,4 +53,6 @@ class AppStyles {
     fontSize: 20.sp,
     fontFamily: 'RobotoMono',
   );
+
+  static var poppinsMedium14;
 }

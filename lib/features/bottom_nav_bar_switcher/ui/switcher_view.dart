@@ -36,7 +36,7 @@ class _SwitcherViewState extends State<SwitcherView> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      backgroundColor: AppColors.switcherBackground,
+      backgroundColor: AppColors.background,
       body: BlocBuilder<SwitchViewsCubit, SwitchViewsState>(
         builder: (context, state) {
           if (state is HomeState) {

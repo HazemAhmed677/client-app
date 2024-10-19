@@ -71,7 +71,7 @@ class CustomPieChartCard extends StatelessWidget {
             const Flexible(
               fit: FlexFit.loose,
               child: CustomPieChart(),
-            )
+            ),
           ],
         ),
       ),

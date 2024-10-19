@@ -18,29 +18,38 @@ class HomeViewBody extends StatelessWidget {
           horizontal: 14.0.sp,
           vertical: 16.sp,
         ),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const HomeViewHeader(),
-              verticalSpace(24),
-              const CustomPieChartCard(),
-              verticalSpace(24),
-              const InProgressWord(
-                title: 'In Progress',
-                count: 6,
+        child: CustomScrollView(
+          clipBehavior: Clip.none,
+          physics: const BouncingScrollPhysics(),
+          slivers: [
+            SliverToBoxAdapter(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const HomeViewHeader(),
+                  verticalSpace(24),
+                  const CustomPieChartCard(),
+                  verticalSpace(24),
+                  const InProgressWord(
+                    title: 'In Progress',
+                    count: 6,
+                  ),
+                  verticalSpace(18),
+                  const InProgressListView(),
+                  verticalSpace(24),
+                  const InProgressWord(
+                    title: 'Projects',
+                    count: 4,
+                  ),
+                  verticalSpace(18),
+                ],
               ),
-              verticalSpace(18),
-              const InProgressListView(),
-              verticalSpace(24),
-              const InProgressWord(
-                title: 'Projects',
-                count: 4,
-              ),
-              verticalSpace(18),
-              const ProjectsListView(),
-            ],
-          ),
+            ),
+            const ProjectsListView(),
+            SliverToBoxAdapter(
+              child: verticalSpace(8),
+            )
+          ],
         ),
       ),
     );

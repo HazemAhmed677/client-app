@@ -4,7 +4,7 @@ import 'package:client_app/core/theming/app_styles.dart';
 import 'package:client_app/features/home/ui/widgets/in_progress_line_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import '../../../../core/helpers/icons.dart';
 
 class InProgressItem extends StatelessWidget {
   const InProgressItem({super.key});
@@ -46,11 +46,7 @@ class InProgressItem extends StatelessWidget {
                     color: AppColors.projectColor1,
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  child: Icon(
-                    FontAwesomeIcons.book,
-                    color: AppColors.projectIcon,
-                    size: 16.sp,
-                  ),
+                  child: projectBookIcon(),
                 )
               ],
             ),

@@ -13,9 +13,9 @@ class AppColors {
   static const bottomNavBarColor = Color(0xff243642);
   static const redDegree = Color(0xffA64242);
   static const greenDegree = Color(0xff387478);
-  static const switcherBackground = Color(0xffFFFFFD);
   static const projectColor1 = Color(0xffFFE4F2);
   static const projectIcon = Color(0xffF478B8);
   static const taskColor1 = Color(0xff0087FF);
   static const projectFontColor = Color(0xffCDD5E2);
+  static const projectColor2 = Color(0xff9767F4);
 }
