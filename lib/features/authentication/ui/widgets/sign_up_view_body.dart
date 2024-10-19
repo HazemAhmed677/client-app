@@ -63,7 +63,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                     if (formKey.currentState!.validate()) {
                       formKey.currentState!.save();
                       autovalidateMode = AutovalidateMode.disabled;
-                      context.push(Routes.homeView);
+                      context.push(Routes.switcherView);
                       // BlocProvider.of<SwitchViewsCubit>(context)
                       //     .setIndex(0);
                     } else {

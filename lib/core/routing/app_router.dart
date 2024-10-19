@@ -2,9 +2,13 @@ import 'package:client_app/core/routing/routes.dart';
 import 'package:client_app/core/widgets/custom_zooming_transition.dart';
 import 'package:client_app/features/authentication/ui/login_view.dart';
 import 'package:client_app/features/authentication/ui/sign_up_view.dart';
+import 'package:client_app/features/bottom_nav_bar_switcher/ui/switcher_view.dart';
 import 'package:client_app/features/home/ui/home_view.dart';
 import 'package:client_app/features/onboarding/ui/onboarding_view.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../features/bottom_nav_bar_switcher/logic/switch_views_cubit/switch_views_cubit.dart';
 
 class AppRouter {
   static GoRouter goRouter = GoRouter(
@@ -21,7 +25,7 @@ class AppRouter {
         pageBuilder: (context, state) => CustomZoomingTransition(
           child: const LoginView(),
           key: state.pageKey,
-          duration: 140,
+          duration: 300,
         ),
       ),
 
@@ -31,10 +35,18 @@ class AppRouter {
         pageBuilder: (context, state) => CustomZoomingTransition(
           child: const SignUpView(),
           key: state.pageKey,
-          duration: 140,
+          duration: 300,
         ),
       ),
 
+      // switcher view
+      GoRoute(
+        path: Routes.switcherView,
+        builder: (context, state) => BlocProvider(
+          create: (context) => SwitchViewsCubit(),
+          child: const SwitcherView(),
+        ),
+      ),
       // home
       GoRoute(
         path: Routes.homeView,

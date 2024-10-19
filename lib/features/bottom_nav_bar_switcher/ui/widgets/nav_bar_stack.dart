@@ -1,11 +1,13 @@
-import 'package:client_app/features/home/ui/widgets/micro_bottom_nav_bar.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:iconly/iconly.dart';
 
 import '../../../../core/theming/app_colors.dart';
+import '../../logic/switch_views_cubit/switch_views_cubit.dart';
+import 'switch_micro.dart';
 
 class NavBarStack extends StatefulWidget {
   const NavBarStack({super.key});
@@ -21,25 +23,24 @@ class _NavBarStackState extends State<NavBarStack> {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      alignment: Alignment.bottomCenter,
       clipBehavior: Clip.none,
       children: [
         CurvedNavigationBar(
-          height: 70.sp,
+          height: 64.sp,
           key: bottomNavigationKey,
           index: currentScreenIdx,
           // index: BlocProvider.of<SwitchScreensCubit>(context).currentIndex,
           items: [
             Icon(
               (currentScreenIdx == 0) ? IconlyBold.home : IconlyLight.home,
-              size: 26.sp,
+              size: 24.sp,
               color: AppColors.white,
             ),
             Padding(
               padding: EdgeInsets.all(2.0.sp),
               child: Icon(
                 FontAwesomeIcons.listCheck,
-                size: 24.sp,
+                size: 22.sp,
                 color: AppColors.white,
               ),
             ),
@@ -55,14 +56,14 @@ class _NavBarStackState extends State<NavBarStack> {
               (currentScreenIdx == 3)
                   ? IconlyBold.notification
                   : IconlyLight.notification,
-              size: 28.sp,
+              size: 26.sp,
               color: AppColors.white,
             ),
             Icon(
               (currentScreenIdx == 4)
                   ? IconlyBold.profile
                   : IconlyLight.profile,
-              size: 28.sp,
+              size: 26.sp,
               color: AppColors.white,
             ),
           ],
@@ -76,9 +77,8 @@ class _NavBarStackState extends State<NavBarStack> {
           ),
 
           onTap: (index) {
-            // BlocProvider.of<SwitchScreensCubit>(context).currentIndex = index;
-            // BlocProvider.of<SwitchScreensCubit>(context).getScreen();
             currentScreenIdx = index;
+            BlocProvider.of<SwitchViewsCubit>(context).setIndex(index);
             if (index == 2) {
               flag = !flag;
             } else {
@@ -90,14 +90,11 @@ class _NavBarStackState extends State<NavBarStack> {
         ),
         Positioned(
           bottom: 120.sp,
-          child: AnimatedSwitcher(
-            duration: const Duration(milliseconds: 200),
-            transitionBuilder: (Widget child, Animation<double> animation) {
-              return ScaleTransition(scale: animation, child: child);
-            },
-            child: (currentScreenIdx == 2 && flag)
-                ? const MicroBottomNavBar()
-                : const SizedBox.shrink(),
+          left: 0,
+          right: 0,
+          child: SwitchMicro(
+            currentScreenIdx: currentScreenIdx,
+            flag: flag,
           ),
         )
       ],

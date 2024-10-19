@@ -8,4 +8,6 @@ class AppImages {
   static const String onboarding3 = 'assets/images/onboarding_3.png';
 
   static const String aimatrix = 'assets/images/AIMATRIX.png';
+
+  static const String github = 'assets/images/GitHub.jpg';
 }

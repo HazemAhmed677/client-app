@@ -86,7 +86,7 @@ class _LogInTopSectionState extends State<LogInTopSection>
               if (formKey.currentState!.validate()) {
                 formKey.currentState!.save();
                 autovalidateMode = AutovalidateMode.disabled;
-                context.push(Routes.homeView);
+                context.push(Routes.switcherView);
               } else {
                 autovalidateMode = AutovalidateMode.always;
               }

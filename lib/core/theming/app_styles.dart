@@ -34,4 +34,25 @@ class AppStyles {
     fontFamily: 'AfacadFlux',
     fontWeight: FontWeightHelper.semiBold,
   );
+  static TextStyle interSemiBold18 = TextStyle(
+    fontSize: 18.sp,
+    fontFamily: 'Inter',
+    fontWeight: FontWeightHelper.semiBold,
+  );
+  static TextStyle interBold18 = TextStyle(
+    fontSize: 18.sp,
+    fontFamily: 'Inter',
+    fontWeight: FontWeightHelper.bold,
+  );
+  static TextStyle interBold20 = TextStyle(
+    fontSize: 20.sp,
+    fontFamily: 'Inter',
+    fontWeight: FontWeightHelper.bold,
+  );
+  static TextStyle robotoMonoBold20 = TextStyle(
+    fontSize: 20.sp,
+    fontFamily: 'RobotoMono',
+  );
+
+  static var poppinsMedium14;
 }
