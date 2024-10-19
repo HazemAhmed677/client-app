@@ -21,6 +21,7 @@ class _CustomBoardBarState extends State<CustomBoardBar> {
       child: SingleChildScrollView(
         clipBehavior: Clip.none,
         scrollDirection: Axis.horizontal,
+        physics: const BouncingScrollPhysics(),
         child: Container(
           decoration: BoxDecoration(
             color: AppColors.white,

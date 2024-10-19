@@ -26,10 +26,13 @@ class CheckBoardHeader extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 14.0.sp),
               child: Row(
                 children: [
-                  Text(
-                    'Projects',
-                    style: AppStyles.interSemiBold18.copyWith(
-                      fontSize: 22.sp,
+                  InkWell(
+                    onTap: () {},
+                    child: Text(
+                      'Projects',
+                      style: AppStyles.interSemiBold18.copyWith(
+                        fontSize: 22.sp,
+                      ),
                     ),
                   ),
                   const Spacer(),
@@ -39,10 +42,14 @@ class CheckBoardHeader extends StatelessWidget {
                     size: 22.sp,
                   ),
                   horizontalSpace(24),
-                  Icon(
-                    FontAwesomeIcons.calendarCheck,
-                    color: AppColors.secondary,
-                    size: 22.sp,
+                  InkWell(
+                    onTap: () {},
+                    highlightColor: AppColors.grey,
+                    child: Icon(
+                      FontAwesomeIcons.calendarCheck,
+                      color: AppColors.secondary,
+                      size: 22.sp,
+                    ),
                   ),
                 ],
               ),

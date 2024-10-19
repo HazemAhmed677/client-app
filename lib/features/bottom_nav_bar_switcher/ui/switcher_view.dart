@@ -37,20 +37,20 @@ class _SwitcherViewState extends State<SwitcherView> {
       extendBody: true,
       backgroundColor: AppColors.background,
       body: BlocBuilder<SwitchViewsCubit, SwitchViewsState>(
-        builder: (context, state) {
-          if (state is HomeState) {
-            return screens[0];
-          } else if (state is CheckBoardState) {
-            return screens[1];
-          } else if (state is CreateBoardState) {
-            return screens[2];
-          } else if (state is NotificationState) {
-            return screens[3];
-          } else {
-            return screens[4];
-          }
-        },
-      ),
+          builder: (context, state) => AnimatedSwitcher(
+                duration: const Duration(
+                  milliseconds: 200,
+                ),
+                child: (state is HomeState)
+                    ? screens[0]
+                    : (state is CheckBoardState)
+                        ? screens[1]
+                        : (state is CreateBoardState)
+                            ? screens[2]
+                            : (state is NotificationState)
+                                ? screens[3]
+                                : screens[4],
+              )),
       bottomNavigationBar: const NavBarStack(),
     );
   }
