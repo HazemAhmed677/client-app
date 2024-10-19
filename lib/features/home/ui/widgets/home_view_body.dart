@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'custom_piew_chart_card.dart';
 import 'in_progress_list_view.dart';
 import 'in_progress_word.dart';
+import 'projects_list_view.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -17,19 +18,29 @@ class HomeViewBody extends StatelessWidget {
           horizontal: 14.0.sp,
           vertical: 16.sp,
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const HomeViewHeader(),
-            verticalSpace(24),
-            const CustomPieChartCard(),
-            verticalSpace(24),
-            const InProgressWord(),
-            verticalSpace(18),
-            RoundedProgressBar(
-              percentage: 85,
-            ),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const HomeViewHeader(),
+              verticalSpace(24),
+              const CustomPieChartCard(),
+              verticalSpace(24),
+              const InProgressWord(
+                title: 'In Progress',
+                count: 6,
+              ),
+              verticalSpace(18),
+              const InProgressListView(),
+              verticalSpace(24),
+              const InProgressWord(
+                title: 'Projects',
+                count: 4,
+              ),
+              verticalSpace(18),
+              const ProjectsListView(),
+            ],
+          ),
         ),
       ),
     );

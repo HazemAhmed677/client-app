@@ -6,14 +6,19 @@ import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
 
 class InProgressWord extends StatelessWidget {
-  const InProgressWord({super.key});
-
+  const InProgressWord({
+    super.key,
+    required this.title,
+    required this.count,
+  });
+  final String title;
+  final int count;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Text(
-          'In Progress',
+          title,
           style: AppStyles.robotoMonoBold20.copyWith(
             fontWeight: FontWeightHelper.bold,
           ),
@@ -26,7 +31,7 @@ class InProgressWord extends StatelessWidget {
           radius: 10.sp,
           child: Center(
             child: Text(
-              '6',
+              count.toString(),
               style: AppStyles.poppinsSemiBold18.copyWith(
                 color: AppColors.secondary,
                 fontSize: 14.sp,
