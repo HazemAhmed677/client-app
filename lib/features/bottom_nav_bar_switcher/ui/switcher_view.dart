@@ -1,3 +1,4 @@
+import 'package:client_app/core/theming/app_colors.dart';
 import 'package:client_app/features/check_board/ui/check_board_view.dart';
 import 'package:client_app/features/create_board/ui/widgets/create_board_body.dart';
 import 'package:client_app/features/home/ui/home_view.dart';
@@ -35,6 +36,7 @@ class _SwitcherViewState extends State<SwitcherView> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
+      backgroundColor: AppColors.switcherBackground,
       body: BlocBuilder<SwitchViewsCubit, SwitchViewsState>(
         builder: (context, state) {
           if (state is HomeState) {

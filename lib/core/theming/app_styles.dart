@@ -44,4 +44,13 @@ class AppStyles {
     fontFamily: 'Inter',
     fontWeight: FontWeightHelper.bold,
   );
+  static TextStyle interBold20 = TextStyle(
+    fontSize: 20.sp,
+    fontFamily: 'Inter',
+    fontWeight: FontWeightHelper.bold,
+  );
+  static TextStyle robotoMonoBold20 = TextStyle(
+    fontSize: 20.sp,
+    fontFamily: 'RobotoMono',
+  );
 }

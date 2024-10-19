@@ -83,3 +83,7 @@ flutter:
     - family: Poppins
       fonts:
         - asset: assets/fonts/Poppins-Medium.ttf
+        
+    - family: RobotoMono
+      fonts:
+        - asset: assets/fonts/RobotoMono-Bold.ttf

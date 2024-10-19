@@ -13,4 +13,5 @@ class AppColors {
   static const bottomNavBarColor = Color(0xff243642);
   static const redDegree = Color(0xffA64242);
   static const greenDegree = Color(0xff387478);
+  static const switcherBackground = Color(0xffFFFFFD);
 }
