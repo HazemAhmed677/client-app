@@ -38,6 +38,7 @@ class ProjectItem extends StatelessWidget {
             horizontalSpace(14),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   'Passport Project',
@@ -45,7 +46,6 @@ class ProjectItem extends StatelessWidget {
                     color: AppColors.black,
                   ),
                 ),
-                verticalSpace(4),
                 Text(
                   '23 Tasks',
                   style: AppStyles.poppinsSemiBold18.copyWith(
