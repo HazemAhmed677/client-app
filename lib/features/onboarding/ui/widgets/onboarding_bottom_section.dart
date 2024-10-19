@@ -1,4 +1,4 @@
-import 'package:client_app/features/onboarding/ui/widgets/custom_page_view_barr.dart';
+import 'package:client_app/features/onboarding/ui/widgets/custom_page_view_bar.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/helpers/spacing.dart';

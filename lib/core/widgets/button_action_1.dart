@@ -4,26 +4,42 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ButtonAction1 extends StatelessWidget {
-  const ButtonAction1({super.key, required this.onPressed, required this.text});
+  const ButtonAction1({
+    super.key,
+    required this.onPressed,
+    required this.text,
+    this.backgroundColor = AppColors.primary,
+    this.overlayColor = AppColors.white,
+    this.horizontalPadding = 70,
+    this.verticalPadding = 8,
+    this.textColor = AppColors.white,
+    this.fontSize = 18,
+  });
   final Function() onPressed;
   final String text;
+  final Color textColor;
+  final double fontSize;
+  final Color backgroundColor;
+  final Color overlayColor;
+  final double horizontalPadding;
+  final double verticalPadding;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        overlayColor: AppColors.white,
-        backgroundColor: AppColors.primary,
+        overlayColor: overlayColor,
+        backgroundColor: backgroundColor,
         padding: EdgeInsets.symmetric(
-          vertical: 8.sp,
-          horizontal: 70.sp,
+          vertical: verticalPadding.sp,
+          horizontal: horizontalPadding.sp,
         ),
       ),
       onPressed: onPressed,
       child: Text(
         text,
         style: AppStyles.gilroySemiBold16.copyWith(
-          color: AppColors.white,
-          fontSize: 18.sp,
+          color: textColor,
+          fontSize: fontSize.sp,
         ),
       ),
     );
