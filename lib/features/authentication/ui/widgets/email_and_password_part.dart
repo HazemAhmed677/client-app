@@ -61,7 +61,7 @@ class _EmailAndPasswordPartState extends State<EmailAndPasswordPart> {
                   )
                 : const Icon(
                     Icons.visibility,
-                    color: AppColors.primary,
+                    color: AppColors.secondary,
                   ),
           ),
           obscure: !flag,

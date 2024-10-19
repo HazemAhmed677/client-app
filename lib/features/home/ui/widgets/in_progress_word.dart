@@ -27,13 +27,13 @@ class InProgressWord extends StatelessWidget {
           10,
         ),
         CircleAvatar(
-          backgroundColor: AppColors.secondary.withOpacity(0.1),
+          backgroundColor: AppColors.primary.withOpacity(0.1),
           radius: 10.sp,
           child: Center(
             child: Text(
               count.toString(),
               style: AppStyles.poppinsSemiBold18.copyWith(
-                color: AppColors.secondary,
+                color: AppColors.primary,
                 fontSize: 14.sp,
               ),
             ),

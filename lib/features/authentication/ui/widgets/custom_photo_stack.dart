@@ -70,7 +70,7 @@ class _CustomPhotoStackState extends State<CustomPhotoStack> {
                   Icons.add_a_photo_outlined,
                   color: (selectedImage != null)
                       ? Colors.grey.shade200
-                      : AppColors.primary,
+                      : AppColors.secondary,
                   size: (selectedImage != null) ? 20.sp : 22.sp,
                 ),
               ),

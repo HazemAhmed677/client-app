@@ -6,7 +6,6 @@ import 'package:client_app/features/notification/ui/notification_view.dart';
 import 'package:client_app/features/profile/ui/profile_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../logic/switch_views_cubit/switch_views_cubit.dart';
 import 'widgets/nav_bar_stack.dart';
 

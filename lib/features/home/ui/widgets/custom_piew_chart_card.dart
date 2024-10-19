@@ -15,7 +15,7 @@ class CustomPieChartCard extends StatelessWidget {
       height: 160.sp,
       width: MediaQuery.sizeOf(context).width,
       decoration: BoxDecoration(
-        color: AppColors.secondary,
+        color: AppColors.primary,
         borderRadius: BorderRadius.circular(
           24,
         ),
@@ -39,9 +39,9 @@ class CustomPieChartCard extends StatelessWidget {
                 const Spacer(),
                 InkWell(
                   overlayColor: WidgetStateProperty.all<Color>(
-                    AppColors.primary,
+                    AppColors.secondary,
                   ),
-                  highlightColor: AppColors.primary,
+                  highlightColor: AppColors.secondary,
                   onTap: () {},
                   child: Container(
                     height: 40.sp,
@@ -58,7 +58,7 @@ class CustomPieChartCard extends StatelessWidget {
                       child: Text(
                         'View Task',
                         style: AppStyles.interBold18.copyWith(
-                          color: AppColors.secondary,
+                          color: AppColors.primary,
                           fontSize: 16,
                         ),
                       ),
