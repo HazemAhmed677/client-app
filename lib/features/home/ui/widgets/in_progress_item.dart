@@ -12,7 +12,7 @@ class InProgressItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 140.sp,
+      height: 148.sp,
       width: 220.sp,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(
@@ -60,9 +60,12 @@ class InProgressItem extends StatelessWidget {
                 ),
               ),
             ),
-            verticalSpace(12),
+            verticalSpace(16),
             const InProgressLineBar(
               percentage: 70,
+            ),
+            verticalSpace(
+              8,
             ),
           ],
         ),

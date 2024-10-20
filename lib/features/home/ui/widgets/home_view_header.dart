@@ -44,10 +44,10 @@ class HomeViewHeader extends StatelessWidget {
               size: 28.sp,
             ),
             Positioned(
-              top: -1.sp,
-              right: -1.sp,
+              top: 1.sp,
+              right: 2.sp,
               child: CircleAvatar(
-                radius: 6.sp,
+                radius: 4.sp,
                 backgroundColor: AppColors.primary,
               ),
             )

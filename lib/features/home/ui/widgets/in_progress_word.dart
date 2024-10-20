@@ -5,8 +5,8 @@ import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
 
-class InProgressWord extends StatelessWidget {
-  const InProgressWord({
+class CustomWord extends StatelessWidget {
+  const CustomWord({
     super.key,
     required this.title,
     required this.count,

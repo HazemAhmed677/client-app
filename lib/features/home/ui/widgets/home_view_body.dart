@@ -30,14 +30,14 @@ class HomeViewBody extends StatelessWidget {
                   verticalSpace(24),
                   const CustomPieChartCard(),
                   verticalSpace(24),
-                  const InProgressWord(
+                  const CustomWord(
                     title: 'In Progress',
                     count: 6,
                   ),
                   verticalSpace(18),
                   const InProgressListView(),
                   verticalSpace(24),
-                  const InProgressWord(
+                  const CustomWord(
                     title: 'Projects',
                     count: 4,
                   ),

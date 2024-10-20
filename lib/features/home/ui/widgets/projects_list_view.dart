@@ -13,7 +13,7 @@ class ProjectsListView extends StatelessWidget {
         padding: EdgeInsets.only(
           bottom: (index != 3) ? 16.sp : 0,
         ),
-        child: const ProjectItem(),
+        child: const ProjectItemInHome(),
       ),
     );
   }

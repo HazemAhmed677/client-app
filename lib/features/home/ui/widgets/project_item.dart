@@ -7,8 +7,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/theming/app_styles.dart';
 
-class ProjectItem extends StatelessWidget {
-  const ProjectItem({super.key});
+class ProjectItemInHome extends StatelessWidget {
+  const ProjectItemInHome({super.key});
 
   @override
   Widget build(BuildContext context) {

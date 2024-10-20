@@ -6,17 +6,13 @@ import 'package:client_app/features/check_board/ui/widgets/meetings_sliver_list.
 import 'package:client_app/features/check_board/ui/widgets/projects_sliver_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'check_board_header.dart';
 import 'custom_board_bar.dart';
 
-class CheckBoardBody extends StatefulWidget {
+class CheckBoardBody extends StatelessWidget {
   const CheckBoardBody({super.key});
 
-  @override
-  State<CheckBoardBody> createState() => _CheckBoardBodyState();
-}
-
-class _CheckBoardBodyState extends State<CheckBoardBody> {
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
@@ -35,10 +31,12 @@ class _CheckBoardBodyState extends State<CheckBoardBody> {
         SliverToBoxAdapter(
           child: verticalSpace(24),
         ),
-        BlocBuilder<ChooseBarCubit, ChooseBarState>(
-          builder: (context, state) => AnimatedSwitcher(
-            duration: const Duration(milliseconds: 400),
-            child: (state is ProjectsState)
+        SliverPadding(
+          padding: EdgeInsets.symmetric(
+            horizontal: 18.sp,
+          ),
+          sliver: BlocBuilder<ChooseBarCubit, ChooseBarState>(
+            builder: (context, state) => (state is ProjectsState)
                 ? const ProjectsSliverList()
                 : (state is AssignmentsState)
                     ? const AssignmentsSliverList()

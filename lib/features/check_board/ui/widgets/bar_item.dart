@@ -16,7 +16,7 @@ class BarItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(right: (!isTheLast) ? 10.0 : 0),
+      padding: EdgeInsets.only(right: (!isTheLast) ? 4.0.sp : 0),
       child: AnimatedContainer(
         duration: const Duration(
           milliseconds: 300,
@@ -24,12 +24,12 @@ class BarItem extends StatelessWidget {
         decoration: BoxDecoration(
           color: (isActive) ? AppColors.secondary : Colors.transparent,
           borderRadius: BorderRadius.circular(
-            12,
+            12.sp,
           ),
         ),
         child: Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: 14.sp,
+            horizontal: 16.sp,
             vertical: 6.sp,
           ),
           child: Text(
