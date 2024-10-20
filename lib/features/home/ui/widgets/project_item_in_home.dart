@@ -1,4 +1,4 @@
-import 'package:client_app/core/helpers/icons.dart';
+import 'package:client_app/core/helpers/icons_and_texts.dart';
 import 'package:client_app/core/helpers/spacing.dart';
 import 'package:client_app/core/theming/app_colors.dart';
 import 'package:client_app/features/home/ui/widgets/custom_pie_chart.dart';
@@ -33,7 +33,7 @@ class ProjectItemInHome extends StatelessWidget {
                   12.sp,
                 ),
               ),
-              child: projectProfileIcon(),
+              child: projectPassportIcon(),
             ),
             horizontalSpace(14),
             Column(
@@ -47,7 +47,7 @@ class ProjectItemInHome extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  '23 Tasks',
+                  '23 Taskkkks',
                   style: AppStyles.poppinsSemiBold18.copyWith(
                     color: AppColors.grey,
                     fontSize: 16.sp,
@@ -56,9 +56,9 @@ class ProjectItemInHome extends StatelessWidget {
               ],
             ),
             const Spacer(),
-            const Flexible(
+            Flexible(
               child: Align(
-                alignment: Alignment.centerRight,
+                alignment: Alignment.topCenter,
                 child: AspectRatio(
                   aspectRatio: 1,
                   child: CustomPieChart(
@@ -67,6 +67,9 @@ class ProjectItemInHome extends StatelessWidget {
                     radius: 6,
                     fontSize: 16,
                     percentage: 70,
+                    pieChartColorSection2: AppColors.projectColor2.withOpacity(
+                      0.5,
+                    ),
                   ),
                 ),
               ),

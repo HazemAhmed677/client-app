@@ -30,8 +30,9 @@ class CheckBoardHeader extends StatelessWidget {
                     onTap: () {},
                     child: Text(
                       'Projects',
-                      style: AppStyles.interSemiBold18.copyWith(
-                        fontSize: 22.sp,
+                      style: AppStyles.afacadSemiBold22.copyWith(
+                        fontSize: 26.sp,
+                        color: AppColors.bottomNavBarColor,
                       ),
                     ),
                   ),

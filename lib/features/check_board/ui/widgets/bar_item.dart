@@ -37,6 +37,7 @@ class BarItem extends StatelessWidget {
             textAlign: TextAlign.center,
             style: AppStyles.poppinsSemiBold18.copyWith(
               color: (isActive) ? AppColors.white : AppColors.bottomNavBarColor,
+              fontSize: 17.sp,
             ),
           ),
         ),

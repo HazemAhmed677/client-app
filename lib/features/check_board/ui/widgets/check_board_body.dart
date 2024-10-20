@@ -48,6 +48,11 @@ class CheckBoardBody extends StatelessWidget {
                                 child: SizedBox.shrink(),
                               ),
           ),
+        ),
+        SliverToBoxAdapter(
+          child: verticalSpace(
+            124,
+          ),
         )
       ],
     );

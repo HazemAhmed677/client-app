@@ -13,29 +13,32 @@ class CustomPieChart extends StatelessWidget {
     this.radius = 10,
     this.fontSize = 18,
     this.percentage = 85,
+    required this.pieChartColorSection2,
+    this.startDegreeOffset = 0,
   });
   final Color pieChartColor;
   final Color textColor;
   final double radius;
   final double fontSize;
   final int percentage;
+  final Color pieChartColorSection2;
+  final double startDegreeOffset;
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         PieChart(
           PieChartData(
+            startDegreeOffset: startDegreeOffset,
             sectionsSpace: 0,
             sections: List.generate(
               2,
               (index) {
                 return PieChartSectionData(
-                  value: (index == 0) ? 85 : 15,
-                  color: (index == 0)
-                      ? pieChartColor
-                      : pieChartColor.withOpacity(
-                          0.5,
-                        ),
+                  value: (index == 0)
+                      ? percentage.toDouble()
+                      : (100 - percentage.toDouble()),
+                  color: (index == 0) ? pieChartColor : pieChartColorSection2,
                   showTitle: false,
                   radius: radius.sp,
                 );
@@ -44,11 +47,16 @@ class CustomPieChart extends StatelessWidget {
           ),
         ),
         Center(
-          child: Text('$percentage%',
-              style: AppStyles.interBold18.copyWith(
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              '$percentage%',
+              style: AppStyles.interSemiBold18.copyWith(
                 fontSize: fontSize.sp,
                 color: textColor,
-              )),
+              ),
+            ),
+          ),
         ),
       ],
     );

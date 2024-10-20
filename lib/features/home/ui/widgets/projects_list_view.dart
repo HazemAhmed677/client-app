@@ -1,4 +1,4 @@
-import 'package:client_app/features/home/ui/widgets/project_item.dart';
+import 'package:client_app/features/home/ui/widgets/project_item_in_home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

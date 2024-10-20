@@ -68,9 +68,13 @@ class CustomPieChartCard extends StatelessWidget {
               ],
             ),
             const Spacer(),
-            const Flexible(
+            Flexible(
               fit: FlexFit.loose,
-              child: CustomPieChart(),
+              child: CustomPieChart(
+                pieChartColorSection2: AppColors.white.withOpacity(
+                  0.5,
+                ),
+              ),
             ),
           ],
         ),

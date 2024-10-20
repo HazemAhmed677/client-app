@@ -4,7 +4,7 @@ import 'package:client_app/core/theming/app_styles.dart';
 import 'package:client_app/features/home/ui/widgets/in_progress_line_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../core/helpers/icons.dart';
+import '../../../../core/helpers/icons_and_texts.dart';
 
 class InProgressItem extends StatelessWidget {
   const InProgressItem({super.key});
