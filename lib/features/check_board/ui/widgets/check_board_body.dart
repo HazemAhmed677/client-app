@@ -1,11 +1,22 @@
 import 'package:client_app/core/helpers/spacing.dart';
+import 'package:client_app/features/check_board/logic/choose_bar_cubit/choose_bar_cubit.dart';
+import 'package:client_app/features/check_board/ui/widgets/assignments_sliver_list.dart';
+import 'package:client_app/features/check_board/ui/widgets/completed_sliver_list.dart';
+import 'package:client_app/features/check_board/ui/widgets/meetings_sliver_list.dart';
+import 'package:client_app/features/check_board/ui/widgets/projects_sliver_list.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'check_board_header.dart';
 import 'custom_board_bar.dart';
 
-class CheckBoardBody extends StatelessWidget {
+class CheckBoardBody extends StatefulWidget {
   const CheckBoardBody({super.key});
 
+  @override
+  State<CheckBoardBody> createState() => _CheckBoardBodyState();
+}
+
+class _CheckBoardBodyState extends State<CheckBoardBody> {
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
@@ -24,6 +35,22 @@ class CheckBoardBody extends StatelessWidget {
         SliverToBoxAdapter(
           child: verticalSpace(24),
         ),
+        BlocBuilder<ChooseBarCubit, ChooseBarState>(
+          builder: (context, state) => AnimatedSwitcher(
+            duration: const Duration(milliseconds: 400),
+            child: (state is ProjectsState)
+                ? const ProjectsSliverList()
+                : (state is AssignmentsState)
+                    ? const AssignmentsSliverList()
+                    : (state is MeetingsState)
+                        ? const MeetingsSliverList()
+                        : (state is CompletedState)
+                            ? const CompletedSliverList()
+                            : const SliverToBoxAdapter(
+                                child: SizedBox.shrink(),
+                              ),
+          ),
+        )
       ],
     );
   }
