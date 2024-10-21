@@ -9,8 +9,8 @@ import '../../../../core/theming/app_styles.dart';
 import '../../../../core/theming/font_weight_helper.dart';
 import '../../../home/ui/widgets/custom_pie_chart.dart';
 
-class ProjectItemDetails extends StatelessWidget {
-  const ProjectItemDetails({super.key});
+class ProjectSliverListItemDetails extends StatelessWidget {
+  const ProjectSliverListItemDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +50,7 @@ class ProjectItemDetails extends StatelessWidget {
         Column(
           children: [
             SizedBox(
-              height: 84.sp,
+              height: 80.sp,
               child: const Align(
                 alignment: Alignment.topCenter,
                 child: AspectRatio(
@@ -64,6 +64,7 @@ class ProjectItemDetails extends StatelessWidget {
                     startDegreeOffset: 270,
                     fontSize: 16,
                     fontWeight: FontWeightHelper.medium,
+                    radius: 8,
                   ),
                 ),
               ),

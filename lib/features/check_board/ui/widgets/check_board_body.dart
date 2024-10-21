@@ -33,7 +33,7 @@ class CheckBoardBody extends StatelessWidget {
         ),
         SliverPadding(
           padding: EdgeInsets.symmetric(
-            horizontal: 18.sp,
+            horizontal: 22.sp,
           ),
           sliver: BlocBuilder<ChooseBarCubit, ChooseBarState>(
             builder: (context, state) => (state is ProjectsState)
@@ -51,7 +51,7 @@ class CheckBoardBody extends StatelessWidget {
         ),
         SliverToBoxAdapter(
           child: verticalSpace(
-            124,
+            100,
           ),
         )
       ],

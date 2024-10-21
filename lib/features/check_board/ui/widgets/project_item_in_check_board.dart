@@ -1,5 +1,5 @@
 import 'package:client_app/core/theming/app_colors.dart';
-import 'package:client_app/features/check_board/ui/widgets/project_item_details.dart';
+import 'package:client_app/features/check_board/ui/widgets/project_sliver_list_item_details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -17,8 +17,11 @@ class ProjectItemInCheckBoard extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 18.sp, vertical: 14.sp),
-        child: const ProjectItemDetails(),
+        padding: EdgeInsets.symmetric(
+          horizontal: 18.sp,
+          vertical: 14.sp,
+        ),
+        child: const ProjectSliverListItemDetails(),
       ),
     );
   }

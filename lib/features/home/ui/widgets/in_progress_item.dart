@@ -12,7 +12,7 @@ class InProgressItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 128.sp,
-      width: 248.sp,
+      width: 228.sp,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(
           22,
@@ -24,7 +24,7 @@ class InProgressItem extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.symmetric(
           horizontal: 14.sp,
-          vertical: 14.sp,
+          vertical: 12.sp,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,11 +62,12 @@ class InProgressItem extends StatelessWidget {
               ),
             ),
             const Spacer(
-              flex: 2,
+              flex: 4,
             ),
             const InProgressLineBar(
               percentage: 70,
             ),
+            const Spacer(),
           ],
         ),
       ),

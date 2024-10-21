@@ -25,7 +25,7 @@ class InProgressLineBar extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
           child: Container(
             height: 8.sp,
-            width: (220 * (percentage / 100)).sp,
+            width: (200 * (percentage / 100)).sp,
             color: Colors.blue, // Progress bar color
           ),
         ),

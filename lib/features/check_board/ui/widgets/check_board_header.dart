@@ -47,7 +47,7 @@ class CheckBoardHeader extends StatelessWidget {
                     onTap: () {},
                     highlightColor: AppColors.grey,
                     child: Icon(
-                      FontAwesomeIcons.calendarCheck,
+                      FontAwesomeIcons.calendarDays,
                       color: AppColors.secondary,
                       size: 22.sp,
                     ),
