@@ -8,23 +8,22 @@ import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
 import '../../../../core/widgets/common_container_for_priority.dart';
 
-class MeetingCheclBoardItemDetailsOfDetails extends StatefulWidget {
-  const MeetingCheclBoardItemDetailsOfDetails(
-      {super.key, required this.priorities});
+class AssignmentCheckBoardItemDetails extends StatefulWidget {
+  const AssignmentCheckBoardItemDetails({super.key, required this.priorities});
   final List<CommonContainerForCheckBoard> priorities;
 
   @override
-  State<MeetingCheclBoardItemDetailsOfDetails> createState() =>
-      _MeetingCheclBoardItemDetailsOfDetailsState();
+  State<AssignmentCheckBoardItemDetails> createState() =>
+      _AssignmentCheckBoardItemDetailsState();
 }
 
-class _MeetingCheclBoardItemDetailsOfDetailsState
-    extends State<MeetingCheclBoardItemDetailsOfDetails> {
+class _AssignmentCheckBoardItemDetailsState
+    extends State<AssignmentCheckBoardItemDetails> {
   // The currently selected priority.
   CommonContainerForCheckBoard priorityChoosed =
       const CommonContainerForCheckBoard(
-    color: AppColors.highPriority,
-    priority: 'High',
+    color: AppColors.onTrackColor,
+    priority: 'On Track',
   );
   @override
   Widget build(BuildContext context) {
@@ -36,7 +35,7 @@ class _MeetingCheclBoardItemDetailsOfDetailsState
             horizontal: 18.sp,
           ),
           child: Text(
-            'Meeting with CTO.',
+            'Check if the project is done.',
             style: AppStyles.interSemiBold18.copyWith(
               fontSize: 16.sp,
             ),
@@ -75,7 +74,7 @@ class _MeetingCheclBoardItemDetailsOfDetailsState
               ),
               horizontalSpace(4),
               const CommonContainerForCheckBoard(
-                  color: AppColors.meetingContainer, priority: 'Meeting'),
+                  color: AppColors.highPriority, priority: 'High'),
             ],
           ),
         ),
@@ -94,7 +93,7 @@ class _MeetingCheclBoardItemDetailsOfDetailsState
                 6,
               ),
               textHelperInCheckBoard(
-                '14 Nov 2024',
+                '10 Dec 2024',
                 color: AppColors.grey,
               ),
             ],

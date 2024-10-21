@@ -23,4 +23,6 @@ class AppColors {
   static const highPriority = Color(0xffF06A6A);
   static const mediumPriority = Color(0xffF6B06A);
   static const lowPriority = Color(0xff12C976);
+  static const meetingContainer = Color(0xff9A87F6);
+  static const onTrackColor = Color(0xff4C82EB);
 }
