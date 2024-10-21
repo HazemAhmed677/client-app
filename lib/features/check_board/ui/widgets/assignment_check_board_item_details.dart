@@ -6,7 +6,7 @@ import '../../../../core/helpers/icons_and_texts.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
-import '../../../../core/widgets/common_container_for_priority.dart';
+import '../../../../core/widgets/common_container_for_check_board.dart';
 
 class AssignmentCheckBoardItemDetails extends StatefulWidget {
   const AssignmentCheckBoardItemDetails({super.key, required this.priorities});

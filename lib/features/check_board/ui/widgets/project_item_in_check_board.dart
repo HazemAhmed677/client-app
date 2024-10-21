@@ -19,7 +19,7 @@ class ProjectItemInCheckBoard extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.symmetric(
           horizontal: 18.sp,
-          vertical: 14.sp,
+          vertical: 16.sp,
         ),
         child: const ProjectSliverListItemDetails(),
       ),

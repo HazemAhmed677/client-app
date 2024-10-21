@@ -31,31 +31,26 @@ class _CustomBoardBarState extends State<CustomBoardBar> {
             borderRadius: BorderRadius.circular(14.sp),
             border: Border.all(color: AppColors.white, width: 3.sp),
           ),
-          child: Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: 4.sp,
-            ),
-            child: Row(
-              children: List.generate(
-                4,
-                (index) => GestureDetector(
-                  onTap: () async {
-                    BlocProvider.of<ChooseBarCubit>(context).chooseBar(index);
-                    currentIndex = index;
-                    setState(() {});
-                    // trigger here for rebuilding
-                  },
-                  child: BarItem(
-                    isActive: (currentIndex == index),
-                    text: (index == 0)
-                        ? 'Projects'
-                        : (index == 1)
-                            ? 'Assignments'
-                            : (index == 2)
-                                ? 'Meetings'
-                                : 'Completed',
-                    isTheLast: (index == 3),
-                  ),
+          child: Row(
+            children: List.generate(
+              4,
+              (index) => GestureDetector(
+                onTap: () async {
+                  BlocProvider.of<ChooseBarCubit>(context).chooseBar(index);
+                  currentIndex = index;
+                  setState(() {});
+                  // trigger here for rebuilding
+                },
+                child: BarItem(
+                  isActive: (currentIndex == index),
+                  text: (index == 0)
+                      ? 'Projects'
+                      : (index == 1)
+                          ? 'Assignments'
+                          : (index == 2)
+                              ? 'Meetings'
+                              : 'Completed',
+                  isTheLast: (index == 3),
                 ),
               ),
             ),

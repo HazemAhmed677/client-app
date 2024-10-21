@@ -3,7 +3,7 @@ import 'package:client_app/features/check_board/ui/widgets/meeting_check_board_i
 import 'package:flutter/material.dart';
 
 import '../../../../core/theming/app_colors.dart';
-import '../../../../core/widgets/common_container_for_priority.dart';
+import '../../../../core/widgets/common_container_for_check_board.dart';
 
 class MeetingCheckBoardItem extends StatefulWidget {
   const MeetingCheckBoardItem({super.key});

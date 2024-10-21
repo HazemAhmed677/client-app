@@ -11,9 +11,11 @@ class AssignmentsSliverList extends StatelessWidget {
       itemCount: 8,
       itemBuilder: (BuildContext context, int index) => Padding(
         padding: EdgeInsets.only(
-          bottom: (index != 7) ? 22.0.sp : 0.0,
+          bottom: (index != 7) ? 16.0.sp : 0.0,
         ),
-        child: const AssingmentCheckBoardItem(),
+        child: const Card(
+          child: AssingmentCheckBoardItem(),
+        ),
       ),
     );
   }

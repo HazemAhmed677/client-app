@@ -3,7 +3,7 @@ import 'package:client_app/features/check_board/ui/widgets/common_check_board_it
 import 'package:flutter/material.dart';
 
 import '../../../../core/theming/app_colors.dart';
-import '../../../../core/widgets/common_container_for_priority.dart';
+import '../../../../core/widgets/common_container_for_check_board.dart';
 
 class AssingmentCheckBoardItem extends StatefulWidget {
   const AssingmentCheckBoardItem({super.key});

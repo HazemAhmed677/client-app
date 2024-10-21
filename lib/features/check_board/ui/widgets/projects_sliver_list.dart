@@ -11,8 +11,10 @@ class ProjectsSliverList extends StatelessWidget {
     return SliverList.builder(
       itemCount: 8,
       itemBuilder: (BuildContext context, int index) => Padding(
-        padding: EdgeInsets.only(bottom: (index != 7) ? 22.0.sp : 0.0),
-        child: const ProjectItemInCheckBoard(),
+        padding: EdgeInsets.only(bottom: (index != 7) ? 16.sp : 0.0),
+        child: const Card(
+          child: ProjectItemInCheckBoard(),
+        ),
       ),
     );
   }
