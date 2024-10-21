@@ -37,11 +37,12 @@ class ProjectSliverListItemDetails extends StatelessWidget {
             const Spacer(),
             Row(
               children: [
-                projectItemIconInCheckBoard(
+                iconHelperInCheckBoard(
                   FontAwesomeIcons.calendarDays,
+                  AppColors.subTextColorInCheckBoard.withOpacity(0.8),
                 ),
                 horizontalSpace(6),
-                projectItemTextInCheckBoard('July 02, 2024'),
+                textHelperInCheckBoard('July 02, 2024'),
               ],
             )
           ],
@@ -72,11 +73,12 @@ class ProjectSliverListItemDetails extends StatelessWidget {
             const Spacer(),
             Row(
               children: [
-                projectItemIconInCheckBoard(
+                iconHelperInCheckBoard(
                   FontAwesomeIcons.check,
+                  AppColors.subTextColorInCheckBoard.withOpacity(0.8),
                 ),
                 horizontalSpace(6),
-                projectItemTextInCheckBoard('26 Tasks'),
+                textHelperInCheckBoard('26 Tasks'),
               ],
             )
           ],

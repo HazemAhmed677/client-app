@@ -20,20 +20,21 @@ Icon projectPassportIcon() {
   );
 }
 
-Icon projectItemIconInCheckBoard(IconData icon) {
+Icon iconHelperInCheckBoard(IconData icon, Color color) {
   return Icon(
     icon,
-    color: AppColors.subTextColorInCheckBoard.withOpacity(0.8),
+    color: color,
     size: 18.sp,
   );
 }
 
-Text projectItemTextInCheckBoard(String text) {
+Text textHelperInCheckBoard(String text,
+    {Color color = AppColors.subTextColorInCheckBoard}) {
   return Text(
     text,
     style: AppStyles.poppinsSemiBold18.copyWith(
       fontSize: 15.sp,
-      color: AppColors.subTextColorInCheckBoard,
+      color: color,
     ),
   );
 }

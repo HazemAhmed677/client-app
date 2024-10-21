@@ -1,11 +1,10 @@
+import 'package:client_app/features/check_board/ui/widgets/meeting_check_board_item_details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../../core/theming/app_colors.dart';
-import '../../../../core/theming/app_styles.dart';
 
-class CommonCheckBoardItem extends StatelessWidget {
-  const CommonCheckBoardItem({super.key});
+class MeetingCheckBoardItem extends StatelessWidget {
+  const MeetingCheckBoardItem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,17 +20,7 @@ class CommonCheckBoardItem extends StatelessWidget {
           horizontal: 18.sp,
           vertical: 14.sp,
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Check if the project\nis completed.',
-              style: AppStyles.interSemiBold18.copyWith(
-                fontSize: 18.sp,
-              ),
-            ),
-          ],
-        ),
+        child: const MeetingCheckBoardItemDetails(),
       ),
     );
   }

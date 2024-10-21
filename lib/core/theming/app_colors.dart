@@ -20,4 +20,7 @@ class AppColors {
   static const pieChartColorInCheckBoard = Color(0xff6CCC82);
   static const subTextColorInCheckBoard = Color(0xffC5C6C6);
   static const restPrecentageColorInCheckBoard = Color(0xffEDEDF1);
+  static const highPriority = Color(0xffF06A6A);
+  static const mediumPriority = Color(0xffF6B06A);
+  static const lowPriority = Color(0xff12C976);
 }

@@ -1,4 +1,4 @@
-import 'package:client_app/features/check_board/ui/widgets/common_check_board_item.dart';
+import 'package:client_app/features/check_board/ui/widgets/assingment_check_board_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -13,7 +13,7 @@ class AssignmentsSliverList extends StatelessWidget {
         padding: EdgeInsets.only(
           bottom: (index != 7) ? 22.0.sp : 0.0,
         ),
-        child: const CommonCheckBoardItem(),
+        child: const AssingmentCheckBoardItem(),
       ),
     );
   }
