@@ -15,7 +15,7 @@ class HomeViewHeader extends StatelessWidget {
     return Row(
       children: [
         CircleAvatar(
-          radius: 26.sp,
+          radius: 24.sp,
           backgroundImage: const AssetImage(AppImages.github),
         ),
         horizontalSpace(12),
@@ -26,12 +26,15 @@ class HomeViewHeader extends StatelessWidget {
               'Hello!',
               style: AppStyles.interSemiBold18.copyWith(
                 color: AppColors.grey.shade800,
+                fontSize: 15.sp,
               ),
             ),
             verticalSpace(4),
             Text(
               'Livia Vaccaro',
-              style: AppStyles.interBold18,
+              style: AppStyles.interBold18.copyWith(
+                fontSize: 16.sp,
+              ),
             ),
           ],
         ),
@@ -41,7 +44,7 @@ class HomeViewHeader extends StatelessWidget {
           children: [
             Icon(
               IconlyBold.notification,
-              size: 28.sp,
+              size: 26.sp,
             ),
             Positioned(
               top: 1.sp,

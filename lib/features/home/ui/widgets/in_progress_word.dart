@@ -21,6 +21,7 @@ class CustomWord extends StatelessWidget {
           title,
           style: AppStyles.robotoMonoBold20.copyWith(
             fontWeight: FontWeightHelper.bold,
+            fontSize: 18.sp,
           ),
         ),
         horizontalSpace(
@@ -34,7 +35,7 @@ class CustomWord extends StatelessWidget {
               count.toString(),
               style: AppStyles.poppinsSemiBold18.copyWith(
                 color: AppColors.primary,
-                fontSize: 14.sp,
+                fontSize: 13.sp,
               ),
             ),
           ),

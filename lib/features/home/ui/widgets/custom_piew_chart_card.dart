@@ -12,18 +12,18 @@ class CustomPieChartCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 160.sp,
+      height: 150.sp,
       width: MediaQuery.sizeOf(context).width,
       decoration: BoxDecoration(
         color: AppColors.primary,
         borderRadius: BorderRadius.circular(
-          24,
+          28.sp,
         ),
       ),
       child: Padding(
         padding: EdgeInsets.symmetric(
-          horizontal: 16.sp,
-          vertical: 22.sp,
+          horizontal: 18.sp,
+          vertical: 20.sp,
         ),
         child: Row(
           children: [
@@ -59,7 +59,7 @@ class CustomPieChartCard extends StatelessWidget {
                         'View Task',
                         style: AppStyles.interBold18.copyWith(
                           color: AppColors.primary,
-                          fontSize: 16,
+                          fontSize: 14.sp,
                         ),
                       ),
                     ),

@@ -13,13 +13,18 @@ class ProjectItemInHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100.sp,
+      height: 80.sp,
       decoration: BoxDecoration(
         color: AppColors.white,
-        borderRadius: BorderRadius.circular(16.sp),
+        borderRadius: BorderRadius.circular(
+          16.sp,
+        ),
       ),
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 14.sp, vertical: 16.sp),
+        padding: EdgeInsets.symmetric(
+          horizontal: 14.sp,
+          vertical: 10.sp,
+        ),
         child: Row(
           children: [
             Container(
@@ -44,13 +49,14 @@ class ProjectItemInHome extends StatelessWidget {
                   'Passport Project',
                   style: AppStyles.poppinsSemiBold18.copyWith(
                     color: AppColors.black,
+                    fontSize: 16.sp,
                   ),
                 ),
                 Text(
-                  '23 Taskkkks',
+                  '23 Tasks',
                   style: AppStyles.poppinsSemiBold18.copyWith(
                     color: AppColors.grey,
-                    fontSize: 16.sp,
+                    fontSize: 14.sp,
                   ),
                 ),
               ],
@@ -64,8 +70,8 @@ class ProjectItemInHome extends StatelessWidget {
                   child: CustomPieChart(
                     pieChartColor: AppColors.projectColor2,
                     textColor: AppColors.black,
-                    radius: 6,
-                    fontSize: 16,
+                    radius: 5,
+                    fontSize: 14,
                     percentage: 70,
                     pieChartColorSection2: AppColors.projectColor2.withOpacity(
                       0.5,

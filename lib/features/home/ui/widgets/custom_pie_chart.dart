@@ -1,4 +1,5 @@
 import 'package:client_app/core/theming/app_styles.dart';
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,6 +16,7 @@ class CustomPieChart extends StatelessWidget {
     this.percentage = 85,
     required this.pieChartColorSection2,
     this.startDegreeOffset = 0,
+    this.fontWeight = FontWeightHelper.bold,
   });
   final Color pieChartColor;
   final Color textColor;
@@ -23,6 +25,7 @@ class CustomPieChart extends StatelessWidget {
   final int percentage;
   final Color pieChartColorSection2;
   final double startDegreeOffset;
+  final FontWeight fontWeight;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -51,9 +54,10 @@ class CustomPieChart extends StatelessWidget {
             fit: BoxFit.scaleDown,
             child: Text(
               '$percentage%',
-              style: AppStyles.interSemiBold18.copyWith(
+              style: AppStyles.interBold18.copyWith(
                 fontSize: fontSize.sp,
                 color: textColor,
+                fontWeight: fontWeight,
               ),
             ),
           ),

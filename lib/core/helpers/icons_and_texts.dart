@@ -8,7 +8,7 @@ Icon projectBookIcon() {
   return Icon(
     FontAwesomeIcons.book,
     color: AppColors.projectIcon,
-    size: 16.sp,
+    size: 15.sp,
   );
 }
 

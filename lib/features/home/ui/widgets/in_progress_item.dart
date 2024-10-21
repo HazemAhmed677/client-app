@@ -1,4 +1,3 @@
-import 'package:client_app/core/helpers/spacing.dart';
 import 'package:client_app/core/theming/app_colors.dart';
 import 'package:client_app/core/theming/app_styles.dart';
 import 'package:client_app/features/home/ui/widgets/in_progress_line_bar.dart';
@@ -12,8 +11,8 @@ class InProgressItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 148.sp,
-      width: 220.sp,
+      height: 128.sp,
+      width: 248.sp,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(
           22,
@@ -36,6 +35,7 @@ class InProgressItem extends StatelessWidget {
                   'Office Project',
                   style: AppStyles.poppinsSemiBold18.copyWith(
                     color: AppColors.grey,
+                    fontSize: 16.sp,
                   ),
                 ),
                 const Spacer(),
@@ -57,15 +57,15 @@ class InProgressItem extends StatelessWidget {
                 'Grocery shopping app\ndesign',
                 style: AppStyles.poppinsSemiBold18.copyWith(
                   color: AppColors.black,
+                  fontSize: 17.sp,
                 ),
               ),
             ),
-            verticalSpace(16),
+            const Spacer(
+              flex: 2,
+            ),
             const InProgressLineBar(
               percentage: 70,
-            ),
-            verticalSpace(
-              8,
             ),
           ],
         ),

@@ -9,7 +9,7 @@ class InProgressListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 148.sp,
+      height: 128.sp,
       child: ListView.builder(
         physics: const BouncingScrollPhysics(),
         clipBehavior: Clip.none,
