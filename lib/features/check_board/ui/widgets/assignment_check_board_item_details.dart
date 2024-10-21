@@ -31,8 +31,10 @@ class _AssignmentCheckBoardItemDetailsState
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: 18.sp,
+          padding: EdgeInsets.only(
+            right: 18.sp,
+            left: 18.sp,
+            top: 8.sp,
           ),
           child: Text(
             'Check if the project is done.',
@@ -50,7 +52,9 @@ class _AssignmentCheckBoardItemDetailsState
             children: [
               PopupMenuButton<String>(
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12.sp),
+                  borderRadius: BorderRadius.circular(
+                    12.sp,
+                  ),
                 ),
                 color: AppColors.background,
                 // Show the current selected priority as the icon.
@@ -86,7 +90,7 @@ class _AssignmentCheckBoardItemDetailsState
           child: Row(
             children: [
               iconHelperInCheckBoard(
-                FontAwesomeIcons.calendarCheck,
+                FontAwesomeIcons.calendarMinus,
                 AppColors.grey,
               ),
               horizontalSpace(

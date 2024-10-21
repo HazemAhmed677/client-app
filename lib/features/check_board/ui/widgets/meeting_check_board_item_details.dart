@@ -7,6 +7,7 @@ import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
 import '../../../../core/widgets/common_container_for_check_board.dart';
+import 'more_options.dart';
 
 class MeetingCheclBoardItemDetailsOfDetails extends StatefulWidget {
   const MeetingCheclBoardItemDetailsOfDetails(
@@ -31,18 +32,27 @@ class _MeetingCheclBoardItemDetailsOfDetailsState
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: 18.sp,
-          ),
-          child: Text(
-            'Meeting with CTO.',
-            style: AppStyles.interSemiBold18.copyWith(
-              fontSize: 16.sp,
+        Row(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 18.0,
+              ),
+              child: Text(
+                'Meeting with CTO.',
+                style: AppStyles.interSemiBold18.copyWith(
+                  fontSize: 16.sp,
+                ),
+              ),
             ),
-          ),
+            const Spacer(),
+            Padding(
+              padding: EdgeInsets.only(right: 10.0.sp),
+              child: const MoreOptionsMenu(),
+            ),
+          ],
         ),
-        verticalSpace(12),
+        verticalSpace(4),
         Padding(
           padding: EdgeInsets.symmetric(
             horizontal: 8.sp,
@@ -87,7 +97,7 @@ class _MeetingCheclBoardItemDetailsOfDetailsState
           child: Row(
             children: [
               iconHelperInCheckBoard(
-                FontAwesomeIcons.calendarCheck,
+                FontAwesomeIcons.calendarMinus,
                 AppColors.grey,
               ),
               horizontalSpace(

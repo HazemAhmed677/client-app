@@ -7,6 +7,7 @@ import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
 import '../../../../core/widgets/common_container_for_check_board.dart';
+import 'more_options.dart';
 
 class CompletedCheckBoardItemDetails extends StatefulWidget {
   const CompletedCheckBoardItemDetails({
@@ -24,19 +25,39 @@ class _MeetingCheclBoardItemDetailsOfDetailsState
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 18.0.sp),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'Meeting with Product Owner.',
-            style: AppStyles.interSemiBold18.copyWith(
-              fontSize: 16.sp,
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: 18.0.sp,
+              ),
+              child: Text(
+                'Meeting with Product Owner.',
+                style: AppStyles.interSemiBold18.copyWith(
+                  fontSize: 16.sp,
+                ),
+              ),
             ),
+            const Spacer(),
+            Padding(
+              padding: EdgeInsets.only(
+                right: 10.0.sp,
+              ),
+              child: const MoreOptionsMenu(),
+            ),
+          ],
+        ),
+        verticalSpace(
+          12,
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: 18.0.sp,
           ),
-          verticalSpace(20),
-          Row(
+          child: Row(
             children: [
               const CommonContainerForCheckBoard(
                 color: AppColors.lowPriority,
@@ -49,8 +70,11 @@ class _MeetingCheclBoardItemDetailsOfDetailsState
               ),
             ],
           ),
-          verticalSpace(16),
-          Row(
+        ),
+        verticalSpace(16),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 18.0.sp),
+          child: Row(
             children: [
               iconHelperInCheckBoard(
                 FontAwesomeIcons.calendarCheck,
@@ -65,8 +89,8 @@ class _MeetingCheclBoardItemDetailsOfDetailsState
               ),
             ],
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

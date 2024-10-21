@@ -16,8 +16,9 @@ class CommonCheckBoardItem extends StatelessWidget {
         ),
       ),
       child: Padding(
-          padding: EdgeInsets.symmetric(
-            vertical: 14.sp,
+          padding: EdgeInsets.only(
+            top: 6.sp,
+            bottom: 14.sp,
           ),
           child: child),
     );
