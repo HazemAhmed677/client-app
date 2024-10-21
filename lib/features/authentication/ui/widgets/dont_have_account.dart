@@ -32,8 +32,8 @@ class DontHaveAccount extends StatelessWidget {
               'Sign Up',
               style: AppStyles.poppinsSemiBold18.copyWith(
                   decoration: TextDecoration.underline,
-                  decorationColor: AppColors.primary,
-                  color: AppColors.primary),
+                  decorationColor: AppColors.secondary,
+                  color: AppColors.secondary),
             ),
           ),
         ),

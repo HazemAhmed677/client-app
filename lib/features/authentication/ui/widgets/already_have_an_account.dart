@@ -27,8 +27,8 @@ class AlreadyHaveAnAccount extends StatelessWidget {
               'Sign In',
               style: AppStyles.poppinsSemiBold18.copyWith(
                 decoration: TextDecoration.underline,
-                decorationColor: AppColors.primary,
-                color: AppColors.primary,
+                decorationColor: AppColors.secondary,
+                color: AppColors.secondary,
               ),
             ),
           ),

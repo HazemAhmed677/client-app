@@ -8,7 +8,7 @@ class ButtonAction1 extends StatelessWidget {
     super.key,
     required this.onPressed,
     required this.text,
-    this.backgroundColor = AppColors.primary,
+    this.backgroundColor = AppColors.secondary,
     this.overlayColor = AppColors.white,
     this.horizontalPadding = 70,
     this.verticalPadding = 8,

@@ -13,7 +13,7 @@ class AppStyles {
   static TextStyle afacadSemiBold22 = TextStyle(
     fontFamily: 'AfacadFlux',
     fontSize: 24.sp,
-    color: AppColors.primary,
+    color: AppColors.secondary,
     fontWeight: FontWeightHelper.semiBold,
   );
   static TextStyle gilroySemiBold16 = TextStyle(
@@ -53,6 +53,10 @@ class AppStyles {
     fontSize: 20.sp,
     fontFamily: 'RobotoMono',
   );
-
-  static var poppinsMedium14;
+  static TextStyle poppinsMedium14 = TextStyle(
+    color: AppColors.lightGrey,
+    fontSize: 14.sp,
+    fontFamily: 'Poppins',
+    fontWeight: FontWeightHelper.medium,
+  );
 }

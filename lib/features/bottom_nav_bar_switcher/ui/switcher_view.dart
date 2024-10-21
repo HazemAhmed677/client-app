@@ -6,7 +6,6 @@ import 'package:client_app/features/notification/ui/notification_view.dart';
 import 'package:client_app/features/profile/ui/profile_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../logic/switch_views_cubit/switch_views_cubit.dart';
 import 'widgets/nav_bar_stack.dart';
 
@@ -38,20 +37,20 @@ class _SwitcherViewState extends State<SwitcherView> {
       extendBody: true,
       backgroundColor: AppColors.background,
       body: BlocBuilder<SwitchViewsCubit, SwitchViewsState>(
-        builder: (context, state) {
-          if (state is HomeState) {
-            return screens[0];
-          } else if (state is CheckBoardState) {
-            return screens[1];
-          } else if (state is CreateBoardState) {
-            return screens[2];
-          } else if (state is NotificationState) {
-            return screens[3];
-          } else {
-            return screens[4];
-          }
-        },
-      ),
+          builder: (context, state) => AnimatedSwitcher(
+                duration: const Duration(
+                  milliseconds: 200,
+                ),
+                child: (state is HomeState)
+                    ? screens[0]
+                    : (state is CheckBoardState)
+                        ? screens[1]
+                        : (state is CreateBoardState)
+                            ? screens[2]
+                            : (state is NotificationState)
+                                ? screens[3]
+                                : screens[4],
+              )),
       bottomNavigationBar: const NavBarStack(),
     );
   }

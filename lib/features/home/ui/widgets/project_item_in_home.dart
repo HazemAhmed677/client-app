@@ -1,4 +1,4 @@
-import 'package:client_app/core/helpers/icons.dart';
+import 'package:client_app/core/helpers/icons_and_texts.dart';
 import 'package:client_app/core/helpers/spacing.dart';
 import 'package:client_app/core/theming/app_colors.dart';
 import 'package:client_app/features/home/ui/widgets/custom_pie_chart.dart';
@@ -7,19 +7,24 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/theming/app_styles.dart';
 
-class ProjectItem extends StatelessWidget {
-  const ProjectItem({super.key});
+class ProjectItemInHome extends StatelessWidget {
+  const ProjectItemInHome({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100.sp,
+      height: 80.sp,
       decoration: BoxDecoration(
         color: AppColors.white,
-        borderRadius: BorderRadius.circular(16.sp),
+        borderRadius: BorderRadius.circular(
+          16.sp,
+        ),
       ),
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 14.sp, vertical: 16.sp),
+        padding: EdgeInsets.symmetric(
+          horizontal: 14.sp,
+          vertical: 10.sp,
+        ),
         child: Row(
           children: [
             Container(
@@ -33,7 +38,7 @@ class ProjectItem extends StatelessWidget {
                   12.sp,
                 ),
               ),
-              child: projectProfileIcon(),
+              child: projectPassportIcon(),
             ),
             horizontalSpace(14),
             Column(
@@ -44,29 +49,33 @@ class ProjectItem extends StatelessWidget {
                   'Passport Project',
                   style: AppStyles.poppinsSemiBold18.copyWith(
                     color: AppColors.black,
+                    fontSize: 16.sp,
                   ),
                 ),
                 Text(
                   '23 Tasks',
                   style: AppStyles.poppinsSemiBold18.copyWith(
                     color: AppColors.grey,
-                    fontSize: 16.sp,
+                    fontSize: 14.sp,
                   ),
                 ),
               ],
             ),
             const Spacer(),
-            const Flexible(
+            Flexible(
               child: Align(
-                alignment: Alignment.centerRight,
+                alignment: Alignment.topCenter,
                 child: AspectRatio(
                   aspectRatio: 1,
                   child: CustomPieChart(
                     pieChartColor: AppColors.projectColor2,
                     textColor: AppColors.black,
-                    radius: 6,
-                    fontSize: 16,
+                    radius: 5,
+                    fontSize: 14,
                     percentage: 70,
+                    pieChartColorSection2: AppColors.projectColor2.withOpacity(
+                      0.5,
+                    ),
                   ),
                 ),
               ),

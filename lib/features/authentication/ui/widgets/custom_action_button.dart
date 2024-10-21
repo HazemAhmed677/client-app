@@ -21,7 +21,7 @@ class CustomActionButton extends StatelessWidget {
           MediaQuery.of(context).size.width,
           52.sp,
         ),
-        backgroundColor: AppColors.primary,
+        backgroundColor: AppColors.secondary,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(
             32,

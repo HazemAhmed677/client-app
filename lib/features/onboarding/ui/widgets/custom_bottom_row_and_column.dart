@@ -56,7 +56,7 @@ class CustomBottomRowAndColumn extends StatelessWidget {
                     },
                     text: 'Log In',
                     textColor: AppColors.white,
-                    buttonColor: AppColors.primary,
+                    buttonColor: AppColors.secondary,
                     overlayColor: AppColors.white,
                   ),
                 ),
@@ -70,7 +70,7 @@ class CustomBottomRowAndColumn extends StatelessWidget {
                       context.push(Routes.signUpView);
                     },
                     text: 'Sign Up',
-                    textColor: AppColors.primary,
+                    textColor: AppColors.secondary,
                     buttonColor: AppColors.white,
                     overlayColor: AppColors.lightGrey,
                   ),

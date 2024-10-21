@@ -70,7 +70,7 @@ class _NavBarStackState extends State<NavBarStack> {
           color: AppColors.bottomNavBarColor,
           buttonBackgroundColor:
               flag ? AppColors.redDegree : AppColors.bottomNavBarColor,
-          backgroundColor: AppColors.white,
+          backgroundColor: Colors.transparent,
           animationCurve: Curves.easeInOut,
           animationDuration: const Duration(
             milliseconds: 200,

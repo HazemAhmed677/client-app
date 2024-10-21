@@ -1,0 +1,96 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../../../../core/helpers/icons_and_texts.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/theming/app_colors.dart';
+import '../../../../core/theming/app_styles.dart';
+import '../../../../core/widgets/common_container_for_check_board.dart';
+import 'more_options.dart';
+
+class CompletedCheckBoardItemDetails extends StatefulWidget {
+  const CompletedCheckBoardItemDetails({
+    super.key,
+  });
+
+  @override
+  State<CompletedCheckBoardItemDetails> createState() =>
+      _MeetingCheclBoardItemDetailsOfDetailsState();
+}
+
+class _MeetingCheclBoardItemDetailsOfDetailsState
+    extends State<CompletedCheckBoardItemDetails> {
+  // The currently selected priority.
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: 18.0.sp,
+              ),
+              child: Text(
+                'Meeting with Product Owner.',
+                style: AppStyles.interSemiBold18.copyWith(
+                  fontSize: 16.sp,
+                ),
+              ),
+            ),
+            const Spacer(),
+            Padding(
+              padding: EdgeInsets.only(
+                right: 10.0.sp,
+              ),
+              child: const MoreOptionsMenu(),
+            ),
+          ],
+        ),
+        verticalSpace(
+          12,
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: 18.0.sp,
+          ),
+          child: Row(
+            children: [
+              const CommonContainerForCheckBoard(
+                color: AppColors.lowPriority,
+                priority: 'Completed',
+              ),
+              horizontalSpace(12),
+              const CommonContainerForCheckBoard(
+                color: AppColors.meetingContainer,
+                priority: 'Meeting',
+              ),
+            ],
+          ),
+        ),
+        verticalSpace(16),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 18.0.sp),
+          child: Row(
+            children: [
+              iconHelperInCheckBoard(
+                FontAwesomeIcons.calendarCheck,
+                AppColors.grey,
+              ),
+              horizontalSpace(
+                6,
+              ),
+              textHelperInCheckBoard(
+                '6 Oct 2024',
+                color: AppColors.grey,
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}

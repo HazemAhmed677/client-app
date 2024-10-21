@@ -5,6 +5,16 @@ class CreateBoardBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text('Create Board'));
+    return const CustomScrollView(
+      clipBehavior: Clip.none,
+      physics: BouncingScrollPhysics(),
+      slivers: [
+        SliverToBoxAdapter(
+          child: Center(
+            child: Text('Create Board'),
+          ),
+        ),
+      ],
+    );
   }
 }

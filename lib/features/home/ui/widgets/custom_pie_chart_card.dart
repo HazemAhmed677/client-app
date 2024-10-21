@@ -12,18 +12,18 @@ class CustomPieChartCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 160.sp,
+      height: 150.sp,
       width: MediaQuery.sizeOf(context).width,
       decoration: BoxDecoration(
-        color: AppColors.secondary,
+        color: AppColors.primary,
         borderRadius: BorderRadius.circular(
-          24,
+          28.sp,
         ),
       ),
       child: Padding(
         padding: EdgeInsets.symmetric(
-          horizontal: 16.sp,
-          vertical: 22.sp,
+          horizontal: 18.sp,
+          vertical: 20.sp,
         ),
         child: Row(
           children: [
@@ -39,9 +39,9 @@ class CustomPieChartCard extends StatelessWidget {
                 const Spacer(),
                 InkWell(
                   overlayColor: WidgetStateProperty.all<Color>(
-                    AppColors.primary,
+                    AppColors.secondary,
                   ),
-                  highlightColor: AppColors.primary,
+                  highlightColor: AppColors.secondary,
                   onTap: () {},
                   child: Container(
                     height: 40.sp,
@@ -58,8 +58,8 @@ class CustomPieChartCard extends StatelessWidget {
                       child: Text(
                         'View Task',
                         style: AppStyles.interBold18.copyWith(
-                          color: AppColors.secondary,
-                          fontSize: 16,
+                          color: AppColors.primary,
+                          fontSize: 14.sp,
                         ),
                       ),
                     ),
@@ -68,9 +68,13 @@ class CustomPieChartCard extends StatelessWidget {
               ],
             ),
             const Spacer(),
-            const Flexible(
+            Flexible(
               fit: FlexFit.loose,
-              child: CustomPieChart(),
+              child: CustomPieChart(
+                pieChartColorSection2: AppColors.white.withOpacity(
+                  0.5,
+                ),
+              ),
             ),
           ],
         ),

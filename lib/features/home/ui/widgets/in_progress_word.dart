@@ -5,8 +5,8 @@ import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
 
-class InProgressWord extends StatelessWidget {
-  const InProgressWord({
+class CustomWord extends StatelessWidget {
+  const CustomWord({
     super.key,
     required this.title,
     required this.count,
@@ -21,20 +21,21 @@ class InProgressWord extends StatelessWidget {
           title,
           style: AppStyles.robotoMonoBold20.copyWith(
             fontWeight: FontWeightHelper.bold,
+            fontSize: 18.sp,
           ),
         ),
         horizontalSpace(
           10,
         ),
         CircleAvatar(
-          backgroundColor: AppColors.secondary.withOpacity(0.1),
+          backgroundColor: AppColors.primary.withOpacity(0.1),
           radius: 10.sp,
           child: Center(
             child: Text(
               count.toString(),
               style: AppStyles.poppinsSemiBold18.copyWith(
-                color: AppColors.secondary,
-                fontSize: 14.sp,
+                color: AppColors.primary,
+                fontSize: 13.sp,
               ),
             ),
           ),

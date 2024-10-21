@@ -26,7 +26,7 @@ class CustomTextFormField extends StatelessWidget {
       onChanged: onChanged,
       validator: validator,
       obscureText: obscure,
-      cursorColor: AppColors.primary,
+      cursorColor: AppColors.secondary,
       decoration: InputDecoration(
         suffixIcon: suffixIcon,
         contentPadding: EdgeInsets.symmetric(

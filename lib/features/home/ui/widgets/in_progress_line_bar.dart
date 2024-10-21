@@ -15,8 +15,8 @@ class InProgressLineBar extends StatelessWidget {
         ClipRRect(
           borderRadius: BorderRadius.circular(15),
           child: Container(
-            height: 10.sp,
-            width: double.infinity,
+            height: 8.sp,
+            width: MediaQuery.sizeOf(context).width,
             color: AppColors.white, // Background color of the bar
           ),
         ),
@@ -24,8 +24,8 @@ class InProgressLineBar extends StatelessWidget {
         ClipRRect(
           borderRadius: BorderRadius.circular(15),
           child: Container(
-            height: 10.sp,
-            width: 220 * (percentage / 100),
+            height: 8.sp,
+            width: (200 * (percentage / 100)).sp,
             color: Colors.blue, // Progress bar color
           ),
         ),
