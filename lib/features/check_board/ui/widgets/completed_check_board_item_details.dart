@@ -51,11 +51,11 @@ class _MeetingCheclBoardItemDetailsOfDetailsState
           ],
         ),
         verticalSpace(
-          12,
+          8,
         ),
         Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: 18.0.sp,
+            horizontal: 16.0.sp,
           ),
           child: Row(
             children: [
@@ -73,12 +73,14 @@ class _MeetingCheclBoardItemDetailsOfDetailsState
         ),
         verticalSpace(16),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 18.0.sp),
+          padding: EdgeInsets.symmetric(
+            horizontal: 18.0.sp,
+          ),
           child: Row(
             children: [
               iconHelperInCheckBoard(
                 FontAwesomeIcons.calendarCheck,
-                AppColors.grey,
+                AppColors.lightGrey,
               ),
               horizontalSpace(
                 6,

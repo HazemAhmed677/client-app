@@ -1,8 +1,10 @@
 import 'package:client_app/core/routing/routes.dart';
+import 'package:client_app/core/widgets/custom_slider_transition.dart';
 import 'package:client_app/core/widgets/custom_zooming_transition.dart';
 import 'package:client_app/features/authentication/ui/login_view.dart';
 import 'package:client_app/features/authentication/ui/sign_up_view.dart';
 import 'package:client_app/features/bottom_nav_bar_switcher/ui/switcher_view.dart';
+import 'package:client_app/features/check_board/ui/calendar_view.dart';
 import 'package:client_app/features/home/ui/home_view.dart';
 import 'package:client_app/features/onboarding/ui/onboarding_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -51,6 +53,14 @@ class AppRouter {
       GoRoute(
         path: Routes.homeView,
         builder: (context, state) => const HomeView(),
+      ),
+      GoRoute(
+        path: Routes.calendarView,
+        pageBuilder: (context, state) => CustomSliderTransition(
+          child: const CalendarView(),
+          key: state.pageKey,
+          duration: 300,
+        ),
       ),
     ],
   );

@@ -11,64 +11,83 @@ class InProgressItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 128.sp,
-      width: 228.sp,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(
-          22,
+          22.sp,
         ),
-        color: AppColors.taskColor1.withOpacity(
-          0.1,
-        ),
+        boxShadow: [
+          BoxShadow(
+            color: AppColors.taskColor1.withOpacity(0.1),
+            blurRadius: 1.sp,
+            spreadRadius: 1.sp,
+          ),
+        ],
       ),
-      child: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: 14.sp,
-          vertical: 12.sp,
+      child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(22.sp),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
+        child: Container(
+          height: 128.sp,
+          width: 228.sp,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(
+              22.sp,
+            ),
+            color: AppColors.taskColor1.withOpacity(
+              0.1,
+            ),
+          ),
+          child: Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 14.sp,
+              vertical: 12.sp,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'Office Project',
-                  style: AppStyles.poppinsSemiBold18.copyWith(
-                    color: AppColors.grey,
-                    fontSize: 16.sp,
-                  ),
+                Row(
+                  children: [
+                    Text(
+                      'Office Project',
+                      style: AppStyles.poppinsSemiBold18.copyWith(
+                        color: AppColors.grey,
+                        fontSize: 16.sp,
+                      ),
+                    ),
+                    const Spacer(),
+                    Container(
+                      height: 26.sp,
+                      width: 26.sp,
+                      decoration: BoxDecoration(
+                        color: AppColors.projectColor1,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: projectBookIcon(),
+                    )
+                  ],
                 ),
                 const Spacer(),
-                Container(
-                  height: 26.sp,
-                  width: 26.sp,
-                  decoration: BoxDecoration(
-                    color: AppColors.projectColor1,
-                    borderRadius: BorderRadius.circular(8),
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    'Grocery shopping app\ndesign',
+                    style: AppStyles.poppinsSemiBold18.copyWith(
+                      color: AppColors.black,
+                      fontSize: 17.sp,
+                    ),
                   ),
-                  child: projectBookIcon(),
-                )
+                ),
+                const Spacer(
+                  flex: 4,
+                ),
+                const InProgressLineBar(
+                  percentage: 70,
+                ),
+                const Spacer(),
               ],
             ),
-            const Spacer(),
-            FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Text(
-                'Grocery shopping app\ndesign',
-                style: AppStyles.poppinsSemiBold18.copyWith(
-                  color: AppColors.black,
-                  fontSize: 17.sp,
-                ),
-              ),
-            ),
-            const Spacer(
-              flex: 4,
-            ),
-            const InProgressLineBar(
-              percentage: 70,
-            ),
-            const Spacer(),
-          ],
+          ),
         ),
       ),
     );

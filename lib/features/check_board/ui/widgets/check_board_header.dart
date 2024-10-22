@@ -1,9 +1,12 @@
 import 'package:client_app/core/helpers/spacing.dart';
+import 'package:client_app/core/routing/app_router.dart';
+import 'package:client_app/core/routing/routes.dart';
 import 'package:client_app/core/theming/app_colors.dart';
 import 'package:client_app/core/theming/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 
 class CheckBoardHeader extends StatelessWidget {
   const CheckBoardHeader({super.key});
@@ -11,7 +14,7 @@ class CheckBoardHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 120.sp,
+      height: 110.sp,
       width: MediaQuery.sizeOf(context).width,
       decoration: const BoxDecoration(
         color: AppColors.white,
@@ -23,7 +26,9 @@ class CheckBoardHeader extends StatelessWidget {
           children: [
             const Spacer(),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 14.0.sp),
+              padding: EdgeInsets.symmetric(
+                horizontal: 14.0.sp,
+              ),
               child: Row(
                 children: [
                   InkWell(
@@ -44,8 +49,10 @@ class CheckBoardHeader extends StatelessWidget {
                   ),
                   horizontalSpace(24),
                   InkWell(
-                    onTap: () {},
-                    highlightColor: AppColors.grey,
+                    onTap: () {
+                      context.push(Routes.calendarView);
+                    },
+                    highlightColor: AppColors.primary,
                     child: Icon(
                       FontAwesomeIcons.calendarDays,
                       color: AppColors.secondary,

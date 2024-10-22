@@ -50,7 +50,12 @@ class OnboardingHeader extends StatelessWidget {
                           Routes.loginView,
                         );
                       },
-                      child: Text('Skip', style: AppStyles.gilroyRegular17),
+                      child: Text(
+                        'Skip',
+                        style: AppStyles.gilroyRegular17.copyWith(
+                          fontSize: 15.sp,
+                        ),
+                      ),
                     )
                   : const SizedBox.shrink(),
             ],
