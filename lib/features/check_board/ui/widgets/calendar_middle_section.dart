@@ -26,12 +26,12 @@ class _CalendarViewBodyState extends State<CalendarMiddleSection> {
       children: [
         // Year navigation row
         if (isYearView) _buildYearNavigation(),
-        SizedBox(
-          height: 350,
-          child: isYearView
-              ? _buildYearView() // Custom year view
-              : _buildMonthlyCalendar(), // Monthly calendar view
-        ),
+        isYearView
+            ? SizedBox(height: 400, child: _buildYearView()) // Custom year view
+            : Padding(
+                padding: EdgeInsets.only(bottom: 12.0.sp),
+                child: _buildMonthlyCalendar(),
+              ), // Monthly calendar view
       ],
     );
   }
@@ -39,6 +39,12 @@ class _CalendarViewBodyState extends State<CalendarMiddleSection> {
   // Monthly calendar using TableCalendar
   Widget _buildMonthlyCalendar() {
     return TableCalendar(
+      weekendDays: const [
+        DateTime.friday,
+      ],
+      daysOfWeekStyle: const DaysOfWeekStyle(
+        weekendStyle: TextStyle(color: Colors.redAccent),
+      ),
       firstDay: DateTime.utc(2021, 10, 16),
       lastDay: DateTime.utc(2030, 10, 16),
       focusedDay: _focusedDay,
@@ -70,6 +76,24 @@ class _CalendarViewBodyState extends State<CalendarMiddleSection> {
       onPageChanged: (focusedDay) {
         _focusedDay = focusedDay;
       },
+      // calendarBuilders: CalendarBuilders(
+      //   defaultBuilder: (context, day, focusedDay) {
+      //     // Check if the day is a Friday (left column) or Saturday (right column)
+      //     if (day.weekday == DateTime.friday) {
+      //       return buildDayContainer(
+      //           day, Colors.redAccent); // Special color for Fridays
+      //     }
+      //     return null; // Use default style for other days
+      //   },
+      //   todayBuilder: (context, day, focusedDay) {
+      //     return buildDayContainer(
+      //         day, Colors.orangeAccent); // Today's day color
+      //   },
+      //   selectedBuilder: (context, day, focusedDay) {
+      //     return buildDayContainer(
+      //         day, AppColors.secondary); // Selected day color
+      //   },
+      // ),
     );
   }
 

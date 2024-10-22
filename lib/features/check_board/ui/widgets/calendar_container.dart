@@ -13,7 +13,6 @@ class CalendarContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 440.sp,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
             bottomRight: Radius.circular(28.sp),
