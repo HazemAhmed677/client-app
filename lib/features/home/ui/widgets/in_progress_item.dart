@@ -11,14 +11,16 @@ class InProgressItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 128.sp,
+      width: 228.sp,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(
-          22.sp,
+          28.sp,
         ),
         boxShadow: [
           BoxShadow(
             color: AppColors.taskColor1.withOpacity(0.1),
-            blurRadius: 1.sp,
+            blurRadius: 2.sp,
             spreadRadius: 1.sp,
           ),
         ],

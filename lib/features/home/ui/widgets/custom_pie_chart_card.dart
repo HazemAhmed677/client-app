@@ -18,9 +18,9 @@ class CustomPieChartCard extends StatelessWidget {
         ),
         boxShadow: [
           BoxShadow(
-            color: AppColors.primary.withOpacity(0.4),
-            blurRadius: 10.sp,
-            spreadRadius: 5.sp,
+            color: AppColors.primary.withOpacity(0.2),
+            blurRadius: 6.sp,
+            spreadRadius: 2.sp,
           ),
         ],
       ),

@@ -9,7 +9,6 @@ import 'package:client_app/features/home/ui/home_view.dart';
 import 'package:client_app/features/onboarding/ui/onboarding_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-
 import '../../features/bottom_nav_bar_switcher/logic/switch_views_cubit/switch_views_cubit.dart';
 
 class AppRouter {
@@ -59,7 +58,7 @@ class AppRouter {
         pageBuilder: (context, state) => CustomSliderTransition(
           child: const CalendarView(),
           key: state.pageKey,
-          duration: 300,
+          duration: 100,
         ),
       ),
     ],

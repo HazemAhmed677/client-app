@@ -1,3 +1,5 @@
+import 'package:client_app/core/helpers/spacing.dart';
+import 'package:client_app/features/check_board/ui/widgets/calendar_container.dart';
 import 'package:flutter/material.dart';
 
 class CalendarViewBody extends StatelessWidget {
@@ -5,6 +7,13 @@ class CalendarViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text('HHHHH'));
+    return Column(
+      children: [
+        verticalSpace(
+          12,
+        ),
+        const CalendarContainer()
+      ],
+    );
   }
 }
