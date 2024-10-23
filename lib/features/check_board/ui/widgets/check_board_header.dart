@@ -3,15 +3,24 @@ import 'package:client_app/core/routing/routes.dart';
 import 'package:client_app/core/theming/app_colors.dart';
 import 'package:client_app/core/theming/app_styles.dart';
 import 'package:client_app/features/check_board/logic/choose_bar_cubit/choose_bar_cubit.dart';
+import 'package:client_app/features/check_board/ui/widgets/custom_search_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 
-class CheckBoardHeader extends StatelessWidget {
-  const CheckBoardHeader({super.key});
+class CheckBoardHeader extends StatefulWidget {
+  const CheckBoardHeader({
+    super.key,
+    required this.focusNode,
+  });
+  final FocusNode focusNode;
+  @override
+  State<CheckBoardHeader> createState() => _CheckBoardHeaderState();
+}
 
+class _CheckBoardHeaderState extends State<CheckBoardHeader> {
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -51,22 +60,18 @@ class CheckBoardHeader extends StatelessWidget {
                           );
                         },
                       ),
-                      const Spacer(),
-                      Icon(
-                        FontAwesomeIcons.magnifyingGlass,
-                        color: AppColors.secondary,
-                        size: 22.sp,
+                      horizontalSpace(14),
+                      Expanded(
+                        child: CustomSearchTextFeild(
+                          onPressedOnIcon: () {},
+                          focusNode: widget.focusNode,
+                        ),
                       ),
-                      horizontalSpace(24),
+                      horizontalSpace(12),
                       InkWell(
                         onTap: () {
                           context.push(Routes.calendarView);
                         },
-                        overlayColor: WidgetStateProperty.all<Color>(
-                          AppColors.primary,
-                        ),
-                        splashColor: AppColors.primary,
-                        highlightColor: AppColors.primary,
                         child: Icon(
                           FontAwesomeIcons.calendarDays,
                           color: AppColors.secondary,
