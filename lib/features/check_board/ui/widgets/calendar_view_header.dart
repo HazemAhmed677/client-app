@@ -10,7 +10,6 @@ class CalendarViewHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         IconButton(
           onPressed: () {
@@ -21,16 +20,20 @@ class CalendarViewHeader extends StatelessWidget {
             color: AppColors.black,
           ),
         ),
-        Center(
-          child: Text(
-            "Calendar",
-            style: AppStyles.robotoMonoBold20.copyWith(
-              color: AppColors.black,
-              fontSize: 20.sp,
-              // fontWeight: FontWeightHelper.bold,
-            ),
+        const Spacer(
+          flex: 2,
+        ),
+        Text(
+          "Calendar",
+          style: AppStyles.robotoMonoBold20.copyWith(
+            color: AppColors.black,
+            fontSize: 20.sp,
+            // fontWeight: FontWeightHelper.bold,
           ),
-        )
+        ),
+        const Spacer(
+          flex: 3,
+        ),
       ],
     );
   }

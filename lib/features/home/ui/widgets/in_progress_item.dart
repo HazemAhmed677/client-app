@@ -14,14 +14,15 @@ class InProgressItem extends StatelessWidget {
       height: 128.sp,
       width: 228.sp,
       decoration: BoxDecoration(
+        color: AppColors.grey.withOpacity(0.04.sp),
         borderRadius: BorderRadius.circular(
           28.sp,
         ),
         boxShadow: [
           BoxShadow(
-            color: AppColors.taskColor1.withOpacity(0.1),
-            blurRadius: 2.sp,
-            spreadRadius: 1.sp,
+            color: AppColors.taskColor1.withOpacity(0.02),
+            blurRadius: 1.sp,
+            spreadRadius: 0.5.sp,
           ),
         ],
       ),

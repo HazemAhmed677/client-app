@@ -91,7 +91,7 @@ class _AssignmentCheckBoardItemDetailsState
             children: [
               iconHelperInCheckBoard(
                 FontAwesomeIcons.calendarMinus,
-                AppColors.lightGrey,
+                AppColors.darkGrey,
               ),
               horizontalSpace(
                 6,

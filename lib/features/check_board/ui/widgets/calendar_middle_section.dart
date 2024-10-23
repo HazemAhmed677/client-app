@@ -22,28 +22,45 @@ class _CalendarViewBodyState extends State<CalendarMiddleSection> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        // Year navigation row
-        if (isYearView) _buildYearNavigation(),
-        isYearView
-            ? SizedBox(height: 400, child: _buildYearView()) // Custom year view
-            : Padding(
-                padding: EdgeInsets.only(bottom: 12.0.sp),
-                child: _buildMonthlyCalendar(),
-              ), // Monthly calendar view
-      ],
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 12.0.sp, vertical: 4.sp),
+      child: Column(
+        children: [
+          // Year navigation row
+          if (isYearView) _buildYearNavigation(),
+          isYearView
+              ? SizedBox(
+                  height: 400,
+                  child: _buildYearView(),
+                ) // Custom year view
+              : Padding(
+                  padding: EdgeInsets.only(bottom: 12.0.sp),
+                  child: _buildMonthlyCalendar(),
+                ), // Monthly calendar view
+        ],
+      ),
     );
   }
 
-  // Monthly calendar using TableCalendar
   Widget _buildMonthlyCalendar() {
     return TableCalendar(
+      headerStyle: HeaderStyle(
+        titleTextStyle: AppStyles.poppinsMedium14.copyWith(
+          color: AppColors.bottomNavBarColor,
+          fontSize: 15.sp,
+        ),
+        formatButtonTextStyle: AppStyles.poppinsMedium14.copyWith(
+          color: AppColors.bottomNavBarColor,
+          fontSize: 12.sp,
+        ),
+      ),
       weekendDays: const [
         DateTime.friday,
       ],
-      daysOfWeekStyle: const DaysOfWeekStyle(
-        weekendStyle: TextStyle(color: Colors.redAccent),
+      daysOfWeekStyle: DaysOfWeekStyle(
+        weekendStyle: AppStyles.poppinsMedium14.copyWith(
+          color: Colors.redAccent,
+        ),
       ),
       firstDay: DateTime.utc(2021, 10, 16),
       lastDay: DateTime.utc(2030, 10, 16),
@@ -62,11 +79,21 @@ class _CalendarViewBodyState extends State<CalendarMiddleSection> {
           isYearView = true;
         });
       },
-      calendarStyle: const CalendarStyle(
-          selectedDecoration: BoxDecoration(
-        color: AppColors.secondary,
-        shape: BoxShape.circle,
-      )),
+      calendarStyle: CalendarStyle(
+        todayTextStyle: AppStyles.poppinsMedium14.copyWith(
+          color: AppColors.white,
+        ),
+        defaultTextStyle: AppStyles.poppinsMedium14.copyWith(
+          color: AppColors.bottomNavBarColor,
+        ),
+        outsideTextStyle: AppStyles.poppinsMedium14.copyWith(
+          color: AppColors.grey,
+        ),
+        selectedDecoration: const BoxDecoration(
+          color: AppColors.secondary,
+          shape: BoxShape.circle,
+        ),
+      ),
       calendarFormat: calendarFormat,
       onFormatChanged: (format) {
         setState(() {
@@ -76,30 +103,24 @@ class _CalendarViewBodyState extends State<CalendarMiddleSection> {
       onPageChanged: (focusedDay) {
         _focusedDay = focusedDay;
       },
-      // calendarBuilders: CalendarBuilders(
-      //   defaultBuilder: (context, day, focusedDay) {
-      //     // Check if the day is a Friday (left column) or Saturday (right column)
-      //     if (day.weekday == DateTime.friday) {
-      //       return buildDayContainer(
-      //           day, Colors.redAccent); // Special color for Fridays
-      //     }
-      //     return null; // Use default style for other days
-      //   },
-      //   todayBuilder: (context, day, focusedDay) {
-      //     return buildDayContainer(
-      //         day, Colors.orangeAccent); // Today's day color
-      //   },
-      //   selectedBuilder: (context, day, focusedDay) {
-      //     return buildDayContainer(
-      //         day, AppColors.secondary); // Selected day color
-      //   },
-      // ),
+      calendarBuilders: CalendarBuilders(
+        defaultBuilder: (context, day, focusedDay) {
+          // Check if the day is a Friday (left column) or Saturday (right column)
+          if (day.weekday == DateTime.friday) {
+            return buildDayContainer(
+                day, AppColors.white); // Special color for Fridays
+          }
+          return null; // Use default style for other days
+        },
+      ),
     );
   }
 
   // Custom yearly view (grid of months)
   Widget _buildYearView() {
     return GridView.builder(
+      physics: const BouncingScrollPhysics(),
+      clipBehavior: Clip.hardEdge,
       padding: const EdgeInsets.all(8),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3, // 3 months in a row
@@ -120,7 +141,10 @@ class _CalendarViewBodyState extends State<CalendarMiddleSection> {
           },
           child: Container(
             decoration: BoxDecoration(
-              color: AppColors.secondary,
+              color: Colors.accents[index % Colors.accents.length].shade700
+                  .withOpacity(
+                0.8,
+              ),
               borderRadius: BorderRadius.circular(
                 14.sp,
               ),

@@ -40,7 +40,7 @@ class ProjectItemInHome extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.symmetric(
               horizontal: 14.sp,
-              vertical: 10.sp,
+              vertical: 12.sp,
             ),
             child: Row(
               children: [
@@ -87,12 +87,12 @@ class ProjectItemInHome extends StatelessWidget {
                       child: CustomPieChart(
                         pieChartColor: AppColors.projectColor2,
                         textColor: AppColors.black,
-                        radius: 5,
-                        fontSize: 14,
+                        radius: 5.sp,
+                        fontSize: 13.sp,
                         percentage: 70,
                         pieChartColorSection2:
                             AppColors.projectColor2.withOpacity(
-                          0.5,
+                          0.3,
                         ),
                       ),
                     ),

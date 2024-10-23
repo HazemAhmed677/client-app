@@ -39,7 +39,7 @@ class ProjectSliverListItemDetails extends StatelessWidget {
               children: [
                 iconHelperInCheckBoard(
                   FontAwesomeIcons.calendarDays,
-                  AppColors.lightGrey,
+                  AppColors.darkGrey,
                 ),
                 horizontalSpace(6),
                 textHelperInCheckBoard(
@@ -83,7 +83,7 @@ class ProjectSliverListItemDetails extends StatelessWidget {
                 horizontalSpace(6),
                 textHelperInCheckBoard(
                   '26 Tasks',
-                  color: AppColors.lightGrey,
+                  color: AppColors.darkGrey,
                 ),
               ],
             )

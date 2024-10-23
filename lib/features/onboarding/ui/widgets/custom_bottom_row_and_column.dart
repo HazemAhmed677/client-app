@@ -72,7 +72,7 @@ class CustomBottomRowAndColumn extends StatelessWidget {
                     text: 'Sign Up',
                     textColor: AppColors.secondary,
                     buttonColor: AppColors.white,
-                    overlayColor: AppColors.lightGrey,
+                    overlayColor: AppColors.darkGrey,
                   ),
                 ),
                 verticalSpace(

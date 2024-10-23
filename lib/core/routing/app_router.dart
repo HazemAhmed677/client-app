@@ -23,7 +23,7 @@ class AppRouter {
       // login
       GoRoute(
         path: Routes.loginView,
-        pageBuilder: (context, state) => CustomZoomingTransition(
+        pageBuilder: (context, state) => CustomSliderTransition(
           child: const LoginView(),
           key: state.pageKey,
           duration: 300,
@@ -33,7 +33,7 @@ class AppRouter {
       // sign up
       GoRoute(
         path: Routes.signUpView,
-        pageBuilder: (context, state) => CustomZoomingTransition(
+        pageBuilder: (context, state) => CustomSliderTransition(
           child: const SignUpView(),
           key: state.pageKey,
           duration: 300,
@@ -55,10 +55,10 @@ class AppRouter {
       ),
       GoRoute(
         path: Routes.calendarView,
-        pageBuilder: (context, state) => CustomSliderTransition(
+        pageBuilder: (context, state) => CustomZoomingTransition(
           child: const CalendarView(),
           key: state.pageKey,
-          duration: 100,
+          duration: 300,
         ),
       ),
     ],

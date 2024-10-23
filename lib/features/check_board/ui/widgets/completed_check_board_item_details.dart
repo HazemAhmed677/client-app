@@ -80,7 +80,7 @@ class _MeetingCheclBoardItemDetailsOfDetailsState
             children: [
               iconHelperInCheckBoard(
                 FontAwesomeIcons.calendarCheck,
-                AppColors.lightGrey,
+                AppColors.darkGrey,
               ),
               horizontalSpace(
                 6,
