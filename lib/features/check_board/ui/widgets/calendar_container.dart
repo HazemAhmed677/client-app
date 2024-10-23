@@ -2,6 +2,7 @@ import 'package:client_app/features/check_board/ui/widgets/calendar_view_header.
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_colors.dart';
 import 'calendar_middle_section.dart';
 
@@ -41,12 +42,18 @@ class CalendarContainer extends StatelessWidget {
           )
         ],
       ),
-      child: const Column(
+      child: Column(
         children: [
-          SafeArea(
-            child: CalendarViewHeader(),
+          verticalSpace(
+            12,
           ),
-          CalendarMiddleSection(),
+          SafeArea(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 2.0.sp),
+              child: const CalendarViewHeader(),
+            ),
+          ),
+          const CalendarMiddleSection(),
         ],
       ),
     );
