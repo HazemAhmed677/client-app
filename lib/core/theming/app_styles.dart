@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppStyles {
   static TextStyle gilroyRegular17 = TextStyle(
-    color: AppColors.lightGrey,
+    color: AppColors.darkGrey,
     fontSize: 17.sp,
     fontFamily: 'Gilroy',
     fontWeight: FontWeightHelper.semiBold,
@@ -17,19 +17,19 @@ class AppStyles {
     fontWeight: FontWeightHelper.semiBold,
   );
   static TextStyle gilroySemiBold16 = TextStyle(
-    color: AppColors.lightGrey,
+    color: AppColors.darkGrey,
     fontSize: 16.sp,
     fontFamily: 'AfacadFlux',
     fontWeight: FontWeightHelper.semiBold,
   );
   static TextStyle poppinsSemiBold18 = TextStyle(
-    color: AppColors.lightGrey,
+    color: AppColors.darkGrey,
     fontSize: 18.sp,
     fontFamily: 'AfacadFlux',
     fontWeight: FontWeightHelper.semiBold,
   );
   static TextStyle poppinsSemiBold24 = TextStyle(
-    color: AppColors.lightGrey,
+    color: AppColors.darkGrey,
     fontSize: 24.sp,
     fontFamily: 'AfacadFlux',
     fontWeight: FontWeightHelper.semiBold,
@@ -54,7 +54,7 @@ class AppStyles {
     fontFamily: 'RobotoMono',
   );
   static TextStyle poppinsMedium14 = TextStyle(
-    color: AppColors.lightGrey,
+    color: AppColors.darkGrey,
     fontSize: 14.sp,
     fontFamily: 'Poppins',
     fontWeight: FontWeightHelper.medium,

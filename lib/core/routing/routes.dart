@@ -4,4 +4,5 @@ class Routes {
   static const signUpView = '/signUpView';
   static const switcherView = '/switcherView';
   static const homeView = '/homeView';
+  static const calendarView = '/calendarView';
 }

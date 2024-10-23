@@ -11,7 +11,7 @@ class ProjectsListView extends StatelessWidget {
       itemCount: 4,
       itemBuilder: (BuildContext context, int index) => Padding(
         padding: EdgeInsets.only(
-          bottom: (index != 3) ? 16.sp : 0,
+          bottom: (index != 3) ? 12.sp : 0,
         ),
         child: const ProjectItemInHome(),
       ),

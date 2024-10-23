@@ -52,7 +52,6 @@ class _MeetingCheclBoardItemDetailsOfDetailsState
             ),
           ],
         ),
-        verticalSpace(4),
         Padding(
           padding: EdgeInsets.symmetric(
             horizontal: 8.sp,

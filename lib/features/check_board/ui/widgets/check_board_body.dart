@@ -10,51 +10,64 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'check_board_header.dart';
 import 'custom_board_bar.dart';
 
-class CheckBoardBody extends StatelessWidget {
+class CheckBoardBody extends StatefulWidget {
   const CheckBoardBody({super.key});
 
   @override
+  State<CheckBoardBody> createState() => _CheckBoardBodyState();
+}
+
+class _CheckBoardBodyState extends State<CheckBoardBody> {
+  FocusNode focusNode = FocusNode();
+  @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      clipBehavior: Clip.none,
-      physics: const BouncingScrollPhysics(),
-      slivers: [
-        const SliverToBoxAdapter(
-          child: CheckBoardHeader(),
-        ),
-        SliverToBoxAdapter(
-          child: verticalSpace(24),
-        ),
-        const SliverToBoxAdapter(
-          child: CustomBoardBar(),
-        ),
-        SliverToBoxAdapter(
-          child: verticalSpace(24),
-        ),
-        SliverPadding(
-          padding: EdgeInsets.symmetric(
-            horizontal: 22.sp,
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).unfocus();
+      },
+      child: CustomScrollView(
+        clipBehavior: Clip.none,
+        physics: const BouncingScrollPhysics(),
+        slivers: [
+          SliverToBoxAdapter(
+            child: CheckBoardHeader(
+              focusNode: focusNode,
+            ),
           ),
-          sliver: BlocBuilder<ChooseBarCubit, ChooseBarState>(
-            builder: (context, state) => (state is ProjectsState)
-                ? const ProjectsSliverList()
-                : (state is AssignmentsState)
-                    ? const AssignmentsSliverList()
-                    : (state is MeetingsState)
-                        ? const MeetingsSliverList()
-                        : (state is CompletedState)
-                            ? const CompletedSliverList()
-                            : const SliverToBoxAdapter(
-                                child: SizedBox.shrink(),
-                              ),
+          SliverToBoxAdapter(
+            child: verticalSpace(24),
           ),
-        ),
-        SliverToBoxAdapter(
-          child: verticalSpace(
-            100,
+          const SliverToBoxAdapter(
+            child: CustomBoardBar(),
           ),
-        )
-      ],
+          SliverToBoxAdapter(
+            child: verticalSpace(24),
+          ),
+          SliverPadding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 22.sp,
+            ),
+            sliver: BlocBuilder<ChooseBarCubit, ChooseBarState>(
+              builder: (context, state) => (state is ProjectsState)
+                  ? const ProjectsSliverList()
+                  : (state is AssignmentsState)
+                      ? const AssignmentsSliverList()
+                      : (state is MeetingsState)
+                          ? const MeetingsSliverList()
+                          : (state is CompletedState)
+                              ? const CompletedSliverList()
+                              : const SliverToBoxAdapter(
+                                  child: SizedBox.shrink(),
+                                ),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: verticalSpace(
+              100,
+            ),
+          )
+        ],
+      ),
     );
   }
 }

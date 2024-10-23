@@ -12,10 +12,10 @@ Icon projectBookIcon() {
   );
 }
 
-Icon projectPassportIcon() {
+Icon projectPassportIcon({Color color = AppColors.projectColor2}) {
   return Icon(
     FontAwesomeIcons.passport,
-    color: AppColors.projectColor2,
+    color: color,
     size: 22.sp,
   );
 }
