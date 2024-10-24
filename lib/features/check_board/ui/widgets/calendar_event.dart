@@ -57,7 +57,7 @@ class CalendarEvent extends StatelessWidget {
                   ),
                 ),
                 verticalSpace(
-                  2,
+                  4,
                 ),
                 FittedBox(
                   fit: BoxFit.scaleDown,

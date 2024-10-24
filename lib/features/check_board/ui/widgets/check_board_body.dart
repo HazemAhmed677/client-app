@@ -63,7 +63,7 @@ class _CheckBoardBodyState extends State<CheckBoardBody> {
           ),
           SliverToBoxAdapter(
             child: verticalSpace(
-              100,
+              MediaQuery.of(context).viewInsets.bottom != 0 ? 0 : 100,
             ),
           )
         ],

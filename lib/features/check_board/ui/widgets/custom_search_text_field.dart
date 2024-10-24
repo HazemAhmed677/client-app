@@ -1,4 +1,6 @@
+import 'package:client_app/core/theming/app_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../core/theming/app_colors.dart';
@@ -26,24 +28,25 @@ class CustomSearchTextFeild extends StatelessWidget {
       onFieldSubmitted: onSubmitted,
       cursorColor: AppColors.secondary,
       decoration: InputDecoration(
-        contentPadding: const EdgeInsets.symmetric(
-          horizontal: 22,
-          vertical: 12,
+        contentPadding: EdgeInsets.symmetric(
+          horizontal: 4.sp,
+          vertical: 2.sp,
         ),
         hintFadeDuration: const Duration(
           milliseconds: 200,
         ),
         prefixIcon: IconButton(
           onPressed: onPressedOnIcon,
-          icon: const Icon(
+          icon: Icon(
             FontAwesomeIcons.magnifyingGlass,
+            size: 18.sp,
           ),
           color: AppColors.secondary,
         ),
         hintText: 'Search',
-        hintStyle: const TextStyle(
-          color: Colors.grey,
-          fontSize: 18,
+        hintStyle: AppStyles.poppinsSemiBold18.copyWith(
+          fontSize: 17.sp,
+          color: Colors.grey.shade500,
         ),
         enabledBorder: buildBorder(
           color: Colors.grey.shade400,

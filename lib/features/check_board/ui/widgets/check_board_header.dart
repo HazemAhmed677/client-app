@@ -62,9 +62,12 @@ class _CheckBoardHeaderState extends State<CheckBoardHeader> {
                       ),
                       horizontalSpace(14),
                       Expanded(
-                        child: CustomSearchTextFeild(
-                          onPressedOnIcon: () {},
-                          focusNode: widget.focusNode,
+                        child: SizedBox(
+                          height: 42.sp,
+                          child: CustomSearchTextFeild(
+                            onPressedOnIcon: () {},
+                            focusNode: widget.focusNode,
+                          ),
                         ),
                       ),
                       horizontalSpace(12),

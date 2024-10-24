@@ -1,6 +1,6 @@
 import 'package:client_app/core/routing/routes.dart';
+import 'package:client_app/core/views/task_details_view.dart';
 import 'package:client_app/core/widgets/custom_slider_transition.dart';
-import 'package:client_app/core/widgets/custom_zooming_transition.dart';
 import 'package:client_app/features/authentication/ui/login_view.dart';
 import 'package:client_app/features/authentication/ui/sign_up_view.dart';
 import 'package:client_app/features/bottom_nav_bar_switcher/ui/switcher_view.dart';
@@ -55,11 +55,15 @@ class AppRouter {
       ),
       GoRoute(
         path: Routes.calendarView,
-        pageBuilder: (context, state) => CustomZoomingTransition(
+        pageBuilder: (context, state) => CustomSliderTransition(
           child: const CalendarView(),
           key: state.pageKey,
-          duration: 300,
+          duration: 150,
         ),
+      ),
+      GoRoute(
+        path: Routes.taskDetailsView,
+        builder: (context, state) => const TaskDetailsView(),
       ),
     ],
   );

@@ -1,4 +1,3 @@
-import 'package:client_app/core/theming/app_colors.dart';
 import 'package:client_app/features/check_board/ui/check_board_view.dart';
 import 'package:client_app/features/create_board/ui/widgets/create_board_body.dart';
 import 'package:client_app/features/home/ui/home_view.dart';
@@ -35,23 +34,26 @@ class _SwitcherViewState extends State<SwitcherView> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      backgroundColor: AppColors.background,
       body: BlocBuilder<SwitchViewsCubit, SwitchViewsState>(
-          builder: (context, state) => AnimatedSwitcher(
-                duration: const Duration(
-                  milliseconds: 200,
-                ),
-                child: (state is HomeState)
-                    ? screens[0]
-                    : (state is CheckBoardState)
-                        ? screens[1]
-                        : (state is CreateBoardState)
-                            ? screens[2]
-                            : (state is NotificationState)
-                                ? screens[3]
-                                : screens[4],
-              )),
-      bottomNavigationBar: const NavBarStack(),
+        builder: (context, state) => AnimatedSwitcher(
+          duration: const Duration(
+            milliseconds: 200,
+          ),
+          child: (state is HomeState)
+              ? screens[0]
+              : (state is CheckBoardState)
+                  ? screens[1]
+                  : (state is CreateBoardState)
+                      ? screens[2]
+                      : (state is NotificationState)
+                          ? screens[3]
+                          : screens[4],
+        ),
+      ),
+      bottomNavigationBar: Padding(
+          padding:
+              EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+          child: const NavBarStack()),
     );
   }
 }
