@@ -1,16 +1,14 @@
-import 'package:client_app/features/check_board/ui/widgets/calendar_view_header.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/helpers/spacing.dart';
-import '../../../../core/theming/app_colors.dart';
-import 'calendar_middle_section.dart';
+import '../theming/app_colors.dart';
 
-class CalendarContainer extends StatelessWidget {
-  const CalendarContainer({
+class DynamicContainer extends StatelessWidget {
+  const DynamicContainer({
     super.key,
+    required this.child,
   });
-
+  final Widget child;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -42,20 +40,7 @@ class CalendarContainer extends StatelessWidget {
           )
         ],
       ),
-      child: Column(
-        children: [
-          verticalSpace(
-            12,
-          ),
-          SafeArea(
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 2.0.sp),
-              child: const CalendarViewHeader(),
-            ),
-          ),
-          const CalendarMiddleSection(),
-        ],
-      ),
+      child: child,
     );
   }
 }

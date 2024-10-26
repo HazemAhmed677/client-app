@@ -46,7 +46,7 @@ class _CustomBoardBarState extends State<CustomBoardBar> {
                   text: (index == 0)
                       ? 'Projects'
                       : (index == 1)
-                          ? 'Assignments'
+                          ? 'Tasks'
                           : (index == 2)
                               ? 'Meetings'
                               : 'Completed',

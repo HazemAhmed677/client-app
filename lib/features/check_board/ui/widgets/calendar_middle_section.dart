@@ -141,10 +141,7 @@ class _CalendarViewBodyState extends State<CalendarMiddleSection> {
           },
           child: Container(
             decoration: BoxDecoration(
-              color: Colors.accents[index % Colors.accents.length].shade700
-                  .withOpacity(
-                0.8,
-              ),
+              color: AppColors.darkGrey,
               borderRadius: BorderRadius.circular(
                 14.sp,
               ),

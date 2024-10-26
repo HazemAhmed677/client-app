@@ -8,17 +8,16 @@ import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
 import '../../../../core/widgets/common_container_for_check_board.dart';
 
-class AssignmentCheckBoardItemDetails extends StatefulWidget {
-  const AssignmentCheckBoardItemDetails({super.key, required this.priorities});
+class TaskCheckBoardItemDetails extends StatefulWidget {
+  const TaskCheckBoardItemDetails({super.key, required this.priorities});
   final List<CommonContainerForCheckBoard> priorities;
 
   @override
-  State<AssignmentCheckBoardItemDetails> createState() =>
-      _AssignmentCheckBoardItemDetailsState();
+  State<TaskCheckBoardItemDetails> createState() =>
+      _TaskCheckBoardItemDetailsState();
 }
 
-class _AssignmentCheckBoardItemDetailsState
-    extends State<AssignmentCheckBoardItemDetails> {
+class _TaskCheckBoardItemDetailsState extends State<TaskCheckBoardItemDetails> {
   // The currently selected priority.
   CommonContainerForCheckBoard priorityChoosed =
       const CommonContainerForCheckBoard(

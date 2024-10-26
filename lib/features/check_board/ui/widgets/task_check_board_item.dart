@@ -1,19 +1,18 @@
-import 'package:client_app/features/check_board/ui/widgets/assignment_check_board_item_details.dart';
+import 'package:client_app/features/check_board/ui/widgets/task_check_board_item_details.dart';
 import 'package:client_app/features/check_board/ui/widgets/common_check_board_item.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/widgets/common_container_for_check_board.dart';
 
-class AssingmentCheckBoardItem extends StatefulWidget {
-  const AssingmentCheckBoardItem({super.key});
+class TaskCheckBoardItem extends StatefulWidget {
+  const TaskCheckBoardItem({super.key});
 
   @override
-  State<AssingmentCheckBoardItem> createState() =>
-      _AssingmentCheckBoardItemState();
+  State<TaskCheckBoardItem> createState() => _TaskCheckBoardItemState();
 }
 
-class _AssingmentCheckBoardItemState extends State<AssingmentCheckBoardItem> {
+class _TaskCheckBoardItemState extends State<TaskCheckBoardItem> {
   final List<CommonContainerForCheckBoard> priorities = const [
     CommonContainerForCheckBoard(
       color: AppColors.highPriority,
@@ -35,7 +34,7 @@ class _AssingmentCheckBoardItemState extends State<AssingmentCheckBoardItem> {
   @override
   Widget build(BuildContext context) {
     return CommonCheckBoardItem(
-      child: AssignmentCheckBoardItemDetails(
+      child: TaskCheckBoardItemDetails(
         priorities: priorities,
       ),
     );
