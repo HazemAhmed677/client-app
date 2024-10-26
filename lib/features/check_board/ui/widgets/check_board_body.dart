@@ -51,8 +51,8 @@ class _CheckBoardBodyState extends State<CheckBoardBody> {
               sliver: BlocBuilder<ChooseBarCubit, ChooseBarState>(
                 builder: (context, state) => (state is ProjectsState)
                     ? const ProjectsSliverList()
-                    : (state is AssignmentsState)
-                        ? const AssignmentsSliverList()
+                    : (state is TasksState)
+                        ? const TasksSliverList()
                         : (state is MeetingsState)
                             ? const MeetingsSliverList()
                             : (state is CompletedState)

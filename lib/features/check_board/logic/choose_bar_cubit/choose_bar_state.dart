@@ -5,7 +5,7 @@ sealed class ChooseBarState {}
 
 final class ProjectsState extends ChooseBarState {}
 
-final class AssignmentsState extends ChooseBarState {}
+final class TasksState extends ChooseBarState {}
 
 final class MeetingsState extends ChooseBarState {}
 

@@ -8,7 +8,7 @@ class ChooseBarCubit extends Cubit<ChooseBarState> {
     if (currentIndex == 0) {
       emit(ProjectsState());
     } else if (currentIndex == 1) {
-      emit(AssignmentsState());
+      emit(TasksState());
     } else if (currentIndex == 2) {
       emit(MeetingsState());
     } else {
