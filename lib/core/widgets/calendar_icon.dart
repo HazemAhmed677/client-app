@@ -9,8 +9,9 @@ import '../theming/app_colors.dart';
 class CalendarIcon extends StatelessWidget {
   const CalendarIcon({
     super.key,
+    this.color = AppColors.secondary,
   });
-
+  final Color color;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -19,7 +20,7 @@ class CalendarIcon extends StatelessWidget {
       },
       child: Icon(
         FontAwesomeIcons.calendarDays,
-        color: AppColors.secondary,
+        color: color,
         size: 22.sp,
       ),
     );
