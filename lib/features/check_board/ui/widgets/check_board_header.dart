@@ -1,11 +1,8 @@
 import 'package:client_app/core/helpers/spacing.dart';
 import 'package:client_app/core/routing/routes.dart';
 import 'package:client_app/core/theming/app_colors.dart';
-import 'package:client_app/core/theming/app_styles.dart';
-import 'package:client_app/features/check_board/logic/choose_bar_cubit/choose_bar_cubit.dart';
 import 'package:client_app/features/check_board/ui/widgets/custom_search_text_field.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
@@ -43,23 +40,23 @@ class _CheckBoardHeaderState extends State<CheckBoardHeader> {
                   ),
                   child: Row(
                     children: [
-                      BlocBuilder<ChooseBarCubit, ChooseBarState>(
-                        builder: (context, state) {
-                          return Text(
-                            (state is ProjectsState)
-                                ? 'Projects'
-                                : (state is AssignmentsState)
-                                    ? 'Assignments'
-                                    : (state is MeetingsState)
-                                        ? 'Meetings'
-                                        : 'Completed',
-                            style: AppStyles.afacadSemiBold22.copyWith(
-                              fontSize: 25.sp,
-                              color: AppColors.black,
-                            ),
-                          );
-                        },
-                      ),
+                      // BlocBuilder<ChooseBarCubit, ChooseBarState>(
+                      //   builder: (context, state) {
+                      //     return Text(
+                      //       (state is ProjectsState)
+                      //           ? 'Projects'
+                      //           : (state is AssignmentsState)
+                      //               ? 'Assignments'
+                      //               : (state is MeetingsState)
+                      //                   ? 'Meetings'
+                      //                   : 'Completed',
+                      //       style: AppStyles.afacadSemiBold22.copyWith(
+                      //         fontSize: 25.sp,
+                      //         color: AppColors.black,
+                      //       ),
+                      //     );
+                      //   },
+                      // ),
                       horizontalSpace(14),
                       Expanded(
                         child: SizedBox(

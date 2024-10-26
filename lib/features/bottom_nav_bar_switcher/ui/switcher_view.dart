@@ -50,10 +50,7 @@ class _SwitcherViewState extends State<SwitcherView> {
                           : screens[4],
         ),
       ),
-      bottomNavigationBar: Padding(
-          padding:
-              EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
-          child: const NavBarStack()),
+      bottomNavigationBar: const NavBarStack(),
     );
   }
 }
