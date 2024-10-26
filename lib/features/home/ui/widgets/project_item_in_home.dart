@@ -15,7 +15,7 @@ class ProjectItemInHome extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(
-          28.sp,
+          16.sp,
         ),
         boxShadow: [
           BoxShadow(

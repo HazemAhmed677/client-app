@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class TaskDetailsBody extends StatelessWidget {
-  const TaskDetailsBody({super.key});
+class ProjectDetailsBody extends StatelessWidget {
+  const ProjectDetailsBody({super.key});
 
   @override
   Widget build(BuildContext context) {

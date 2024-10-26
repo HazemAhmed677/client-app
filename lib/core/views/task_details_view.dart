@@ -1,13 +1,13 @@
 import 'package:client_app/core/views/widgets/task_details_body.dart';
 import 'package:flutter/material.dart';
 
-class TaskDetailsView extends StatelessWidget {
-  const TaskDetailsView({super.key});
+class ProjectDetailView extends StatelessWidget {
+  const ProjectDetailView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: TaskDetailsBody(),
+      body: ProjectDetailsBody(),
     );
   }
 }

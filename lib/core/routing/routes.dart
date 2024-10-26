@@ -5,5 +5,5 @@ class Routes {
   static const switcherView = '/switcherView';
   static const homeView = '/homeView';
   static const calendarView = '/calendarView';
-  static const taskDetailsView = '/taskDetailsView';
+  static const projectDetailsView = '/taskDetailsView';
 }
