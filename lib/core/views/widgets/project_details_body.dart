@@ -1,9 +1,10 @@
 import 'package:client_app/core/helpers/spacing.dart';
-import 'package:client_app/core/views/widgets/add_task_row.dart';
+import 'package:client_app/core/views/widgets/add_task_or_subs_row.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'checkout_button.dart';
-import 'project_details_container.dart';
+import 'container_content.dart';
+import 'details_of_container.dart';
 import 'tasks_details_sliver_list.dart';
 import 'total_price_container.dart';
 
@@ -16,7 +17,9 @@ class ProjectDetailsBody extends StatelessWidget {
       physics: const BouncingScrollPhysics(),
       slivers: [
         const SliverToBoxAdapter(
-          child: ProjectDetailsContainer(),
+          child: DetailsOfContainer(
+            containerDetails: ProjectContainerContent(),
+          ),
         ),
         SliverToBoxAdapter(
           child: Padding(
@@ -37,7 +40,7 @@ class ProjectDetailsBody extends StatelessWidget {
             padding: EdgeInsets.symmetric(
               horizontal: 14.0.sp,
             ),
-            child: const AddTaskRow(),
+            child: const AddTasksOrSubsRow(),
           ),
         ),
         SliverToBoxAdapter(

@@ -4,11 +4,10 @@ import 'package:client_app/core/widgets/calendar_icon.dart';
 import 'package:client_app/core/widgets/dynamic_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'container_content.dart';
 
-class ProjectDetailsContainer extends StatelessWidget {
-  const ProjectDetailsContainer({super.key});
-
+class DetailsOfContainer extends StatelessWidget {
+  const DetailsOfContainer({super.key, required this.containerDetails});
+  final Widget containerDetails;
   @override
   Widget build(BuildContext context) {
     return DynamicContainer(
@@ -29,7 +28,7 @@ class ProjectDetailsContainer extends StatelessWidget {
                   ),
                 ],
               ),
-              const ContainerContent(),
+              containerDetails,
             ],
           ),
         ),

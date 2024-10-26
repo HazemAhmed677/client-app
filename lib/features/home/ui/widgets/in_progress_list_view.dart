@@ -1,5 +1,9 @@
+import 'package:client_app/core/routing/routes.dart';
+import 'package:client_app/core/theming/app_colors.dart';
+import 'package:client_app/core/widgets/calendar_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 import 'in_progress_item.dart';
 
@@ -19,7 +23,19 @@ class InProgressListView extends StatelessWidget {
           padding: EdgeInsets.only(
             right: (index != 5) ? 16.sp : 0,
           ),
-          child: const InProgressItem(),
+          child: InkWell(
+              overlayColor: WidgetStateProperty.all<Color>(
+                AppColors.transitionColor,
+              ),
+              borderRadius: BorderRadius.circular(
+                22.sp,
+              ),
+              onTap: () {
+                context.push(
+                  Routes.taskDetailsView,
+                );
+              },
+              child: const InProgressItem()),
         ),
       ),
     );

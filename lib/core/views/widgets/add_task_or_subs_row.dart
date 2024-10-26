@@ -6,15 +6,15 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../theming/app_colors.dart';
 import '../../theming/app_styles.dart';
 
-class AddTaskRow extends StatelessWidget {
-  const AddTaskRow({super.key});
-
+class AddTasksOrSubsRow extends StatelessWidget {
+  const AddTasksOrSubsRow({super.key, this.isAddTask = true});
+  final bool isAddTask;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Text(
-          'Add Task',
+          isAddTask ? 'Add Task' : 'Add Sub Task',
           style: AppStyles.poppinsSemiBold18.copyWith(
             fontSize: 22.sp,
             color: AppColors.black,
@@ -33,13 +33,13 @@ class AddTaskRow extends StatelessWidget {
             ),
             shape: WidgetStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.sp),
+                borderRadius: BorderRadius.circular(6.sp),
               ),
             ),
             padding: WidgetStateProperty.all<EdgeInsets>(
               EdgeInsets.symmetric(
-                horizontal: 6.sp,
-                vertical: 6.sp,
+                horizontal: 3.sp,
+                vertical: 3.sp,
               ),
             ),
             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
@@ -48,12 +48,12 @@ class AddTaskRow extends StatelessWidget {
           icon: Icon(
             FontAwesomeIcons.plus,
             color: AppColors.white,
-            size: 18.sp,
+            size: 16.sp,
           ),
         ),
         const Spacer(),
         Text(
-          'All Tasks',
+          isAddTask ? 'All Tasks' : 'All Sub Tasks',
           style: AppStyles.poppinsMedium14.copyWith(
             fontSize: 14.sp,
           ),
