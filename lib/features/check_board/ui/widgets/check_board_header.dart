@@ -57,7 +57,7 @@ class _CheckBoardHeaderState extends State<CheckBoardHeader> {
                       //     );
                       //   },
                       // ),
-                      horizontalSpace(14),
+                      // horizontalSpace(14),
                       Expanded(
                         child: SizedBox(
                           height: 42.sp,

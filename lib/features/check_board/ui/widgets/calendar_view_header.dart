@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
+import '../../../../core/widgets/back_navigation_button.dart';
 
 class CalendarViewHeader extends StatelessWidget {
   const CalendarViewHeader({super.key});
@@ -11,14 +12,8 @@ class CalendarViewHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: const Icon(
-            Icons.arrow_back_ios_new,
-            color: AppColors.black,
-          ),
+        BackNavigationButton(
+          pageContext: context,
         ),
         const Spacer(
           flex: 2,

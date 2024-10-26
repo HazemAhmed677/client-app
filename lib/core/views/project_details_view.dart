@@ -1,4 +1,4 @@
-import 'package:client_app/core/views/widgets/task_details_body.dart';
+import 'package:client_app/core/views/widgets/project_details_body.dart';
 import 'package:flutter/material.dart';
 
 class ProjectDetailView extends StatelessWidget {

@@ -1,0 +1,40 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../theming/app_colors.dart';
+
+class BackNavigationButton extends StatelessWidget {
+  const BackNavigationButton({
+    super.key,
+    required this.pageContext,
+  });
+  final BuildContext pageContext;
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(left: 8.0.sp),
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(
+            12.sp,
+          ),
+          color: AppColors.secondary.withOpacity(0.1),
+        ),
+        child: IconButton(
+          padding: EdgeInsets.zero,
+          style: const ButtonStyle(
+            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+          ),
+          onPressed: () {
+            Navigator.pop(pageContext);
+          },
+          icon: Icon(
+            Icons.arrow_back_ios_new,
+            color: AppColors.black,
+            size: 18.sp,
+          ),
+        ),
+      ),
+    );
+  }
+}
