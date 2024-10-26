@@ -1,11 +1,9 @@
 import 'package:client_app/core/helpers/spacing.dart';
-import 'package:client_app/core/routing/routes.dart';
 import 'package:client_app/core/theming/app_colors.dart';
 import 'package:client_app/features/check_board/ui/widgets/custom_search_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:go_router/go_router.dart';
+import '../../../../core/widgets/calendar_icon.dart';
 
 class CheckBoardHeader extends StatefulWidget {
   const CheckBoardHeader({
@@ -68,16 +66,7 @@ class _CheckBoardHeaderState extends State<CheckBoardHeader> {
                         ),
                       ),
                       horizontalSpace(12),
-                      InkWell(
-                        onTap: () {
-                          context.push(Routes.calendarView);
-                        },
-                        child: Icon(
-                          FontAwesomeIcons.calendarDays,
-                          color: AppColors.secondary,
-                          size: 22.sp,
-                        ),
-                      ),
+                      const CalendarIcon(),
                     ],
                   ),
                 ),

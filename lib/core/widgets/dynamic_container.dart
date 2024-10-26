@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../theming/app_colors.dart';
 
-class DaynamicContainer extends StatelessWidget {
-  const DaynamicContainer({
+class DynamicContainer extends StatelessWidget {
+  const DynamicContainer({
     super.key,
     required this.child,
   });

@@ -59,7 +59,7 @@ class AppRouter {
         pageBuilder: (context, state) => CustomSliderTransition(
           child: const CalendarView(),
           key: state.pageKey,
-          duration: 150,
+          duration: 300,
         ),
       ),
       GoRoute(

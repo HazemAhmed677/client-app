@@ -30,7 +30,7 @@ class CustomSearchTextFeild extends StatelessWidget {
       decoration: InputDecoration(
         contentPadding: EdgeInsets.symmetric(
           horizontal: 4.sp,
-          vertical: 2.sp,
+          vertical: 4.sp,
         ),
         hintFadeDuration: const Duration(
           milliseconds: 200,
