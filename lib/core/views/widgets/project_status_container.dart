@@ -8,29 +8,35 @@ class ProjectStatusContainer extends StatelessWidget {
   const ProjectStatusContainer({
     super.key,
     required this.text,
+    required this.backgroundColor,
   });
   final String text;
+  final Color backgroundColor;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(
-          32.sp,
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 2.sp, vertical: 4.0.sp),
+      child: Container(
+        decoration: BoxDecoration(
+          color: backgroundColor,
+          borderRadius: BorderRadius.circular(
+            32.sp,
+          ),
+          border: Border.all(
+            color: AppColors.grey.shade700,
+          ),
         ),
-        border: Border.all(
-          color: AppColors.darkGrey,
-        ),
-      ),
-      child: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: 36.0.sp,
-          vertical: 12.sp,
-        ),
-        child: Text(
-          text,
-          style: AppStyles.interSemiBold18.copyWith(
-            fontSize: 14.sp,
-            color: AppColors.darkGrey,
+        child: Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: 26.0.sp,
+            vertical: 6.sp,
+          ),
+          child: Text(
+            text,
+            style: AppStyles.interSemiBold18.copyWith(
+              fontSize: 14.sp,
+              color: AppColors.white,
+            ),
           ),
         ),
       ),

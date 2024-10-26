@@ -14,7 +14,10 @@ class ProjectDetailsContainer extends StatelessWidget {
     return DynamicContainer(
       child: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 14.0.sp, vertical: 12.sp),
+          padding: EdgeInsets.symmetric(
+            horizontal: 14.0.sp,
+            vertical: 12.sp,
+          ),
           child: Column(
             children: [
               Row(

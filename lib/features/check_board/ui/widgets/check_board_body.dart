@@ -6,7 +6,7 @@ import 'check_board_header.dart';
 import 'custom_board_bar.dart';
 import 'package:client_app/core/helpers/spacing.dart';
 import 'package:client_app/features/check_board/logic/choose_bar_cubit/choose_bar_cubit.dart';
-import 'package:client_app/features/check_board/ui/widgets/assignments_sliver_list.dart';
+import 'package:client_app/features/check_board/ui/widgets/tasks_sliver_list.dart';
 import 'package:client_app/features/check_board/ui/widgets/completed_sliver_list.dart';
 import 'package:client_app/features/check_board/ui/widgets/meetings_sliver_list.dart';
 import 'package:client_app/features/check_board/ui/widgets/projects_sliver_list.dart';

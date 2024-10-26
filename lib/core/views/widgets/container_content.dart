@@ -59,7 +59,7 @@ class ContainerContent extends StatelessWidget {
               Column(
                 children: [
                   SizedBox(
-                    height: 110.sp,
+                    height: 114.sp,
                     child: Align(
                       alignment: Alignment.topCenter,
                       child: AspectRatio(
@@ -71,7 +71,7 @@ class ContainerContent extends StatelessWidget {
                           pieChartColorSection2:
                               AppColors.restPrecentageColorInCheckBoard,
                           startDegreeOffset: 270,
-                          fontSize: 16,
+                          fontSize: 20,
                           fontWeight: FontWeightHelper.medium,
                           radius: 9.sp,
                         ),
