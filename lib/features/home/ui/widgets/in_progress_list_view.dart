@@ -1,6 +1,5 @@
 import 'package:client_app/core/routing/routes.dart';
 import 'package:client_app/core/theming/app_colors.dart';
-import 'package:client_app/core/widgets/calendar_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';

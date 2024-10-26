@@ -40,7 +40,9 @@ class TaskDetailsBody extends StatelessWidget {
           padding: EdgeInsets.symmetric(
             horizontal: 14.0.sp,
           ),
-          sliver: const TasksDetailsSliverList(),
+          sliver: const TasksDetailsSliverList(
+            isProjectPage: false,
+          ),
         ),
         SliverToBoxAdapter(
           child: verticalSpace(

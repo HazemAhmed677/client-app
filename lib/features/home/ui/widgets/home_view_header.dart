@@ -1,5 +1,7 @@
 import 'package:client_app/core/helpers/spacing.dart';
+import 'package:client_app/features/bottom_nav_bar_switcher/logic/switch_views_cubit/switch_views_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iconly/iconly.dart';
 
@@ -39,22 +41,28 @@ class HomeViewHeader extends StatelessWidget {
           ],
         ),
         const Spacer(),
-        Stack(
-          clipBehavior: Clip.none,
-          children: [
-            Icon(
-              IconlyBold.notification,
-              size: 26.sp,
-            ),
-            Positioned(
-              top: 1.sp,
-              right: 2.sp,
-              child: CircleAvatar(
-                radius: 4.sp,
-                backgroundColor: AppColors.primary,
+        InkWell(
+          borderRadius: BorderRadius.circular(12.sp),
+          onTap: () {
+            // BlocProvider.of<SwitchViewsCubit>(context).setIndex(3);
+          },
+          child: Stack(
+            clipBehavior: Clip.none,
+            children: [
+              Icon(
+                IconlyBold.notification,
+                size: 26.sp,
               ),
-            )
-          ],
+              Positioned(
+                top: 1.sp,
+                right: 2.sp,
+                child: CircleAvatar(
+                  radius: 4.sp,
+                  backgroundColor: AppColors.primary,
+                ),
+              )
+            ],
+          ),
         )
       ],
     );
