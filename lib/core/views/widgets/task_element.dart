@@ -1,4 +1,5 @@
 import 'package:client_app/core/helpers/spacing.dart';
+import 'package:client_app/features/check_board/ui/widgets/custom_check_box.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -20,7 +21,7 @@ class TaskElement extends StatelessWidget {
           BoxShadow(
             color: AppColors.grey.shade300.withOpacity(0.2),
             blurRadius: 2.sp,
-            spreadRadius: 1.sp,
+            spreadRadius: 5.sp,
           ),
         ],
       ),
@@ -37,20 +38,35 @@ class TaskElement extends StatelessWidget {
             horizontal: 14.sp,
             vertical: 12.sp,
           ),
-          child: Column(
+          child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                'Splash Screen Design',
-                style: AppStyles.poppinsSemiBold18.copyWith(
-                  color: AppColors.black,
-                  fontSize: 16.sp,
-                ),
-              ),
-              verticalSpace(12),
-              const InProgressLineBar(
-                percentage: 35,
+              const CustomCheckBox(),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Splash Screen Design',
+                    style: AppStyles.poppinsSemiBold18.copyWith(
+                      color: AppColors.black,
+                      fontSize: 16.sp,
+                    ),
+                  ),
+                  verticalSpace(
+                    12,
+                  ),
+                  // 28 out
+                  // 28 in
+                  // repair later in integration
+                  InProgressLineBar(
+                    percentage: 80,
+                    width: (MediaQuery.sizeOf(context).width - (28 * 5)),
+                    section2: AppColors.d8,
+                    section1: AppColors.mediumPriority,
+                    hight: 9,
+                  ),
+                ],
               ),
             ],
           ),

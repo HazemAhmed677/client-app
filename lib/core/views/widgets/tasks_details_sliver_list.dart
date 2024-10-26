@@ -9,9 +9,11 @@ class TasksDetailsSliverList extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverList.builder(
       itemCount: 6,
-      itemBuilder: (BuildContext context, int index) => Card(
-        child: Padding(
-          padding: EdgeInsets.only(bottom: (index != 5) ? 12.sp : 0),
+      itemBuilder: (BuildContext context, int index) => Padding(
+        padding: EdgeInsets.only(
+          bottom: (index != 5) ? 8.sp : 0,
+        ),
+        child: const Card(
           child: TaskElement(),
         ),
       ),

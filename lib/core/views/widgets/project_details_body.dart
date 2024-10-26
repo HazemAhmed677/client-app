@@ -3,7 +3,7 @@ import 'package:client_app/core/views/widgets/add_task_row.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'project_details_container.dart';
-import 'tasks_sliver_list.dart';
+import 'tasks_details_sliver_list.dart';
 import 'total_price_container.dart';
 
 class ProjectDetailsBody extends StatelessWidget {
@@ -49,7 +49,9 @@ class ProjectDetailsBody extends StatelessWidget {
           sliver: const TasksDetailsSliverList(),
         ),
         SliverToBoxAdapter(
-          child: verticalSpace(22),
+          child: verticalSpace(
+            22,
+          ),
         ),
       ],
     );

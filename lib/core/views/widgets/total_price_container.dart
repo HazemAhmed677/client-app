@@ -11,41 +11,48 @@ class TotalPriceContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.darkGrey,
+        color: AppColors.lowPriority,
         borderRadius: BorderRadius.circular(32.sp),
       ),
       child: Padding(
         padding: EdgeInsets.symmetric(
           horizontal: 22.0.sp,
-          vertical: 14.sp,
+          vertical: 12.sp,
         ),
         child: Row(
           children: [
-            RichText(
-              text: TextSpan(
-                children: [
-                  TextSpan(
-                    text: 'Total Price:  ',
-                    style: AppStyles.poppinsMedium14.copyWith(
-                      fontSize: 14.sp,
-                      color: AppColors.white,
-                    ),
-                  ),
-                  TextSpan(
-                    text: '8500 EG ',
-                    style: AppStyles.interBold18.copyWith(
-                      fontSize: 20.sp,
-                      color: AppColors.white,
-                    ),
-                  ),
-                ],
+            Text(
+              'Total Price:  ',
+              style: AppStyles.poppinsMedium14.copyWith(
+                fontSize: 14.sp,
+                color: AppColors.white,
               ),
             ),
+            // RichText(
+            //   text: TextSpan(
+            //     children: [
+            //       TextSpan(
+            //         text: 'Total Price:  ',
+            //         style: AppStyles.poppinsMedium14.copyWith(
+            //           fontSize: 14.sp,
+            //           color: AppColors.white,
+            //         ),
+            //       ),
+            //       TextSpan(
+            //         text: '8500 EG ',
+            //         style: AppStyles.interBold18.copyWith(
+            //           fontSize: 20.sp,
+            //           color: AppColors.white,
+            //         ),
+            //       ),
+            //     ],
+            //   ),
+            // ),
             const Spacer(),
             Text(
-              'Pending...',
+              '8500 EG ',
               style: AppStyles.interBold18.copyWith(
-                fontSize: 16.sp,
+                fontSize: 20.sp,
                 color: AppColors.white,
               ),
             ),

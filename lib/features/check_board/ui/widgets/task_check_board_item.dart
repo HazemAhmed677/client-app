@@ -1,4 +1,4 @@
-import 'package:client_app/features/check_board/ui/widgets/assignment_check_board_item_details.dart';
+import 'package:client_app/features/check_board/ui/widgets/task_check_board_item_details.dart';
 import 'package:client_app/features/check_board/ui/widgets/common_check_board_item.dart';
 import 'package:flutter/material.dart';
 
