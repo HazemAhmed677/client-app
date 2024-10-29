@@ -41,7 +41,7 @@ class SettingsWidget extends StatelessWidget {
         verticalSpace(2),
         Text(
           'Settings',
-          style: AppStyles.poppinsSemiBold18.copyWith(
+          style: AppStyles.afacadfluxSemiBold18.copyWith(
             color: AppColors.black,
             fontSize: 16.sp,
           ),

@@ -15,7 +15,7 @@ class DontHaveAccount extends StatelessWidget {
       children: [
         Text(
           'Don\'t have an account? ',
-          style: AppStyles.poppinsSemiBold18.copyWith(
+          style: AppStyles.afacadfluxSemiBold18.copyWith(
             fontSize: 16.sp,
             color: Colors.grey.shade700,
           ),
@@ -30,7 +30,7 @@ class DontHaveAccount extends StatelessWidget {
             ),
             child: Text(
               'Sign Up',
-              style: AppStyles.poppinsSemiBold18.copyWith(
+              style: AppStyles.afacadfluxSemiBold18.copyWith(
                   decoration: TextDecoration.underline,
                   decorationColor: AppColors.secondary,
                   color: AppColors.secondary),

@@ -13,7 +13,7 @@ class AlreadyHaveAnAccount extends StatelessWidget {
       children: [
         Text(
           'Already have an account? ',
-          style: AppStyles.poppinsSemiBold18,
+          style: AppStyles.afacadfluxSemiBold18,
         ),
         InkWell(
           borderRadius: BorderRadius.circular(32),
@@ -25,7 +25,7 @@ class AlreadyHaveAnAccount extends StatelessWidget {
             ),
             child: Text(
               'Sign In',
-              style: AppStyles.poppinsSemiBold18.copyWith(
+              style: AppStyles.afacadfluxSemiBold18.copyWith(
                 decoration: TextDecoration.underline,
                 decorationColor: AppColors.secondary,
                 color: AppColors.secondary,

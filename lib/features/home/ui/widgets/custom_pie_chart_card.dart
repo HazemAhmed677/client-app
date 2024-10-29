@@ -53,7 +53,7 @@ class CustomPieChartCard extends StatelessWidget {
                       children: [
                         Text(
                           "Your today's task\nalmost done",
-                          style: AppStyles.poppinsSemiBold18.copyWith(
+                          style: AppStyles.afacadfluxSemiBold18.copyWith(
                             color: AppColors.white,
                             fontWeight: FontWeightHelper.medium,
                           ),

@@ -33,7 +33,7 @@ class CustomWord extends StatelessWidget {
           child: Center(
             child: Text(
               count.toString(),
-              style: AppStyles.poppinsSemiBold18.copyWith(
+              style: AppStyles.afacadfluxSemiBold18.copyWith(
                 color: AppColors.primary,
                 fontSize: 13.sp,
               ),

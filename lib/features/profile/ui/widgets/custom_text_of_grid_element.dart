@@ -15,7 +15,7 @@ class CustomTextOfGridElement extends StatelessWidget {
         verticalSpace(2),
         Text(
           text,
-          style: AppStyles.poppinsSemiBold18.copyWith(
+          style: AppStyles.afacadfluxSemiBold18.copyWith(
             color: AppColors.black,
             fontSize: 16.sp,
           ),

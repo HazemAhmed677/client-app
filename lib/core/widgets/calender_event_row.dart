@@ -23,7 +23,7 @@ class CalenderEventRow extends StatelessWidget {
         horizontalSpace(4),
         Text(
           title,
-          style: AppStyles.poppinsSemiBold18.copyWith(
+          style: AppStyles.afacadfluxSemiBold18.copyWith(
             fontSize: 12.sp,
             color: AppColors.primary,
           ),

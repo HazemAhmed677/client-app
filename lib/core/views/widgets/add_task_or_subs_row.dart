@@ -15,7 +15,7 @@ class AddTasksOrSubsRow extends StatelessWidget {
       children: [
         Text(
           isAddTask ? 'Add Task' : 'Add Sub Task',
-          style: AppStyles.poppinsSemiBold18.copyWith(
+          style: AppStyles.afacadfluxSemiBold18.copyWith(
             fontSize: 22.sp,
             color: AppColors.black,
           ),

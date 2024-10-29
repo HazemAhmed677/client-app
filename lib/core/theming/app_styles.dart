@@ -16,22 +16,22 @@ class AppStyles {
     color: AppColors.secondary,
     fontWeight: FontWeightHelper.semiBold,
   );
-  static TextStyle gilroySemiBold16 = TextStyle(
+  static TextStyle afacadfluxSemiBold16 = TextStyle(
     color: AppColors.darkGrey,
     fontSize: 16.sp,
-    fontFamily: 'Gilroy',
+    fontFamily: 'AfacadFlux',
     fontWeight: FontWeightHelper.semiBold,
   );
-  static TextStyle poppinsSemiBold18 = TextStyle(
+  static TextStyle afacadfluxSemiBold18 = TextStyle(
     color: AppColors.darkGrey,
     fontSize: 18.sp,
-    fontFamily: 'Poppins',
+    fontFamily: 'AfacadFlux',
     fontWeight: FontWeightHelper.semiBold,
   );
-  static TextStyle poppinsSemiBold24 = TextStyle(
+  static TextStyle afacadfluxSemiBold24 = TextStyle(
     color: AppColors.darkGrey,
     fontSize: 24.sp,
-    fontFamily: 'Poppins',
+    fontFamily: 'AfacadFlux',
     fontWeight: FontWeightHelper.semiBold,
   );
   static TextStyle interSemiBold18 = TextStyle(
@@ -58,5 +58,11 @@ class AppStyles {
     fontSize: 14.sp,
     fontFamily: 'Poppins',
     fontWeight: FontWeightHelper.medium,
+  );
+  static TextStyle poppinsSemiBold18 = TextStyle(
+    color: AppColors.darkGrey,
+    fontSize: 14.sp,
+    fontFamily: 'Poppins',
+    fontWeight: FontWeightHelper.semiBold,
   );
 }

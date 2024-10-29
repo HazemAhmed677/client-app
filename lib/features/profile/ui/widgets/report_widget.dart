@@ -32,7 +32,7 @@ class ReportWidget extends StatelessWidget {
         ),
         Text(
           'Report',
-          style: AppStyles.poppinsSemiBold18.copyWith(
+          style: AppStyles.afacadfluxSemiBold18.copyWith(
             color: AppColors.black,
             fontSize: 16.sp,
           ),

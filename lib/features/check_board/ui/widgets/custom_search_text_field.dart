@@ -44,7 +44,7 @@ class CustomSearchTextFeild extends StatelessWidget {
           color: AppColors.secondary,
         ),
         hintText: 'Search',
-        hintStyle: AppStyles.poppinsSemiBold18.copyWith(
+        hintStyle: AppStyles.afacadfluxSemiBold18.copyWith(
           fontSize: 17.sp,
           color: Colors.grey.shade500,
         ),

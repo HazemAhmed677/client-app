@@ -10,7 +10,7 @@ class WordOfTextfield extends StatelessWidget {
       alignment: Alignment.centerLeft,
       child: Text(
         text,
-        style: AppStyles.poppinsSemiBold18,
+        style: AppStyles.afacadfluxSemiBold18,
       ),
     );
   }

@@ -35,7 +35,7 @@ class DynamicContainerProfileContent extends StatelessWidget {
                 const CalendarIcon(),
               ],
             ),
-            verticalSpace(12),
+            verticalSpace(22),
             Row(
               // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -44,7 +44,7 @@ class DynamicContainerProfileContent extends StatelessWidget {
                     number: 142, taksType: 'Completed Task'),
                 const Spacer(),
                 CircleAvatar(
-                  radius: 44.sp,
+                  radius: 48.sp,
                   backgroundImage: const AssetImage(AppImages.github),
                 ),
                 const Spacer(),
@@ -55,24 +55,27 @@ class DynamicContainerProfileContent extends StatelessWidget {
                 horizontalSpace(8),
               ],
             ),
-            verticalSpace(16),
+            verticalSpace(18),
             Text(
               'Shoban Haider',
-              style: AppStyles.poppinsSemiBold18.copyWith(
+              style: AppStyles.afacadfluxSemiBold18.copyWith(
                 fontSize: 21.sp,
                 color: AppColors.black,
               ),
             ),
             Text(
               'UI/UX Designer',
-              style: AppStyles.poppinsSemiBold18.copyWith(
+              style: AppStyles.afacadfluxSemiBold18.copyWith(
                 fontSize: 14.sp,
                 color: AppColors.grey,
               ),
             ),
-            verticalSpace(16),
-            CustomEditProfileButton(onPressed: () {}, text: 'Edit Profile'),
             verticalSpace(22),
+            CustomEditProfileButton(
+              onPressed: () {},
+              text: 'Edit Profile',
+            ),
+            verticalSpace(18),
           ],
         ),
       ),

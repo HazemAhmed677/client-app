@@ -17,9 +17,10 @@ class CommonProfileColumn extends StatelessWidget {
       children: [
         Text(
           number.toString(),
-          style: AppStyles.afacadSemiBold22.copyWith(
+          style: AppStyles.afacadfluxSemiBold24.copyWith(
             fontSize: 18.sp,
             fontWeight: FontWeightHelper.bold,
+            color: AppColors.primary,
           ),
         ),
         verticalSpace(2),
