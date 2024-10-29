@@ -37,7 +37,7 @@ class ButtonAction1 extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         text,
-        style: AppStyles.gilroySemiBold16.copyWith(
+        style: AppStyles.afacadfluxSemiBold16.copyWith(
           color: textColor,
           fontSize: fontSize.sp,
         ),

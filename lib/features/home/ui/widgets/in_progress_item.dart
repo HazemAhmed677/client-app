@@ -53,7 +53,7 @@ class InProgressItem extends StatelessWidget {
                   children: [
                     Text(
                       'Office Project',
-                      style: AppStyles.poppinsSemiBold18.copyWith(
+                      style: AppStyles.afacadfluxSemiBold18.copyWith(
                         color: AppColors.grey,
                         fontSize: 16.sp,
                       ),
@@ -75,7 +75,7 @@ class InProgressItem extends StatelessWidget {
                   fit: BoxFit.scaleDown,
                   child: Text(
                     'Grocery shopping app\ndesign',
-                    style: AppStyles.poppinsSemiBold18.copyWith(
+                    style: AppStyles.afacadfluxSemiBold18.copyWith(
                       color: AppColors.black,
                       fontSize: 17.sp,
                     ),

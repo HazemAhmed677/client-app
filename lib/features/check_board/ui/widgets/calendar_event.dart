@@ -51,7 +51,7 @@ class CalendarEvent extends StatelessWidget {
               children: [
                 Text(
                   'Project Presentation',
-                  style: AppStyles.poppinsSemiBold18.copyWith(
+                  style: AppStyles.afacadfluxSemiBold18.copyWith(
                     fontSize: 18.sp,
                     color: AppColors.bottomNavBarColor,
                   ),

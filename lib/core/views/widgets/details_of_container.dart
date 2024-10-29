@@ -6,7 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DetailsOfContainer extends StatelessWidget {
-  const DetailsOfContainer({super.key, required this.containerDetails});
+  const DetailsOfContainer({
+    super.key,
+    required this.containerDetails,
+  });
   final Widget containerDetails;
   @override
   Widget build(BuildContext context) {

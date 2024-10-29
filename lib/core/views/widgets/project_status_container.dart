@@ -23,7 +23,7 @@ class ProjectStatusContainer extends StatelessWidget {
             32.sp,
           ),
           border: Border.all(
-            color: AppColors.grey.shade700,
+            color: AppColors.white,
           ),
         ),
         child: Padding(

@@ -25,7 +25,7 @@ class _SignUpHeaderState extends State<SignUpHeader> {
         ),
         Text(
           'with your social account.',
-          style: AppStyles.poppinsSemiBold18.copyWith(
+          style: AppStyles.afacadfluxSemiBold18.copyWith(
             fontSize: 15,
             color: AppColors.grey,
           ),

@@ -29,7 +29,7 @@ class ProjectSliverListItemDetails extends StatelessWidget {
             verticalSpace(4),
             Text(
               'Mobile App',
-              style: AppStyles.poppinsSemiBold18.copyWith(
+              style: AppStyles.afacadfluxSemiBold18.copyWith(
                 fontSize: 15.sp,
                 color: AppColors.subTextColorInCheckBoard,
               ),

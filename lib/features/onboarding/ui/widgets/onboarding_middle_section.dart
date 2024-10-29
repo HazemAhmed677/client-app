@@ -30,7 +30,7 @@ class OnboardingMiddleSection extends StatelessWidget {
                   ? 'You can remind yourselt about everything.\nSet reminders and never miss important\nthings.'
                   : "Manage all of your work in one place\nefficiently, Don't need any more open\ncouple apps for your manage task",
           textAlign: TextAlign.center,
-          style: AppStyles.gilroySemiBold16,
+          style: AppStyles.afacadfluxSemiBold16,
         ),
       ],
     );

@@ -1,7 +1,5 @@
 import 'package:client_app/core/helpers/spacing.dart';
-import 'package:client_app/features/bottom_nav_bar_switcher/logic/switch_views_cubit/switch_views_cubit.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iconly/iconly.dart';
 

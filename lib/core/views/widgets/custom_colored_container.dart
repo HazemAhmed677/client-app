@@ -23,7 +23,7 @@ class CustomColoredContainer extends StatelessWidget {
         ),
         child: Text(
           text,
-          style: AppStyles.poppinsSemiBold18.copyWith(
+          style: AppStyles.afacadfluxSemiBold18.copyWith(
             fontSize: 15.sp,
             color: backgroundColor,
           ),

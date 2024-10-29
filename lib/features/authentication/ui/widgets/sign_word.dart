@@ -20,14 +20,14 @@ class SignWord extends StatelessWidget {
         verticalSpace(height),
         Text(
           title,
-          style: AppStyles.poppinsSemiBold24.copyWith(
+          style: AppStyles.afacadfluxSemiBold24.copyWith(
             color: AppColors.bottomNavBarColor,
           ),
         ),
         verticalSpace(2),
         Text(
           subTitle,
-          style: AppStyles.poppinsSemiBold24.copyWith(
+          style: AppStyles.afacadfluxSemiBold24.copyWith(
             fontSize: 15,
             color: AppColors.grey,
           ),

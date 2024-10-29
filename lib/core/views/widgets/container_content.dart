@@ -45,7 +45,7 @@ class ProjectContainerContent extends StatelessWidget {
                           horizontal: 16.0.sp, vertical: 4.sp),
                       child: Text(
                         'Mobile App',
-                        style: AppStyles.poppinsSemiBold18.copyWith(
+                        style: AppStyles.afacadfluxSemiBold18.copyWith(
                           fontSize: 15.sp,
                           color: AppColors.lowPriority,
                         ),
@@ -87,7 +87,7 @@ class ProjectContainerContent extends StatelessWidget {
           verticalSpace(20),
           Text(
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nulla facilisi. Duis aliquet egestas purus in blandit.',
-            style: AppStyles.poppinsSemiBold18.copyWith(
+            style: AppStyles.afacadfluxSemiBold18.copyWith(
               fontSize: 15.sp,
               color: AppColors.grey,
             ),

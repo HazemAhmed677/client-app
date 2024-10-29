@@ -74,7 +74,7 @@ class TaskContainerContent extends StatelessWidget {
           verticalSpace(12),
           Text(
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nulla facilisi. Duis aliquet egestas purus in blandit.',
-            style: AppStyles.poppinsSemiBold18.copyWith(
+            style: AppStyles.afacadfluxSemiBold18.copyWith(
               fontSize: 15.sp,
               color: AppColors.grey,
             ),

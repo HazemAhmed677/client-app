@@ -48,7 +48,7 @@ class TaskElement extends StatelessWidget {
                 children: [
                   Text(
                     'Splash Screen Design',
-                    style: AppStyles.poppinsSemiBold18.copyWith(
+                    style: AppStyles.afacadfluxSemiBold18.copyWith(
                       color: AppColors.black,
                       fontSize: 16.sp,
                     ),

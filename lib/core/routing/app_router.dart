@@ -2,13 +2,15 @@ import 'package:client_app/core/routing/routes.dart';
 import 'package:client_app/core/views/project_details_view.dart';
 import 'package:client_app/core/views/task_details_view.dart';
 import 'package:client_app/core/widgets/custom_slider_transition.dart';
-import 'package:client_app/core/widgets/custom_zooming_transition.dart';
 import 'package:client_app/features/authentication/ui/login_view.dart';
 import 'package:client_app/features/authentication/ui/sign_up_view.dart';
 import 'package:client_app/features/bottom_nav_bar_switcher/ui/switcher_view.dart';
 import 'package:client_app/features/check_board/ui/calendar_view.dart';
 import 'package:client_app/features/home/ui/home_view.dart';
 import 'package:client_app/features/onboarding/ui/onboarding_view.dart';
+import 'package:client_app/features/profile/ui/document_view.dart';
+import 'package:client_app/features/profile/ui/report_view.dart';
+import 'package:client_app/features/profile/ui/settings_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import '../../features/bottom_nav_bar_switcher/logic/switch_views_cubit/switch_views_cubit.dart';
@@ -67,7 +69,7 @@ class AppRouter {
       // project details
       GoRoute(
         path: Routes.projectDetailsView,
-        pageBuilder: (context, state) => CustomZoomingTransition(
+        pageBuilder: (context, state) => CustomSliderTransition(
           child: const ProjectDetailView(),
           key: state.pageKey,
           duration: 300,
@@ -76,8 +78,32 @@ class AppRouter {
       // task details
       GoRoute(
         path: Routes.taskDetailsView,
-        pageBuilder: (context, state) => CustomZoomingTransition(
+        pageBuilder: (context, state) => CustomSliderTransition(
           child: const TaskDetailsView(),
+          key: state.pageKey,
+          duration: 300,
+        ),
+      ),
+      GoRoute(
+        path: Routes.documentView,
+        pageBuilder: (context, state) => CustomSliderTransition(
+          child: const DocumentView(),
+          key: state.pageKey,
+          duration: 300,
+        ),
+      ),
+      GoRoute(
+        path: Routes.reportView,
+        pageBuilder: (context, state) => CustomSliderTransition(
+          child: const ReportView(),
+          key: state.pageKey,
+          duration: 300,
+        ),
+      ),
+      GoRoute(
+        path: Routes.settingsView,
+        pageBuilder: (context, state) => CustomSliderTransition(
+          child: const SettingsView(),
           key: state.pageKey,
           duration: 300,
         ),
