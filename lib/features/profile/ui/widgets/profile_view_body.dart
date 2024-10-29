@@ -19,7 +19,7 @@ class ProfileViewBody extends StatelessWidget {
             ),
           ),
           SliverToBoxAdapter(
-            child: verticalSpace(12),
+            child: verticalSpace(22),
           ),
           SliverPadding(
             padding: EdgeInsets.symmetric(

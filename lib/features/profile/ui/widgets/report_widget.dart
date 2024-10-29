@@ -3,29 +3,39 @@ import 'dart:math';
 import 'package:client_app/core/theming/app_colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/theming/app_styles.dart';
+
 class ReportWidget extends StatelessWidget {
   const ReportWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Stack(
           clipBehavior: Clip.none,
           children: [
             Center(
               child: CustomPaint(
-                size: Size(50.sp, 50.sp),
+                size: Size(34.sp, 34.sp),
                 painter: ArcPainter90(),
               ),
             ),
             Center(
               child: CustomPaint(
-                size: Size(40.sp, 40.sp),
+                size: Size(30.sp, 30.sp),
                 painter: ArcPainter270(),
               ),
             ),
           ],
+        ),
+        Text(
+          'Report',
+          style: AppStyles.poppinsSemiBold18.copyWith(
+            color: AppColors.black,
+            fontSize: 16.sp,
+          ),
         ),
       ],
     );
@@ -40,7 +50,7 @@ class ArcPainter90 extends CustomPainter {
       ..strokeWidth = 4
       ..style = PaintingStyle.fill;
 
-    final rect = Rect.fromLTWH(2, -2, size.width, size.height);
+    final rect = Rect.fromLTWH(2, -5, size.width, size.height);
     const startAngle = 0.0; // 270 degrees (in radians)
     const sweepAngle = -pi / 2;
 
