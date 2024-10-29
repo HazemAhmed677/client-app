@@ -10,26 +10,25 @@ class ProfileViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: CustomScrollView(
-        slivers: [
-          const SliverToBoxAdapter(
-            child: DynamicContainer(
-              child: DynamicContainerProfileContent(),
-            ),
+    return CustomScrollView(
+      physics: const BouncingScrollPhysics(),
+      slivers: [
+        const SliverToBoxAdapter(
+          child: DynamicContainer(
+            child: DynamicContainerProfileContent(),
           ),
-          SliverToBoxAdapter(
-            child: verticalSpace(22),
+        ),
+        SliverToBoxAdapter(
+          child: verticalSpace(22),
+        ),
+        SliverPadding(
+          padding: EdgeInsets.symmetric(
+            horizontal: 8.0.sp,
+            vertical: 12.sp,
           ),
-          SliverPadding(
-            padding: EdgeInsets.symmetric(
-              horizontal: 8.0.sp,
-              vertical: 12.sp,
-            ),
-            sliver: const ProfileGridView(),
-          ),
-        ],
-      ),
+          sliver: const ProfileGridView(),
+        ),
+      ],
     );
   }
 }
