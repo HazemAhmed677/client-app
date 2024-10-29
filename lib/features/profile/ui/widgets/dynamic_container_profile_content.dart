@@ -1,3 +1,4 @@
+import 'package:client_app/core/helpers/dialogs.dart';
 import 'package:client_app/core/helpers/spacing.dart';
 import 'package:client_app/core/theming/app_colors.dart';
 import 'package:client_app/core/theming/app_styles.dart';
@@ -36,9 +37,8 @@ class DynamicContainerProfileContent extends StatelessWidget {
                 const CalendarIcon(),
               ],
             ),
-            verticalSpace(22),
+            verticalSpace(12),
             Row(
-              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 horizontalSpace(8),
                 const CommonProfileColumn(
@@ -73,7 +73,9 @@ class DynamicContainerProfileContent extends StatelessWidget {
             ),
             verticalSpace(22),
             CustomEditProfileButton(
-              onPressed: () {},
+              onPressed: () {
+                showEditProfileDialog(context);
+              },
               text: 'Edit Profile',
             ),
             verticalSpace(28),
