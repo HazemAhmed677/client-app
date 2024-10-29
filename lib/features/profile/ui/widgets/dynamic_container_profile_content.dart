@@ -20,6 +20,7 @@ class DynamicContainerProfileContent extends StatelessWidget {
         vertical: 12.sp,
       ),
       child: SafeArea(
+        bottom: false,
         child: Column(
           children: [
             Row(
@@ -75,7 +76,7 @@ class DynamicContainerProfileContent extends StatelessWidget {
               onPressed: () {},
               text: 'Edit Profile',
             ),
-            verticalSpace(18),
+            verticalSpace(28),
           ],
         ),
       ),

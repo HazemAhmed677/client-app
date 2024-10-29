@@ -1,11 +1,9 @@
 import 'package:client_app/core/helpers/spacing.dart';
-import 'package:client_app/core/widgets/calendar_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
-import 'custom_edit_profile_button.dart';
 import 'custom_logout_button.dart';
 
 class CustomBottomModalSheet extends StatelessWidget {
@@ -34,7 +32,7 @@ class CustomBottomModalSheet extends StatelessWidget {
           Text(
             'Logout',
             style: AppStyles.poppinsSemiBold18.copyWith(
-              fontSize: 24,
+              fontSize: 22,
               color: Colors.grey,
             ),
           ),
@@ -82,7 +80,7 @@ class CustomBottomModalSheet extends StatelessWidget {
             left: false,
             right: false,
             child: verticalSpace(
-              12,
+              22,
             ),
           )
         ],
