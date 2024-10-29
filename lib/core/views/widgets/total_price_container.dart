@@ -11,7 +11,7 @@ class TotalPriceContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.darkGrey,
+        color: AppColors.secondary.withOpacity(0.8),
         borderRadius: BorderRadius.circular(32.sp),
       ),
       child: Padding(
