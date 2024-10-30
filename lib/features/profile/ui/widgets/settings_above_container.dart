@@ -15,13 +15,13 @@ class SettingsAboveContainer extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.white,
           borderRadius: BorderRadius.circular(12.sp),
-          // boxShadow: [
-          //   BoxShadow(
-          //     color: AppColors.grey.shade300,
-          //     blurRadius: 2,
-          //     spreadRadius: 5,
-          //   )
-          // ],
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.grey.shade300,
+              blurRadius: 8,
+              spreadRadius: 4,
+            )
+          ],
         ),
         child: const SettingsContainerDetails(),
       ),

@@ -15,8 +15,8 @@ class SettingsBehindContainer extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.primary,
         borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(24.sp),
-          bottomRight: Radius.circular(24.sp),
+          bottomLeft: Radius.circular(12.sp),
+          bottomRight: Radius.circular(12.sp),
         ),
       ),
       child: SafeArea(

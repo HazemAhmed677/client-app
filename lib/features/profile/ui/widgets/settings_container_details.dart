@@ -1,8 +1,12 @@
+import 'package:client_app/core/theming/app_styles.dart';
 import 'package:client_app/features/profile/ui/widgets/custom_devider.dart';
+import 'package:client_app/features/profile/ui/widgets/settings_container_column_of_options.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/helpers/spacing.dart';
+import '../../../../core/theming/app_colors.dart';
+import 'settingd_container_column_of_more.dart';
 import 'settings_container_header.dart';
 
 class SettingsContainerDetails extends StatelessWidget {
@@ -11,6 +15,7 @@ class SettingsContainerDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         verticalSpace(16),
         Padding(
@@ -22,6 +27,21 @@ class SettingsContainerDetails extends StatelessWidget {
         const CustomDevider(
           height: 42,
         ),
+        Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: 16.0.sp,
+          ),
+          child: Text(
+            'Account Settings',
+            style: AppStyles.poppinsMedium14.copyWith(
+              fontSize: 16.sp,
+              color: AppColors.grey,
+            ),
+          ),
+        ),
+        verticalSpace(12),
+        const SettingsContainerColumnOfOptions(),
+        const SettingdContainerColumnOfMore(),
       ],
     );
   }

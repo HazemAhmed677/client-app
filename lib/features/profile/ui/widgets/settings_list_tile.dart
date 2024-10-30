@@ -1,5 +1,7 @@
+import 'package:client_app/core/theming/app_colors.dart';
 import 'package:client_app/core/theming/app_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SettingsListTile extends StatelessWidget {
   const SettingsListTile(
@@ -11,9 +13,12 @@ class SettingsListTile extends StatelessWidget {
     return ListTile(
       title: Text(
         title,
-        style: AppStyles.poppinsMedium14,
+        style: AppStyles.poppinsMedium14.copyWith(
+          fontSize: 16.sp,
+          color: AppColors.black,
+        ),
       ),
-      leading: leading,
+      trailing: leading,
     );
   }
 }
