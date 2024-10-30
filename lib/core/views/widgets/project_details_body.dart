@@ -29,7 +29,10 @@ class ProjectDetailsBody extends StatelessWidget {
             child: Column(
               children: [
                 verticalSpace(32),
-                const TotalPriceContainer(),
+                const TotalPriceContainer(
+                  title: 'Total Price: ',
+                  price: 8500,
+                ),
                 verticalSpace(24),
               ],
             ),

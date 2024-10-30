@@ -79,6 +79,7 @@ class _TaskElementState extends State<TaskElement> {
                           : TextDecoration.none,
                     ),
                   ),
+
                   verticalSpace(
                     12,
                   ),
@@ -89,7 +90,8 @@ class _TaskElementState extends State<TaskElement> {
                     percentage: 80,
                     width: (MediaQuery.sizeOf(context).width - (28 * 5)),
                     section2: AppColors.d8,
-                    section1: AppColors.mediumPriority,
+                    section1:
+                        isChecked ? AppColors.grey : AppColors.mediumPriority,
                     hight: 9,
                   ),
                 ],
