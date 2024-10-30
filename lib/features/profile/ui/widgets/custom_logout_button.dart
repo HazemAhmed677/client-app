@@ -11,6 +11,7 @@ class CustomLogoutButton extends StatelessWidget {
     required this.backgroundColor,
     required this.textColor,
     required this.overlayColor,
+    this.shape,
   });
   final Color edgeColor;
   final Color backgroundColor;
@@ -18,11 +19,11 @@ class CustomLogoutButton extends StatelessWidget {
   final String text;
   final Color overlayColor;
   final Function()? onPressed;
+  final RoundedRectangleBorder? shape;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 46.sp,
-      // width: (MediaQuery.sizeOf(context).width * 0.5 - 16).sp,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           backgroundColor: backgroundColor,
@@ -31,6 +32,7 @@ class CustomLogoutButton extends StatelessWidget {
             width: 1.0, // Border width
             color: edgeColor, // Border color
           ),
+          shape: shape,
         ),
         onPressed: onPressed,
         child: FittedBox(

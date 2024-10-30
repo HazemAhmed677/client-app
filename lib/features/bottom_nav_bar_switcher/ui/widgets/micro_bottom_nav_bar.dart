@@ -15,8 +15,6 @@ class _MicroBottomNavBarState extends State<MicroBottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      // crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         AnimatedSwitcher(
           transitionBuilder: (Widget child, Animation<double> animation) {
@@ -31,7 +29,7 @@ class _MicroBottomNavBarState extends State<MicroBottomNavBar> {
             height: radius,
             child: Transform.translate(
               offset: Offset(
-                -18.sp,
+                -17.sp,
                 0,
               ),
               child: Stack(
