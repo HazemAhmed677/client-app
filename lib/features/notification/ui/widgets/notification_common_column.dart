@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/helpers/spacing.dart';
 import 'today_word.dart';
 
@@ -9,15 +9,20 @@ class NotificationCommonColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          verticalSpace(22),
-          TodayWord(
-            text: text,
-          ),
-          verticalSpace(18),
-        ],
+      child: Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: 14.0.sp,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            verticalSpace(22),
+            TodayWord(
+              text: text,
+            ),
+            verticalSpace(6),
+          ],
+        ),
       ),
     );
   }

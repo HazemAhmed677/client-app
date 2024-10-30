@@ -1,5 +1,10 @@
 import 'package:client_app/features/notification/ui/widgets/notification_element.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../../core/routing/routes.dart';
+import '../../../../core/theming/app_colors.dart';
 
 class NotificationSliverList extends StatelessWidget {
   const NotificationSliverList({super.key});
@@ -7,10 +12,31 @@ class NotificationSliverList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverList.builder(
-      itemCount: 8,
+      itemCount: 4,
       itemBuilder: (BuildContext context, int index) => Padding(
         padding: const EdgeInsets.only(bottom: 10.0),
-        child: const NotificationElement(),
+        child: Column(
+          children: [
+            InkWell(
+              onTap: () {
+                // redirect
+                context.push(Routes.taskDetailsView);
+              },
+              child: Padding(
+                padding:
+                    EdgeInsets.symmetric(horizontal: 14.0.sp, vertical: 12),
+                child: const NotificationElement(),
+              ),
+            ),
+            (index != 3)
+                ? Divider(
+                    // height: 24,
+                    thickness: 3,
+                    color: AppColors.grey.shade200,
+                  )
+                : const SizedBox.shrink(),
+          ],
+        ),
       ),
     );
   }
