@@ -84,6 +84,8 @@ class AppRouter {
           duration: 300,
         ),
       ),
+
+      // profile
       GoRoute(
         path: Routes.documentView,
         pageBuilder: (context, state) => CustomSliderTransition(
@@ -92,6 +94,7 @@ class AppRouter {
           duration: 300,
         ),
       ),
+      // report
       GoRoute(
         path: Routes.reportView,
         pageBuilder: (context, state) => CustomSliderTransition(
@@ -100,6 +103,7 @@ class AppRouter {
           duration: 300,
         ),
       ),
+      // settings
       GoRoute(
         path: Routes.settingsView,
         pageBuilder: (context, state) => CustomSliderTransition(

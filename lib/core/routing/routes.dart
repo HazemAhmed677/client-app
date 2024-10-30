@@ -10,4 +10,7 @@ class Routes {
   static const documentView = '/documentView';
   static const reportView = '/reportView';
   static const settingsView = '/settingsView';
+  static const createProjectView = '/createProjectView';
+  static const createTaskView = '/createTaskView';
+  static const createMeetingView = '/createMeetingView';
 }

@@ -13,6 +13,14 @@ class TotalPriceContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          colors: [
+            AppColors.projectIcon, // Start color
+            AppColors.redDegree, // End color
+          ],
+          begin: Alignment.centerLeft, // Starting point
+          end: Alignment.centerRight, // Ending point
+        ),
         color: AppColors.secondary.withOpacity(0.8),
         borderRadius: BorderRadius.circular(32.sp),
       ),

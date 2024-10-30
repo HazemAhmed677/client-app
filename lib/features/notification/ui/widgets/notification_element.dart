@@ -17,7 +17,7 @@ class NotificationElement extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CircleAvatar(
-              radius: 22.sp,
+              radius: 20.sp,
               backgroundColor: AppColors.primary.withOpacity(0.1),
               child: const Icon(
                 Icons.access_time,
@@ -31,7 +31,7 @@ class NotificationElement extends StatelessWidget {
                 Text(
                   'New Task Assigned',
                   style: AppStyles.poppinsSemiBold18.copyWith(
-                    fontSize: 16.sp,
+                    fontSize: 14.sp,
                     color: AppColors.black,
                   ),
                 ),
@@ -42,7 +42,7 @@ class NotificationElement extends StatelessWidget {
                   child: Text(
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae',
                     style: AppStyles.poppinsSemiBold18.copyWith(
-                      fontSize: 15.sp,
+                      fontSize: 13.sp,
                       color: AppColors.grey,
                     ),
                   ),
@@ -53,7 +53,7 @@ class NotificationElement extends StatelessWidget {
             Text(
               '1h',
               style: AppStyles.poppinsSemiBold18.copyWith(
-                fontSize: 16.sp,
+                fontSize: 15.sp,
                 color: AppColors.grey,
               ),
             ),

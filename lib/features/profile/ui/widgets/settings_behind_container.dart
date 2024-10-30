@@ -28,6 +28,12 @@ class SettingsBehindContainer extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              // Icon(
+              //   Icons.arrow_back_ios_new,
+              //   color: AppColors.white,
+              //   size: 24.sp,
+              // ),
+              // horizontalSpace(8),
               Icon(
                 Icons.settings,
                 color: AppColors.white,

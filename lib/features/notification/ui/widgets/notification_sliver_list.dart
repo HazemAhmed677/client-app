@@ -27,8 +27,10 @@ class NotificationSliverList extends StatelessWidget {
                 context.push(Routes.taskDetailsView);
               },
               child: Padding(
-                padding:
-                    EdgeInsets.symmetric(horizontal: 14.0.sp, vertical: 12),
+                padding: EdgeInsets.symmetric(
+                  horizontal: 14.0.sp,
+                  vertical: 12,
+                ),
                 child: const NotificationElement(),
               ),
             ),

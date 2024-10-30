@@ -3,7 +3,6 @@ import 'package:client_app/features/profile/ui/widgets/custom_devider.dart';
 import 'package:client_app/features/profile/ui/widgets/settings_container_column_of_options.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_colors.dart';
 import 'settingd_container_column_of_more.dart';
@@ -42,6 +41,23 @@ class SettingsContainerDetails extends StatelessWidget {
         verticalSpace(12),
         const SettingsContainerColumnOfOptions(),
         const SettingdContainerColumnOfMore(),
+        // Row(
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        //   children: [
+        //     Icon(
+        //       FontAwesomeIcons.linkedin,
+        //       color: Colors.blue,
+        //       size: 32.sp,
+        //     ),
+        //     horizontalSpace(8),
+        //     Icon(
+        //       FontAwesomeIcons.facebook,
+        //       color: Colors.blue,
+        //       size: 32.sp,
+        //     ),
+        //   ],
+        // ),
+        verticalSpace(32),
       ],
     );
   }
