@@ -1,5 +1,4 @@
 import 'package:client_app/core/helpers/spacing.dart';
-import 'package:client_app/features/check_board/ui/widgets/custom_check_box.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -7,8 +6,15 @@ import '../../../features/home/ui/widgets/in_progress_line_bar.dart';
 import '../../theming/app_colors.dart';
 import '../../theming/app_styles.dart';
 
-class TaskElement extends StatelessWidget {
+class TaskElement extends StatefulWidget {
   const TaskElement({super.key});
+
+  @override
+  State<TaskElement> createState() => _TaskElementState();
+}
+
+class _TaskElementState extends State<TaskElement> {
+  bool isChecked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +47,24 @@ class TaskElement extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const CustomCheckBox(),
+              Checkbox(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(
+                    4.sp,
+                  ),
+                ),
+                checkColor: AppColors.white,
+                activeColor: AppColors.lowPriority,
+                side: const BorderSide(
+                  color: AppColors.black,
+                ),
+                value: isChecked,
+                onChanged: (bool? value) {
+                  setState(() {
+                    isChecked = value!;
+                  });
+                },
+              ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -49,8 +72,11 @@ class TaskElement extends StatelessWidget {
                   Text(
                     'Splash Screen Design',
                     style: AppStyles.afacadfluxSemiBold18.copyWith(
-                      color: AppColors.black,
+                      color: isChecked ? AppColors.grey : AppColors.black,
                       fontSize: 16.sp,
+                      decoration: isChecked
+                          ? TextDecoration.lineThrough
+                          : TextDecoration.none,
                     ),
                   ),
                   verticalSpace(

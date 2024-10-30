@@ -18,17 +18,6 @@ class CustomPrefixTextFieldForEditProfileDialog extends StatelessWidget {
             topLeft: Radius.circular(8.sp),
           ),
           color: const Color(0xffE7E3F6),
-          // border: const Border(
-          //   left: BorderSide(
-          //     color: AppColors.secondary,
-          //   ),
-          //   top: BorderSide(
-          //     color: AppColors.secondary,
-          //   ),
-          //   bottom: BorderSide(
-          //     color: AppColors.secondary,
-          //   ),
-          // ),
         ),
         child: Padding(
           padding: EdgeInsets.symmetric(

@@ -5,10 +5,16 @@ import 'package:client_app/core/theming/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/widgets/calender_event_row.dart';
-import 'custom_check_box.dart';
 
-class CalendarEvent extends StatelessWidget {
+class CalendarEvent extends StatefulWidget {
   const CalendarEvent({super.key});
+
+  @override
+  State<CalendarEvent> createState() => _CalendarEventState();
+}
+
+class _CalendarEventState extends State<CalendarEvent> {
+  bool isChecked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +59,12 @@ class CalendarEvent extends StatelessWidget {
                   'Project Presentation',
                   style: AppStyles.afacadfluxSemiBold18.copyWith(
                     fontSize: 18.sp,
-                    color: AppColors.bottomNavBarColor,
+                    color: isChecked
+                        ? AppColors.grey
+                        : AppColors.bottomNavBarColor,
+                    decoration: isChecked
+                        ? TextDecoration.lineThrough
+                        : TextDecoration.none,
                   ),
                 ),
                 verticalSpace(
@@ -78,7 +89,25 @@ class CalendarEvent extends StatelessWidget {
               ],
             ),
             const Spacer(),
-            const CustomCheckBox(),
+            Checkbox(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(
+                  4.sp,
+                ),
+              ),
+              checkColor: AppColors.white,
+              activeColor: AppColors.lowPriority,
+              side: const BorderSide(
+                color: AppColors.black,
+              ),
+              value: isChecked,
+              onChanged: (bool? value) {
+                setState(() {
+                  isChecked = value!;
+                });
+              },
+            ),
+            // const CustomCheckBox(),
           ],
         ),
       ),

@@ -13,13 +13,9 @@ class BuildCircleItem extends StatelessWidget {
   final int size;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 42.sp,
-      height: 42.sp,
-      decoration: const BoxDecoration(
-        color: AppColors.bottomNavBarColor,
-        shape: BoxShape.circle,
-      ),
+    return CircleAvatar(
+      radius: 22.sp,
+      backgroundColor: AppColors.bottomNavBarColor,
       child: Center(
         child: Icon(
           iconData,

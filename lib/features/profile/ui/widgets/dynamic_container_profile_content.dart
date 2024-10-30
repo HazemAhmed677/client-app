@@ -28,8 +28,8 @@ class DynamicContainerProfileContent extends StatelessWidget {
               children: [
                 Text(
                   'Profile',
-                  style: AppStyles.afacadSemiBold22.copyWith(
-                    fontSize: 24.sp,
+                  style: AppStyles.gilroyRegular17.copyWith(
+                    fontSize: 20.sp,
                     color: AppColors.black,
                   ),
                 ),
