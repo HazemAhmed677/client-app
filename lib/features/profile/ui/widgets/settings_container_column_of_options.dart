@@ -2,6 +2,8 @@ import 'package:client_app/features/profile/ui/widgets/settings_list_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/helpers/dialogs.dart';
+
 class SettingsContainerColumnOfOptions extends StatelessWidget {
   const SettingsContainerColumnOfOptions({super.key});
 
@@ -13,7 +15,9 @@ class SettingsContainerColumnOfOptions extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           InkWell(
-            onTap: () {},
+            onTap: () {
+              showEditProfileDialog(context);
+            },
             child: SettingsListTile(
               title: 'Edit profile',
               leading: Transform.rotate(
