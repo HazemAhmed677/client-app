@@ -2,7 +2,8 @@ import 'package:client_app/features/profile/ui/widgets/settings_behind_container
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'settings_above_container.dart';
+import 'common_above_container.dart';
+import 'settings_container_details.dart';
 
 class SettingsViewBody extends StatelessWidget {
   const SettingsViewBody({super.key});
@@ -23,7 +24,9 @@ class SettingsViewBody extends StatelessWidget {
                 top: MediaQuery.sizeOf(context).height * 0.13.sp,
                 left: 0,
                 right: 0,
-                child: const SettingsAboveContainer(),
+                child: const CommonAboveContainer(
+                  child: SettingsContainerDetails(),
+                ),
               ),
             ],
           ),

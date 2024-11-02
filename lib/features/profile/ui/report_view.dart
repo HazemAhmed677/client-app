@@ -1,3 +1,4 @@
+import 'package:client_app/features/profile/ui/widgets/report_view_body.dart';
 import 'package:flutter/material.dart';
 
 class ReportView extends StatelessWidget {
@@ -6,7 +7,7 @@ class ReportView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(child: Text('Report View')),
+      body: ReportViewBody(),
     );
   }
 }

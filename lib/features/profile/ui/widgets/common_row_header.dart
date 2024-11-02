@@ -1,12 +1,13 @@
-import 'package:client_app/core/theming/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
 import '../../../../core/widgets/back_navigation_button.dart';
 
-class DocumentViewHeader extends StatelessWidget {
-  const DocumentViewHeader({super.key});
+class CommonRowHeader extends StatelessWidget {
+  const CommonRowHeader({super.key, required this.title});
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,7 @@ class DocumentViewHeader extends StatelessWidget {
                     flex: 2,
                   ),
                   Text(
-                    'Documents',
+                    title,
                     style: AppStyles.gilroyRegular17.copyWith(
                       fontSize: 20.sp,
                       color: AppColors.black,

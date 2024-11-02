@@ -1,10 +1,10 @@
-import 'package:client_app/features/profile/ui/widgets/settings_container_details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/theming/app_colors.dart';
 
-class SettingsAboveContainer extends StatelessWidget {
-  const SettingsAboveContainer({super.key});
+class CommonAboveContainer extends StatelessWidget {
+  const CommonAboveContainer({super.key, required this.child});
+  final Widget child;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class SettingsAboveContainer extends StatelessWidget {
             )
           ],
         ),
-        child: const SettingsContainerDetails(),
+        child: child,
       ),
     );
   }
