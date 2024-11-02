@@ -26,7 +26,7 @@ class _SwitcherViewState extends State<SwitcherView> {
   @override
   void initState() {
     // set home default
-    BlocProvider.of<SwitchViewsCubit>(context).setIndex(0);
+    BlocProvider.of<SwitchViewsCubit>(context).emitViews(0);
     super.initState();
   }
 

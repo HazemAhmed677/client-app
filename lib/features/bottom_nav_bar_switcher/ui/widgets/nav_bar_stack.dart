@@ -22,84 +22,88 @@ class _NavBarStackState extends State<NavBarStack> {
   bool flag = false;
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      clipBehavior: Clip.none,
-      children: [
-        CurvedNavigationBar(
-          height: 64.sp,
-          key: bottomNavigationKey,
-          index: currentScreenIdx,
-          // index: BlocProvider.of<SwitchScreensCubit>(context).currentIndex,
-          items: [
-            Icon(
-              (currentScreenIdx == 0) ? IconlyBold.home : IconlyLight.home,
-              size: 24.sp,
-              color: AppColors.white,
-            ),
-            Padding(
-              padding: EdgeInsets.all(2.0.sp),
-              child: Icon(
-                FontAwesomeIcons.listCheck,
-                size: 22.sp,
-                color: AppColors.white,
+    return BlocBuilder<SwitchViewsCubit, SwitchViewsState>(
+      builder: (context, state) {
+        return Stack(
+          clipBehavior: Clip.none,
+          children: [
+            CurvedNavigationBar(
+              height: 64.sp,
+              key: bottomNavigationKey,
+              index: currentScreenIdx,
+              // index: BlocProvider.of<SwitchScreensCubit>(context).currentIndex,
+              items: [
+                Icon(
+                  (currentScreenIdx == 0) ? IconlyBold.home : IconlyLight.home,
+                  size: 24.sp,
+                  color: AppColors.white,
+                ),
+                Padding(
+                  padding: EdgeInsets.all(2.0.sp),
+                  child: Icon(
+                    FontAwesomeIcons.listCheck,
+                    size: 22.sp,
+                    color: AppColors.white,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(
+                    2.0.sp,
+                  ),
+                  child: Icon(
+                    (flag) ? FontAwesomeIcons.xmark : FontAwesomeIcons.plus,
+                    size: 24.sp,
+                    color: AppColors.white,
+                  ),
+                ),
+                Icon(
+                  (currentScreenIdx == 3)
+                      ? IconlyBold.notification
+                      : IconlyLight.notification,
+                  size: 26.sp,
+                  color: AppColors.white,
+                ),
+                Icon(
+                  (currentScreenIdx == 4)
+                      ? IconlyBold.profile
+                      : IconlyLight.profile,
+                  size: 26.sp,
+                  color: AppColors.white,
+                ),
+              ],
+              color: AppColors.bottomNavBarColor,
+              buttonBackgroundColor:
+                  flag ? AppColors.redDegree : AppColors.bottomNavBarColor,
+              backgroundColor: Colors.transparent,
+              animationCurve: Curves.easeInOut,
+              animationDuration: const Duration(
+                milliseconds: 200,
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(
-                2.0.sp,
-              ),
-              child: Icon(
-                (flag) ? FontAwesomeIcons.xmark : FontAwesomeIcons.plus,
-                size: 24.sp,
-                color: AppColors.white,
-              ),
-            ),
-            Icon(
-              (currentScreenIdx == 3)
-                  ? IconlyBold.notification
-                  : IconlyLight.notification,
-              size: 26.sp,
-              color: AppColors.white,
-            ),
-            Icon(
-              (currentScreenIdx == 4)
-                  ? IconlyBold.profile
-                  : IconlyLight.profile,
-              size: 26.sp,
-              color: AppColors.white,
-            ),
-          ],
-          color: AppColors.bottomNavBarColor,
-          buttonBackgroundColor:
-              flag ? AppColors.redDegree : AppColors.bottomNavBarColor,
-          backgroundColor: Colors.transparent,
-          animationCurve: Curves.easeInOut,
-          animationDuration: const Duration(
-            milliseconds: 200,
-          ),
 
-          onTap: (index) {
-            currentScreenIdx = index;
-            BlocProvider.of<SwitchViewsCubit>(context).setIndex(index);
-            if (index == 2) {
-              flag = !flag;
-            } else {
-              flag = false;
-            }
-            setState(() {});
-          },
-          letIndexChange: (index) => true,
-        ),
-        Positioned(
-          bottom: 120.sp,
-          left: 0,
-          right: 0,
-          child: SwitchMicro(
-            currentScreenIdx: currentScreenIdx,
-            flag: flag,
-          ),
-        )
-      ],
+              onTap: (index) {
+                currentScreenIdx = index;
+                BlocProvider.of<SwitchViewsCubit>(context).emitViews(index);
+                if (index == 2) {
+                  flag = !flag;
+                } else {
+                  flag = false;
+                }
+                setState(() {});
+              },
+              letIndexChange: (index) => true,
+            ),
+            Positioned(
+              bottom: 120.sp,
+              left: 0,
+              right: 0,
+              child: SwitchMicro(
+                currentScreenIdx: currentScreenIdx,
+                flag: flag,
+              ),
+            )
+          ],
+        );
+      },
     );
   }
 }

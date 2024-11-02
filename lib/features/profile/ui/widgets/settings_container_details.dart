@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_colors.dart';
-import 'settingd_container_column_of_more.dart';
 import 'settings_container_header.dart';
 
 class SettingsContainerDetails extends StatelessWidget {
@@ -40,7 +39,7 @@ class SettingsContainerDetails extends StatelessWidget {
         ),
         verticalSpace(12),
         const SettingsContainerColumnOfOptions(),
-        const SettingdContainerColumnOfMore(),
+        // const SettingdContainerColumnOfMore(),
         // Row(
         //   mainAxisAlignment: MainAxisAlignment.center,
         //   children: [

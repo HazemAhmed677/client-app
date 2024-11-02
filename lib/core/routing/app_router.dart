@@ -90,7 +90,7 @@ class AppRouter {
 
       // profile
       GoRoute(
-        path: Routes.createdocumentView,
+        path: Routes.documentView,
         pageBuilder: (context, state) => CustomSliderTransition(
           child: const DocumentView(),
           key: state.pageKey,
@@ -132,7 +132,7 @@ class AppRouter {
         ),
       ),
       GoRoute(
-        path: Routes.createdocumentView,
+        path: Routes.createDocumentView,
         pageBuilder: (context, state) => CustomSliderTransition(
           child: const CreateDocumentView(),
           key: state.pageKey,

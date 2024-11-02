@@ -24,9 +24,8 @@ class _MicroBottomNavBarStackState extends State<MicroBottomNavBarStack> {
   List<double> x1 = List.filled(3, 0.0);
   List<double> y = List.filled(3, 0.0);
   List<double> x11 = List.filled(3, 0.0);
-
-  // Calculate step angle for each widget (top arc)
-
+  List<double> lefts = List.filled(3, 0.0);
+  List<double> tops = List.filled(3, 0.0);
   @override
   void initState() {
     for (int i = 0; i < 3; i++) {
@@ -56,6 +55,7 @@ class _MicroBottomNavBarStackState extends State<MicroBottomNavBarStack> {
             top: y[idx],
             right: x11[idx],
             child: GestureDetector(
+              behavior: HitTestBehavior.translucent,
               onTap: () {
                 print('###################################');
                 print('###################################');
@@ -63,7 +63,7 @@ class _MicroBottomNavBarStackState extends State<MicroBottomNavBarStack> {
                   context.push(Routes.createTaskView);
                 } else if (idx == 1) {
                   // check token then navigate to doc if client
-                  context.push(Routes.createdocumentView);
+                  context.push(Routes.createDocumentView);
                 } else {
                   context.push(Routes.createTaskView);
                 }
@@ -81,7 +81,7 @@ class _MicroBottomNavBarStackState extends State<MicroBottomNavBarStack> {
                   size: (idx == 2) ? 25 : 22,
                 ),
               ),
-            ), // index shown
+            ),
           );
         },
       ),

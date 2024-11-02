@@ -1,14 +1,15 @@
 import 'package:client_app/core/theming/app_colors.dart';
 import 'package:client_app/features/check_board/ui/widgets/bar_item.dart';
+import 'package:client_app/features/profile/logic/choose_bar_cubit/choose_doc_bar_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../logic/choose_bar_cubit/choose_bar_cubit.dart';
+import '../../features/check_board/logic/choose_bar_cubit/choose_bar_cubit.dart';
 
 class CustomBoardBar extends StatefulWidget {
-  const CustomBoardBar({super.key});
-
+  const CustomBoardBar({super.key, this.flag = false});
+  final bool flag;
   @override
   State<CustomBoardBar> createState() => _CustomBoardBarState();
 }
@@ -33,10 +34,14 @@ class _CustomBoardBarState extends State<CustomBoardBar> {
           ),
           child: Row(
             children: List.generate(
-              4,
+              !widget.flag ? 4 : 3,
               (index) => GestureDetector(
                 onTap: () async {
-                  BlocProvider.of<ChooseBarCubit>(context).chooseBar(index);
+                  !widget.flag
+                      ? BlocProvider.of<ChooseBarCubit>(context)
+                          .chooseBar(index)
+                      : BlocProvider.of<ChooseDocumentBarCubit>(context)
+                          .chooseBar(index);
                   currentIndex = index;
                   setState(() {});
                   // trigger here for rebuilding
@@ -44,11 +49,11 @@ class _CustomBoardBarState extends State<CustomBoardBar> {
                 child: BarItem(
                   isActive: (currentIndex == index),
                   text: (index == 0)
-                      ? 'Projects'
+                      ? (!widget.flag ? 'Projects' : 'Laws')
                       : (index == 1)
-                          ? 'Tasks'
+                          ? (!widget.flag ? 'Tasks' : 'Taxes')
                           : (index == 2)
-                              ? 'Meetings'
+                              ? (!widget.flag ? 'Meetings' : 'Regulations')
                               : 'Completed',
                   isTheLast: (index == 3),
                 ),

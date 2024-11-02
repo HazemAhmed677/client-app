@@ -25,11 +25,11 @@ class SettingsContainerHeader extends StatelessWidget {
             ],
           ),
           child: CircleAvatar(
-            radius: 20.sp,
+            radius: 26.sp,
             backgroundImage: const AssetImage(AppImages.github),
           ),
         ),
-        horizontalSpace(12),
+        horizontalSpace(16),
         Text(
           'Livia Vaccaro',
           style: AppStyles.robotoMonoBold20.copyWith(fontSize: 14.sp),
