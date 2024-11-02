@@ -27,7 +27,7 @@ class ProfileGridView extends StatelessWidget {
         borderRadius: BorderRadius.circular(16.sp),
         onTap: () {
           if (index == 0) {
-            context.push(Routes.documentView);
+            context.push(Routes.createdocumentView);
           } else if (index == 1) {
             context.push(Routes.reportView);
           } else if (index == 2) {

@@ -45,7 +45,9 @@ class _NavBarStackState extends State<NavBarStack> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(2.0.sp),
+              padding: EdgeInsets.all(
+                2.0.sp,
+              ),
               child: Icon(
                 (flag) ? FontAwesomeIcons.xmark : FontAwesomeIcons.plus,
                 size: 24.sp,

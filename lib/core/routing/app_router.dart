@@ -6,6 +6,9 @@ import 'package:client_app/features/authentication/ui/login_view.dart';
 import 'package:client_app/features/authentication/ui/sign_up_view.dart';
 import 'package:client_app/features/bottom_nav_bar_switcher/ui/switcher_view.dart';
 import 'package:client_app/features/check_board/ui/calendar_view.dart';
+import 'package:client_app/features/create_board/ui/create_document.dart';
+import 'package:client_app/features/create_board/ui/create_project_view.dart';
+import 'package:client_app/features/create_board/ui/create_task_view.dart';
 import 'package:client_app/features/home/ui/home_view.dart';
 import 'package:client_app/features/onboarding/ui/onboarding_view.dart';
 import 'package:client_app/features/profile/ui/document_view.dart';
@@ -87,7 +90,7 @@ class AppRouter {
 
       // profile
       GoRoute(
-        path: Routes.documentView,
+        path: Routes.createdocumentView,
         pageBuilder: (context, state) => CustomSliderTransition(
           child: const DocumentView(),
           key: state.pageKey,
@@ -108,6 +111,30 @@ class AppRouter {
         path: Routes.settingsView,
         pageBuilder: (context, state) => CustomSliderTransition(
           child: const SettingsView(),
+          key: state.pageKey,
+          duration: 300,
+        ),
+      ),
+      GoRoute(
+        path: Routes.createTaskView,
+        pageBuilder: (context, state) => CustomSliderTransition(
+          child: const CreareTaskView(),
+          key: state.pageKey,
+          duration: 300,
+        ),
+      ),
+      GoRoute(
+        path: Routes.createProjectView,
+        pageBuilder: (context, state) => CustomSliderTransition(
+          child: const CreateProjectView(),
+          key: state.pageKey,
+          duration: 300,
+        ),
+      ),
+      GoRoute(
+        path: Routes.createdocumentView,
+        pageBuilder: (context, state) => CustomSliderTransition(
+          child: const CreateDocumentView(),
           key: state.pageKey,
           duration: 300,
         ),

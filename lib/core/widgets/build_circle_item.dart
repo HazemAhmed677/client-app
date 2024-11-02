@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../theming/app_colors.dart';
 
 class BuildCircleItem extends StatelessWidget {
@@ -11,6 +10,7 @@ class BuildCircleItem extends StatelessWidget {
   });
   final IconData iconData;
   final int size;
+
   @override
   Widget build(BuildContext context) {
     return CircleAvatar(
