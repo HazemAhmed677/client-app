@@ -55,10 +55,7 @@ class _MicroBottomNavBarStackState extends State<MicroBottomNavBarStack> {
             top: y[idx],
             right: x11[idx],
             child: GestureDetector(
-              behavior: HitTestBehavior.translucent,
               onTap: () {
-                print('###################################');
-                print('###################################');
                 if (idx == 0) {
                   context.push(Routes.createTaskView);
                 } else if (idx == 1) {
@@ -70,8 +67,8 @@ class _MicroBottomNavBarStackState extends State<MicroBottomNavBarStack> {
               },
               child: Container(
                 decoration: const BoxDecoration(
-                  color: Colors.black,
-                ),
+                    // color: Colors.black,
+                    ),
                 child: BuildCircleItem(
                   iconData: (idx == 0)
                       ? FontAwesomeIcons.handshakeSimple

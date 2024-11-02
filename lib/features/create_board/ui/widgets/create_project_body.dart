@@ -5,6 +5,6 @@ class CreateProjectBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: const Text('Create Project'));
+    return const Center(child: Text('Create Project'));
   }
 }
