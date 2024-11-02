@@ -7,8 +7,10 @@ class BackNavigationButton extends StatelessWidget {
   const BackNavigationButton({
     super.key,
     required this.pageContext,
+    this.iconColor = AppColors.black,
   });
   final BuildContext pageContext;
+  final Color iconColor;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,7 +30,7 @@ class BackNavigationButton extends StatelessWidget {
         },
         icon: Icon(
           Icons.arrow_back_ios_new,
-          color: AppColors.black,
+          color: iconColor,
           size: 18.sp,
         ),
       ),

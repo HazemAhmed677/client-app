@@ -1,0 +1,63 @@
+import 'package:client_app/core/theming/app_styles.dart';
+import 'package:client_app/features/profile/ui/widgets/custom_devider.dart';
+import 'package:client_app/features/profile/ui/widgets/settings_container_column_of_options.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/theming/app_colors.dart';
+import 'settings_container_header.dart';
+
+class SettingsContainerDetails extends StatelessWidget {
+  const SettingsContainerDetails({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        verticalSpace(16),
+        Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: 16.0.sp,
+          ),
+          child: const SettingsContainerHeader(),
+        ),
+        const CustomDevider(
+          height: 42,
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: 16.0.sp,
+          ),
+          child: Text(
+            'Account Settings',
+            style: AppStyles.poppinsMedium14.copyWith(
+              fontSize: 16.sp,
+              color: AppColors.grey,
+            ),
+          ),
+        ),
+        verticalSpace(12),
+        const SettingsContainerColumnOfOptions(),
+        // const SettingdContainerColumnOfMore(),
+        // Row(
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        //   children: [
+        //     Icon(
+        //       FontAwesomeIcons.linkedin,
+        //       color: Colors.blue,
+        //       size: 32.sp,
+        //     ),
+        //     horizontalSpace(8),
+        //     Icon(
+        //       FontAwesomeIcons.facebook,
+        //       color: Colors.blue,
+        //       size: 32.sp,
+        //     ),
+        //   ],
+        // ),
+        verticalSpace(32),
+      ],
+    );
+  }
+}

@@ -46,7 +46,7 @@ class LogoutWidget extends StatelessWidget {
             ),
           ],
         ),
-        CustomTextOfGridElement(text: 'Logout')
+        const CustomTextOfGridElement(text: 'Logout')
       ],
     );
   }

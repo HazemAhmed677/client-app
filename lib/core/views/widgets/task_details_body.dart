@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../helpers/spacing.dart';
+import 'checkout_button.dart';
 import 'details_of_container.dart';
+import 'total_price_container.dart';
 
 class TaskDetailsBody extends StatelessWidget {
   const TaskDetailsBody({super.key});
@@ -21,7 +23,21 @@ class TaskDetailsBody extends StatelessWidget {
           ),
         ),
         SliverToBoxAdapter(
-          child: verticalSpace(24),
+          child: Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 14.0.sp,
+            ),
+            child: Column(
+              children: [
+                verticalSpace(32),
+                const TotalPriceContainer(
+                  title: 'Price: ',
+                  price: 4000,
+                ),
+                verticalSpace(24),
+              ],
+            ),
+          ),
         ),
         SliverToBoxAdapter(
           child: Padding(
@@ -42,6 +58,21 @@ class TaskDetailsBody extends StatelessWidget {
           ),
           sliver: const TasksDetailsSliverList(
             isProjectPage: false,
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: verticalSpace(
+            18,
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 14.0.sp,
+            ),
+            child: CheckoutButton(
+              onPressed: () {},
+            ),
           ),
         ),
         SliverToBoxAdapter(

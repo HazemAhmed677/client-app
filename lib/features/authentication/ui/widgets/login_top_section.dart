@@ -17,30 +17,10 @@ class LogInTopSection extends StatefulWidget {
   State<LogInTopSection> createState() => _LogInTopSectionState();
 }
 
-class _LogInTopSectionState extends State<LogInTopSection>
-    with SingleTickerProviderStateMixin {
+class _LogInTopSectionState extends State<LogInTopSection> {
   String email = '', password = '';
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
-  late AnimationController animationController;
-  late Animation<double> fadeAnimation;
-  @override
-  void initState() {
-    animationController = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 2),
-    );
-    fadeAnimation =
-        Tween<double>(begin: 0, end: 1).animate(animationController);
-    animationController.repeat();
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    animationController.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -51,18 +31,12 @@ class _LogInTopSectionState extends State<LogInTopSection>
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           verticalSpace(12),
-          AnimatedBuilder(
-            animation: fadeAnimation,
-            builder: (context, _) => FadeTransition(
-              opacity: fadeAnimation,
-              child: SizedBox(
-                height: 100.sp,
-                child: AspectRatio(
-                  aspectRatio: 1,
-                  child: Image.asset(
-                    AppImages.aimatrix,
-                  ),
-                ),
+          SizedBox(
+            height: 120.sp,
+            child: AspectRatio(
+              aspectRatio: 1,
+              child: Image.asset(
+                AppImages.aimatrix,
               ),
             ),
           ),

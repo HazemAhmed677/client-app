@@ -20,7 +20,7 @@ class ProfileGridView extends StatelessWidget {
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         mainAxisSpacing: 10.sp,
         crossAxisSpacing: 10.sp,
-        childAspectRatio: 1.sp,
+        childAspectRatio: 1.1.sp,
         crossAxisCount: 3,
       ),
       itemBuilder: (BuildContext context, int index) => InkWell(

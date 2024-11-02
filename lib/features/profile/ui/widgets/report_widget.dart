@@ -18,13 +18,13 @@ class ReportWidget extends StatelessWidget {
           children: [
             Center(
               child: CustomPaint(
-                size: Size(34.sp, 34.sp),
+                size: Size(28.sp, 28.sp),
                 painter: ArcPainter90(),
               ),
             ),
             Center(
               child: CustomPaint(
-                size: Size(30.sp, 30.sp),
+                size: Size(24.sp, 24.sp),
                 painter: ArcPainter270(),
               ),
             ),
@@ -34,7 +34,7 @@ class ReportWidget extends StatelessWidget {
           'Report',
           style: AppStyles.afacadfluxSemiBold18.copyWith(
             color: AppColors.black,
-            fontSize: 16.sp,
+            fontSize: 14.sp,
           ),
         ),
       ],
@@ -50,7 +50,7 @@ class ArcPainter90 extends CustomPainter {
       ..strokeWidth = 4
       ..style = PaintingStyle.fill;
 
-    final rect = Rect.fromLTWH(2, -5, size.width, size.height);
+    final rect = Rect.fromLTWH(2, -4, size.width, size.height);
     const startAngle = 0.0; // 270 degrees (in radians)
     const sweepAngle = -pi / 2;
 

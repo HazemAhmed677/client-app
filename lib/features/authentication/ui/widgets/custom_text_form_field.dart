@@ -13,17 +13,20 @@ class CustomTextFormField extends StatelessWidget {
     this.validator,
     required this.onChanged,
     this.textEditingController,
+    this.onSubmitted,
   });
   final String hint;
   final bool obscure;
   final Widget? suffixIcon;
   final String? Function(String?)? validator;
   final void Function(String) onChanged;
+  final Function(String)? onSubmitted;
   final TextEditingController? textEditingController;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       onChanged: onChanged,
+      onFieldSubmitted: onSubmitted,
       validator: validator,
       obscureText: obscure,
       cursorColor: AppColors.secondary,

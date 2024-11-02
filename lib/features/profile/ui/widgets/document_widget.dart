@@ -16,7 +16,7 @@ class DocumentWidget extends StatelessWidget {
         Icon(
           FontAwesomeIcons.solidFile,
           color: AppColors.primary,
-          size: 28.sp,
+          size: 22.sp,
         ),
         verticalSpace(4),
         const CustomTextOfGridElement(

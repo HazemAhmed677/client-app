@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../core/helpers/confirmation_alert.dart';
 import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/app_colors.dart';
 
@@ -18,13 +19,18 @@ class NotificationSliverList extends StatelessWidget {
         child: Column(
           children: [
             InkWell(
+              onLongPress: () {
+                showDeleteConfirmation(context);
+              },
               onTap: () {
                 // redirect
                 context.push(Routes.taskDetailsView);
               },
               child: Padding(
-                padding:
-                    EdgeInsets.symmetric(horizontal: 14.0.sp, vertical: 12),
+                padding: EdgeInsets.symmetric(
+                  horizontal: 14.0.sp,
+                  vertical: 12,
+                ),
                 child: const NotificationElement(),
               ),
             ),

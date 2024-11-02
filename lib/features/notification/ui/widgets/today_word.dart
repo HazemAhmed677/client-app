@@ -14,7 +14,7 @@ class TodayWord extends StatelessWidget {
       text,
       style: AppStyles.gilroyRegular17.copyWith(
         fontWeight: FontWeightHelper.medium,
-        fontSize: 20.sp,
+        fontSize: 18.sp,
         color: AppColors.grey,
       ),
     );

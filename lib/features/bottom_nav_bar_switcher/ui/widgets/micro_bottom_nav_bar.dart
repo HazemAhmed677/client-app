@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../core/helpers/build_circles_of_nav_bar.dart';
+import 'micro_bottom_nav_bar_stack.dart';
 
 class MicroBottomNavBar extends StatefulWidget {
   const MicroBottomNavBar({super.key});
@@ -19,7 +19,9 @@ class _MicroBottomNavBarState extends State<MicroBottomNavBar> {
         AnimatedSwitcher(
           transitionBuilder: (Widget child, Animation<double> animation) {
             return ScaleTransition(
-                scale: animation, child: child); // Animation effect
+              scale: animation,
+              child: child,
+            ); // Animation effect
           },
           duration: const Duration(
             milliseconds: 200,
@@ -29,16 +31,11 @@ class _MicroBottomNavBarState extends State<MicroBottomNavBar> {
             height: radius,
             child: Transform.translate(
               offset: Offset(
-                -17.sp,
+                -44.sp,
                 0,
               ),
-              child: Stack(
-                alignment: Alignment.center,
-                clipBehavior: Clip.none,
-                children: buildWidgetsInCircle(
-                  count: 3,
-                  radius: radius,
-                ), // Number of widgets and radius
+              child: MicroBottomNavBarStack(
+                radius: radius,
               ),
             ),
           ),
