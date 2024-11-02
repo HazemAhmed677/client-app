@@ -44,24 +44,37 @@ class HomeViewHeader extends StatelessWidget {
           onTap: () {
             // BlocProvider.of<SwitchViewsCubit>(context).setIndex(3);
           },
-          child: Stack(
-            clipBehavior: Clip.none,
-            children: [
-              Icon(
-                IconlyBold.notification,
-                size: 26.sp,
-              ),
-              Positioned(
-                top: 1.sp,
-                right: 2.sp,
-                child: CircleAvatar(
-                  radius: 4.sp,
-                  backgroundColor: AppColors.primary,
-                ),
-              )
-            ],
+          // child: Stack(
+          //   clipBehavior: Clip.none,
+          //   children: [
+          //     Badge(
+          //       child: Icon(
+          //         IconlyBold.notification,
+          //         size: 26.sp,
+          //       ),
+          //     ),
+          //     Positioned(
+          //       top: 1.sp,
+          //       right: 2.sp,
+          //       child: CircleAvatar(
+          //         radius: 4.sp,
+          //         backgroundColor: AppColors.primary,
+          //       ),
+          //     )
+          //   ],
+          // ),
+          child: Badge(
+            backgroundColor: AppColors.primary,
+            label: CircleAvatar(
+              radius: 4.sp,
+              backgroundColor: AppColors.white,
+            ),
+            child: Icon(
+              IconlyBold.notification,
+              size: 26.sp,
+            ),
           ),
-        )
+        ),
       ],
     );
   }

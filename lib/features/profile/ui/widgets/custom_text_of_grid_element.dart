@@ -17,7 +17,7 @@ class CustomTextOfGridElement extends StatelessWidget {
           text,
           style: AppStyles.afacadfluxSemiBold18.copyWith(
             color: AppColors.black,
-            fontSize: 16.sp,
+            fontSize: 14.sp,
           ),
         ),
       ],

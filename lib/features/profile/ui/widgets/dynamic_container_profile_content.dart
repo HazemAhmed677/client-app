@@ -60,7 +60,7 @@ class DynamicContainerProfileContent extends StatelessWidget {
             Text(
               'Shoban Haider',
               style: AppStyles.afacadfluxSemiBold18.copyWith(
-                fontSize: 21.sp,
+                fontSize: 20.sp,
                 color: AppColors.black,
               ),
             ),
@@ -78,7 +78,7 @@ class DynamicContainerProfileContent extends StatelessWidget {
               },
               text: 'Edit Profile',
             ),
-            verticalSpace(28),
+            verticalSpace(18),
           ],
         ),
       ),

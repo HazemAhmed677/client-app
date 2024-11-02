@@ -19,7 +19,7 @@ class SettingsWidget extends StatelessWidget {
             Icon(
               Icons.settings,
               color: AppColors.primary,
-              size: 30.sp,
+              size: 26.sp,
             ),
             Transform.translate(
               offset: Offset(0, -4.sp),
@@ -27,7 +27,7 @@ class SettingsWidget extends StatelessWidget {
                 Icon(
                   Icons.settings,
                   color: AppColors.mediumPriority,
-                  size: 16.sp,
+                  size: 14.sp,
                 ),
                 Icon(
                   Icons.settings,
