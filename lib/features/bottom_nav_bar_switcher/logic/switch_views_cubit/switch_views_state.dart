@@ -7,7 +7,7 @@ final class HomeState extends SwitchViewsState {}
 
 final class CheckBoardState extends SwitchViewsState {}
 
-final class CreateBoardState extends SwitchViewsState {}
+// final class CreateBoardState extends SwitchViewsState {}
 
 final class NotificationState extends SwitchViewsState {}
 

@@ -1,5 +1,4 @@
 import 'package:client_app/features/check_board/ui/check_board_view.dart';
-import 'package:client_app/features/create_board/ui/widgets/create_board_body.dart';
 import 'package:client_app/features/home/ui/home_view.dart';
 import 'package:client_app/features/notification/ui/notification_view.dart';
 import 'package:client_app/features/profile/ui/profile_view.dart';
@@ -19,7 +18,6 @@ class _SwitcherViewState extends State<SwitcherView> {
   final screens = const <Widget>[
     HomeView(),
     CheckBoardView(),
-    CreateBoardBody(),
     NotificationView(),
     ProfileView(),
   ];
@@ -43,11 +41,11 @@ class _SwitcherViewState extends State<SwitcherView> {
               ? screens[0]
               : (state is CheckBoardState)
                   ? screens[1]
-                  : (state is CreateBoardState)
+                  : (state is NotificationState)
                       ? screens[2]
-                      : (state is NotificationState)
+                      : (state is ProfileState)
                           ? screens[3]
-                          : screens[4],
+                          : const SizedBox.shrink(),
         ),
       ),
       bottomNavigationBar: const NavBarStack(),
