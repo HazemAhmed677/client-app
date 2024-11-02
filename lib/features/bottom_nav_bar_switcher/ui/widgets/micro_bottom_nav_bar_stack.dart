@@ -1,5 +1,5 @@
 import 'dart:math';
-
+import 'package:client_app/core/theming/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
@@ -24,8 +24,6 @@ class _MicroBottomNavBarStackState extends State<MicroBottomNavBarStack> {
   List<double> x1 = List.filled(3, 0.0);
   List<double> y = List.filled(3, 0.0);
   List<double> x11 = List.filled(3, 0.0);
-  List<double> lefts = List.filled(3, 0.0);
-  List<double> tops = List.filled(3, 0.0);
   @override
   void initState() {
     for (int i = 0; i < 3; i++) {
@@ -54,10 +52,14 @@ class _MicroBottomNavBarStackState extends State<MicroBottomNavBarStack> {
             left: x1[idx],
             top: y[idx],
             right: x11[idx],
-            child: GestureDetector(
+            // bottom: (idx != 1) ? 10.sp : 0,
+            child: InkWell(
+              highlightColor: AppColors.primary,
+              splashColor: AppColors.primary,
+              overlayColor: WidgetStateProperty.all<Color>(AppColors.primary),
               onTap: () {
                 if (idx == 0) {
-                  context.push(Routes.createTaskView);
+                  context.push(Routes.createProjectView);
                 } else if (idx == 1) {
                   // check token then navigate to doc if client
                   context.push(Routes.createDocumentView);
@@ -65,18 +67,13 @@ class _MicroBottomNavBarStackState extends State<MicroBottomNavBarStack> {
                   context.push(Routes.createTaskView);
                 }
               },
-              child: Container(
-                decoration: const BoxDecoration(
-                    // color: Colors.black,
-                    ),
-                child: BuildCircleItem(
-                  iconData: (idx == 0)
-                      ? FontAwesomeIcons.handshakeSimple
-                      : (idx == 1)
-                          ? FontAwesomeIcons.folderOpen
-                          : Icons.task,
-                  size: (idx == 2) ? 25 : 22,
-                ),
+              child: BuildCircleItem(
+                iconData: (idx == 0)
+                    ? FontAwesomeIcons.handshakeSimple
+                    : (idx == 1)
+                        ? FontAwesomeIcons.folderOpen
+                        : Icons.task,
+                size: (idx == 2) ? 25 : 22,
               ),
             ),
           );

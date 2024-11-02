@@ -5,10 +5,6 @@ class CreateTaskBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        Center(child: Text('Task')),
-      ],
-    );
+    return Center(child: Text('Task'));
   }
 }

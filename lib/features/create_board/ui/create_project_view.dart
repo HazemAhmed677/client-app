@@ -1,3 +1,4 @@
+import 'package:client_app/features/create_board/ui/widgets/create_project_body.dart';
 import 'package:flutter/material.dart';
 
 class CreateProjectView extends StatelessWidget {
@@ -6,7 +7,7 @@ class CreateProjectView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: CreateProjectView(),
+      body: CreateProjectBody(),
     );
   }
 }

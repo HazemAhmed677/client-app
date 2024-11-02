@@ -1,3 +1,4 @@
+import 'package:client_app/core/theming/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'micro_bottom_nav_bar_stack.dart';
@@ -14,33 +15,36 @@ class _MicroBottomNavBarState extends State<MicroBottomNavBar> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        AnimatedSwitcher(
-          transitionBuilder: (Widget child, Animation<double> animation) {
-            return ScaleTransition(
-              scale: animation,
-              child: child,
-            ); // Animation effect
-          },
-          duration: const Duration(
-            milliseconds: 200,
-          ),
-          child: SizedBox(
-            width: radius * 2.sp,
-            height: radius,
-            child: Transform.translate(
-              offset: Offset(
-                -44.sp,
-                0,
+    return AnimatedSwitcher(
+      transitionBuilder: (Widget child, Animation<double> animation) {
+        return ScaleTransition(
+          scale: animation,
+          child: child,
+        ); // Animation effect
+      },
+      duration: const Duration(
+        milliseconds: 200,
+      ),
+      child: Transform.translate(
+        offset: const Offset(0, -20),
+        child: Container(
+          clipBehavior: Clip.none,
+          width: 200,
+          height: (radius * 3).sp,
+          decoration: const BoxDecoration(
+              // color: AppColors.primary,
               ),
-              child: MicroBottomNavBarStack(
-                radius: radius,
-              ),
+          child: Transform.translate(
+            offset: Offset(
+              -44.sp,
+              0,
+            ),
+            child: MicroBottomNavBarStack(
+              radius: radius,
             ),
           ),
         ),
-      ],
+      ),
     );
   }
 }

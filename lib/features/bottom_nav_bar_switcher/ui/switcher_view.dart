@@ -78,7 +78,6 @@ class _SwitcherViewState extends State<SwitcherView> {
                 letIndexChange: (index) => true,
               ),
               Positioned(
-                bottom: 120.sp,
                 left: 0,
                 right: 0,
                 child: SwitchMicro(
