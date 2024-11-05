@@ -1,9 +1,10 @@
 import 'dart:math';
-import 'package:client_app/core/theming/app_colors.dart';
+import 'package:client_app/core/helpers/logger.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/routing/routes.dart';
+import '../../../../core/theming/app_colors.dart';
 import '../../../../core/widgets/build_circle_item.dart';
 
 class MicroBottomNavBarStack extends StatefulWidget {
@@ -53,11 +54,13 @@ class _MicroBottomNavBarStackState extends State<MicroBottomNavBarStack> {
             top: y[idx],
             right: x11[idx],
             // bottom: (idx != 1) ? 10.sp : 0,
-            child: InkWell(
-              highlightColor: AppColors.primary,
-              splashColor: AppColors.primary,
-              overlayColor: WidgetStateProperty.all<Color>(AppColors.primary),
+            child: GestureDetector(
+              // highlightColor: AppColors.primary,
+              // splashColor: AppColors.primary,
+              // overlayColor: WidgetStateProperty.all<Color>(AppColors.primary),
+              behavior: HitTestBehavior.translucent,
               onTap: () {
+                loggerDebug('Ezaay');
                 if (idx == 0) {
                   context.push(Routes.createProjectView);
                 } else if (idx == 1) {
@@ -67,13 +70,24 @@ class _MicroBottomNavBarStackState extends State<MicroBottomNavBarStack> {
                   context.push(Routes.createTaskView);
                 }
               },
-              child: BuildCircleItem(
-                iconData: (idx == 0)
-                    ? FontAwesomeIcons.handshakeSimple
-                    : (idx == 1)
-                        ? FontAwesomeIcons.folderOpen
-                        : Icons.task,
-                size: (idx == 2) ? 25 : 22,
+              child: Align(
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: (idx == 0)
+                        ? AppColors.primary
+                        : (idx == 1)
+                            ? AppColors.secondary
+                            : AppColors.redDegree,
+                  ),
+                  child: BuildCircleItem(
+                    iconData: (idx == 0)
+                        ? FontAwesomeIcons.handshakeSimple
+                        : (idx == 1)
+                            ? FontAwesomeIcons.folderOpen
+                            : Icons.task,
+                    size: (idx == 2) ? 25 : 22,
+                  ),
+                ),
               ),
             ),
           );
