@@ -1,5 +1,5 @@
 import 'dart:math';
-
+import 'package:client_app/core/helpers/logger.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
@@ -24,64 +24,56 @@ class _MicroBottomNavBarStackState extends State<MicroBottomNavBarStack> {
   List<double> x1 = List.filled(3, 0.0);
   List<double> y = List.filled(3, 0.0);
   List<double> x11 = List.filled(3, 0.0);
-  List<double> lefts = List.filled(3, 0.0);
-  List<double> tops = List.filled(3, 0.0);
+
   @override
   void initState() {
+    super.initState();
     for (int i = 0; i < 3; i++) {
       angle[i] = angleStep * i;
-      x1[i] = widget.radius +
-          widget.radius * cos(angle[i]); // radius = sopcd between each 2
-      y[i] = widget.radius -
-          widget.radius * sin(angle[i]); // Minus to align on top arc
-      x11[i] = -(widget.radius +
-          widget.radius *
-              cos(
-                angle[i],
-              ));
+      x1[i] = widget.radius + widget.radius * cos(angle[i]); // X position
+      y[i] = widget.radius - widget.radius * sin(angle[i]); // Y position
+      x11[i] =
+          -(widget.radius + widget.radius * cos(angle[i])); // Offset adjustment
     }
-    super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       clipBehavior: Clip.none,
-      children: List.generate(
-        3,
-        (idx) {
-          return Positioned(
-            left: x1[idx],
-            top: y[idx],
-            right: x11[idx],
-            child: GestureDetector(
-              onTap: () {
-                if (idx == 0) {
-                  context.push(Routes.createTaskView);
-                } else if (idx == 1) {
-                  // check token then navigate to doc if client
-                  context.push(Routes.createDocumentView);
-                } else {
-                  context.push(Routes.createTaskView);
-                }
-              },
-              child: Container(
-                decoration: const BoxDecoration(
-                    // color: Colors.black,
-                    ),
-                child: BuildCircleItem(
-                  iconData: (idx == 0)
-                      ? FontAwesomeIcons.handshakeSimple
-                      : (idx == 1)
-                          ? FontAwesomeIcons.folderOpen
-                          : Icons.task,
-                  size: (idx == 2) ? 25 : 22,
+      children: List.generate(3, (idx) {
+        return Positioned(
+          left: x1[idx],
+          top: y[idx],
+          right: x11[idx],
+          child: Stack(
+            children: [
+              Align(
+                child: InkWell(
+                  onTap: () {
+                    loggerDebug('Ezaay');
+                    if (idx == 0) {
+                      context.push(Routes.createProjectView);
+                    } else if (idx == 1) {
+                      context.push(Routes.createDocumentView);
+                    } else {
+                      context.push(Routes.createTaskView);
+                    }
+                  },
+                  child: BuildCircleItem(
+                    iconData: (idx == 0)
+                        ? FontAwesomeIcons.handshakeSimple
+                        : (idx == 1)
+                            ? FontAwesomeIcons.folderOpen
+                            : Icons.task,
+                    size: (idx == 2) ? 25 : 22,
+                  ),
                 ),
               ),
-            ),
-          );
-        },
-      ),
+            ],
+          ),
+        );
+      }),
     );
   }
 }

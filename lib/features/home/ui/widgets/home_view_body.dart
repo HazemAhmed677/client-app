@@ -47,7 +47,7 @@ class HomeViewBody extends StatelessWidget {
             ),
             const ProjectsListView(),
             SliverToBoxAdapter(
-              child: verticalSpace(8),
+              child: verticalSpace(90),
             )
           ],
         ),

@@ -14,33 +14,20 @@ class _MicroBottomNavBarState extends State<MicroBottomNavBar> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        AnimatedSwitcher(
-          transitionBuilder: (Widget child, Animation<double> animation) {
-            return ScaleTransition(
-              scale: animation,
-              child: child,
-            ); // Animation effect
-          },
-          duration: const Duration(
-            milliseconds: 200,
+    return Transform.translate(
+      offset: Offset(0, -72.sp),
+      child: SizedBox(
+        height: 100,
+        child: Transform.translate(
+          offset: Offset(
+            -45.sp,
+            0,
           ),
-          child: SizedBox(
-            width: radius * 2.sp,
-            height: radius,
-            child: Transform.translate(
-              offset: Offset(
-                -44.sp,
-                0,
-              ),
-              child: MicroBottomNavBarStack(
-                radius: radius,
-              ),
-            ),
+          child: MicroBottomNavBarStack(
+            radius: radius,
           ),
         ),
-      ],
+      ),
     );
   }
 }
