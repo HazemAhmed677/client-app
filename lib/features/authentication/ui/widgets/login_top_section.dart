@@ -32,7 +32,7 @@ class _LogInTopSectionState extends State<LogInTopSection> {
         children: [
           verticalSpace(12),
           SizedBox(
-            height: 140.sp,
+            height: 180.h,
             child: AspectRatio(
               aspectRatio: 1,
               child: Image.asset(
