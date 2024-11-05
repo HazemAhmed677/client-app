@@ -39,44 +39,39 @@ class _SwitcherViewState extends State<SwitcherView> {
           alignment: Alignment.bottomCenter,
           children: [
             ModalProgressHUD(
-                color: AppColors.darkGrey,
-                blur: 1,
-                inAsyncCall: isAbsorbing,
-                progressIndicator: const SizedBox.shrink(),
-                child: AbsorbPointer(
-                  absorbing: isAbsorbing,
-                  child: theScreen(state),
-                )),
-            Container(
-              height: 180,
-              decoration: BoxDecoration(
-                color: AppColors.lowPriority,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(32.sp),
-                  topRight: Radius.circular(32.sp),
-                ),
-              ),
-              child: CurvedNavigationBar(
-                height: 64.sp,
-                key: bottomNavigationKey,
-                index: currentScreenIdx,
-                items: curevedNavBarItems(
-                    currentScreenIdx: currentScreenIdx, flag: flag),
-                color: AppColors.bottomNavBarColor,
-                buttonBackgroundColor:
-                    flag ? AppColors.redDegree : AppColors.bottomNavBarColor,
-                backgroundColor: Colors.transparent,
-                animationCurve: Curves.easeInOut,
-                animationDuration: const Duration(
-                  milliseconds: 200,
-                ),
-                onTap: logicOfCurrAndPrevIndex,
-                letIndexChange: (index) => true,
+              color: AppColors.darkGrey,
+              blur: 1,
+              inAsyncCall: isAbsorbing,
+              progressIndicator: const SizedBox.shrink(),
+              child: AbsorbPointer(
+                absorbing: isAbsorbing,
+                child: theScreen(state),
               ),
             ),
-            SwitchMicro(
-              currentScreenIdx: currentScreenIdx,
-              flag: flag,
+            CurvedNavigationBar(
+              height: 65,
+              key: bottomNavigationKey,
+              index: currentScreenIdx,
+              items: curevedNavBarItems(
+                  currentScreenIdx: currentScreenIdx, flag: flag),
+              color: AppColors.bottomNavBarColor,
+              buttonBackgroundColor:
+                  flag ? AppColors.redDegree : AppColors.bottomNavBarColor,
+              backgroundColor: Colors.transparent,
+              animationCurve: Curves.easeInOut,
+              animationDuration: const Duration(
+                milliseconds: 200,
+              ),
+              onTap: logicOfCurrAndPrevIndex,
+              letIndexChange: (index) => true,
+            ),
+            SizedBox(
+              height: 180.h,
+              width: MediaQuery.sizeOf(context).width,
+              child: SwitchMicro(
+                currentScreenIdx: currentScreenIdx,
+                flag: flag,
+              ),
             )
           ],
         ),

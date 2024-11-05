@@ -5,6 +5,11 @@ class CreateTaskBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('Task'));
+    return const Center(
+      child: Text(
+        'Create Task View',
+        style: TextStyle(color: Colors.black, fontSize: 18),
+      ),
+    );
   }
 }

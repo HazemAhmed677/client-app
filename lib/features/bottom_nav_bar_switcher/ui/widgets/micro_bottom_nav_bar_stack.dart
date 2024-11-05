@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/routing/routes.dart';
-import '../../../../core/theming/app_colors.dart';
 import '../../../../core/widgets/build_circle_item.dart';
 
 class MicroBottomNavBarStack extends StatefulWidget {
@@ -25,60 +24,42 @@ class _MicroBottomNavBarStackState extends State<MicroBottomNavBarStack> {
   List<double> x1 = List.filled(3, 0.0);
   List<double> y = List.filled(3, 0.0);
   List<double> x11 = List.filled(3, 0.0);
+
   @override
   void initState() {
+    super.initState();
     for (int i = 0; i < 3; i++) {
       angle[i] = angleStep * i;
-      x1[i] = widget.radius +
-          widget.radius * cos(angle[i]); // radius = sopcd between each 2
-      y[i] = widget.radius -
-          widget.radius * sin(angle[i]); // Minus to align on top arc
-      x11[i] = -(widget.radius +
-          widget.radius *
-              cos(
-                angle[i],
-              ));
+      x1[i] = widget.radius + widget.radius * cos(angle[i]); // X position
+      y[i] = widget.radius - widget.radius * sin(angle[i]); // Y position
+      x11[i] =
+          -(widget.radius + widget.radius * cos(angle[i])); // Offset adjustment
     }
-    super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       clipBehavior: Clip.none,
-      children: List.generate(
-        3,
-        (idx) {
-          return Positioned(
-            left: x1[idx],
-            top: y[idx],
-            right: x11[idx],
-            // bottom: (idx != 1) ? 10.sp : 0,
-            child: GestureDetector(
-              // highlightColor: AppColors.primary,
-              // splashColor: AppColors.primary,
-              // overlayColor: WidgetStateProperty.all<Color>(AppColors.primary),
-              behavior: HitTestBehavior.translucent,
-              onTap: () {
-                loggerDebug('Ezaay');
-                if (idx == 0) {
-                  context.push(Routes.createProjectView);
-                } else if (idx == 1) {
-                  // check token then navigate to doc if client
-                  context.push(Routes.createDocumentView);
-                } else {
-                  context.push(Routes.createTaskView);
-                }
-              },
-              child: Align(
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: (idx == 0)
-                        ? AppColors.primary
-                        : (idx == 1)
-                            ? AppColors.secondary
-                            : AppColors.redDegree,
-                  ),
+      children: List.generate(3, (idx) {
+        return Positioned(
+          left: x1[idx],
+          top: y[idx],
+          right: x11[idx],
+          child: Stack(
+            children: [
+              Align(
+                child: InkWell(
+                  onTap: () {
+                    loggerDebug('Ezaay');
+                    if (idx == 0) {
+                      context.push(Routes.createProjectView);
+                    } else if (idx == 1) {
+                      context.push(Routes.createDocumentView);
+                    } else {
+                      context.push(Routes.createTaskView);
+                    }
+                  },
                   child: BuildCircleItem(
                     iconData: (idx == 0)
                         ? FontAwesomeIcons.handshakeSimple
@@ -89,10 +70,10 @@ class _MicroBottomNavBarStackState extends State<MicroBottomNavBarStack> {
                   ),
                 ),
               ),
-            ),
-          );
-        },
-      ),
+            ],
+          ),
+        );
+      }),
     );
   }
 }

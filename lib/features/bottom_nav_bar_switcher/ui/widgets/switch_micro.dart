@@ -20,7 +20,13 @@ class SwitchMicro extends StatelessWidget {
         return ScaleTransition(scale: animation, child: child);
       },
       child: (currentScreenIdx == 2 && flag)
-          ? const MicroBottomNavBar()
+          ? Transform.translate(
+              offset: const Offset(
+                0,
+                50,
+              ),
+              child: const MicroBottomNavBar(),
+            )
           : const SizedBox.shrink(),
     );
   }

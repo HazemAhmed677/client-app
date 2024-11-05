@@ -5,6 +5,11 @@ class CreateProjectBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text('Create Project'));
+    return const Center(
+      child: Text(
+        'Create Meeting View',
+        style: TextStyle(color: Colors.black, fontSize: 18),
+      ),
+    );
   }
 }

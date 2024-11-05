@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../core/theming/app_colors.dart';
 import 'micro_bottom_nav_bar_stack.dart';
 
 class MicroBottomNavBar extends StatefulWidget {
@@ -17,16 +16,11 @@ class _MicroBottomNavBarState extends State<MicroBottomNavBar> {
   Widget build(BuildContext context) {
     return Transform.translate(
       offset: Offset(0, -72.sp),
-      child: Container(
-        clipBehavior: Clip.hardEdge,
-        width: 160,
-        height: 98,
-        decoration: const BoxDecoration(
-          color: AppColors.white,
-        ),
+      child: SizedBox(
+        height: 100,
         child: Transform.translate(
           offset: Offset(
-            -44.sp,
+            -45.sp,
             0,
           ),
           child: MicroBottomNavBarStack(
