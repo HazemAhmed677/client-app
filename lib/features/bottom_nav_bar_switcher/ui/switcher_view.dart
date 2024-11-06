@@ -1,7 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import '../../../core/theming/app_colors.dart';
 import '../logic/switch_views_cubit/switch_views_cubit.dart';
@@ -25,7 +24,7 @@ class _SwitcherViewState extends State<SwitcherView> {
 
   @override
   void initState() {
-    // set home default
+    // set home default (change place)
     BlocProvider.of<SwitchViewsCubit>(context).emitViews(0);
     super.initState();
   }
@@ -45,28 +44,33 @@ class _SwitcherViewState extends State<SwitcherView> {
               progressIndicator: const SizedBox.shrink(),
               child: AbsorbPointer(
                 absorbing: isAbsorbing,
-                child: theScreen(state),
+                child: AnimatedSwitcher(
+                  duration: const Duration(milliseconds: 400),
+                  child: theScreen(state),
+                ),
               ),
             ),
             CurvedNavigationBar(
-              height: 65,
+              height: 64,
               key: bottomNavigationKey,
               index: currentScreenIdx,
               items: curevedNavBarItems(
-                  currentScreenIdx: currentScreenIdx, flag: flag),
+                currentScreenIdx: currentScreenIdx,
+                flag: flag,
+              ),
               color: AppColors.bottomNavBarColor,
               buttonBackgroundColor:
                   flag ? AppColors.redDegree : AppColors.bottomNavBarColor,
               backgroundColor: Colors.transparent,
               animationCurve: Curves.easeInOut,
               animationDuration: const Duration(
-                milliseconds: 200,
+                milliseconds: 350,
               ),
               onTap: logicOfCurrAndPrevIndex,
               letIndexChange: (index) => true,
             ),
             SizedBox(
-              height: 180.h,
+              height: 180,
               width: MediaQuery.sizeOf(context).width,
               child: SwitchMicro(
                 currentScreenIdx: currentScreenIdx,
@@ -76,7 +80,6 @@ class _SwitcherViewState extends State<SwitcherView> {
           ],
         ),
       ),
-      // bottomNavigationBar: const NavBarStack(),
     );
   }
 

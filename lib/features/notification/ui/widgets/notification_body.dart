@@ -33,11 +33,13 @@ class NotificationBody extends StatelessWidget {
             ),
           ),
           const NotificationCommonColumn(
-            text: 'TODAY',
+            text1: 'TODAY',
+            text2: 'Mark all as read',
           ),
           const NotificationSliverList(),
           const NotificationCommonColumn(
-            text: 'YESTERDAY',
+            text1: 'YESTERDAY',
+            text2: 'Mark all as read',
           ),
           const NotificationSliverList(),
           SliverToBoxAdapter(child: verticalSpace(100)),

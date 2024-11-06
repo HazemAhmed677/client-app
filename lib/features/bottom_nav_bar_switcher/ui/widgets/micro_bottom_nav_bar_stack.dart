@@ -1,6 +1,6 @@
 import 'dart:math';
-import 'package:client_app/core/helpers/logger.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/routing/routes.dart';
@@ -50,12 +50,12 @@ class _MicroBottomNavBarStackState extends State<MicroBottomNavBarStack> {
             children: [
               Align(
                 child: InkWell(
+                  borderRadius: BorderRadius.circular(22.sp),
                   onTap: () {
-                    loggerDebug('Ezaay');
                     if (idx == 0) {
-                      context.push(Routes.createProjectView);
+                      context.push(Routes.createMeetinfView);
                     } else if (idx == 1) {
-                      context.push(Routes.createDocumentView);
+                      context.push(Routes.createProjectView);
                     } else {
                       context.push(Routes.createTaskView);
                     }

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/theming/app_colors.dart';
-import '../../../../core/theming/app_styles.dart';
-import '../../../../core/widgets/back_navigation_button.dart';
+import '../theming/app_colors.dart';
+import '../theming/app_styles.dart';
+import 'back_navigation_button.dart';
 
 class CommonRowHeader extends StatelessWidget {
   const CommonRowHeader({super.key, required this.title});
@@ -36,6 +36,7 @@ class CommonRowHeader extends StatelessWidget {
                     style: AppStyles.gilroyRegular17.copyWith(
                       fontSize: 20.sp,
                       color: AppColors.black,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                   const Spacer(

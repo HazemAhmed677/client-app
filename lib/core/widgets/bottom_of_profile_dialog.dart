@@ -1,0 +1,50 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../features/profile/ui/widgets/custom_logout_button.dart';
+import '../helpers/spacing.dart';
+import '../theming/app_colors.dart';
+
+class BottomOfProfileDialog extends StatelessWidget {
+  const BottomOfProfileDialog({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 16.0.sp),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          CustomLogoutButton(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12.0.sp),
+            ),
+            onPressed: () {
+              context.pop();
+            },
+            text: 'Cancel',
+            edgeColor: AppColors.primary,
+            backgroundColor: AppColors.white,
+            textColor: AppColors.black,
+            overlayColor: AppColors.primary,
+          ),
+          horizontalSpace(12),
+          CustomLogoutButton(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12.0.sp),
+            ),
+            onPressed: () {},
+            text: 'Update',
+            edgeColor: AppColors.primary,
+            backgroundColor: AppColors.primary,
+            textColor: AppColors.white,
+            overlayColor: AppColors.white,
+          ),
+        ],
+      ),
+    );
+  }
+}

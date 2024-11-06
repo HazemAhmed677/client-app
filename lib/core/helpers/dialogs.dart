@@ -3,13 +3,11 @@ import 'package:client_app/core/theming/app_colors.dart';
 import 'package:client_app/core/theming/app_styles.dart';
 import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:client_app/core/widgets/custom_prefix_text_field_for_edit_profile_dialog.dart';
-import 'package:client_app/features/profile/ui/widgets/custom_logout_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:go_router/go_router.dart';
 import 'package:iconly/iconly.dart';
-
+import '../widgets/bottom_of_profile_dialog.dart';
 import '../widgets/custom_text_field_for_edit_profile.dart';
 
 void showEditProfileDialog(BuildContext context) {
@@ -84,39 +82,7 @@ void showEditProfileDialog(BuildContext context) {
                 ),
               ),
               verticalSpace(32),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.0.sp),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    CustomLogoutButton(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12.0.sp),
-                      ),
-                      onPressed: () {
-                        context.pop();
-                      },
-                      text: 'Cancel',
-                      edgeColor: AppColors.primary,
-                      backgroundColor: AppColors.white,
-                      textColor: AppColors.black,
-                      overlayColor: AppColors.primary,
-                    ),
-                    horizontalSpace(12),
-                    CustomLogoutButton(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12.0.sp),
-                      ),
-                      onPressed: () {},
-                      text: 'Update',
-                      edgeColor: AppColors.primary,
-                      backgroundColor: AppColors.primary,
-                      textColor: AppColors.white,
-                      overlayColor: AppColors.white,
-                    ),
-                  ],
-                ),
-              ),
+              const BottomOfProfileDialog(),
               verticalSpace(32),
             ],
           ),

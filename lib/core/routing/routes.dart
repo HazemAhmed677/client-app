@@ -13,4 +13,5 @@ class Routes {
   static const createProjectView = '/createProjectView';
   static const createTaskView = '/createTaskView';
   static const createDocumentView = '/createDocumentView';
+  static const createMeetinfView = '/createMeetinfView';
 }

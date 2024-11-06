@@ -7,17 +7,22 @@ class DynamicContainer extends StatelessWidget {
   const DynamicContainer({
     super.key,
     required this.child,
+    this.isBoardered = false,
   });
   final Widget child;
+  final bool isBoardered;
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.only(
-            bottomRight: Radius.circular(28.sp),
-            bottomLeft: Radius.circular(
-              28.sp,
-            )),
+        borderRadius: isBoardered
+            ? null
+            : BorderRadius.only(
+                bottomRight: Radius.circular(28.sp),
+                bottomLeft: Radius.circular(
+                  28.sp,
+                ),
+              ),
         color: AppColors.white,
         boxShadow: [
           BoxShadow(

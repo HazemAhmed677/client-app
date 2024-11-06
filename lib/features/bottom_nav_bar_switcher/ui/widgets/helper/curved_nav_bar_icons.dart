@@ -31,12 +31,22 @@ List<Widget> curevedNavBarItems(
         color: AppColors.white,
       ),
     ),
-    Icon(
-      (currentScreenIdx == 3)
-          ? IconlyBold.notification
-          : IconlyLight.notification,
-      size: 26.sp,
-      color: AppColors.white,
+    Padding(
+      padding: EdgeInsets.all(1.0.sp),
+      child: Badge(
+        backgroundColor: AppColors.primary,
+        label: CircleAvatar(
+          radius: 3.sp,
+          backgroundColor: AppColors.white,
+        ),
+        child: Icon(
+          (currentScreenIdx == 3)
+              ? IconlyBold.notification
+              : IconlyLight.notification,
+          size: 25.sp,
+          color: AppColors.white,
+        ),
+      ),
     ),
     Icon(
       (currentScreenIdx == 4) ? IconlyBold.profile : IconlyLight.profile,

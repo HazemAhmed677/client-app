@@ -10,7 +10,7 @@ import '../../../../core/widgets/common_container_for_check_board.dart';
 
 class TaskCheckBoardItemDetails extends StatefulWidget {
   const TaskCheckBoardItemDetails({super.key, required this.priorities});
-  final List<CommonContainerForCheckBoard> priorities;
+  final List<ProirityContainer> priorities;
 
   @override
   State<TaskCheckBoardItemDetails> createState() =>
@@ -19,8 +19,7 @@ class TaskCheckBoardItemDetails extends StatefulWidget {
 
 class _TaskCheckBoardItemDetailsState extends State<TaskCheckBoardItemDetails> {
   // The currently selected priority.
-  CommonContainerForCheckBoard priorityChoosed =
-      const CommonContainerForCheckBoard(
+  ProirityContainer priorityChoosed = const ProirityContainer(
     color: AppColors.onTrackColor,
     priority: 'On Track',
   );
@@ -76,7 +75,7 @@ class _TaskCheckBoardItemDetailsState extends State<TaskCheckBoardItemDetails> {
                     .toList(),
               ),
               horizontalSpace(4),
-              const CommonContainerForCheckBoard(
+              const ProirityContainer(
                   color: AppColors.highPriority, priority: 'High'),
             ],
           ),

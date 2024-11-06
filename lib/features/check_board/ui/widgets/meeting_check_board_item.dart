@@ -13,16 +13,16 @@ class MeetingCheckBoardItem extends StatefulWidget {
 }
 
 class _MeetingCheckBoardItemState extends State<MeetingCheckBoardItem> {
-  final List<CommonContainerForCheckBoard> priorities = const [
-    CommonContainerForCheckBoard(
+  final List<ProirityContainer> priorities = const [
+    ProirityContainer(
       color: AppColors.highPriority,
       priority: 'High',
     ),
-    CommonContainerForCheckBoard(
+    ProirityContainer(
       color: AppColors.mediumPriority,
       priority: 'Medium',
     ),
-    CommonContainerForCheckBoard(
+    ProirityContainer(
       color: AppColors.lowPriority,
       priority: 'Low',
     ),

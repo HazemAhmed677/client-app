@@ -1,4 +1,4 @@
-import 'package:client_app/features/profile/ui/widgets/common_row_header.dart';
+import 'package:client_app/core/widgets/common_row_header.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
