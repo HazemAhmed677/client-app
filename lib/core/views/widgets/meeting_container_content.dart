@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../helpers/spacing.dart';
 import '../../theming/app_colors.dart';
 import '../../theming/app_styles.dart';
+import 'people_list_view.dart';
 
 class MeetingContainerContent extends StatelessWidget {
   const MeetingContainerContent({super.key});
@@ -44,8 +45,9 @@ class MeetingContainerContent extends StatelessWidget {
               const DateContainerColumnForMeetingDetails()
             ],
           ),
-          verticalSpace(12),
-          verticalSpace(12),
+          verticalSpace(24),
+          const PeopleListView(),
+          verticalSpace(22),
           Text(
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nulla facilisi. Duis aliquet egestas purus in blandit.',
             style: AppStyles.afacadfluxSemiBold18.copyWith(

@@ -41,7 +41,9 @@ class NotificationBody extends StatelessWidget {
             text1: 'YESTERDAY',
             text2: 'Mark all as read',
           ),
-          const NotificationSliverList(),
+          const NotificationSliverList(
+            isMeeting: true,
+          ),
           SliverToBoxAdapter(child: verticalSpace(100)),
         ],
       ),
