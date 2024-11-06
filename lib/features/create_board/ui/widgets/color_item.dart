@@ -13,10 +13,10 @@ class ColorItem extends StatelessWidget {
         milliseconds: 200,
       ),
       child: CircleAvatar(
-        radius: 24,
+        radius: 20,
         backgroundColor: color,
         child: CircleAvatar(
-          radius: 12,
+          radius: 10,
           backgroundColor: (isActive) ? AppColors.white : Colors.transparent,
         ),
       ),

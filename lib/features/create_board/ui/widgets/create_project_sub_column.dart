@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../../../core/theming/app_styles.dart';
 import '../../../../core/widgets/common_container_for_check_board.dart';
+import 'colors_list_view.dart';
 import 'common_list_tile.dart';
 
 class CreateProjectSubColumn extends StatelessWidget {
@@ -54,7 +55,9 @@ class CreateProjectSubColumn extends StatelessWidget {
                 color: AppColors.grey.shade400,
               ),
             ),
-          )
+          ),
+          verticalSpace(22),
+          const ColorListView(),
         ],
       ),
     );

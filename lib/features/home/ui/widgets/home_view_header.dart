@@ -1,8 +1,6 @@
 import 'package:client_app/core/helpers/spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:iconly/iconly.dart';
-
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_images.dart';
 import '../../../../core/theming/app_styles.dart';
@@ -37,43 +35,6 @@ class HomeViewHeader extends StatelessWidget {
               ),
             ),
           ],
-        ),
-        const Spacer(),
-        InkWell(
-          borderRadius: BorderRadius.circular(12.sp),
-          onTap: () {
-            // BlocProvider.of<SwitchViewsCubit>(context).setIndex(3);
-          },
-          // child: Stack(
-          //   clipBehavior: Clip.none,
-          //   children: [
-          //     Badge(
-          //       child: Icon(
-          //         IconlyBold.notification,
-          //         size: 26.sp,
-          //       ),
-          //     ),
-          //     Positioned(
-          //       top: 1.sp,
-          //       right: 2.sp,
-          //       child: CircleAvatar(
-          //         radius: 4.sp,
-          //         backgroundColor: AppColors.primary,
-          //       ),
-          //     )
-          //   ],
-          // ),
-          child: Badge(
-            backgroundColor: AppColors.primary,
-            label: CircleAvatar(
-              radius: 4.sp,
-              backgroundColor: AppColors.white,
-            ),
-            child: Icon(
-              IconlyBold.notification,
-              size: 26.sp,
-            ),
-          ),
         ),
       ],
     );
