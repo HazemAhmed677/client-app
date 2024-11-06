@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../theming/app_colors.dart';
 
-class CommonContainerForCheckBoard extends StatelessWidget {
-  const CommonContainerForCheckBoard({
+class ProirityContainer extends StatelessWidget {
+  const ProirityContainer({
     super.key,
     required this.color,
     required this.priority,

@@ -17,56 +17,60 @@ class CommonListTile extends StatelessWidget {
   final Widget trailing;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: AppColors.white,
-        borderRadius: BorderRadius.circular(8.sp),
-        boxShadow: [
-          BoxShadow(
-            color: AppColors.primary.withOpacity(0.05),
-            spreadRadius: 2.sp,
-            blurRadius: 2.sp,
-            offset: Offset(
-              0,
-              3.sp,
-            ),
-          ),
-          BoxShadow(
-            color: AppColors.secondary.withOpacity(0.05),
-            spreadRadius: 3.sp,
-            blurRadius: 3.sp,
-            offset: Offset(
-              0,
-              6.sp,
-            ), // changes position of shadow
-          )
-        ],
-      ),
-      child: Padding(
-        padding: EdgeInsets.only(
-          left: 16.w,
-          top: 18.h,
-          bottom: 18.h,
-          right: 12.w,
-        ),
-        child: Row(
-          children: [
-            Icon(
-              leadingIcon,
-              color: AppColors.primary,
-            ),
-            horizontalSpace(12),
-            Text(
-              title,
-              style: AppStyles.gilroyRegular17.copyWith(
-                color: AppColors.black,
-                fontSize: 15.sp,
-                fontWeight: FontWeightHelper.bold,
+    return InkWell(
+      borderRadius: BorderRadius.circular(8.sp),
+      onTap: () {},
+      child: Container(
+        decoration: BoxDecoration(
+          color: AppColors.white,
+          borderRadius: BorderRadius.circular(8.sp),
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.primary.withOpacity(0.05),
+              spreadRadius: 2.sp,
+              blurRadius: 2.sp,
+              offset: Offset(
+                0,
+                3.sp,
               ),
             ),
-            const Spacer(),
-            trailing,
+            BoxShadow(
+              color: AppColors.secondary.withOpacity(0.05),
+              spreadRadius: 3.sp,
+              blurRadius: 3.sp,
+              offset: Offset(
+                0,
+                6.sp,
+              ), // changes position of shadow
+            )
           ],
+        ),
+        child: Padding(
+          padding: EdgeInsets.only(
+            left: 16.w,
+            top: 18.h,
+            bottom: 18.h,
+            right: 14.w,
+          ),
+          child: Row(
+            children: [
+              Icon(
+                leadingIcon,
+                color: AppColors.primary,
+              ),
+              horizontalSpace(12),
+              Text(
+                title,
+                style: AppStyles.gilroyRegular17.copyWith(
+                  color: AppColors.black,
+                  fontSize: 14.sp,
+                  fontWeight: FontWeightHelper.bold,
+                ),
+              ),
+              const Spacer(),
+              trailing,
+            ],
+          ),
         ),
       ),
     );

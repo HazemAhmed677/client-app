@@ -12,7 +12,7 @@ import 'more_options.dart';
 class MeetingCheclBoardItemDetailsOfDetails extends StatefulWidget {
   const MeetingCheclBoardItemDetailsOfDetails(
       {super.key, required this.priorities});
-  final List<CommonContainerForCheckBoard> priorities;
+  final List<ProirityContainer> priorities;
 
   @override
   State<MeetingCheclBoardItemDetailsOfDetails> createState() =>
@@ -22,8 +22,7 @@ class MeetingCheclBoardItemDetailsOfDetails extends StatefulWidget {
 class _MeetingCheclBoardItemDetailsOfDetailsState
     extends State<MeetingCheclBoardItemDetailsOfDetails> {
   // The currently selected priority.
-  CommonContainerForCheckBoard priorityChoosed =
-      const CommonContainerForCheckBoard(
+  ProirityContainer priorityChoosed = const ProirityContainer(
     color: AppColors.highPriority,
     priority: 'High',
   );
@@ -83,7 +82,7 @@ class _MeetingCheclBoardItemDetailsOfDetailsState
                     .toList(),
               ),
               horizontalSpace(4),
-              const CommonContainerForCheckBoard(
+              const ProirityContainer(
                   color: AppColors.meetingContainer, priority: 'Meeting'),
             ],
           ),

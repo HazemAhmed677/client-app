@@ -13,20 +13,20 @@ class TaskCheckBoardItem extends StatefulWidget {
 }
 
 class _TaskCheckBoardItemState extends State<TaskCheckBoardItem> {
-  final List<CommonContainerForCheckBoard> priorities = const [
-    CommonContainerForCheckBoard(
+  final List<ProirityContainer> priorities = const [
+    ProirityContainer(
       color: AppColors.highPriority,
       priority: 'Not Started',
     ),
-    CommonContainerForCheckBoard(
+    ProirityContainer(
       color: AppColors.onTrackColor,
       priority: 'On Track',
     ),
-    CommonContainerForCheckBoard(
+    ProirityContainer(
       color: AppColors.mediumPriority,
       priority: 'Adjustments',
     ),
-    CommonContainerForCheckBoard(
+    ProirityContainer(
       color: AppColors.lowPriority,
       priority: 'Completed',
     ),

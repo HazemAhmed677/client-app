@@ -59,12 +59,12 @@ class _MeetingCheclBoardItemDetailsOfDetailsState
           ),
           child: Row(
             children: [
-              const CommonContainerForCheckBoard(
+              const ProirityContainer(
                 color: AppColors.lowPriority,
                 priority: 'Completed',
               ),
               horizontalSpace(12),
-              const CommonContainerForCheckBoard(
+              const ProirityContainer(
                 color: AppColors.meetingContainer,
                 priority: 'Meeting',
               ),
