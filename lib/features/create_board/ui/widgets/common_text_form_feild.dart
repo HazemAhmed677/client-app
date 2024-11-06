@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/theming/app_colors.dart';
 
-class CommonTextFormFeild extends StatelessWidget {
-  const CommonTextFormFeild({
+class CommonTextFormField extends StatelessWidget {
+  const CommonTextFormField({
     super.key,
     this.validator,
     this.onSubmitted,

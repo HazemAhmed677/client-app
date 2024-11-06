@@ -18,7 +18,6 @@ class CreateProjectSubColumn extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: 22.0.w,
-        vertical: 14.h,
       ),
       child: Column(
         children: [

@@ -11,11 +11,12 @@ class CommonTextFieldColumn extends StatelessWidget {
       {super.key,
       required this.text,
       required this.maxLines,
-      required this.hintText});
+      required this.hintText,
+      this.formKey});
   final String text;
   final String hintText;
   final int maxLines;
-
+  final GlobalKey<FormState>? formKey;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -30,7 +31,7 @@ class CommonTextFieldColumn extends StatelessWidget {
           ),
         ),
         verticalSpace(6),
-        CommonTextFormFeild(
+        CommonTextFormField(
           hintText: hintText,
           maxLines: maxLines,
           validator: (p0) {

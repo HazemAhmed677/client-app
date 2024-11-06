@@ -18,16 +18,18 @@ class CreateProjectDetailedColumn extends StatelessWidget {
         key: formKey,
         child: Column(
           children: [
-            const CommonTextFieldColumn(
+            CommonTextFieldColumn(
               text: 'Project Title',
               maxLines: 1,
               hintText: 'Project Title',
+              formKey: formKey,
             ),
             verticalSpace(22),
-            const CommonTextFieldColumn(
+            CommonTextFieldColumn(
               text: 'Project Detail',
               maxLines: 4,
               hintText: 'Project Detail Here...',
+              formKey: formKey,
             ),
             verticalSpace(22),
           ],
