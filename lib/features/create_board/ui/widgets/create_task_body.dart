@@ -1,8 +1,10 @@
+import 'package:client_app/features/create_board/ui/widgets/create_task_sub_column.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/widgets/dynamic_container.dart';
+import '../../../authentication/ui/widgets/custom_action_button.dart';
 import 'create_something_detailed_column.dart';
 import 'create_something_header.dart';
 
@@ -47,7 +49,7 @@ class _CreateTaskBodyState extends State<CreateTaskBody> {
           ),
         ),
         const SliverToBoxAdapter(
-          child: CreateProjectSubColumn(),
+          child: CreateTaskSubColumn(),
         ),
         SliverToBoxAdapter(
           child: Padding(

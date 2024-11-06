@@ -10,14 +10,14 @@ import 'attach_file_widget.dart';
 import 'colors_list_view.dart';
 import 'common_list_tile.dart';
 
-class CreateProjectSubColumn extends StatefulWidget {
-  const CreateProjectSubColumn({super.key});
+class CreateTaskSubColumn extends StatefulWidget {
+  const CreateTaskSubColumn({super.key});
 
   @override
-  State<CreateProjectSubColumn> createState() => _CreateProjectSubColumnState();
+  State<CreateTaskSubColumn> createState() => _CreateTaskSubColumnState();
 }
 
-class _CreateProjectSubColumnState extends State<CreateProjectSubColumn> {
+class _CreateTaskSubColumnState extends State<CreateTaskSubColumn> {
   bool isToggle = false;
   @override
   Widget build(BuildContext context) {
@@ -27,6 +27,14 @@ class _CreateProjectSubColumnState extends State<CreateProjectSubColumn> {
       ),
       child: Column(
         children: [
+          const CommonListTile(
+            leadingIcon: FontAwesomeIcons.diagramProject,
+            title: 'Project',
+            trailing: CommonTextForCommonListTile(text: 'Mobile App'),
+          ),
+          verticalSpace(
+            22,
+          ),
           const CommonListTile(
             leadingIcon: FontAwesomeIcons.solidFlag,
             title: 'Priority Level',
@@ -39,24 +47,26 @@ class _CreateProjectSubColumnState extends State<CreateProjectSubColumn> {
             22,
           ),
           const CommonListTile(
-            leadingIcon: FontAwesomeIcons.calendarDays,
-            title: 'Due Date',
-            trailing: CommonTextForCommonListTile(text: 'Tuesday 09/07/2024'),
-          ),
+              leadingIcon: FontAwesomeIcons.calendarDays,
+              title: 'Due Date',
+              trailing: CommonTextForCommonListTile(
+                text: 'Tuesday 09/07/2024',
+              )),
           verticalSpace(
             22,
           ),
           const CommonListTile(
-            leadingIcon: FontAwesomeIcons.solidClock,
-            title: 'Time',
-            trailing: CommonTextForCommonListTile(text: '08:20 PM'),
-          ),
+              leadingIcon: FontAwesomeIcons.solidClock,
+              title: 'Time',
+              trailing: CommonTextForCommonListTile(
+                text: '08:20 PM',
+              )),
           verticalSpace(22),
           const ColorListView(),
           verticalSpace(22),
           CommonListTile(
             leadingIcon: FontAwesomeIcons.list,
-            title: 'Add Tasks',
+            title: 'Add Sub Tasks',
             trailing: IconButton(
               onPressed: () {
                 isToggle = !isToggle;
