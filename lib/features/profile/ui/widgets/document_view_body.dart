@@ -1,5 +1,5 @@
 import 'package:client_app/features/profile/logic/choose_bar_cubit/choose_doc_bar_cubit.dart';
-import 'package:client_app/features/profile/ui/widgets/common_row_header.dart';
+import 'package:client_app/core/widgets/common_row_header.dart';
 import 'package:client_app/features/profile/ui/widgets/laws_sliver_list.dart';
 import 'package:client_app/features/profile/ui/widgets/regulations_sliver_list.dart';
 import 'package:client_app/features/profile/ui/widgets/taxes_sliver_list.dart';

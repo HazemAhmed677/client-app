@@ -1,6 +1,6 @@
 import 'package:client_app/core/helpers/spacing.dart';
 import 'package:client_app/core/theming/app_colors.dart';
-import 'package:client_app/features/check_board/ui/widgets/custom_search_text_field.dart';
+import 'package:client_app/core/widgets/custom_search_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/widgets/calendar_icon.dart';

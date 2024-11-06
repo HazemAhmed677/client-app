@@ -24,7 +24,7 @@ class _SwitcherViewState extends State<SwitcherView> {
 
   @override
   void initState() {
-    // set home default (change  place )
+    // set home default (change place)
     BlocProvider.of<SwitchViewsCubit>(context).emitViews(0);
     super.initState();
   }
@@ -52,7 +52,9 @@ class _SwitcherViewState extends State<SwitcherView> {
               key: bottomNavigationKey,
               index: currentScreenIdx,
               items: curevedNavBarItems(
-                  currentScreenIdx: currentScreenIdx, flag: flag),
+                currentScreenIdx: currentScreenIdx,
+                flag: flag,
+              ),
               color: AppColors.bottomNavBarColor,
               buttonBackgroundColor:
                   flag ? AppColors.redDegree : AppColors.bottomNavBarColor,

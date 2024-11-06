@@ -1,15 +1,37 @@
+import 'package:client_app/core/helpers/spacing.dart';
+import 'package:client_app/core/widgets/dynamic_container.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'common_text_field_column.dart';
+import 'create_project_detailed_column.dart';
+import 'create_project_header.dart';
 
 class CreateProjectBody extends StatelessWidget {
   const CreateProjectBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Create Meeting View',
-        style: TextStyle(color: Colors.black, fontSize: 18),
-      ),
+    return CustomScrollView(
+      slivers: [
+        SliverFillRemaining(
+          hasScrollBody: false,
+          child: Column(
+            children: [
+              SizedBox(
+                height: 100.sp,
+                child: const DynamicContainer(
+                  isBoardered: true,
+                  child: CreateProjectHeader(),
+                ),
+              ),
+              verticalSpace(
+                16,
+              ),
+              const CreateProjectDetailedColumn(),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
