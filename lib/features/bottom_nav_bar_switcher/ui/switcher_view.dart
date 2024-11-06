@@ -44,7 +44,10 @@ class _SwitcherViewState extends State<SwitcherView> {
               progressIndicator: const SizedBox.shrink(),
               child: AbsorbPointer(
                 absorbing: isAbsorbing,
-                child: theScreen(state),
+                child: AnimatedSwitcher(
+                  duration: const Duration(milliseconds: 400),
+                  child: theScreen(state),
+                ),
               ),
             ),
             CurvedNavigationBar(
@@ -61,7 +64,7 @@ class _SwitcherViewState extends State<SwitcherView> {
               backgroundColor: Colors.transparent,
               animationCurve: Curves.easeInOut,
               animationDuration: const Duration(
-                milliseconds: 200,
+                milliseconds: 350,
               ),
               onTap: logicOfCurrAndPrevIndex,
               letIndexChange: (index) => true,

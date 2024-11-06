@@ -4,17 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'common_text_field_column.dart';
 
-class CreateProjectDetailedColumn extends StatefulWidget {
-  const CreateProjectDetailedColumn({super.key});
-
-  @override
-  State<CreateProjectDetailedColumn> createState() =>
-      _CreateProjectDetailedColumnState();
-}
-
-class _CreateProjectDetailedColumnState
-    extends State<CreateProjectDetailedColumn> {
-  GlobalKey formKey = GlobalKey<FormState>();
+class CreateProjectDetailedColumn extends StatelessWidget {
+  const CreateProjectDetailedColumn({super.key, required this.formKey});
+  final GlobalKey<FormState> formKey;
   @override
   Widget build(BuildContext context) {
     return Padding(

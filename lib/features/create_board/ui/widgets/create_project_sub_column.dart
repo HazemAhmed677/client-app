@@ -1,10 +1,12 @@
 import 'package:client_app/core/helpers/spacing.dart';
 import 'package:client_app/core/theming/app_colors.dart';
+import 'package:client_app/features/create_board/ui/widgets/common_text_field_column.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../../../core/theming/app_styles.dart';
 import '../../../../core/widgets/common_container_for_check_board.dart';
+import 'attach_file_widget.dart';
 import 'colors_list_view.dart';
 import 'common_list_tile.dart';
 
@@ -58,6 +60,15 @@ class CreateProjectSubColumn extends StatelessWidget {
           ),
           verticalSpace(22),
           const ColorListView(),
+          verticalSpace(22),
+          const AttachFileWidget(),
+          verticalSpace(22),
+          const CommonTextFieldColumn(
+            text: 'Add Note',
+            maxLines: 4,
+            hintText: 'Add Your Notes',
+          ),
+          verticalSpace(22),
         ],
       ),
     );
