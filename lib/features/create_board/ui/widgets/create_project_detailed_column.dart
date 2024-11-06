@@ -37,6 +37,7 @@ class _CreateProjectDetailedColumnState
               maxLines: 4,
               hintText: 'Project Detail Here...',
             ),
+            verticalSpace(22),
           ],
         ),
       ),

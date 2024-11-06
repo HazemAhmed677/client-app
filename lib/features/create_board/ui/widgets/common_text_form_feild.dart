@@ -87,7 +87,7 @@ class CommonTextFormFeild extends StatelessWidget {
       borderSide: BorderSide(
         color: color,
       ),
-      borderRadius: BorderRadius.circular(8.sp),
+      borderRadius: BorderRadius.circular(10.sp),
     );
   }
 }

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'create_project_detailed_column.dart';
 import 'create_project_header.dart';
+import 'create_project_sub_column.dart';
 
 class CreateProjectBody extends StatelessWidget {
   const CreateProjectBody({super.key});
@@ -12,8 +13,7 @@ class CreateProjectBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
-        SliverFillRemaining(
-          hasScrollBody: false,
+        SliverToBoxAdapter(
           child: Column(
             children: [
               SizedBox(
@@ -29,6 +29,9 @@ class CreateProjectBody extends StatelessWidget {
               const CreateProjectDetailedColumn(),
             ],
           ),
+        ),
+        const SliverToBoxAdapter(
+          child: CreateProjectSubColumn(),
         ),
       ],
     );
