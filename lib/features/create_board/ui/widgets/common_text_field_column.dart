@@ -8,8 +8,12 @@ import '../../../../core/theming/app_colors.dart';
 
 class CommonTextFieldColumn extends StatelessWidget {
   const CommonTextFieldColumn(
-      {super.key, required this.text, required this.maxLines});
+      {super.key,
+      required this.text,
+      required this.maxLines,
+      required this.hintText});
   final String text;
+  final String hintText;
   final int maxLines;
 
   @override
@@ -27,7 +31,7 @@ class CommonTextFieldColumn extends StatelessWidget {
         ),
         verticalSpace(6),
         CommonTextFormFeild(
-          hintText: text,
+          hintText: hintText,
           maxLines: maxLines,
           validator: (p0) {
             if (p0 == null || p0.isEmpty) {

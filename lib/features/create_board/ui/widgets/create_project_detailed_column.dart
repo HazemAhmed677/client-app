@@ -29,11 +29,13 @@ class _CreateProjectDetailedColumnState
             const CommonTextFieldColumn(
               text: 'Project Title',
               maxLines: 1,
+              hintText: 'Project Title',
             ),
             verticalSpace(22),
             const CommonTextFieldColumn(
               text: 'Project Detail',
               maxLines: 4,
+              hintText: 'Project Detail Here...',
             ),
           ],
         ),
