@@ -2,7 +2,6 @@ import 'package:client_app/core/helpers/spacing.dart';
 import 'package:client_app/core/widgets/dynamic_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'common_text_field_column.dart';
 import 'create_project_detailed_column.dart';
 import 'create_project_header.dart';
 

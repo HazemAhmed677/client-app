@@ -26,4 +26,5 @@ class AppColors {
   static const meetingContainer = Color(0xff9A87F6);
   static const onTrackColor = Color(0xff4C82EB);
   static Color transitionColor = Colors.grey.shade300;
+  static Color redAccent = Colors.redAccent.shade100;
 }
