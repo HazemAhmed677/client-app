@@ -1,4 +1,5 @@
 import 'package:client_app/core/routing/routes.dart';
+import 'package:client_app/core/views/meeting_details_view.dart';
 import 'package:client_app/core/views/project_details_view.dart';
 import 'package:client_app/core/views/task_details_view.dart';
 import 'package:client_app/core/widgets/custom_slider_transition.dart';
@@ -88,7 +89,15 @@ class AppRouter {
           duration: 300,
         ),
       ),
-
+      // meeting details
+      GoRoute(
+        path: Routes.meetingDetailsView,
+        pageBuilder: (context, state) => CustomSliderTransition(
+          child: const MeetingDetailsView(),
+          key: state.pageKey,
+          duration: 300,
+        ),
+      ),
       // profile
       GoRoute(
         path: Routes.documentView,

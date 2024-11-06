@@ -8,15 +8,15 @@ class TotalPriceContainer extends StatelessWidget {
   const TotalPriceContainer(
       {super.key, required this.title, required this.price});
   final String title;
-  final double price;
+  final String price;
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         gradient: const LinearGradient(
           colors: [
-            AppColors.projectIcon, // Start color
-            AppColors.redDegree, // End color
+            AppColors.colorPalette4, // Start color
+            AppColors.primary, // End color
           ],
           begin: Alignment.centerLeft, // Starting point
           end: Alignment.centerRight, // Ending point
@@ -42,7 +42,7 @@ class TotalPriceContainer extends StatelessWidget {
             Text(
               '$price EG ',
               style: AppStyles.interBold18.copyWith(
-                fontSize: 20.sp,
+                fontSize: 16.sp,
                 color: AppColors.white,
               ),
             ),
