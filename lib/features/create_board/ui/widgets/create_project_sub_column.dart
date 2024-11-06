@@ -10,9 +10,15 @@ import 'attach_file_widget.dart';
 import 'colors_list_view.dart';
 import 'common_list_tile.dart';
 
-class CreateProjectSubColumn extends StatelessWidget {
+class CreateProjectSubColumn extends StatefulWidget {
   const CreateProjectSubColumn({super.key});
 
+  @override
+  State<CreateProjectSubColumn> createState() => _CreateProjectSubColumnState();
+}
+
+class _CreateProjectSubColumnState extends State<CreateProjectSubColumn> {
+  bool isToggle = false;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -59,6 +65,36 @@ class CreateProjectSubColumn extends StatelessWidget {
           ),
           verticalSpace(22),
           const ColorListView(),
+          verticalSpace(22),
+          CommonListTile(
+            leadingIcon: FontAwesomeIcons.list,
+            title: 'Add Tasks',
+            trailing: IconButton(
+              onPressed: () {
+                isToggle = !isToggle;
+                setState(() {});
+              },
+              icon: AnimatedSwitcher(
+                duration: const Duration(milliseconds: 800),
+                transitionBuilder: (Widget child, Animation<double> animation) {
+                  return ScaleTransition(
+                    scale: animation,
+                    child: child,
+                  );
+                },
+                child: (isToggle)
+                    ? Icon(
+                        FontAwesomeIcons.toggleOn,
+                        size: 30.sp,
+                        color: AppColors.primary,
+                      )
+                    : Icon(
+                        FontAwesomeIcons.toggleOff,
+                        size: 30.sp,
+                      ),
+              ),
+            ),
+          ),
           verticalSpace(22),
           const AttachFileWidget(),
           verticalSpace(22),

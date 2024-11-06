@@ -4,9 +4,19 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'common_text_field_column.dart';
 
-class CreateProjectDetailedColumn extends StatelessWidget {
-  const CreateProjectDetailedColumn({super.key, required this.formKey});
+class CreateSomethingDetailedColumn extends StatelessWidget {
+  const CreateSomethingDetailedColumn(
+      {super.key,
+      required this.formKey,
+      required this.text1,
+      required this.text2,
+      required this.hintText1,
+      required this.hintText2});
   final GlobalKey<FormState> formKey;
+  final String text1;
+  final String text2;
+  final String hintText1;
+  final String hintText2;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -19,16 +29,16 @@ class CreateProjectDetailedColumn extends StatelessWidget {
         child: Column(
           children: [
             CommonTextFieldColumn(
-              text: 'Project Title',
+              text: text1,
               maxLines: 1,
-              hintText: 'Project Title',
+              hintText: hintText1,
               formKey: formKey,
             ),
             verticalSpace(22),
             CommonTextFieldColumn(
-              text: 'Project Detail',
+              text: text2,
               maxLines: 4,
-              hintText: 'Project Detail Here...',
+              hintText: hintText2,
               formKey: formKey,
             ),
             verticalSpace(22),

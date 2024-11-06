@@ -7,6 +7,7 @@ import 'package:client_app/features/authentication/ui/sign_up_view.dart';
 import 'package:client_app/features/bottom_nav_bar_switcher/ui/switcher_view.dart';
 import 'package:client_app/features/check_board/ui/calendar_view.dart';
 import 'package:client_app/features/create_board/ui/create_document.dart';
+import 'package:client_app/features/create_board/ui/create_meeting.dart';
 import 'package:client_app/features/create_board/ui/create_project_view.dart';
 import 'package:client_app/features/create_board/ui/create_task_view.dart';
 import 'package:client_app/features/home/ui/home_view.dart';
@@ -135,6 +136,14 @@ class AppRouter {
         path: Routes.createDocumentView,
         pageBuilder: (context, state) => CustomSliderTransition(
           child: const CreateDocumentView(),
+          key: state.pageKey,
+          duration: 300,
+        ),
+      ),
+      GoRoute(
+        path: Routes.createMeetinfView,
+        pageBuilder: (context, state) => CustomSliderTransition(
+          child: const CreateMeetingView(),
           key: state.pageKey,
           duration: 300,
         ),
