@@ -4,8 +4,10 @@ import '../../../../core/helpers/spacing.dart';
 import 'today_word.dart';
 
 class NotificationCommonColumn extends StatelessWidget {
-  const NotificationCommonColumn({super.key, required this.text});
-  final String text;
+  const NotificationCommonColumn(
+      {super.key, required this.text1, required this.text2});
+  final String text1;
+  final String text2;
   @override
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
@@ -18,7 +20,8 @@ class NotificationCommonColumn extends StatelessWidget {
           children: [
             verticalSpace(22),
             TodayWord(
-              text: text,
+              text1: text1,
+              text2: text2,
             ),
             verticalSpace(6),
           ],

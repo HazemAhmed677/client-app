@@ -43,7 +43,7 @@ List<Widget> curevedNavBarItems(
           (currentScreenIdx == 3)
               ? IconlyBold.notification
               : IconlyLight.notification,
-          size: 24.sp,
+          size: 25.sp,
           color: AppColors.white,
         ),
       ),
