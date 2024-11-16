@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../../../core/helpers/get_priority_list.dart';
 import '../../../../core/helpers/icons_and_texts.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_colors.dart';
@@ -10,9 +11,9 @@ import '../../../../core/widgets/common_container_for_check_board.dart';
 import 'more_options.dart';
 
 class MeetingCheclBoardItemDetailsOfDetails extends StatefulWidget {
-  const MeetingCheclBoardItemDetailsOfDetails(
-      {super.key, required this.priorities});
-  final List<ProirityContainer> priorities;
+  const MeetingCheclBoardItemDetailsOfDetails({
+    super.key,
+  });
 
   @override
   State<MeetingCheclBoardItemDetailsOfDetails> createState() =>
@@ -21,6 +22,8 @@ class MeetingCheclBoardItemDetailsOfDetails extends StatefulWidget {
 
 class _MeetingCheclBoardItemDetailsOfDetailsState
     extends State<MeetingCheclBoardItemDetailsOfDetails> {
+  final List<ProirityContainer> priorities = getPriorityList();
+
   // The currently selected priority.
   ProirityContainer priorityChoosed = const ProirityContainer(
     color: AppColors.highPriority,
@@ -67,13 +70,13 @@ class _MeetingCheclBoardItemDetailsOfDetailsState
                 elevation: 6.sp,
                 onSelected: (String selectedPriority) {
                   setState(() {
-                    priorityChoosed = widget.priorities.firstWhere(
+                    priorityChoosed = priorities.firstWhere(
                       (element) => element.priority == selectedPriority,
                     );
                   });
                 },
                 // Create the popup menu items with their priorities.
-                itemBuilder: (context) => widget.priorities
+                itemBuilder: (context) => priorities
                     .map((priority) => PopupMenuItem<String>(
                           value: priority.priority,
                           child:
