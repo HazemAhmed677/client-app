@@ -1,20 +1,17 @@
 import 'package:client_app/core/helpers/spacing.dart';
-import 'package:client_app/core/widgets/custom_prefix_text_field_for_edit_profile_dialog.dart';
 import 'package:client_app/core/widgets/dialog_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
-import 'package:iconly/iconly.dart';
 import '../../../../core/widgets/cancel_and_actionbutton_row.dart';
 import '../../../../core/widgets/custom_text_field_for_edit_profile.dart';
 
-void showEditProfileDialog(BuildContext context) {
+void showChangePasswordDialog(BuildContext context) {
   showDialog(
     context: context,
     builder: (BuildContext context) {
       return DialogContainer(
-        title: 'Edit Profile',
+        title: 'Change Password',
         body: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -22,36 +19,24 @@ void showEditProfileDialog(BuildContext context) {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 12.0.sp),
               child: const CustomTextFieldForProfileDialogs(
-                icon: CustomPrefixTextFieldForEditProfileDialog(
-                    icon: IconlyBold.profile),
-                hint: 'Shaban Haider',
+                hint: 'Enter Current Password',
+                label: 'Current Password',
               ),
             ),
             verticalSpace(18),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 12.0.sp),
               child: const CustomTextFieldForProfileDialogs(
-                icon: CustomPrefixTextFieldForEditProfileDialog(
-                    icon: FontAwesomeIcons.squareCheck),
-                hint: 'UI/UX Designer',
+                hint: 'Enter New Password',
+                label: 'New Password',
               ),
             ),
             verticalSpace(18),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 12.0.sp),
               child: const CustomTextFieldForProfileDialogs(
-                icon: CustomPrefixTextFieldForEditProfileDialog(
-                    icon: FontAwesomeIcons.envelope),
-                hint: 'example@AIMTRIX.com',
-              ),
-            ),
-            verticalSpace(18),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 12.0.sp),
-              child: const CustomTextFieldForProfileDialogs(
-                icon: CustomPrefixTextFieldForEditProfileDialog(
-                    icon: FontAwesomeIcons.phone),
-                hint: '01010101010',
+                hint: 'Confirm Password',
+                label: 'Confirm Password',
               ),
             ),
             verticalSpace(32),
@@ -59,7 +44,7 @@ void showEditProfileDialog(BuildContext context) {
               onPressed: () {
                 context.pop();
               },
-              actionText: 'Update',
+              actionText: 'Change',
             ),
             verticalSpace(32),
           ],

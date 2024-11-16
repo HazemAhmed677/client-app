@@ -1,3 +1,4 @@
+import 'package:client_app/features/profile/ui/helper/change_password_dialog.dart';
 import 'package:client_app/features/profile/ui/widgets/settings_list_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -26,11 +27,16 @@ class SettingsContainerColumnOfOptions extends StatelessWidget {
               ),
             ),
           ),
-          SettingsListTile(
-            title: 'Change password',
-            leading: Transform.rotate(
-              angle: 3.14,
-              child: const Icon(Icons.arrow_back_ios_new),
+          InkWell(
+            onTap: () {
+              showChangePasswordDialog(context);
+            },
+            child: SettingsListTile(
+              title: 'Change password',
+              leading: Transform.rotate(
+                angle: 3.14,
+                child: const Icon(Icons.arrow_back_ios_new),
+              ),
             ),
           ),
         ],

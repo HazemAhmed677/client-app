@@ -72,9 +72,11 @@ class _SwitcherViewState extends State<SwitcherView> {
             SizedBox(
               height: 180,
               width: MediaQuery.sizeOf(context).width,
-              child: SwitchMicro(
-                currentScreenIdx: currentScreenIdx,
-                flag: flag,
+              child: Center(
+                child: SwitchMicro(
+                  currentScreenIdx: currentScreenIdx,
+                  flag: flag,
+                ),
               ),
             )
           ],

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../../../core/helpers/get_priority_list.dart';
 import '../../../../core/helpers/icons_and_texts.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_colors.dart';
@@ -21,8 +22,11 @@ class CompletedCheckBoardItemDetails extends StatefulWidget {
 
 class _MeetingCheclBoardItemDetailsOfDetailsState
     extends State<CompletedCheckBoardItemDetails> {
-  // The currently selected priority.
-
+  final List<ProirityContainer> priorities = getPriorityList();
+  ProirityContainer priorityChoosed = const ProirityContainer(
+    color: AppColors.lowPriority,
+    priority: 'Completed',
+  );
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -46,22 +50,46 @@ class _MeetingCheclBoardItemDetailsOfDetailsState
               padding: EdgeInsets.only(
                 right: 10.0.sp,
               ),
-              child: const MoreOptionsMenu(),
+              child: const MoreOptionsMenu(
+                deleteOnly: true,
+              ),
             ),
           ],
         ),
-        verticalSpace(
-          8,
-        ),
+        // verticalSpace(
+        //   8,
+        // ),
         Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: 16.0.sp,
+            horizontal: 8.0.sp,
           ),
           child: Row(
             children: [
-              const ProirityContainer(
-                color: AppColors.lowPriority,
-                priority: 'Completed',
+              PopupMenuButton<String>(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(
+                    12.sp,
+                  ),
+                ),
+                color: AppColors.background,
+                // Show the current selected priority as the icon.
+                icon: priorityChoosed,
+                elevation: 6.sp,
+                onSelected: (String selectedPriority) {
+                  setState(() {
+                    priorityChoosed = priorities.firstWhere(
+                      (element) => element.priority == selectedPriority,
+                    );
+                  });
+                },
+                // Create the popup menu items with their priorities.
+                itemBuilder: (context) => priorities
+                    .map((priority) => PopupMenuItem<String>(
+                          value: priority.priority,
+                          child:
+                              priority, // Use the widget to display the priority.
+                        ))
+                    .toList(),
               ),
               horizontalSpace(12),
               const ProirityContainer(
@@ -71,7 +99,7 @@ class _MeetingCheclBoardItemDetailsOfDetailsState
             ],
           ),
         ),
-        verticalSpace(16),
+        verticalSpace(8),
         Padding(
           padding: EdgeInsets.symmetric(
             horizontal: 18.0.sp,
