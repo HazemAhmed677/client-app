@@ -1,4 +1,5 @@
-import 'package:client_app/features/create_board/ui/widgets/table_calendar_for_dialog.dart';
+import 'package:client_app/core/widgets/table_calendar_for_dialog.dart';
+import 'package:client_app/features/create_board/ui/widgets/time_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -18,10 +19,18 @@ class TaskOrMeetingSubDetailsMiddle extends StatefulWidget {
 class _TaskOrMeetingSubDetailsMiddleState
     extends State<TaskOrMeetingSubDetailsMiddle> {
   DateTime? selectedDate = DateTime.now();
+  TimeOfDay? selectedTime = TimeOfDay.now();
   Future<void> _showTableCalendarDialog() async {
     selectedDate = await showDialog<DateTime>(
       context: context,
       builder: (BuildContext context) => const TableCalendarForDialog(),
+    );
+  }
+
+  Future<void> _showTimePickerDialog(BuildContext context) async {
+    selectedTime = await showDialog(
+      context: context,
+      builder: (context) => const CustomTimePickerDialog(),
     );
   }
 
@@ -48,10 +57,13 @@ class _TaskOrMeetingSubDetailsMiddleState
         verticalSpace(
           22,
         ),
-        const CommonListTile(
+        CommonListTile(
+            onTap: () {
+              _showTimePickerDialog(context);
+            },
             leadingIcon: FontAwesomeIcons.solidClock,
             title: 'Time',
-            trailing: CommonTextForCommonListTile(
+            trailing: const CommonTextForCommonListTile(
               text: '08:20 PM',
             )),
         verticalSpace(22),
