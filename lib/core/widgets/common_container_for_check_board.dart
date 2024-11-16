@@ -22,7 +22,10 @@ class ProirityContainer extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 14.sp, vertical: 4.sp),
+        padding: EdgeInsets.symmetric(
+          horizontal: 14.w,
+          vertical: 4.h,
+        ),
         child: Text(
           priority,
           style: AppStyles.interSemiBold18.copyWith(

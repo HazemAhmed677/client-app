@@ -7,7 +7,7 @@ class MeetingCheckBoardItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CommonCheckBoardItem(
+    return const CommonCheckBoardItem(
       child: MeetingCheclBoardItemDetailsOfDetails(),
     );
   }

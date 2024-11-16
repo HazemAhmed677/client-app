@@ -1,20 +1,33 @@
 import 'package:client_app/core/helpers/spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import '../../../../core/helpers/get_priority_list.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
 import '../../../../core/theming/font_weight_helper.dart';
+import '../../../../core/widgets/common_container_for_check_board.dart';
 
-class CommonListTile extends StatelessWidget {
+class CommonListTile extends StatefulWidget {
   const CommonListTile(
       {super.key,
       required this.leadingIcon,
       required this.title,
-      required this.trailing});
+      this.trailing});
   final IconData leadingIcon;
   final String title;
-  final Widget trailing;
+  final Widget? trailing;
+
+  @override
+  State<CommonListTile> createState() => _CommonListTileState();
+}
+
+class _CommonListTileState extends State<CommonListTile> {
+  final List<ProirityContainer> priorities = getPriorityList();
+
+  ProirityContainer priorityChoosed = const ProirityContainer(
+    color: AppColors.highPriority,
+    priority: 'High',
+  );
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -48,19 +61,19 @@ class CommonListTile extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.only(
             left: 16.w,
-            top: 18.h,
-            bottom: 18.h,
-            right: 14.w,
+            top: (widget.trailing != null) ? 18.h : 6.h,
+            bottom: (widget.trailing != null) ? 18.h : 6.h,
+            right: (widget.trailing != null) ? 14.w : 8.w,
           ),
           child: Row(
             children: [
               Icon(
-                leadingIcon,
+                widget.leadingIcon,
                 color: AppColors.primary,
               ),
               horizontalSpace(12),
               Text(
-                title,
+                widget.title,
                 style: AppStyles.gilroyRegular17.copyWith(
                   color: AppColors.black,
                   fontSize: 14.sp,
@@ -68,7 +81,37 @@ class CommonListTile extends StatelessWidget {
                 ),
               ),
               const Spacer(),
-              trailing,
+              (widget.trailing != null)
+                  ? widget.trailing!
+                  : PopupMenuButton<String>(
+                      position: PopupMenuPosition.under,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12.sp),
+                      ),
+                      color: AppColors.background,
+                      // Show the current selected priority as the icon.
+                      icon: priorityChoosed,
+                      elevation: 6.sp,
+                      onSelected: (String selectedPriority) {
+                        setState(
+                          () {
+                            priorityChoosed = priorities.firstWhere(
+                              (element) => element.priority == selectedPriority,
+                            );
+                          },
+                        );
+                      },
+                      // Create the popup menu items with their priorities.
+                      itemBuilder: (context) => priorities
+                          .map(
+                            (priority) => PopupMenuItem<String>(
+                              value: priority.priority,
+                              child:
+                                  priority, // Use the widget to display the priority.
+                            ),
+                          )
+                          .toList(),
+                    ),
             ],
           ),
         ),
