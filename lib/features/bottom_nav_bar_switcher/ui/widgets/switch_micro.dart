@@ -23,7 +23,7 @@ class SwitchMicro extends StatelessWidget {
           ? Transform.translate(
               offset: const Offset(
                 0,
-                50,
+                80,
               ),
               child: const MicroBottomNavBar(),
             )
