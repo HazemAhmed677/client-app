@@ -37,6 +37,7 @@ class ProjectItemForDialog extends StatelessWidget {
               textAlign: TextAlign.center,
               style: AppStyles.poppinsSemiBold18.copyWith(
                 fontSize: 12.sp,
+                color: AppColors.black,
               ),
             ),
           ],

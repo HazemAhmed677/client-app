@@ -56,7 +56,7 @@ class _CreateTaskOrMeetingSubColumnState
           verticalSpace(
             22,
           ),
-          const TaskOrMeetingSubDetailsMiddle(),
+          const TaskOrMeetingOrProjectSubDetailsMiddle(),
           widget.isTask
               ? CommonListTile(
                   leadingIcon: FontAwesomeIcons.list,

@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:iconly/iconly.dart';
-import '../../../../core/widgets/CancelAndActionButtonRow.dart';
+import '../../../../core/widgets/cancel_and_actionbutton_row.dart';
 import '../../../../core/widgets/custom_text_field_for_edit_profile.dart';
 
 void showEditProfileDialog(BuildContext context) {

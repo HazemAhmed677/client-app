@@ -8,16 +8,16 @@ import 'colors_list_view.dart';
 import 'common_list_tile.dart';
 import 'common_text_for_common_list_tile.dart';
 
-class TaskOrMeetingSubDetailsMiddle extends StatefulWidget {
-  const TaskOrMeetingSubDetailsMiddle({super.key});
+class TaskOrMeetingOrProjectSubDetailsMiddle extends StatefulWidget {
+  const TaskOrMeetingOrProjectSubDetailsMiddle({super.key});
 
   @override
-  State<TaskOrMeetingSubDetailsMiddle> createState() =>
-      _TaskOrMeetingSubDetailsMiddleState();
+  State<TaskOrMeetingOrProjectSubDetailsMiddle> createState() =>
+      _TaskOrMeetingOrProjectSubDetailsMiddleState();
 }
 
-class _TaskOrMeetingSubDetailsMiddleState
-    extends State<TaskOrMeetingSubDetailsMiddle> {
+class _TaskOrMeetingOrProjectSubDetailsMiddleState
+    extends State<TaskOrMeetingOrProjectSubDetailsMiddle> {
   DateTime? selectedDate = DateTime.now();
   TimeOfDay? selectedTime = TimeOfDay.now();
   Future<void> _showTableCalendarDialog() async {
