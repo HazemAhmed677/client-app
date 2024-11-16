@@ -1,6 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import '../../../core/theming/app_colors.dart';
 import '../logic/switch_views_cubit/switch_views_cubit.dart';
@@ -70,7 +71,7 @@ class _SwitcherViewState extends State<SwitcherView> {
               letIndexChange: (index) => true,
             ),
             SizedBox(
-              height: 180,
+              height: 240.h,
               width: MediaQuery.sizeOf(context).width,
               child: Center(
                 child: SwitchMicro(
