@@ -6,11 +6,14 @@ import '../../features/profile/ui/widgets/custom_logout_button.dart';
 import '../helpers/spacing.dart';
 import '../theming/app_colors.dart';
 
-class BottomOfProfileDialog extends StatelessWidget {
-  const BottomOfProfileDialog({
+class CancelAndActionButtonRow extends StatelessWidget {
+  const CancelAndActionButtonRow({
     super.key,
+    required this.actionText,
+    this.onPressed,
   });
-
+  final String actionText;
+  final Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -36,8 +39,8 @@ class BottomOfProfileDialog extends StatelessWidget {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12.0.sp),
             ),
-            onPressed: () {},
-            text: 'Update',
+            onPressed: onPressed,
+            text: actionText,
             edgeColor: AppColors.primary,
             backgroundColor: AppColors.primary,
             textColor: AppColors.white,

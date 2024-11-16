@@ -2,7 +2,7 @@ import 'package:client_app/features/profile/ui/widgets/settings_list_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/helpers/dialogs.dart';
+import '../helper/edit_profile_dailog.dart';
 
 class SettingsContainerColumnOfOptions extends StatelessWidget {
   const SettingsContainerColumnOfOptions({super.key});

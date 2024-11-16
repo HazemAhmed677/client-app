@@ -12,10 +12,12 @@ class CommonListTile extends StatefulWidget {
       {super.key,
       required this.leadingIcon,
       required this.title,
-      this.trailing});
+      this.trailing,
+      this.onTap});
   final IconData leadingIcon;
   final String title;
   final Widget? trailing;
+  final Function()? onTap;
 
   @override
   State<CommonListTile> createState() => _CommonListTileState();
@@ -32,7 +34,7 @@ class _CommonListTileState extends State<CommonListTile> {
   Widget build(BuildContext context) {
     return InkWell(
       borderRadius: BorderRadius.circular(8.sp),
-      onTap: () {},
+      onTap: widget.onTap,
       child: Container(
         decoration: BoxDecoration(
           color: AppColors.white,
@@ -61,8 +63,8 @@ class _CommonListTileState extends State<CommonListTile> {
         child: Padding(
           padding: EdgeInsets.only(
             left: 16.w,
-            top: (widget.trailing != null) ? 18.h : 6.h,
-            bottom: (widget.trailing != null) ? 18.h : 6.h,
+            top: (widget.trailing != null) ? 18.h : 8.h,
+            bottom: (widget.trailing != null) ? 18.h : 8.h,
             right: (widget.trailing != null) ? 14.w : 8.w,
           ),
           child: Row(
