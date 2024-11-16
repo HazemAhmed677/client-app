@@ -15,12 +15,14 @@ class ColorListView extends StatefulWidget {
 class _ColorListViewState extends State<ColorListView> {
   int currentIndex = 0;
   Map<int, String> colorMap = {
-    0: 'purple',
-    1: 'pink',
-    2: 'violet',
-    3: 'green',
-    4: 'orange',
+    0: 'Indigo',
+    1: 'Coral',
+    2: 'Lavender',
+    3: 'Mint',
+    4: 'Amber',
+    5: 'Teal',
   };
+
   List<Color> colorList = colorsPalette();
   @override
   Widget build(BuildContext context) {

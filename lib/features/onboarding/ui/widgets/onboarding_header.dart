@@ -47,7 +47,7 @@ class OnboardingHeader extends StatelessWidget {
                       ),
                       onPressed: () {
                         context.push(
-                          Routes.switcherView,
+                          Routes.loginView,
                         );
                       },
                       child: Text(

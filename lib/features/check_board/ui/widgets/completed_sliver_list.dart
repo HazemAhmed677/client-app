@@ -13,7 +13,9 @@ class CompletedSliverList extends StatelessWidget {
         padding: EdgeInsets.only(
           bottom: (index != 7) ? 16.0.sp : 0.0,
         ),
-        child: const Card(child: CompletedCheckBoardItem()),
+        child: const Card(
+          child: CompletedCheckBoardItem(),
+        ),
       ),
     );
   }

@@ -1,8 +1,9 @@
 import 'package:client_app/core/helpers/spacing.dart';
+import 'package:client_app/core/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
+import 'package:go_router/go_router.dart';
 import '../../theming/app_colors.dart';
 import '../../theming/app_styles.dart';
 
@@ -44,7 +45,9 @@ class AddTasksOrSubsRow extends StatelessWidget {
             ),
             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
           ),
-          onPressed: () {},
+          onPressed: () {
+            context.push(Routes.createTaskView);
+          },
           icon: Icon(
             FontAwesomeIcons.plus,
             color: AppColors.white,

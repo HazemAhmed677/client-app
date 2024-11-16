@@ -32,7 +32,7 @@ class TaskDetailsBody extends StatelessWidget {
                 verticalSpace(32),
                 const TotalPriceContainer(
                   title: 'Price: ',
-                  price: 4000,
+                  price: '4000',
                 ),
                 verticalSpace(24),
               ],

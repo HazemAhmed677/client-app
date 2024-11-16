@@ -10,12 +10,12 @@ class CustomPrefixTextFieldForEditProfileDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Transform.translate(
-      offset: Offset(2.sp, 0),
+      offset: Offset(1.sp, 0),
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(8.sp),
-            topLeft: Radius.circular(8.sp),
+            bottomLeft: Radius.circular(10.sp),
+            topLeft: Radius.circular(10.sp),
           ),
           color: const Color(0xffE7E3F6),
         ),

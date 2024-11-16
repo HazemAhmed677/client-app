@@ -8,8 +8,8 @@ import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/app_colors.dart';
 
 class NotificationSliverList extends StatelessWidget {
-  const NotificationSliverList({super.key});
-
+  const NotificationSliverList({super.key, this.isMeeting = false});
+  final bool isMeeting;
   @override
   Widget build(BuildContext context) {
     return SliverList.builder(
@@ -24,7 +24,9 @@ class NotificationSliverList extends StatelessWidget {
               },
               onTap: () {
                 // redirect
-                context.push(Routes.taskDetailsView);
+                isMeeting
+                    ? context.push(Routes.meetingDetailsView)
+                    : context.push(Routes.taskDetailsView);
               },
               child: Padding(
                 padding: EdgeInsets.symmetric(

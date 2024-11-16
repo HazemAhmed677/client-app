@@ -7,6 +7,7 @@ class Routes {
   static const calendarView = '/calendarView';
   static const projectDetailsView = '/projectDetailsView';
   static const taskDetailsView = '/taskDetailsView';
+  static const meetingDetailsView = '/meetingDetailsView';
   static const documentView = '/documentView';
   static const reportView = '/reportView';
   static const settingsView = '/settingsView';

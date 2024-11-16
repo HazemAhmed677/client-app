@@ -25,10 +25,14 @@ class AppColors {
   static const lowPriority = Color(0xff12C976);
   static const meetingContainer = Color(0xff9A87F6);
   static const onTrackColor = Color(0xff4C82EB);
-  static const colorPalette2 = Color(0xffE1335F);
-  static const colorPalette3 = Color(0xff9F33E1);
-  static const colorPalette4 = Color(0xff00D1B2);
-  static const colorPalette5 = Color(0xffF7D02C);
+  static const colorPalette1 = Color(0xff274D60);
+  static const colorPalette2 = Color(0xff6BA3BE);
+  static const colorPalette3 = Color(0xff0C969C);
+  static const colorPalette4 = Color(0xff0A7075);
+  static const colorPalette5 = Color(0xff032F30);
+  static const colorPalette6 = Color(0xff031716);
   static Color transitionColor = Colors.grey.shade300;
   static Color redAccent = Colors.redAccent.shade100;
+  static const Color projectContainerDialog = Color(0xffFFF8EF);
+  static const Color projectIconColorForDialog = Color(0xffFFB55C);
 }

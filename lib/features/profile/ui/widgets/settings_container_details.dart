@@ -39,23 +39,6 @@ class SettingsContainerDetails extends StatelessWidget {
         ),
         verticalSpace(12),
         const SettingsContainerColumnOfOptions(),
-        // const SettingdContainerColumnOfMore(),
-        // Row(
-        //   mainAxisAlignment: MainAxisAlignment.center,
-        //   children: [
-        //     Icon(
-        //       FontAwesomeIcons.linkedin,
-        //       color: Colors.blue,
-        //       size: 32.sp,
-        //     ),
-        //     horizontalSpace(8),
-        //     Icon(
-        //       FontAwesomeIcons.facebook,
-        //       color: Colors.blue,
-        //       size: 32.sp,
-        //     ),
-        //   ],
-        // ),
         verticalSpace(32),
       ],
     );

@@ -1,14 +1,12 @@
 import 'package:client_app/core/helpers/spacing.dart';
 import 'package:client_app/core/theming/app_colors.dart';
 import 'package:client_app/features/create_board/ui/widgets/common_text_field_column.dart';
-import 'package:client_app/features/create_board/ui/widgets/common_text_for_common_list_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../../../../core/widgets/common_container_for_check_board.dart';
 import 'attach_file_widget.dart';
-import 'colors_list_view.dart';
 import 'common_list_tile.dart';
+import 'task_or_meeting_sub_details_middle.dart';
 
 class CreateProjectSubColumn extends StatefulWidget {
   const CreateProjectSubColumn({super.key});
@@ -27,33 +25,7 @@ class _CreateProjectSubColumnState extends State<CreateProjectSubColumn> {
       ),
       child: Column(
         children: [
-          const CommonListTile(
-            leadingIcon: FontAwesomeIcons.solidFlag,
-            title: 'Priority Level',
-            trailing: ProirityContainer(
-              color: AppColors.highPriority,
-              priority: 'High',
-            ),
-          ),
-          verticalSpace(
-            22,
-          ),
-          const CommonListTile(
-            leadingIcon: FontAwesomeIcons.calendarDays,
-            title: 'Due Date',
-            trailing: CommonTextForCommonListTile(text: 'Tuesday 09/07/2024'),
-          ),
-          verticalSpace(
-            22,
-          ),
-          const CommonListTile(
-            leadingIcon: FontAwesomeIcons.solidClock,
-            title: 'Time',
-            trailing: CommonTextForCommonListTile(text: '08:20 PM'),
-          ),
-          verticalSpace(22),
-          const ColorListView(),
-          verticalSpace(22),
+          const TaskOrMeetingOrProjectSubDetailsMiddle(),
           CommonListTile(
             leadingIcon: FontAwesomeIcons.list,
             title: 'Add Tasks',

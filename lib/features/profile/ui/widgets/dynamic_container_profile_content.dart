@@ -1,4 +1,4 @@
-import 'package:client_app/core/helpers/dialogs.dart';
+import 'package:client_app/features/profile/ui/helper/edit_profile_dailog.dart';
 import 'package:client_app/core/helpers/spacing.dart';
 import 'package:client_app/core/theming/app_colors.dart';
 import 'package:client_app/core/theming/app_styles.dart';

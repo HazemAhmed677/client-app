@@ -3,16 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/theming/app_colors.dart';
 
-class CustomTextFieldForEditProfile extends StatelessWidget {
-  const CustomTextFieldForEditProfile({
+class CustomTextFieldForProfileDialogs extends StatelessWidget {
+  const CustomTextFieldForProfileDialogs({
     super.key,
     this.onChanged,
-    required this.icon,
+    this.icon,
     required this.hint,
+    this.label,
   });
   final Function(String)? onChanged;
-  final Widget icon;
+  final Widget? icon;
   final String hint;
+  final String? label;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,6 +31,7 @@ class CustomTextFieldForEditProfile extends StatelessWidget {
         onChanged: onChanged,
         cursorColor: AppColors.secondary,
         decoration: InputDecoration(
+          labelText: label,
           contentPadding: EdgeInsets.symmetric(
             vertical: 12.sp,
           ),
@@ -40,7 +43,7 @@ class CustomTextFieldForEditProfile extends StatelessWidget {
             child: icon,
           ),
           prefixIconConstraints: BoxConstraints(
-            minWidth: 60.sp,
+            minWidth: (icon != null) ? 60.w : 20.w,
           ),
           hintText: hint,
           hintStyle: AppStyles.afacadfluxSemiBold18.copyWith(
