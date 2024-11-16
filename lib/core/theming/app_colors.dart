@@ -33,4 +33,6 @@ class AppColors {
   static const colorPalette6 = Color(0xff031716);
   static Color transitionColor = Colors.grey.shade300;
   static Color redAccent = Colors.redAccent.shade100;
+  static const Color projectContainerDialog = Color(0xffFFF8EF);
+  static const Color projectIconColorForDialog = Color(0xffFFB55C);
 }

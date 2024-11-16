@@ -7,6 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'attach_file_widget.dart';
 import 'common_list_tile.dart';
+import 'projects_dialog.dart';
 import 'task_or_meeting_sub_details_middle.dart';
 
 class CreateTaskOrMeetingSubColumn extends StatefulWidget {
@@ -20,6 +21,13 @@ class CreateTaskOrMeetingSubColumn extends StatefulWidget {
 class _CreateTaskOrMeetingSubColumnState
     extends State<CreateTaskOrMeetingSubColumn> {
   bool isToggle = false;
+  Future<void> _showProjectsGridView(BuildContext context) async {
+    await showDialog(
+      context: context,
+      builder: (context) => const ProjectsDialog(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -29,10 +37,14 @@ class _CreateTaskOrMeetingSubColumnState
       child: Column(
         children: [
           widget.isTask
-              ? const CommonListTile(
+              ? CommonListTile(
+                  onTap: () {
+                    _showProjectsGridView(context);
+                  },
                   leadingIcon: FontAwesomeIcons.diagramProject,
                   title: 'Project',
-                  trailing: CommonTextForCommonListTile(text: 'Mobile App'),
+                  trailing:
+                      const CommonTextForCommonListTile(text: 'Mobile App'),
                 )
               : const CommonListTile(
                   leadingIcon: FontAwesomeIcons.peopleGroup,

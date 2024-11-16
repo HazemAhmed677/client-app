@@ -18,32 +18,32 @@ class DialogContainer extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(18.sp),
       ),
-      child: SingleChildScrollView(
-        child: Column(
-            // crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Container(
-                decoration: const BoxDecoration(
-                  color: AppColors.primary,
-                  // borderRadius: BorderRadius.circular(22.sp),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            decoration: const BoxDecoration(
+              color: AppColors.primary,
+              // borderRadius: BorderRadius.circular(22.sp),
+            ),
+            child: Center(
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  vertical: 16.sp,
                 ),
-                child: Center(
-                    child: Padding(
-                  padding: EdgeInsets.symmetric(
-                    vertical: 16.sp,
+                child: Text(
+                  title,
+                  style: AppStyles.poppinsMedium14.copyWith(
+                    fontSize: 16.sp,
+                    color: AppColors.white,
+                    fontWeight: FontWeightHelper.light,
                   ),
-                  child: Text(
-                    title,
-                    style: AppStyles.poppinsMedium14.copyWith(
-                      fontSize: 16.sp,
-                      color: AppColors.white,
-                      fontWeight: FontWeightHelper.light,
-                    ),
-                  ),
-                )),
+                ),
               ),
-              body,
-            ]),
+            ),
+          ),
+          body,
+        ],
       ),
     );
   }
