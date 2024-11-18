@@ -37,7 +37,7 @@ void commonDialogInCreateFeature({
                   ),
                   child: Text(
                     title,
-                    style: AppStyles.poppinsMedium14.copyWith(
+                    style: AppStyles.nexaMediumDarkGrey14.copyWith(
                       fontSize: 16.sp,
                       color: AppColors.white,
                       fontWeight: FontWeightHelper.light,

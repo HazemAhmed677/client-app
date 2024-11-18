@@ -22,14 +22,14 @@ class ProjectSliverListItemDetails extends StatelessWidget {
           children: [
             Text(
               'Wi-Fi Analyzer',
-              style: AppStyles.interSemiBold18.copyWith(
+              style: AppStyles.nexaSemiBoldNoColor18.copyWith(
                 fontSize: 18.sp,
               ),
             ),
             verticalSpace(4),
             Text(
               'Mobile App',
-              style: AppStyles.afacadfluxSemiBold18.copyWith(
+              style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
                 fontSize: 15.sp,
                 color: AppColors.subTextColorInCheckBoard,
               ),
@@ -55,19 +55,19 @@ class ProjectSliverListItemDetails extends StatelessWidget {
           children: [
             SizedBox(
               height: 80.sp,
-              child: const Align(
+              child: Align(
                 alignment: Alignment.topCenter,
                 child: AspectRatio(
                   aspectRatio: 1,
                   child: CustomPieChart(
                     pieChartColor: AppColors.pieChartColorInCheckBoard,
                     percentage: 35,
-                    textColor: AppColors.black,
+                    textColor: AppColors.grey.shade700,
                     pieChartColorSection2:
                         AppColors.restPrecentageColorInCheckBoard,
                     startDegreeOffset: 270,
-                    fontSize: 16,
-                    fontWeight: FontWeightHelper.medium,
+                    fontSize: 14,
+                    fontWeight: FontWeightHelper.extraBold,
                     radius: 8,
                   ),
                 ),

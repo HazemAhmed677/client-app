@@ -1,3 +1,4 @@
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/theming/app_colors.dart';
@@ -16,7 +17,7 @@ class BarItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(right: (!isTheLast) ? 4.0.sp : 0),
+      padding: EdgeInsets.only(right: (!isTheLast) ? 6.0.w : 0),
       child: AnimatedContainer(
         duration: const Duration(
           milliseconds: 300,
@@ -35,9 +36,10 @@ class BarItem extends StatelessWidget {
           child: Text(
             text,
             textAlign: TextAlign.center,
-            style: AppStyles.afacadfluxSemiBold18.copyWith(
+            style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
               color: (isActive) ? AppColors.white : AppColors.bottomNavBarColor,
-              fontSize: 17.sp,
+              fontSize: 16.sp,
+              fontWeight: FontWeightHelper.extraBold,
             ),
           ),
         ),

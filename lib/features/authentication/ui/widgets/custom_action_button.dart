@@ -1,3 +1,4 @@
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -31,9 +32,10 @@ class CustomActionButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         text,
-        style: AppStyles.afacadSemiBold22.copyWith(
-          fontSize: 20.sp,
+        style: AppStyles.nexaBoldSecondaryColor22.copyWith(
+          fontSize: 18.sp,
           color: AppColors.white,
+          fontWeight: FontWeightHelper.extraBold,
         ),
       ),
     );

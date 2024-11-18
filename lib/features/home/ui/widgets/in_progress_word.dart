@@ -19,9 +19,10 @@ class CustomWord extends StatelessWidget {
       children: [
         Text(
           title,
-          style: AppStyles.robotoMonoBold20.copyWith(
-            fontWeight: FontWeightHelper.bold,
+          style: AppStyles.nexaBoldNoColor20.copyWith(
+            fontWeight: FontWeightHelper.semiBold,
             fontSize: 18.sp,
+            color: AppColors.black,
           ),
         ),
         horizontalSpace(
@@ -33,9 +34,10 @@ class CustomWord extends StatelessWidget {
           child: Center(
             child: Text(
               count.toString(),
-              style: AppStyles.afacadfluxSemiBold18.copyWith(
+              style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
                 color: AppColors.primary,
-                fontSize: 13.sp,
+                fontSize: 12.sp,
+                fontWeight: FontWeightHelper.extraBold,
               ),
             ),
           ),

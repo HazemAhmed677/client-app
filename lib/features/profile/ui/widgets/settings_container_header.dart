@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:client_app/core/helpers/spacing.dart';
 import 'package:client_app/core/theming/app_images.dart';
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
@@ -64,7 +65,7 @@ class _SettingsContainerHeaderState extends State<SettingsContainerHeader> {
               0.4,
             ),
             icon: CircleAvatar(
-              radius: 26.sp,
+              radius: 28.sp,
               backgroundImage: selectedImage != null
                   ? FileImage(selectedImage!)
                   : const AssetImage(AppImages.github),
@@ -74,7 +75,11 @@ class _SettingsContainerHeaderState extends State<SettingsContainerHeader> {
         horizontalSpace(16),
         Text(
           'Livia Vaccaro',
-          style: AppStyles.robotoMonoBold20.copyWith(fontSize: 14.sp),
+          style: AppStyles.nexaBoldNoColor20.copyWith(
+            fontSize: 15.sp,
+            color: AppColors.grey.shade800,
+            fontWeight: FontWeightHelper.extraBold,
+          ),
         )
       ],
     );

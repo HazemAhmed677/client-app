@@ -1,6 +1,7 @@
 import 'package:client_app/core/helpers/spacing.dart';
 import 'package:client_app/core/theming/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/theming/app_styles.dart';
 
@@ -20,14 +21,15 @@ class SignWord extends StatelessWidget {
         verticalSpace(height),
         Text(
           title,
-          style: AppStyles.afacadfluxSemiBold24.copyWith(
+          style: AppStyles.nexaSemiBoldDarkGrey24.copyWith(
             color: AppColors.bottomNavBarColor,
+            fontSize: 22.sp,
           ),
         ),
         verticalSpace(2),
         Text(
           subTitle,
-          style: AppStyles.afacadfluxSemiBold24.copyWith(
+          style: AppStyles.nexaSemiBoldDarkGrey24.copyWith(
             fontSize: 15,
             color: AppColors.grey,
           ),

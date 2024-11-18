@@ -24,7 +24,7 @@ class SettingdContainerColumnOfMore extends StatelessWidget {
           ),
           child: Text(
             'More',
-            style: AppStyles.poppinsMedium14.copyWith(
+            style: AppStyles.nexaMediumDarkGrey14.copyWith(
               fontSize: 16.sp,
               color: AppColors.grey,
             ),

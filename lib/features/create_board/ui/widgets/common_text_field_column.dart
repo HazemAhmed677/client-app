@@ -24,7 +24,7 @@ class CommonTextFieldColumn extends StatelessWidget {
       children: [
         Text(
           text,
-          style: AppStyles.gilroyRegular17.copyWith(
+          style: AppStyles.nexaRegular17.copyWith(
             color: AppColors.black,
             fontSize: 15.sp,
             fontWeight: FontWeightHelper.bold,

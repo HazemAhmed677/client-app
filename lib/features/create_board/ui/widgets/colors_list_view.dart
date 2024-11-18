@@ -1,4 +1,5 @@
 import 'package:client_app/core/helpers/spacing.dart';
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/theming/app_styles.dart';
@@ -34,17 +35,17 @@ class _ColorListViewState extends State<ColorListView> {
             children: [
               Text(
                 'Select Color : ',
-                style: AppStyles.interSemiBold18.copyWith(
+                style: AppStyles.nexaSemiBoldNoColor18.copyWith(
                   fontSize: 14.sp,
-                  fontWeight: FontWeight.w300,
+                  fontWeight: FontWeightHelper.bold,
                 ),
               ),
               Text(
                 colorMap[currentIndex]!,
-                style: AppStyles.interSemiBold18.copyWith(
+                style: AppStyles.nexaSemiBoldNoColor18.copyWith(
                   fontSize: 14.sp,
-                  color: Colors.grey,
-                  fontWeight: FontWeight.w300,
+                  color: Colors.grey.shade500,
+                  fontWeight: FontWeightHelper.bold,
                 ),
               ),
             ],

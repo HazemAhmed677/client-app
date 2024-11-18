@@ -59,7 +59,7 @@ class CommonTextFormField extends StatelessWidget {
             milliseconds: 200,
           ),
           hintText: hintText,
-          hintStyle: AppStyles.afacadfluxSemiBold18.copyWith(
+          hintStyle: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
             fontSize: 15.sp,
             color: AppColors.grey.shade400,
           ),

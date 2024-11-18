@@ -24,14 +24,14 @@ class ReportCard extends StatelessWidget {
                 children: [
                   TextSpan(
                     text: 'Click to ',
-                    style: AppStyles.poppinsMedium14.copyWith(
+                    style: AppStyles.nexaMediumDarkGrey14.copyWith(
                       fontSize: 14.sp,
                       color: AppColors.black,
                     ),
                   ),
                   TextSpan(
                     text: 'download ',
-                    style: AppStyles.poppinsMedium14.copyWith(
+                    style: AppStyles.nexaMediumDarkGrey14.copyWith(
                       fontSize: 14.sp,
                       color: AppColors.lowPriority,
                       fontWeight: FontWeightHelper.bold,
@@ -39,7 +39,7 @@ class ReportCard extends StatelessWidget {
                   ),
                   TextSpan(
                     text: 'your report',
-                    style: AppStyles.poppinsMedium14.copyWith(
+                    style: AppStyles.nexaMediumDarkGrey14.copyWith(
                       fontSize: 14.sp,
                       color: AppColors.black,
                     ),

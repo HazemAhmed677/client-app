@@ -1,5 +1,6 @@
 import 'package:client_app/core/theming/app_colors.dart';
 import 'package:client_app/core/theming/app_styles.dart';
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -45,20 +46,21 @@ class _CalendarViewBodyState extends State<CalendarMiddleSection> {
   Widget _buildMonthlyCalendar() {
     return TableCalendar(
       headerStyle: HeaderStyle(
-        titleTextStyle: AppStyles.poppinsMedium14.copyWith(
+        titleTextStyle: AppStyles.nexaBoldSecondaryColor22.copyWith(
           color: AppColors.bottomNavBarColor,
           fontSize: 15.sp,
         ),
-        formatButtonTextStyle: AppStyles.poppinsMedium14.copyWith(
-          color: AppColors.bottomNavBarColor,
+        formatButtonTextStyle: AppStyles.nexaBoldNoColor18.copyWith(
+          color: AppColors.grey.shade600,
           fontSize: 12.sp,
+          fontWeight: FontWeightHelper.extraBold,
         ),
       ),
       weekendDays: const [
         DateTime.friday,
       ],
       daysOfWeekStyle: DaysOfWeekStyle(
-        weekendStyle: AppStyles.poppinsMedium14.copyWith(
+        weekendStyle: AppStyles.nexaMediumDarkGrey14.copyWith(
           color: Colors.redAccent,
         ),
       ),
@@ -80,14 +82,17 @@ class _CalendarViewBodyState extends State<CalendarMiddleSection> {
         });
       },
       calendarStyle: CalendarStyle(
-        todayTextStyle: AppStyles.poppinsMedium14.copyWith(
+        todayTextStyle: AppStyles.nexaBoldNoColor18.copyWith(
           color: AppColors.white,
+          fontSize: 14.sp,
         ),
-        defaultTextStyle: AppStyles.poppinsMedium14.copyWith(
+        defaultTextStyle: AppStyles.nexaBoldNoColor18.copyWith(
           color: AppColors.bottomNavBarColor,
+          fontSize: 14.sp,
         ),
-        outsideTextStyle: AppStyles.poppinsMedium14.copyWith(
+        outsideTextStyle: AppStyles.nexaBoldNoColor18.copyWith(
           color: AppColors.grey,
+          fontSize: 14.sp,
         ),
         selectedDecoration: const BoxDecoration(
           color: AppColors.secondary,
@@ -148,7 +153,7 @@ class _CalendarViewBodyState extends State<CalendarMiddleSection> {
             ),
             alignment: Alignment.center,
             child: Text(getMonthName(month.month),
-                style: AppStyles.interBold18.copyWith(
+                style: AppStyles.nexaBoldNoColor18.copyWith(
                   color: AppColors.white,
                   fontSize: 15.sp,
                 )),
@@ -172,7 +177,7 @@ class _CalendarViewBodyState extends State<CalendarMiddleSection> {
           },
         ),
         Text('$_currentYear',
-            style: AppStyles.robotoMonoBold20.copyWith(
+            style: AppStyles.nexaBoldNoColor20.copyWith(
               fontSize: 18.sp,
             )),
         IconButton(

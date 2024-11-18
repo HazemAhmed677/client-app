@@ -30,7 +30,7 @@ class TaskContainerContent extends StatelessWidget {
                 children: [
                   Text(
                     'Grocery shopping app\ndesign',
-                    style: AppStyles.interSemiBold18,
+                    style: AppStyles.nexaSemiBoldNoColor18,
                   ),
                   verticalSpace(18),
                   const CustomColoredContainer(
@@ -55,12 +55,12 @@ class TaskContainerContent extends StatelessWidget {
                         child: CustomPieChart(
                           pieChartColor: AppColors.pieChartColorInCheckBoard,
                           percentage: 90,
-                          textColor: AppColors.black,
+                          textColor: AppColors.grey.shade600,
                           pieChartColorSection2:
                               AppColors.restPrecentageColorInCheckBoard,
                           startDegreeOffset: 270,
                           fontSize: 20,
-                          fontWeight: FontWeightHelper.medium,
+                          fontWeight: FontWeightHelper.extraBold,
                           radius: 9.sp,
                         ),
                       ),
@@ -74,7 +74,7 @@ class TaskContainerContent extends StatelessWidget {
           verticalSpace(12),
           Text(
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nulla facilisi. Duis aliquet egestas purus in blandit.',
-            style: AppStyles.afacadfluxSemiBold18.copyWith(
+            style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
               fontSize: 15.sp,
               color: AppColors.grey,
             ),

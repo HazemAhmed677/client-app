@@ -25,7 +25,7 @@ class NotificationBody extends StatelessWidget {
             child: Center(
               child: Text(
                 'Notification',
-                style: AppStyles.gilroyRegular17.copyWith(
+                style: AppStyles.nexaRegular17.copyWith(
                   fontSize: 18.sp,
                   color: AppColors.black,
                 ),

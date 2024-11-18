@@ -44,6 +44,7 @@
 // }
 
 import 'package:client_app/core/theming/app_styles.dart';
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -78,9 +79,10 @@ class CustomViewTaskButton extends StatelessWidget {
           fit: BoxFit.scaleDown,
           child: Text(
             'View Task',
-            style: AppStyles.interBold18.copyWith(
+            style: AppStyles.nexaBoldNoColor18.copyWith(
               color: AppColors.primary,
               fontSize: 14.sp,
+              fontWeight: FontWeightHelper.extraBold,
             ),
           ),
         ),

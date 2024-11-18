@@ -52,7 +52,7 @@ class OnboardingHeader extends StatelessWidget {
                       },
                       child: Text(
                         'Skip',
-                        style: AppStyles.gilroyRegular17.copyWith(
+                        style: AppStyles.nexaRegular17.copyWith(
                           fontSize: 15.sp,
                         ),
                       ),

@@ -31,7 +31,7 @@ class CancelAndActionButtonRow extends StatelessWidget {
             text: 'Cancel',
             edgeColor: AppColors.primary,
             backgroundColor: AppColors.white,
-            textColor: AppColors.black,
+            textColor: AppColors.grey.shade700,
             overlayColor: AppColors.primary,
           ),
           horizontalSpace(12),

@@ -1,3 +1,4 @@
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:client_app/features/profile/ui/helper/edit_profile_dailog.dart';
 import 'package:client_app/core/helpers/spacing.dart';
 import 'package:client_app/core/theming/app_colors.dart';
@@ -28,8 +29,8 @@ class DynamicContainerProfileContent extends StatelessWidget {
               children: [
                 Text(
                   'Profile',
-                  style: AppStyles.gilroyRegular17.copyWith(
-                    fontSize: 20.sp,
+                  style: AppStyles.nexaRegular17.copyWith(
+                    fontSize: 18.sp,
                     color: AppColors.black,
                   ),
                 ),
@@ -56,19 +57,21 @@ class DynamicContainerProfileContent extends StatelessWidget {
                 horizontalSpace(8),
               ],
             ),
-            verticalSpace(18),
+            verticalSpace(14),
             Text(
-              'Shoban Haider',
-              style: AppStyles.afacadfluxSemiBold18.copyWith(
+              'Hazem Ahmed',
+              style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
                 fontSize: 20.sp,
                 color: AppColors.black,
+                // fontWeight: FontWeightHelper.extraBold,
               ),
             ),
             Text(
-              'UI/UX Designer',
-              style: AppStyles.afacadfluxSemiBold18.copyWith(
+              'Software engineer',
+              style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
                 fontSize: 14.sp,
-                color: AppColors.grey,
+                color: AppColors.grey.shade400,
+                fontWeight: FontWeightHelper.extraBold,
               ),
             ),
             verticalSpace(22),

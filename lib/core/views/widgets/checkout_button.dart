@@ -1,5 +1,6 @@
 import 'package:client_app/core/theming/app_colors.dart';
 import 'package:client_app/core/theming/app_styles.dart';
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -33,8 +34,9 @@ class _CheckoutButtonState extends State<CheckoutButton> {
           ),
           child: Text(
             'Checkout',
-            style: AppStyles.interBold18.copyWith(
+            style: AppStyles.nexaBoldNoColor18.copyWith(
               color: AppColors.white,
+              fontWeight: FontWeightHelper.extraBold,
             ),
           ),
         ),

@@ -17,7 +17,7 @@ class AttendeesDialogDataColumn extends StatelessWidget {
         ),
         Text(
           'CFO',
-          style: AppStyles.afacadfluxSemiBold16.copyWith(
+          style: AppStyles.nexaSemiBoldDarkGrey16.copyWith(
             color: AppColors.primary,
           ),
         )

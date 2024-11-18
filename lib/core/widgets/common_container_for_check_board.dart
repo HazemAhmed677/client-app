@@ -1,4 +1,5 @@
 import 'package:client_app/core/theming/app_styles.dart';
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -28,9 +29,10 @@ class ProirityContainer extends StatelessWidget {
         ),
         child: Text(
           priority,
-          style: AppStyles.interSemiBold18.copyWith(
-            fontSize: 14.sp,
-            color: AppColors.white,
+          style: AppStyles.nexaSemiBoldNoColor18.copyWith(
+            fontSize: 13.sp,
+            color: AppColors.grey.shade100,
+            fontWeight: FontWeightHelper.extraBold,
           ),
         ),
       ),

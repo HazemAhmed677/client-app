@@ -31,7 +31,7 @@ class NotificationElement extends StatelessWidget {
                 Text(
                   'New Task Assigned',
                   style: AppStyles.poppinsSemiBold18.copyWith(
-                    fontSize: 14.sp,
+                    fontSize: 16.sp,
                     color: AppColors.black,
                   ),
                 ),
@@ -42,7 +42,7 @@ class NotificationElement extends StatelessWidget {
                   child: Text(
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae',
                     style: AppStyles.poppinsSemiBold18.copyWith(
-                      fontSize: 13.sp,
+                      fontSize: 14.sp,
                       color: AppColors.grey,
                     ),
                   ),

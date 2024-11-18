@@ -53,9 +53,9 @@ class InProgressItem extends StatelessWidget {
                   children: [
                     Text(
                       'Office Project',
-                      style: AppStyles.afacadfluxSemiBold18.copyWith(
+                      style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
                         color: AppColors.grey,
-                        fontSize: 16.sp,
+                        fontSize: 14.sp,
                       ),
                     ),
                     const Spacer(),
@@ -75,14 +75,14 @@ class InProgressItem extends StatelessWidget {
                   fit: BoxFit.scaleDown,
                   child: Text(
                     'Grocery shopping app\ndesign',
-                    style: AppStyles.afacadfluxSemiBold18.copyWith(
+                    style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
                       color: AppColors.black,
-                      fontSize: 17.sp,
+                      fontSize: 14.sp,
                     ),
                   ),
                 ),
                 const Spacer(
-                  flex: 4,
+                  flex: 3,
                 ),
                 const InProgressLineBar(
                   percentage: 70,

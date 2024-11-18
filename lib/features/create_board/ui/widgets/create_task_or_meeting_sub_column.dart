@@ -51,8 +51,8 @@ class _CreateTaskOrMeetingSubColumnState
                   },
                   leadingIcon: FontAwesomeIcons.diagramProject,
                   title: 'Project',
-                  trailing:
-                      const CommonTextForCommonListTile(text: 'Mobile App'),
+                  trailing: const CommonTextForCommonListTile(
+                      text: 'Passport service'),
                 )
               : CommonListTile(
                   onTap: () {

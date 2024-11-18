@@ -1,5 +1,6 @@
 import 'package:client_app/core/helpers/spacing.dart';
 import 'package:client_app/core/routing/routes.dart';
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -16,9 +17,10 @@ class AddTasksOrSubsRow extends StatelessWidget {
       children: [
         Text(
           isAddTask ? 'Add Task' : 'Add Sub Task',
-          style: AppStyles.afacadfluxSemiBold18.copyWith(
-            fontSize: 22.sp,
-            color: AppColors.black,
+          style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
+            fontSize: 18.sp,
+            color: AppColors.grey.shade700,
+            fontWeight: FontWeightHelper.extraBold,
           ),
         ),
         horizontalSpace(10),
@@ -57,8 +59,10 @@ class AddTasksOrSubsRow extends StatelessWidget {
         const Spacer(),
         Text(
           isAddTask ? 'All Tasks' : 'All Sub Tasks',
-          style: AppStyles.poppinsMedium14.copyWith(
+          style: AppStyles.nexaMediumDarkGrey14.copyWith(
             fontSize: 14.sp,
+            fontWeight: FontWeightHelper.extraBold,
+            color: AppColors.grey.shade500,
           ),
         ),
         horizontalSpace(8),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
@@ -13,7 +14,10 @@ class AlreadyHaveAnAccount extends StatelessWidget {
       children: [
         Text(
           'Already have an account? ',
-          style: AppStyles.afacadfluxSemiBold18,
+          style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
+            fontSize: 14.sp,
+            color: Colors.grey.shade700,
+          ),
         ),
         InkWell(
           borderRadius: BorderRadius.circular(32),
@@ -25,10 +29,11 @@ class AlreadyHaveAnAccount extends StatelessWidget {
             ),
             child: Text(
               'Sign In',
-              style: AppStyles.afacadfluxSemiBold18.copyWith(
+              style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
                 decoration: TextDecoration.underline,
                 decorationColor: AppColors.secondary,
                 color: AppColors.secondary,
+                fontSize: 16.sp,
               ),
             ),
           ),

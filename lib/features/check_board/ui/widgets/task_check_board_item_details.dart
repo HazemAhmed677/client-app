@@ -38,7 +38,7 @@ class _TaskCheckBoardItemDetailsState extends State<TaskCheckBoardItemDetails> {
           ),
           child: Text(
             'Check if the project is done.',
-            style: AppStyles.interSemiBold18.copyWith(
+            style: AppStyles.nexaSemiBoldNoColor18.copyWith(
               fontSize: 16.sp,
             ),
           ),

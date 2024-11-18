@@ -46,7 +46,7 @@ class _AttachFileWidgetState extends State<AttachFileWidget> {
       children: [
         Text(
           'Attach Files',
-          style: AppStyles.gilroyRegular17.copyWith(
+          style: AppStyles.nexaRegular17.copyWith(
             color: AppColors.black,
             fontSize: 15.sp,
             fontWeight: FontWeightHelper.bold,
@@ -105,7 +105,7 @@ class _AttachFileWidgetState extends State<AttachFileWidget> {
                   horizontalSpace(12),
                   Text(
                     'Click here to attach files',
-                    style: AppStyles.afacadfluxSemiBold18.copyWith(
+                    style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
                       fontSize: 15.sp,
                       color: AppColors.grey.shade400,
                     ),

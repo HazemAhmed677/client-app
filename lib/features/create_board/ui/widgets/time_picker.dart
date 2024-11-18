@@ -32,7 +32,7 @@ class _CustomTimePickerDialogState extends State<CustomTimePickerDialog> {
             data: ThemeData.dark().copyWith(
               primaryColor: AppColors.primary,
               textTheme: TextTheme(
-                bodyMedium: AppStyles.poppinsMedium14.copyWith(
+                bodyMedium: AppStyles.nexaMediumDarkGrey14.copyWith(
                   color: AppColors.black,
                 ), // Minutes text color
               ),

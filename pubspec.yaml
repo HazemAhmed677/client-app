@@ -91,3 +91,14 @@ flutter:
     - family: RobotoMono
       fonts:
         - asset: assets/fonts/RobotoMono-Bold.ttf
+
+    - family: Nexa
+      fonts:
+        - asset: assets/fonts/NexaBold.otf
+          weight: 700
+        - asset: assets/fonts/Nexa-Heavy.ttf
+          weight: 800
+        - asset: assets/fonts/NexaLight.otf
+          weight: 500
+        - asset: assets/fonts/Nexa-ExtraLight.ttf
+          weight: 300

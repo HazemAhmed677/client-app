@@ -45,7 +45,7 @@ class CustomRegisterButton extends StatelessWidget {
         ),
         child: Text(
           text,
-          style: AppStyles.afacadfluxSemiBold16.copyWith(
+          style: AppStyles.nexaSemiBoldDarkGrey16.copyWith(
             color: textColor,
             fontSize: 18.sp,
           ),

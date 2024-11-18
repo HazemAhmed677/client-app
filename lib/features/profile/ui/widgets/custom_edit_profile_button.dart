@@ -1,4 +1,5 @@
 import 'package:client_app/core/theming/app_styles.dart';
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -32,9 +33,10 @@ class CustomEditProfileButton extends StatelessWidget {
           fit: BoxFit.scaleDown,
           child: Text(
             text,
-            style: AppStyles.poppinsMedium14.copyWith(
+            style: AppStyles.nexaBoldNoColor18.copyWith(
               color: AppColors.white,
-              fontSize: 15.sp,
+              fontSize: 14.sp,
+              fontWeight: FontWeightHelper.extraBold,
             ),
           ),
         ),

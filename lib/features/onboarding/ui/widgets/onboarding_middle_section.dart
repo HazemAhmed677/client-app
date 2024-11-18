@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_styles.dart';
@@ -17,7 +18,9 @@ class OnboardingMiddleSection extends StatelessWidget {
                 : (currentIdx == 1)
                     ? 'Reminder!!'
                     : 'All in One',
-            style: AppStyles.afacadSemiBold22,
+            style: AppStyles.nexaBoldSecondaryColor22.copyWith(
+              fontSize: 20.sp,
+            ),
           ),
         ),
         verticalSpace(
@@ -30,7 +33,9 @@ class OnboardingMiddleSection extends StatelessWidget {
                   ? 'You can remind yourselt about everything.\nSet reminders and never miss important\nthings.'
                   : "Manage all of your work in one place\nefficiently, Don't need any more open\ncouple apps for your manage task",
           textAlign: TextAlign.center,
-          style: AppStyles.afacadfluxSemiBold16,
+          style: AppStyles.nexaSemiBoldDarkGrey16.copyWith(
+            fontSize: 14.sp,
+          ),
         ),
       ],
     );

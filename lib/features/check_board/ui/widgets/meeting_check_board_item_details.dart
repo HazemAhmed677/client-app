@@ -42,7 +42,7 @@ class _MeetingCheclBoardItemDetailsOfDetailsState
               ),
               child: Text(
                 'Meeting with CTO.',
-                style: AppStyles.interSemiBold18.copyWith(
+                style: AppStyles.nexaSemiBoldNoColor18.copyWith(
                   fontSize: 16.sp,
                 ),
               ),

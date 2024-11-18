@@ -4,65 +4,62 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppStyles {
-  static TextStyle gilroyRegular17 = TextStyle(
+  static TextStyle nexaRegular17 = TextStyle(
     color: AppColors.darkGrey,
     fontSize: 17.sp,
-    fontFamily: 'Gilroy',
+    fontFamily: 'Nexa',
     fontWeight: FontWeightHelper.semiBold,
   );
-  static TextStyle afacadSemiBold22 = TextStyle(
-    fontFamily: 'AfacadFlux',
+  static TextStyle nexaBoldSecondaryColor22 = TextStyle(
+    fontFamily: 'Nexa',
     fontSize: 24.sp,
     color: AppColors.secondary,
     fontWeight: FontWeightHelper.semiBold,
   );
-  static TextStyle afacadfluxSemiBold16 = TextStyle(
+  static TextStyle nexaSemiBoldDarkGrey16 = TextStyle(
     color: AppColors.darkGrey,
     fontSize: 16.sp,
-    fontFamily: 'AfacadFlux',
+    fontFamily: 'Nexa',
     fontWeight: FontWeightHelper.semiBold,
   );
-  static TextStyle afacadfluxSemiBold18 = TextStyle(
+  static TextStyle nexaSemiBoldDarkGrey18 = TextStyle(
     color: AppColors.darkGrey,
     fontSize: 18.sp,
-    fontFamily: 'AfacadFlux',
+    fontFamily: 'Nexa',
     fontWeight: FontWeightHelper.semiBold,
   );
-  static TextStyle afacadfluxSemiBold24 = TextStyle(
+  static TextStyle nexaSemiBoldDarkGrey24 = TextStyle(
     color: AppColors.darkGrey,
     fontSize: 24.sp,
-    fontFamily: 'AfacadFlux',
+    fontFamily: 'Nexa',
     fontWeight: FontWeightHelper.semiBold,
   );
-  static TextStyle interSemiBold18 = TextStyle(
+  static TextStyle nexaSemiBoldNoColor18 = TextStyle(
     fontSize: 18.sp,
-    fontFamily: 'Inter',
+    fontFamily: 'Nexa',
     fontWeight: FontWeightHelper.semiBold,
   );
-  static TextStyle interBold18 = TextStyle(
+  static TextStyle nexaBoldNoColor18 = TextStyle(
     fontSize: 18.sp,
-    fontFamily: 'Inter',
+    fontFamily: 'Nexa',
     fontWeight: FontWeightHelper.bold,
   );
-  static TextStyle interBold20 = TextStyle(
+  static TextStyle nexaBoldNoColor20 = TextStyle(
     fontSize: 20.sp,
-    fontFamily: 'Inter',
+    fontFamily: 'Nexa',
     fontWeight: FontWeightHelper.bold,
   );
-  static TextStyle robotoMonoBold20 = TextStyle(
-    fontSize: 20.sp,
-    fontFamily: 'RobotoMono',
-  );
-  static TextStyle poppinsMedium14 = TextStyle(
+
+  static TextStyle nexaMediumDarkGrey14 = TextStyle(
     color: AppColors.darkGrey,
     fontSize: 14.sp,
-    fontFamily: 'Poppins',
+    fontFamily: 'Nexa',
     fontWeight: FontWeightHelper.medium,
   );
   static TextStyle poppinsSemiBold18 = TextStyle(
     color: AppColors.darkGrey,
     fontSize: 14.sp,
-    fontFamily: 'Poppins',
+    fontFamily: 'Nexa',
     fontWeight: FontWeightHelper.semiBold,
   );
 }

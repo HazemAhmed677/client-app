@@ -15,8 +15,8 @@ class DontHaveAccount extends StatelessWidget {
       children: [
         Text(
           'Don\'t have an account? ',
-          style: AppStyles.afacadfluxSemiBold18.copyWith(
-            fontSize: 16.sp,
+          style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
+            fontSize: 14.sp,
             color: Colors.grey.shade700,
           ),
         ),
@@ -30,10 +30,12 @@ class DontHaveAccount extends StatelessWidget {
             ),
             child: Text(
               'Sign Up',
-              style: AppStyles.afacadfluxSemiBold18.copyWith(
-                  decoration: TextDecoration.underline,
-                  decorationColor: AppColors.secondary,
-                  color: AppColors.secondary),
+              style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
+                decoration: TextDecoration.underline,
+                decorationColor: AppColors.secondary,
+                color: AppColors.secondary,
+                fontSize: 16.sp,
+              ),
             ),
           ),
         ),

@@ -64,16 +64,16 @@ class ProjectItemInHome extends StatelessWidget {
                   children: [
                     Text(
                       'Passport Project',
-                      style: AppStyles.afacadfluxSemiBold18.copyWith(
+                      style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
                         color: AppColors.black,
-                        fontSize: 16.sp,
+                        fontSize: 15.sp,
                       ),
                     ),
                     Text(
                       '23 Tasks',
-                      style: AppStyles.afacadfluxSemiBold18.copyWith(
+                      style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
                         color: AppColors.grey,
-                        fontSize: 14.sp,
+                        fontSize: 12.sp,
                       ),
                     ),
                   ],

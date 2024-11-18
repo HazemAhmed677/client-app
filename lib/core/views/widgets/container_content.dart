@@ -30,7 +30,7 @@ class ProjectContainerContent extends StatelessWidget {
                 children: [
                   Text(
                     'Wi-Fi Analyzer',
-                    style: AppStyles.interSemiBold18,
+                    style: AppStyles.nexaSemiBoldNoColor18,
                   ),
                   verticalSpace(8),
                   Container(
@@ -45,8 +45,9 @@ class ProjectContainerContent extends StatelessWidget {
                           horizontal: 16.0.sp, vertical: 4.sp),
                       child: Text(
                         'Mobile App',
-                        style: AppStyles.afacadfluxSemiBold18.copyWith(
-                          fontSize: 15.sp,
+                        style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
+                          fontSize: 14.sp,
+                          fontWeight: FontWeightHelper.extraBold,
                           color: AppColors.lowPriority,
                         ),
                       ),
@@ -67,12 +68,12 @@ class ProjectContainerContent extends StatelessWidget {
                         child: CustomPieChart(
                           pieChartColor: AppColors.pieChartColorInCheckBoard,
                           percentage: 35,
-                          textColor: AppColors.black,
+                          textColor: AppColors.grey.shade600,
                           pieChartColorSection2:
                               AppColors.restPrecentageColorInCheckBoard,
                           startDegreeOffset: 270,
                           fontSize: 20,
-                          fontWeight: FontWeightHelper.medium,
+                          fontWeight: FontWeightHelper.extraBold,
                           radius: 9.sp,
                         ),
                       ),
@@ -87,7 +88,7 @@ class ProjectContainerContent extends StatelessWidget {
           verticalSpace(20),
           Text(
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nulla facilisi. Duis aliquet egestas purus in blandit.',
-            style: AppStyles.afacadfluxSemiBold18.copyWith(
+            style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
               fontSize: 15.sp,
               color: AppColors.grey,
             ),
