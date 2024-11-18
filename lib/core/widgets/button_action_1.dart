@@ -1,5 +1,6 @@
 import 'package:client_app/core/theming/app_colors.dart';
 import 'package:client_app/core/theming/app_styles.dart';
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -39,6 +40,7 @@ class ButtonAction1 extends StatelessWidget {
         text,
         style: AppStyles.nexaSemiBoldDarkGrey16.copyWith(
           color: textColor,
+          fontWeight: FontWeightHelper.extraBold,
           fontSize: fontSize.sp,
         ),
       ),
