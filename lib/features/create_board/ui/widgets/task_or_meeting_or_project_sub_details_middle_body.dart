@@ -1,24 +1,25 @@
-import 'package:client_app/core/helpers/logger.dart';
-import 'package:client_app/core/widgets/table_calendar_for_dialog.dart';
-import 'package:client_app/features/create_board/ui/widgets/time_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../../../../core/helpers/logger.dart';
 import '../../../../core/helpers/spacing.dart';
+import '../../../../core/widgets/table_calendar_for_dialog.dart';
 import 'colors_list_view.dart';
 import 'common_list_tile.dart';
 import 'common_text_for_common_list_tile.dart';
 import 'helpers/formate_time.dart';
+import 'time_picker.dart';
 
-class TaskOrMeetingOrProjectSubDetailsMiddle extends StatefulWidget {
-  const TaskOrMeetingOrProjectSubDetailsMiddle({super.key});
+class TaskOrMeetingOrProjectSubDetailsMiddleBody extends StatefulWidget {
+  const TaskOrMeetingOrProjectSubDetailsMiddleBody({super.key});
 
   @override
-  State<TaskOrMeetingOrProjectSubDetailsMiddle> createState() =>
-      _TaskOrMeetingOrProjectSubDetailsMiddleState();
+  State<TaskOrMeetingOrProjectSubDetailsMiddleBody> createState() =>
+      _TaskOrMeetingOrProjectSubDetailsMiddleBodyState();
 }
 
-class _TaskOrMeetingOrProjectSubDetailsMiddleState
-    extends State<TaskOrMeetingOrProjectSubDetailsMiddle> {
+class _TaskOrMeetingOrProjectSubDetailsMiddleBodyState
+    extends State<TaskOrMeetingOrProjectSubDetailsMiddleBody> {
   DateTime? selectedDate = DateTime.now();
   TimeOfDay? selectedTime = TimeOfDay.now();
 
@@ -38,7 +39,6 @@ class _TaskOrMeetingOrProjectSubDetailsMiddleState
   }
 
   String timeFormatted = formatTimeOfDay(TimeOfDay.now());
-
   @override
   Widget build(BuildContext context) {
     return Column(

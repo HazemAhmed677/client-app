@@ -9,7 +9,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'attach_file_widget.dart';
 import 'common_list_tile.dart';
 import 'projects_dialog.dart';
-import 'task_or_meeting_sub_details_middle.dart';
+import 'task_or_meeting_or_project_sub_details_middle.dart';
 
 class CreateTaskOrMeetingSubColumn extends StatefulWidget {
   const CreateTaskOrMeetingSubColumn({super.key, this.isTask = true});
