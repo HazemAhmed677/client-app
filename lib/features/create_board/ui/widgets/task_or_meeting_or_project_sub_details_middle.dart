@@ -1,4 +1,4 @@
-import 'package:client_app/features/create_board/logic/cubit/pick_date_cubit.dart';
+import 'package:client_app/features/create_board/logic/pick_date/pick_date_cubit.dart';
 import 'package:client_app/features/create_board/logic/pick_time/pick_time_cubit.dart';
 import 'package:client_app/features/create_board/ui/widgets/task_or_meeting_or_project_sub_details_middle_body.dart';
 import 'package:flutter/material.dart';

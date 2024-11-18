@@ -1,6 +1,6 @@
 import 'package:client_app/core/helpers/spacing.dart';
 import 'package:client_app/core/widgets/cancel_and_actionbutton_row.dart';
-import 'package:client_app/features/create_board/logic/cubit/pick_date_cubit.dart';
+import 'package:client_app/features/create_board/logic/pick_date/pick_date_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
