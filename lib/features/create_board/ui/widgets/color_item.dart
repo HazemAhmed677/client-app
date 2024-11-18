@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/theming/app_colors.dart';
 
@@ -13,10 +14,10 @@ class ColorItem extends StatelessWidget {
         milliseconds: 200,
       ),
       child: CircleAvatar(
-        radius: 20,
+        radius: 20.sp,
         backgroundColor: color,
         child: CircleAvatar(
-          radius: 10,
+          radius: 9.sp,
           backgroundColor: (isActive) ? AppColors.white : Colors.transparent,
         ),
       ),

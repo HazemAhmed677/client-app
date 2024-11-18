@@ -1,5 +1,6 @@
 import 'package:client_app/core/helpers/spacing.dart';
 import 'package:client_app/core/theming/app_colors.dart';
+import 'package:client_app/features/create_board/ui/widgets/attendees_dailog.dart';
 import 'package:client_app/features/create_board/ui/widgets/common_text_field_column.dart';
 import 'package:client_app/features/create_board/ui/widgets/common_text_for_common_list_tile.dart';
 import 'package:flutter/material.dart';
@@ -28,6 +29,13 @@ class _CreateTaskOrMeetingSubColumnState
     );
   }
 
+  Future<void> _showEmployeesListView(BuildContext context) async {
+    await showDialog(
+      context: context,
+      builder: (context) => const AttendeesDialog(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -46,10 +54,13 @@ class _CreateTaskOrMeetingSubColumnState
                   trailing:
                       const CommonTextForCommonListTile(text: 'Mobile App'),
                 )
-              : const CommonListTile(
+              : CommonListTile(
+                  onTap: () {
+                    _showEmployeesListView(context);
+                  },
                   leadingIcon: FontAwesomeIcons.peopleGroup,
-                  title: 'Attendeces',
-                  trailing: Icon(
+                  title: 'Attendees',
+                  trailing: const Icon(
                     Icons.arrow_forward_ios,
                   ),
                 ),

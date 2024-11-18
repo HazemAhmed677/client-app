@@ -15,12 +15,12 @@ class ColorListView extends StatefulWidget {
 class _ColorListViewState extends State<ColorListView> {
   int currentIndex = 0;
   Map<int, String> colorMap = {
-    0: 'Indigo',
-    1: 'Coral',
-    2: 'Lavender',
-    3: 'Mint',
-    4: 'Amber',
-    5: 'Teal',
+    0: 'Midnight Purple',
+    1: 'Deep Grape',
+    2: 'Burgundy',
+    3: 'Rosewood',
+    4: 'Tangerine',
+    5: 'Peach Blossom',
   };
 
   List<Color> colorList = colorsPalette();
