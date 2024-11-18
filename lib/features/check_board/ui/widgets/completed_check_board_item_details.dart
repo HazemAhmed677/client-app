@@ -22,7 +22,7 @@ class CompletedCheckBoardItemDetails extends StatefulWidget {
 
 class _MeetingCheclBoardItemDetailsOfDetailsState
     extends State<CompletedCheckBoardItemDetails> {
-  final List<ProirityContainer> priorities = getPriorityList();
+  final List<ProirityContainer> priorities = getStatusList();
   ProirityContainer priorityChoosed = const ProirityContainer(
     color: AppColors.lowPriority,
     priority: 'Completed',

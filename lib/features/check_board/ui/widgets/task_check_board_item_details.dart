@@ -20,7 +20,7 @@ class TaskCheckBoardItemDetails extends StatefulWidget {
 }
 
 class _TaskCheckBoardItemDetailsState extends State<TaskCheckBoardItemDetails> {
-  final List<ProirityContainer> priorities = getPriorityList();
+  final List<ProirityContainer> priorities = getStatusList();
   ProirityContainer priorityChoosed = const ProirityContainer(
     color: AppColors.onTrackColor,
     priority: 'On Track',
