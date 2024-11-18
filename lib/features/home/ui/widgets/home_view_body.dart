@@ -15,8 +15,8 @@ class HomeViewBody extends StatelessWidget {
     return SafeArea(
       child: Padding(
         padding: EdgeInsets.symmetric(
-          horizontal: 14.0.sp,
-          vertical: 16.sp,
+          horizontal: 14.0.w,
+          vertical: 16.h,
         ),
         child: CustomScrollView(
           clipBehavior: Clip.none,
@@ -47,7 +47,7 @@ class HomeViewBody extends StatelessWidget {
             ),
             const ProjectsListView(),
             SliverToBoxAdapter(
-              child: verticalSpace(90),
+              child: verticalSpace(72),
             )
           ],
         ),

@@ -44,7 +44,7 @@ class NotificationBody extends StatelessWidget {
           const NotificationSliverList(
             isMeeting: true,
           ),
-          SliverToBoxAdapter(child: verticalSpace(100)),
+          SliverToBoxAdapter(child: verticalSpace(88)),
         ],
       ),
     );
