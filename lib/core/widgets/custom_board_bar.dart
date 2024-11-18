@@ -30,7 +30,10 @@ class _CustomBoardBarState extends State<CustomBoardBar> {
           decoration: BoxDecoration(
             color: AppColors.white,
             borderRadius: BorderRadius.circular(14.sp),
-            border: Border.all(color: AppColors.white, width: 3.sp),
+            border: Border.all(
+              color: AppColors.white,
+              width: 3.sp,
+            ),
           ),
           child: Row(
             children: List.generate(

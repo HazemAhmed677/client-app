@@ -10,27 +10,28 @@ void showDeleteConfirmation(BuildContext context) {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
+        backgroundColor: AppColors.grey.shade100,
         title: Text(
           'Delete Notification',
-          style: AppStyles.afacadfluxSemiBold16.copyWith(
-            fontWeight: FontWeightHelper.thin,
+          style: AppStyles.nexaSemiBoldDarkGrey16.copyWith(
+            fontWeight: FontWeightHelper.bold,
             color: AppColors.black,
-            fontSize: 22.sp,
+            fontSize: 18.sp,
           ),
         ),
         content: Text(
           'Are you sure you want to delete this notify?',
-          style: AppStyles.afacadfluxSemiBold16.copyWith(
-            fontWeight: FontWeightHelper.thin,
+          style: AppStyles.nexaSemiBoldDarkGrey16.copyWith(
+            fontWeight: FontWeightHelper.medium,
             color: AppColors.black,
-            fontSize: 16.sp,
+            fontSize: 14.sp,
           ),
         ),
         actions: [
           TextButton(
             child: Text(
               'Cancel',
-              style: AppStyles.interBold18.copyWith(
+              style: AppStyles.nexaBoldNoColor18.copyWith(
                 fontSize: 14.sp,
               ),
             ),
@@ -41,8 +42,9 @@ void showDeleteConfirmation(BuildContext context) {
           TextButton(
             child: Text(
               'Delete',
-              style: AppStyles.interBold18.copyWith(
+              style: AppStyles.nexaBoldNoColor18.copyWith(
                 fontSize: 14.sp,
+                color: AppColors.redAccent,
               ),
             ),
             onPressed: () {},

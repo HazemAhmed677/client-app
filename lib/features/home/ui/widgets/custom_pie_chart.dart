@@ -54,7 +54,7 @@ class CustomPieChart extends StatelessWidget {
             fit: BoxFit.scaleDown,
             child: Text(
               '$percentage%',
-              style: AppStyles.interBold18.copyWith(
+              style: AppStyles.nexaBoldNoColor18.copyWith(
                 fontSize: fontSize.sp,
                 color: textColor,
                 fontWeight: fontWeight,

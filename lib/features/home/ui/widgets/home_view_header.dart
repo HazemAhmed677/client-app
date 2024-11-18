@@ -1,4 +1,5 @@
 import 'package:client_app/core/helpers/spacing.dart';
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/theming/app_colors.dart';
@@ -22,16 +23,18 @@ class HomeViewHeader extends StatelessWidget {
           children: [
             Text(
               'Hello!',
-              style: AppStyles.interSemiBold18.copyWith(
-                color: AppColors.grey.shade800,
+              style: AppStyles.nexaSemiBoldNoColor18.copyWith(
+                color: AppColors.grey.shade900,
                 fontSize: 15.sp,
+                fontWeight: FontWeightHelper.medium,
               ),
             ),
-            verticalSpace(4),
+            // verticalSpace(2),
             Text(
-              'Livia Vaccaro',
-              style: AppStyles.interBold18.copyWith(
+              'Hazem Ahmed',
+              style: AppStyles.nexaBoldNoColor18.copyWith(
                 fontSize: 16.sp,
+                fontWeight: FontWeightHelper.bold,
               ),
             ),
           ],

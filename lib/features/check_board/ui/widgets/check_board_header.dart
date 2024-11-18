@@ -38,24 +38,6 @@ class _CheckBoardHeaderState extends State<CheckBoardHeader> {
                   ),
                   child: Row(
                     children: [
-                      // BlocBuilder<ChooseBarCubit, ChooseBarState>(
-                      //   builder: (context, state) {
-                      //     return Text(
-                      //       (state is ProjectsState)
-                      //           ? 'Projects'
-                      //           : (state is AssignmentsState)
-                      //               ? 'Assignments'
-                      //               : (state is MeetingsState)
-                      //                   ? 'Meetings'
-                      //                   : 'Completed',
-                      //       style: AppStyles.afacadSemiBold22.copyWith(
-                      //         fontSize: 25.sp,
-                      //         color: AppColors.black,
-                      //       ),
-                      //     );
-                      //   },
-                      // ),
-                      // horizontalSpace(14),
                       Expanded(
                         child: SizedBox(
                           height: 42.sp,

@@ -48,8 +48,8 @@ class CustomSearchTextFeild extends StatelessWidget {
           color: AppColors.secondary,
         ),
         hintText: hintText,
-        hintStyle: AppStyles.afacadfluxSemiBold18.copyWith(
-          fontSize: 17.sp,
+        hintStyle: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
+          fontSize: 15.sp,
           color: Colors.grey.shade500,
         ),
         enabledBorder: buildBorder(

@@ -15,10 +15,10 @@ class TodayWord extends StatelessWidget {
       children: [
         Text(
           text1,
-          style: AppStyles.gilroyRegular17.copyWith(
+          style: AppStyles.nexaRegular17.copyWith(
             fontWeight: FontWeightHelper.medium,
             fontSize: 18.sp,
-            color: AppColors.grey,
+            color: AppColors.grey.shade600,
           ),
         ),
         const Spacer(),
@@ -31,10 +31,9 @@ class TodayWord extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 4.0.w, vertical: 2.h),
             child: Text(
               text2,
-              style: AppStyles.interBold18.copyWith(
-                fontWeight: FontWeightHelper.medium,
+              style: AppStyles.nexaBoldNoColor18.copyWith(
                 fontSize: 16.sp,
-                color: AppColors.bottomNavBarColor,
+                color: AppColors.grey.shade600,
               ),
             ),
           ),

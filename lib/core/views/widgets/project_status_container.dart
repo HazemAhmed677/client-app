@@ -1,3 +1,4 @@
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -28,14 +29,15 @@ class ProjectStatusContainer extends StatelessWidget {
         ),
         child: Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: 26.0.sp,
+            horizontal: 22.0.sp,
             vertical: 6.sp,
           ),
           child: Text(
             text,
-            style: AppStyles.interSemiBold18.copyWith(
-              fontSize: 14.sp,
+            style: AppStyles.nexaSemiBoldNoColor18.copyWith(
+              fontSize: 15.sp,
               color: AppColors.white,
+              fontWeight: FontWeightHelper.extraBold,
             ),
           ),
         ),

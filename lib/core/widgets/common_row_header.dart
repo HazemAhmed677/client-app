@@ -33,8 +33,8 @@ class CommonRowHeader extends StatelessWidget {
                   ),
                   Text(
                     title,
-                    style: AppStyles.gilroyRegular17.copyWith(
-                      fontSize: 20.sp,
+                    style: AppStyles.nexaRegular17.copyWith(
+                      fontSize: 18.sp,
                       color: AppColors.black,
                       fontWeight: FontWeight.bold,
                     ),

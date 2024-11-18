@@ -46,8 +46,8 @@ class CustomTextFieldForProfileDialogs extends StatelessWidget {
             minWidth: (icon != null) ? 60.w : 20.w,
           ),
           hintText: hint,
-          hintStyle: AppStyles.afacadfluxSemiBold18.copyWith(
-            fontSize: 17.sp,
+          hintStyle: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
+            fontSize: 15.sp,
             color: Colors.grey.shade500,
           ),
           enabledBorder: buildBorder(

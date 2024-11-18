@@ -1,3 +1,4 @@
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -17,15 +18,16 @@ class CalenderEventRow extends StatelessWidget {
       children: [
         Icon(
           iconData,
-          color: AppColors.primary,
+          color: AppColors.secondary,
           size: 16.sp,
         ),
         horizontalSpace(4),
         Text(
           title,
-          style: AppStyles.afacadfluxSemiBold18.copyWith(
-            fontSize: 12.sp,
-            color: AppColors.primary,
+          style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
+            fontSize: 14.sp,
+            color: AppColors.secondary,
+            fontWeight: FontWeightHelper.extraBold,
           ),
         )
       ],

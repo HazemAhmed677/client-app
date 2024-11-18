@@ -28,6 +28,9 @@ class ProfileViewBody extends StatelessWidget {
           ),
           sliver: const ProfileGridView(),
         ),
+        SliverToBoxAdapter(
+          child: verticalSpace(88),
+        )
       ],
     );
   }

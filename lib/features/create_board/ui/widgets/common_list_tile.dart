@@ -76,7 +76,7 @@ class _CommonListTileState extends State<CommonListTile> {
               horizontalSpace(12),
               Text(
                 widget.title,
-                style: AppStyles.gilroyRegular17.copyWith(
+                style: AppStyles.nexaRegular17.copyWith(
                   color: AppColors.black,
                   fontSize: 14.sp,
                   fontWeight: FontWeightHelper.bold,

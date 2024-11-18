@@ -23,7 +23,9 @@ class CalendarViewDetailsContianer extends StatelessWidget {
               ),
               SafeArea(
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 8.0.sp),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 8.0.sp,
+                  ),
                   child: const CalendarViewHeader(),
                 ),
               ),

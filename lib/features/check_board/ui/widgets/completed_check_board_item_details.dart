@@ -22,7 +22,7 @@ class CompletedCheckBoardItemDetails extends StatefulWidget {
 
 class _MeetingCheclBoardItemDetailsOfDetailsState
     extends State<CompletedCheckBoardItemDetails> {
-  final List<ProirityContainer> priorities = getPriorityList();
+  final List<ProirityContainer> priorities = getStatusList();
   ProirityContainer priorityChoosed = const ProirityContainer(
     color: AppColors.lowPriority,
     priority: 'Completed',
@@ -40,7 +40,7 @@ class _MeetingCheclBoardItemDetailsOfDetailsState
               ),
               child: Text(
                 'Meeting with Product Owner.',
-                style: AppStyles.interSemiBold18.copyWith(
+                style: AppStyles.nexaSemiBoldNoColor18.copyWith(
                   fontSize: 16.sp,
                 ),
               ),

@@ -1,5 +1,6 @@
 import 'package:client_app/core/helpers/spacing.dart';
 import 'package:client_app/core/theming/app_styles.dart';
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:client_app/core/widgets/back_navigation_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -30,6 +31,7 @@ class SettingsBehindContainer extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               BackNavigationButton(
+                size: 22,
                 pageContext: context,
                 iconColor: AppColors.white,
               ),
@@ -44,7 +46,8 @@ class SettingsBehindContainer extends StatelessWidget {
               horizontalSpace(8),
               Text(
                 'Settings',
-                style: AppStyles.interBold18.copyWith(
+                style: AppStyles.nexaBoldNoColor18.copyWith(
+                  fontWeight: FontWeightHelper.extraBold,
                   fontSize: 22.sp,
                   color: AppColors.white,
                 ),

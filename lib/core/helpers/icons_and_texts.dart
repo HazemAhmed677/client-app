@@ -1,3 +1,4 @@
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -32,8 +33,9 @@ Text textHelperInCheckBoard(String text,
     {Color color = AppColors.subTextColorInCheckBoard}) {
   return Text(
     text,
-    style: AppStyles.afacadfluxSemiBold18.copyWith(
-      fontSize: 15.sp,
+    style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
+      fontWeight: FontWeightHelper.extraBold,
+      fontSize: 14.sp,
       color: color,
     ),
   );

@@ -1,14 +1,16 @@
 import 'package:client_app/core/theming/app_colors.dart';
 import 'package:client_app/core/theming/app_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../core/helpers/spacing.dart';
+import '../../logic/pick_time/pick_time_cubit.dart';
 
 class CustomTimePickerDialog extends StatefulWidget {
-  const CustomTimePickerDialog({super.key});
-
+  const CustomTimePickerDialog({super.key, required this.target});
+  final BuildContext target;
   @override
   // ignore: library_private_types_in_public_api
   _CustomTimePickerDialogState createState() => _CustomTimePickerDialogState();
@@ -30,7 +32,7 @@ class _CustomTimePickerDialogState extends State<CustomTimePickerDialog> {
             data: ThemeData.dark().copyWith(
               primaryColor: AppColors.primary,
               textTheme: TextTheme(
-                bodyMedium: AppStyles.poppinsMedium14.copyWith(
+                bodyMedium: AppStyles.nexaMediumDarkGrey14.copyWith(
                   color: AppColors.black,
                 ), // Minutes text color
               ),
@@ -49,16 +51,18 @@ class _CustomTimePickerDialogState extends State<CustomTimePickerDialog> {
     }
   }
 
-  void _onSave() {
-    context.pop();
-  }
-
   void _onCancel() {
     context.pop();
   }
 
   @override
   Widget build(BuildContext context) {
+    void onSave() {
+      BlocProvider.of<PickTimeCubit>(widget.target)
+          .pickTime(time: _selectedTime);
+      context.pop();
+    }
+
     return Dialog(
       insetPadding: EdgeInsets.symmetric(horizontal: 16.w),
       backgroundColor: Colors.white,
@@ -97,7 +101,7 @@ class _CustomTimePickerDialogState extends State<CustomTimePickerDialog> {
                   ),
                 ),
                 TextButton(
-                  onPressed: _onSave,
+                  onPressed: onSave,
                   child: Text(
                     'Save',
                     style: TextStyle(fontSize: 16.sp, color: Colors.blue),

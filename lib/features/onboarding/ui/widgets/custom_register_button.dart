@@ -1,3 +1,4 @@
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -45,8 +46,9 @@ class CustomRegisterButton extends StatelessWidget {
         ),
         child: Text(
           text,
-          style: AppStyles.afacadfluxSemiBold16.copyWith(
+          style: AppStyles.nexaSemiBoldDarkGrey16.copyWith(
             color: textColor,
+            fontWeight: FontWeightHelper.extraBold,
             fontSize: 18.sp,
           ),
         ),

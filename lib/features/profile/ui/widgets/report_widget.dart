@@ -4,6 +4,7 @@ import 'package:client_app/core/theming/app_colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/theming/app_styles.dart';
+import '../../../../core/theming/font_weight_helper.dart';
 
 class ReportWidget extends StatelessWidget {
   const ReportWidget({super.key});
@@ -32,8 +33,9 @@ class ReportWidget extends StatelessWidget {
         ),
         Text(
           'Report',
-          style: AppStyles.afacadfluxSemiBold18.copyWith(
-            color: AppColors.black,
+          style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
+            fontWeight: FontWeightHelper.extraBold,
+            color: AppColors.grey.shade700,
             fontSize: 14.sp,
           ),
         ),

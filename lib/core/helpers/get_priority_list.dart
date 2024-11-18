@@ -8,3 +8,14 @@ List<ProirityContainer> getPriorityList() {
     ProirityContainer(color: AppColors.lowPriority, priority: 'Low'),
   ];
 }
+
+List<ProirityContainer> getStatusList() {
+  return const [
+    ProirityContainer(color: AppColors.highPriority, priority: 'Not Started'),
+    ProirityContainer(color: AppColors.onTrackColor, priority: 'On Track'),
+    ProirityContainer(color: AppColors.mediumPriority, priority: 'In Progress'),
+    ProirityContainer(
+        color: AppColors.meetingContainer, priority: 'Adjustments'),
+    ProirityContainer(color: AppColors.lowPriority, priority: 'Completed'),
+  ];
+}

@@ -38,9 +38,9 @@ class CustomTextFormField extends StatelessWidget {
         ),
         hintFadeDuration: const Duration(milliseconds: 200),
         hintText: hint,
-        hintStyle: AppStyles.afacadSemiBold22.copyWith(
+        hintStyle: AppStyles.nexaBoldSecondaryColor22.copyWith(
           color: AppColors.grey,
-          fontSize: 16.sp,
+          fontSize: 15.sp,
         ),
         enabledBorder: buildBorder(
           color: Colors.grey.shade400,

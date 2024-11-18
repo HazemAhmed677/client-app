@@ -1,5 +1,6 @@
 import 'package:client_app/core/theming/app_colors.dart';
 import 'package:client_app/core/theming/app_styles.dart';
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -26,17 +27,16 @@ class _CalendarViewBodyState extends State<CalendarMiddleSection> {
       padding: EdgeInsets.symmetric(horizontal: 12.0.sp, vertical: 4.sp),
       child: Column(
         children: [
-          // Year navigation row
           if (isYearView) _buildYearNavigation(),
           isYearView
               ? SizedBox(
                   height: 400,
                   child: _buildYearView(),
-                ) // Custom year view
+                )
               : Padding(
                   padding: EdgeInsets.only(bottom: 12.0.sp),
                   child: _buildMonthlyCalendar(),
-                ), // Monthly calendar view
+                ),
         ],
       ),
     );
@@ -45,20 +45,21 @@ class _CalendarViewBodyState extends State<CalendarMiddleSection> {
   Widget _buildMonthlyCalendar() {
     return TableCalendar(
       headerStyle: HeaderStyle(
-        titleTextStyle: AppStyles.poppinsMedium14.copyWith(
+        titleTextStyle: AppStyles.nexaBoldSecondaryColor22.copyWith(
           color: AppColors.bottomNavBarColor,
           fontSize: 15.sp,
         ),
-        formatButtonTextStyle: AppStyles.poppinsMedium14.copyWith(
-          color: AppColors.bottomNavBarColor,
+        formatButtonTextStyle: AppStyles.nexaBoldNoColor18.copyWith(
+          color: AppColors.grey.shade600,
           fontSize: 12.sp,
+          fontWeight: FontWeightHelper.extraBold,
         ),
       ),
       weekendDays: const [
         DateTime.friday,
       ],
       daysOfWeekStyle: DaysOfWeekStyle(
-        weekendStyle: AppStyles.poppinsMedium14.copyWith(
+        weekendStyle: AppStyles.nexaMediumDarkGrey14.copyWith(
           color: Colors.redAccent,
         ),
       ),
@@ -80,14 +81,17 @@ class _CalendarViewBodyState extends State<CalendarMiddleSection> {
         });
       },
       calendarStyle: CalendarStyle(
-        todayTextStyle: AppStyles.poppinsMedium14.copyWith(
+        todayTextStyle: AppStyles.nexaBoldNoColor18.copyWith(
           color: AppColors.white,
+          fontSize: 14.sp,
         ),
-        defaultTextStyle: AppStyles.poppinsMedium14.copyWith(
+        defaultTextStyle: AppStyles.nexaBoldNoColor18.copyWith(
           color: AppColors.bottomNavBarColor,
+          fontSize: 14.sp,
         ),
-        outsideTextStyle: AppStyles.poppinsMedium14.copyWith(
+        outsideTextStyle: AppStyles.nexaBoldNoColor18.copyWith(
           color: AppColors.grey,
+          fontSize: 14.sp,
         ),
         selectedDecoration: const BoxDecoration(
           color: AppColors.secondary,
@@ -108,7 +112,9 @@ class _CalendarViewBodyState extends State<CalendarMiddleSection> {
           // Check if the day is a Friday (left column) or Saturday (right column)
           if (day.weekday == DateTime.friday) {
             return buildDayContainer(
-                day, AppColors.white); // Special color for Fridays
+              day,
+              AppColors.white,
+            ); // Special color for Fridays
           }
           return null; // Use default style for other days
         },
@@ -147,11 +153,13 @@ class _CalendarViewBodyState extends State<CalendarMiddleSection> {
               ),
             ),
             alignment: Alignment.center,
-            child: Text(getMonthName(month.month),
-                style: AppStyles.interBold18.copyWith(
-                  color: AppColors.white,
-                  fontSize: 15.sp,
-                )),
+            child: Text(
+              getMonthName(month.month),
+              style: AppStyles.nexaBoldNoColor18.copyWith(
+                color: AppColors.white,
+                fontSize: 15.sp,
+              ),
+            ),
           ),
         );
       },
@@ -160,30 +168,43 @@ class _CalendarViewBodyState extends State<CalendarMiddleSection> {
 
   // Year navigation (allows user to switch between years)
   Widget _buildYearNavigation() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new_sharp),
-          onPressed: () {
-            setState(() {
-              _currentYear--; // Go to the previous year
-            });
-          },
-        ),
-        Text('$_currentYear',
-            style: AppStyles.robotoMonoBold20.copyWith(
-              fontSize: 18.sp,
-            )),
-        IconButton(
-          icon: const Icon(Icons.arrow_forward_ios_sharp),
-          onPressed: () {
-            setState(() {
-              _currentYear++; // Go to the next year
-            });
-          },
-        ),
-      ],
+    return SizedBox(
+      width: 150.w,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          (_currentYear != 2021)
+              ? IconButton(
+                  icon: const Icon(Icons.arrow_back_ios_new_sharp),
+                  onPressed: () {
+                    setState(() {
+                      if (_currentYear > 2021) {
+                        _currentYear--;
+                      } // Go to the previous year
+                    });
+                  },
+                )
+              : const SizedBox.shrink(),
+          Text('$_currentYear',
+              style: AppStyles.nexaBoldNoColor20.copyWith(
+                fontSize: 18.sp,
+                color: AppColors.grey.shade600,
+                fontWeight: FontWeightHelper.extraBold,
+              )),
+          (_currentYear < 2030)
+              ? IconButton(
+                  icon: const Icon(Icons.arrow_forward_ios_sharp),
+                  onPressed: () {
+                    setState(() {
+                      if (_currentYear < 2030) {
+                        _currentYear++;
+                      } // Go to the next year
+                    });
+                  },
+                )
+              : const SizedBox.shrink(),
+        ],
+      ),
     );
   }
 }

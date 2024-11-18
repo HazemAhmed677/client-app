@@ -28,9 +28,9 @@ class LogoutWidget extends StatelessWidget {
               left: 0,
               child: Divider(
                 color: AppColors.white,
-                thickness: 3.sp,
+                thickness: 2.sp,
                 indent: 45.sp,
-                endIndent: 54.sp,
+                endIndent: 50.sp,
               ),
             ),
             Positioned(

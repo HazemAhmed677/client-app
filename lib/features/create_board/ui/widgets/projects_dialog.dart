@@ -37,7 +37,10 @@ class ProjectsDialog extends StatelessWidget {
                     ),
                     itemBuilder: (context, index) => InkWell(
                       borderRadius: BorderRadius.circular(16.sp),
-                      onTap: () {},
+                      onDoubleTap: () {
+                        // cubit like in time and date but this in integration
+                        context.pop();
+                      },
                       child: const ProjectItemForDialog(
                         text: 'Passport service',
                       ),

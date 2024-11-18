@@ -1,4 +1,6 @@
+import 'package:client_app/core/theming/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/theming/app_styles.dart';
 
 class WordOfTextfield extends StatelessWidget {
@@ -10,7 +12,10 @@ class WordOfTextfield extends StatelessWidget {
       alignment: Alignment.centerLeft,
       child: Text(
         text,
-        style: AppStyles.afacadfluxSemiBold18,
+        style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
+          fontSize: 16.sp,
+          color: AppColors.grey.shade800,
+        ),
       ),
     );
   }

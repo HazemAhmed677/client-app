@@ -53,9 +53,10 @@ class CustomPieChartCard extends StatelessWidget {
                       children: [
                         Text(
                           "Your today's task\nalmost done",
-                          style: AppStyles.afacadfluxSemiBold18.copyWith(
+                          style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
                             color: AppColors.white,
-                            fontWeight: FontWeightHelper.medium,
+                            fontWeight: FontWeightHelper.semiBold,
+                            fontSize: 17.sp,
                           ),
                         ),
                         const Spacer(),
@@ -69,6 +70,7 @@ class CustomPieChartCard extends StatelessWidget {
                         child: AspectRatio(
                           aspectRatio: 1,
                           child: CustomPieChart(
+                            fontWeight: FontWeightHelper.extraBold,
                             pieChartColorSection2: AppColors.white.withOpacity(
                               0.5,
                             ),

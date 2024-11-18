@@ -43,7 +43,7 @@ class _LogInTopSectionState extends State<LogInTopSection> {
           SignWord(
             title: 'Welcome to AIMATRIX',
             subTitle: r"Sign in to continue",
-            height: 12.sp,
+            height: 12.h,
           ),
           verticalSpace(42),
           EmailAndPasswordPart(

@@ -15,7 +15,7 @@ class NotificationSliverList extends StatelessWidget {
     return SliverList.builder(
       itemCount: 4,
       itemBuilder: (BuildContext context, int index) => Padding(
-        padding: const EdgeInsets.only(bottom: 10.0),
+        padding: EdgeInsets.only(bottom: (index != 3) ? 10.0.h : 0),
         child: Column(
           children: [
             InkWell(

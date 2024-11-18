@@ -1,6 +1,8 @@
 import 'package:client_app/core/helpers/spacing.dart';
 import 'package:client_app/core/widgets/cancel_and_actionbutton_row.dart';
+import 'package:client_app/features/create_board/logic/cubit/pick_date_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -8,8 +10,8 @@ import 'package:table_calendar/table_calendar.dart';
 import '../theming/app_colors.dart';
 
 class TableCalendarForDialog extends StatefulWidget {
-  const TableCalendarForDialog({super.key});
-
+  const TableCalendarForDialog({super.key, required this.target});
+  final BuildContext target;
   @override
   State<TableCalendarForDialog> createState() => _TableCalendarForDialogState();
 }
@@ -20,14 +22,14 @@ class _TableCalendarForDialogState extends State<TableCalendarForDialog> {
   void _onDaySelected(DateTime selectedDay, DateTime focusedDay) {
     setState(() {
       _selectedDate = selectedDay;
+      BlocProvider.of<PickDateCubit>(widget.target)
+          .pickDate(date: _selectedDate);
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    // Calculate dynamic height based on screen size
     final double dialogHeight = MediaQuery.of(context).size.height * 0.7;
-
     return Dialog(
       insetPadding: EdgeInsets.symmetric(horizontal: 16.w),
       backgroundColor: AppColors.white,
@@ -65,7 +67,9 @@ class _TableCalendarForDialogState extends State<TableCalendarForDialog> {
             CancelAndActionButtonRow(
               actionText: 'Save',
               onPressed: () {
-                context.pop(_selectedDate);
+                BlocProvider.of<PickDateCubit>(widget.target)
+                    .pickDate(date: _selectedDate);
+                context.pop();
               },
             ),
             verticalSpace(14),

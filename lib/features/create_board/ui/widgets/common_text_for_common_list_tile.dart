@@ -11,7 +11,7 @@ class CommonTextForCommonListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: AppStyles.afacadfluxSemiBold18.copyWith(
+      style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
         fontSize: 15.sp,
         color: AppColors.grey.shade400,
       ),

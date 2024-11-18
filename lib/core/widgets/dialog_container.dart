@@ -33,10 +33,10 @@ class DialogContainer extends StatelessWidget {
                 ),
                 child: Text(
                   title,
-                  style: AppStyles.poppinsMedium14.copyWith(
-                    fontSize: 16.sp,
+                  style: AppStyles.nexaMediumDarkGrey14.copyWith(
+                    fontSize: 18.sp,
                     color: AppColors.white,
-                    fontWeight: FontWeightHelper.light,
+                    fontWeight: FontWeightHelper.extraBold,
                   ),
                 ),
               ),

@@ -20,7 +20,7 @@ class _MicroBottomNavBarState extends State<MicroBottomNavBar> {
         height: 100,
         child: Transform.translate(
           offset: Offset(
-            -45.sp,
+            -46.sp,
             0,
           ),
           child: MicroBottomNavBarStack(

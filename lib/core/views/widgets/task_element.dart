@@ -71,7 +71,7 @@ class _TaskElementState extends State<TaskElement> {
                 children: [
                   Text(
                     'Splash Screen Design',
-                    style: AppStyles.afacadfluxSemiBold18.copyWith(
+                    style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
                       color: isChecked ? AppColors.grey : AppColors.black,
                       fontSize: 16.sp,
                       decoration: isChecked

@@ -64,7 +64,7 @@ class _CheckBoardBodyState extends State<CheckBoardBody> {
           SliverToBoxAdapter(
             child: KeyboardVisibilityBuilder(
               builder: (context, visible) {
-                return !visible ? verticalSpace(100) : const SizedBox.shrink();
+                return !visible ? verticalSpace(88) : const SizedBox.shrink();
               },
             ),
           ),

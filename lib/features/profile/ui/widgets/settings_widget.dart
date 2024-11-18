@@ -4,6 +4,8 @@ import 'package:client_app/core/theming/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/theming/font_weight_helper.dart';
+
 class SettingsWidget extends StatelessWidget {
   const SettingsWidget({super.key});
 
@@ -41,9 +43,10 @@ class SettingsWidget extends StatelessWidget {
         verticalSpace(2),
         Text(
           'Settings',
-          style: AppStyles.afacadfluxSemiBold18.copyWith(
-            color: AppColors.black,
-            fontSize: 16.sp,
+          style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
+            fontWeight: FontWeightHelper.extraBold,
+            color: AppColors.grey.shade700,
+            fontSize: 14.sp,
           ),
         ),
       ],

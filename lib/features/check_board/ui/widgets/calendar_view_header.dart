@@ -20,9 +20,9 @@ class CalendarViewHeader extends StatelessWidget {
         ),
         Text(
           "Calendar",
-          style: AppStyles.robotoMonoBold20.copyWith(
+          style: AppStyles.nexaBoldNoColor20.copyWith(
             color: AppColors.black,
-            fontSize: 20.sp,
+            fontSize: 18.sp,
             // fontWeight: FontWeightHelper.bold,
           ),
         ),

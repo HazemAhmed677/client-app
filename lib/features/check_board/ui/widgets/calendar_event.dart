@@ -57,8 +57,8 @@ class _CalendarEventState extends State<CalendarEvent> {
               children: [
                 Text(
                   'Project Presentation',
-                  style: AppStyles.afacadfluxSemiBold18.copyWith(
-                    fontSize: 18.sp,
+                  style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
+                    fontSize: 15.sp,
                     color: isChecked
                         ? AppColors.grey
                         : AppColors.bottomNavBarColor,
@@ -70,20 +70,25 @@ class _CalendarEventState extends State<CalendarEvent> {
                 verticalSpace(
                   4,
                 ),
-                FittedBox(
-                  fit: BoxFit.scaleDown,
-                  child: Row(
-                    children: [
-                      const CalenderEventRow(
-                        iconData: Icons.alarm,
-                        title: 'Today, 11:00 AM',
-                      ),
-                      horizontalSpace(16),
-                      const CalenderEventRow(
-                        iconData: Icons.calendar_month,
-                        title: 'July 03, 2024',
-                      ),
-                    ],
+                ConstrainedBox(
+                  constraints: BoxConstraints(
+                    maxWidth: MediaQuery.sizeOf(context).width * 0.5,
+                  ),
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Row(
+                      children: [
+                        const CalenderEventRow(
+                          iconData: Icons.alarm,
+                          title: 'Today, 11:00 AM',
+                        ),
+                        horizontalSpace(16),
+                        const CalenderEventRow(
+                          iconData: Icons.calendar_month,
+                          title: 'July 03, 2024',
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],

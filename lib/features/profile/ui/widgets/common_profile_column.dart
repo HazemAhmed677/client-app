@@ -17,7 +17,7 @@ class CommonProfileColumn extends StatelessWidget {
       children: [
         Text(
           number.toString(),
-          style: AppStyles.afacadfluxSemiBold24.copyWith(
+          style: AppStyles.nexaSemiBoldDarkGrey24.copyWith(
             fontSize: 18.sp,
             fontWeight: FontWeightHelper.bold,
             color: AppColors.primary,
@@ -26,8 +26,8 @@ class CommonProfileColumn extends StatelessWidget {
         verticalSpace(2),
         Text(
           taksType,
-          style: AppStyles.interBold18.copyWith(
-            color: AppColors.grey,
+          style: AppStyles.nexaBoldNoColor18.copyWith(
+            color: AppColors.grey.shade600,
             fontSize: 12.sp,
           ),
         )

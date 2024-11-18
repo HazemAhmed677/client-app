@@ -20,7 +20,7 @@ class TaskCheckBoardItemDetails extends StatefulWidget {
 }
 
 class _TaskCheckBoardItemDetailsState extends State<TaskCheckBoardItemDetails> {
-  final List<ProirityContainer> priorities = getPriorityList();
+  final List<ProirityContainer> priorities = getStatusList();
   ProirityContainer priorityChoosed = const ProirityContainer(
     color: AppColors.onTrackColor,
     priority: 'On Track',
@@ -38,7 +38,7 @@ class _TaskCheckBoardItemDetailsState extends State<TaskCheckBoardItemDetails> {
           ),
           child: Text(
             'Check if the project is done.',
-            style: AppStyles.interSemiBold18.copyWith(
+            style: AppStyles.nexaSemiBoldNoColor18.copyWith(
               fontSize: 16.sp,
             ),
           ),

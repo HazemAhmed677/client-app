@@ -1,5 +1,6 @@
 import 'package:client_app/core/theming/app_colors.dart';
 import 'package:client_app/core/theming/app_styles.dart';
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -13,9 +14,10 @@ class SettingsListTile extends StatelessWidget {
     return ListTile(
       title: Text(
         title,
-        style: AppStyles.poppinsMedium14.copyWith(
+        style: AppStyles.nexaMediumDarkGrey14.copyWith(
+          fontWeight: FontWeightHelper.bold,
           fontSize: 16.sp,
-          color: AppColors.black,
+          color: AppColors.grey.shade900,
         ),
       ),
       trailing: leading,

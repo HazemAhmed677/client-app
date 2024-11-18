@@ -1,4 +1,5 @@
 import 'package:client_app/core/helpers/spacing.dart';
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -25,15 +26,16 @@ class CustomBottomModalSheet extends StatelessWidget {
           Divider(
             thickness: 3,
             color: Colors.grey.shade400,
-            indent: MediaQuery.sizeOf(context).width * 0.35,
-            endIndent: MediaQuery.sizeOf(context).width * 0.35,
+            indent: MediaQuery.sizeOf(context).width * 0.3,
+            endIndent: MediaQuery.sizeOf(context).width * 0.3,
           ),
-          verticalSpace(22),
+          verticalSpace(12),
           Text(
             'Logout',
             style: AppStyles.poppinsSemiBold18.copyWith(
               fontSize: 22,
               color: Colors.grey,
+              fontWeight: FontWeightHelper.extraBold,
             ),
           ),
           Divider(
@@ -44,10 +46,11 @@ class CustomBottomModalSheet extends StatelessWidget {
           Text(
             'Are you sure you want to log out?',
             style: AppStyles.poppinsSemiBold18.copyWith(
-              color: Colors.grey,
+              color: Colors.grey.shade400,
+              fontWeight: FontWeightHelper.extraBold,
             ),
           ),
-          verticalSpace(28),
+          verticalSpace(26),
           Row(
             children: [
               Expanded(

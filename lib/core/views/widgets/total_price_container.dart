@@ -1,4 +1,5 @@
 import 'package:client_app/core/theming/app_styles.dart';
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -33,17 +34,19 @@ class TotalPriceContainer extends StatelessWidget {
           children: [
             Text(
               title,
-              style: AppStyles.poppinsMedium14.copyWith(
-                fontSize: 14.sp,
-                color: AppColors.white,
+              style: AppStyles.nexaMediumDarkGrey14.copyWith(
+                fontSize: 15.sp,
+                color: AppColors.grey.shade100,
+                fontWeight: FontWeightHelper.extraBold,
               ),
             ),
             const Spacer(),
             Text(
               '$price EG ',
-              style: AppStyles.interBold18.copyWith(
-                fontSize: 16.sp,
+              style: AppStyles.nexaBoldNoColor18.copyWith(
+                fontSize: 17.sp,
                 color: AppColors.white,
+                fontWeight: FontWeightHelper.extraBold,
               ),
             ),
           ],

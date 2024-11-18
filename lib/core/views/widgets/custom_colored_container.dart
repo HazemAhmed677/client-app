@@ -1,3 +1,4 @@
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../theming/app_styles.dart';
@@ -23,9 +24,10 @@ class CustomColoredContainer extends StatelessWidget {
         ),
         child: Text(
           text,
-          style: AppStyles.afacadfluxSemiBold18.copyWith(
-            fontSize: 15.sp,
+          style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
+            fontSize: 14.sp,
             color: backgroundColor,
+            fontWeight: FontWeightHelper.extraBold,
           ),
         ),
       ),

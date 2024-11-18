@@ -1,4 +1,5 @@
 import 'package:client_app/core/theming/app_styles.dart';
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:client_app/features/profile/ui/widgets/custom_devider.dart';
 import 'package:client_app/features/profile/ui/widgets/settings_container_column_of_options.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +32,8 @@ class SettingsContainerDetails extends StatelessWidget {
           ),
           child: Text(
             'Account Settings',
-            style: AppStyles.poppinsMedium14.copyWith(
+            style: AppStyles.nexaMediumDarkGrey14.copyWith(
+              fontWeight: FontWeightHelper.bold,
               fontSize: 16.sp,
               color: AppColors.grey,
             ),
