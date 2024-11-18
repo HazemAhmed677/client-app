@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'attach_file_widget.dart';
 import 'common_list_tile.dart';
-import 'task_or_meeting_sub_details_middle.dart';
+import 'task_or_meeting_or_project_sub_details_middle.dart';
 
 class CreateProjectSubColumn extends StatefulWidget {
   const CreateProjectSubColumn({super.key});
