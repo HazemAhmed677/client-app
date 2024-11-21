@@ -12,8 +12,10 @@ import 'projects_dialog.dart';
 import 'task_or_meeting_or_project_sub_details_middle.dart';
 
 class CreateTaskOrMeetingSubColumn extends StatefulWidget {
-  const CreateTaskOrMeetingSubColumn({super.key, this.isTask = true});
-  final bool isTask;
+  const CreateTaskOrMeetingSubColumn(
+      {super.key, this.isMeeting = false, required this.isAddSubTask});
+  final bool isMeeting;
+  final bool isAddSubTask;
   @override
   State<CreateTaskOrMeetingSubColumn> createState() =>
       _CreateTaskOrMeetingSubColumnState();
@@ -44,7 +46,7 @@ class _CreateTaskOrMeetingSubColumnState
       ),
       child: Column(
         children: [
-          widget.isTask
+          !widget.isMeeting && !widget.isAddSubTask
               ? CommonListTile(
                   onTap: () {
                     _showProjectsGridView(context);
@@ -52,23 +54,26 @@ class _CreateTaskOrMeetingSubColumnState
                   leadingIcon: FontAwesomeIcons.diagramProject,
                   title: 'Project',
                   trailing: const CommonTextForCommonListTile(
-                      text: 'Passport service'),
-                )
-              : CommonListTile(
-                  onTap: () {
-                    _showEmployeesListView(context);
-                  },
-                  leadingIcon: FontAwesomeIcons.peopleGroup,
-                  title: 'Attendees',
-                  trailing: const Icon(
-                    Icons.arrow_forward_ios,
+                    text: 'Passport service',
                   ),
-                ),
+                )
+              : widget.isMeeting
+                  ? CommonListTile(
+                      onTap: () {
+                        _showEmployeesListView(context);
+                      },
+                      leadingIcon: FontAwesomeIcons.peopleGroup,
+                      title: 'Attendees',
+                      trailing: const Icon(
+                        Icons.arrow_forward_ios,
+                      ),
+                    )
+                  : const SizedBox.shrink(),
           verticalSpace(
             22,
           ),
           const TaskOrMeetingOrProjectSubDetailsMiddle(),
-          widget.isTask
+          !widget.isAddSubTask && !widget.isMeeting
               ? CommonListTile(
                   leadingIcon: FontAwesomeIcons.list,
                   title: 'Add Sub Tasks',
@@ -90,7 +95,9 @@ class _CreateTaskOrMeetingSubColumnState
                   ),
                 )
               : const SizedBox.shrink(),
-          widget.isTask ? verticalSpace(22) : const SizedBox.shrink(),
+          !widget.isAddSubTask && !widget.isMeeting
+              ? verticalSpace(22)
+              : const SizedBox.shrink(),
           const AttachFileWidget(),
           verticalSpace(22),
           const CommonTextFieldColumn(

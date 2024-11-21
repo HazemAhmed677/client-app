@@ -10,8 +10,8 @@ import 'details_of_container.dart';
 import 'total_price_container.dart';
 
 class TaskDetailsBody extends StatelessWidget {
-  const TaskDetailsBody({super.key});
-
+  const TaskDetailsBody({super.key, required this.isAddSubTask});
+  final bool isAddSubTask;
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
@@ -44,8 +44,8 @@ class TaskDetailsBody extends StatelessWidget {
             padding: EdgeInsets.symmetric(
               horizontal: 14.0.sp,
             ),
-            child: const AddTasksOrSubsRow(
-              isAddTask: false,
+            child: AddTasksOrSubsRow(
+              isAddSubTask: isAddSubTask,
             ),
           ),
         ),

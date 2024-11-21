@@ -43,7 +43,9 @@ class ProjectDetailsBody extends StatelessWidget {
             padding: EdgeInsets.symmetric(
               horizontal: 14.0.sp,
             ),
-            child: const AddTasksOrSubsRow(),
+            child: const AddTasksOrSubsRow(
+              isAddSubTask: false,
+            ),
           ),
         ),
         SliverToBoxAdapter(

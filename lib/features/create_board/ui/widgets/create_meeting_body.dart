@@ -49,7 +49,8 @@ class _CreateMeetingBodyState extends State<CreateMeetingBody> {
         ),
         const SliverToBoxAdapter(
           child: CreateTaskOrMeetingSubColumn(
-            isTask: false,
+            isAddSubTask: false,
+            isMeeting: true,
           ),
         ),
         SliverToBoxAdapter(

@@ -25,7 +25,10 @@ class TasksDetailsSliverList extends StatelessWidget {
           borderRadius: BorderRadius.circular(16.sp),
           onTap: isProjectPage
               ? () {
-                  context.push(Routes.taskDetailsView);
+                  context.push(
+                    Routes.taskDetailsView,
+                    extra: true,
+                  );
                 }
               : null,
           child: const Card(

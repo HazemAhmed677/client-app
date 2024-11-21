@@ -3,6 +3,7 @@ import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:iconly/iconly.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_images.dart';
 import '../../../../core/theming/app_styles.dart';
@@ -46,6 +47,25 @@ class HomeViewHeader extends StatelessWidget {
               ),
             ),
           ],
+        ),
+        const Spacer(),
+        InkWell(
+          borderRadius: BorderRadius.circular(8.sp),
+          onTap: () {
+            BlocProvider.of<SwitchViewsCubit>(context).emitViews(3);
+          },
+          child: Badge(
+            backgroundColor: AppColors.primary,
+            label: CircleAvatar(
+              radius: 3.sp,
+              backgroundColor: AppColors.white,
+            ),
+            child: Icon(
+              IconlyBold.notification,
+              size: 28.sp,
+              color: AppColors.black,
+            ),
+          ),
         ),
       ],
     );

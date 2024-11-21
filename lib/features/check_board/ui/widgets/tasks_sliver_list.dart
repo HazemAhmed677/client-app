@@ -18,7 +18,10 @@ class TasksSliverList extends StatelessWidget {
         child: InkWell(
           borderRadius: BorderRadius.circular(16.sp),
           onTap: () {
-            context.push(Routes.taskDetailsView);
+            context.push(
+              Routes.taskDetailsView,
+              extra: true,
+            );
           },
           child: const Card(
             child: TaskCheckBoardItem(),

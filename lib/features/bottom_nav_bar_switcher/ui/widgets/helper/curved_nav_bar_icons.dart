@@ -33,19 +33,12 @@ List<Widget> curevedNavBarItems(
     ),
     Padding(
       padding: EdgeInsets.all(1.0.sp),
-      child: Badge(
-        backgroundColor: AppColors.primary,
-        label: CircleAvatar(
-          radius: 3.sp,
-          backgroundColor: AppColors.white,
-        ),
-        child: Icon(
-          (currentScreenIdx == 3 && !flag)
-              ? IconlyBold.notification
-              : IconlyLight.notification,
-          size: 25.sp,
-          color: AppColors.white,
-        ),
+      child: Icon(
+        (currentScreenIdx == 3 && !flag)
+            ? IconlyBold.notification
+            : IconlyLight.notification,
+        size: 25.sp,
+        color: AppColors.white,
       ),
     ),
     Icon(

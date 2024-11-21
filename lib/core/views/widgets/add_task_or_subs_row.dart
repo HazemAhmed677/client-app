@@ -9,14 +9,14 @@ import '../../theming/app_colors.dart';
 import '../../theming/app_styles.dart';
 
 class AddTasksOrSubsRow extends StatelessWidget {
-  const AddTasksOrSubsRow({super.key, this.isAddTask = true});
-  final bool isAddTask;
+  const AddTasksOrSubsRow({super.key, this.isAddSubTask = true});
+  final bool isAddSubTask;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Text(
-          isAddTask ? 'Add Task' : 'Add Sub Task',
+          !isAddSubTask ? 'Add Task' : 'Add Sub Task',
           style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
             fontSize: 18.sp,
             color: AppColors.grey.shade700,
@@ -47,8 +47,8 @@ class AddTasksOrSubsRow extends StatelessWidget {
             ),
             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
           ),
-          onPressed: () {
-            context.push(Routes.createTaskView);
+          onPressed: () async {
+            await context.push(Routes.createTaskView, extra: isAddSubTask);
           },
           icon: Icon(
             FontAwesomeIcons.plus,
@@ -58,7 +58,7 @@ class AddTasksOrSubsRow extends StatelessWidget {
         ),
         const Spacer(),
         Text(
-          isAddTask ? 'All Tasks' : 'All Sub Tasks',
+          !isAddSubTask ? 'All Tasks' : 'All Sub Tasks',
           style: AppStyles.nexaMediumDarkGrey14.copyWith(
             fontSize: 14.sp,
             fontWeight: FontWeightHelper.extraBold,

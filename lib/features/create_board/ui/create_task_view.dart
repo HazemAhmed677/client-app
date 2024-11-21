@@ -2,12 +2,14 @@ import 'package:client_app/features/create_board/ui/widgets/create_task_body.dar
 import 'package:flutter/material.dart';
 
 class CreareTaskView extends StatelessWidget {
-  const CreareTaskView({super.key});
-
+  const CreareTaskView({super.key, required this.isAddSubTask});
+  final bool isAddSubTask;
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: CreateTaskBody(),
+    return Scaffold(
+      body: CreateTaskBody(
+        isAddSubTask: isAddSubTask,
+      ),
     );
   }
 }
