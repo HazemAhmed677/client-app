@@ -9,14 +9,14 @@ import '../../theming/app_colors.dart';
 import '../../theming/app_styles.dart';
 
 class AddTasksOrSubsRow extends StatelessWidget {
-  const AddTasksOrSubsRow({super.key, this.isAddSubTask = true});
+  const AddTasksOrSubsRow({super.key, required this.isAddSubTask});
   final bool isAddSubTask;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Text(
-          !isAddSubTask ? 'Add Task' : 'Add Sub Task',
+          isAddSubTask ? 'Add Sub Task' : 'Add Task',
           style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
             fontSize: 18.sp,
             color: AppColors.grey.shade700,

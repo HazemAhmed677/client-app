@@ -71,9 +71,7 @@ class CustomViewTaskButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(12.sp),
             )),
         onPressed: () {
-          context.push(
-            Routes.taskDetailsView,
-          );
+          context.push(Routes.taskDetailsView, extra: true);
         },
         child: FittedBox(
           fit: BoxFit.scaleDown,

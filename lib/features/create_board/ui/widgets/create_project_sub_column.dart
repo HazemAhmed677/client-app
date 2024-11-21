@@ -49,7 +49,7 @@ class _CreateProjectSubColumnState extends State<CreateProjectSubColumn> {
           ),
           isToggle
               ? const AddTaskOrSubTaskDividers(
-                  isAddSubTask: false,
+                  isProject: true,
                 )
               : const SizedBox.shrink(),
           verticalSpace(22),

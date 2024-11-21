@@ -106,8 +106,8 @@ class _CreateTaskOrMeetingSubColumnState
                 )
               : const SizedBox.shrink(),
           isToggle && !widget.isAddSubTask
-              ? AddTaskOrSubTaskDividers(
-                  isAddSubTask: widget.isAddSubTask,
+              ? const AddTaskOrSubTaskDividers(
+                  isProject: false,
                 )
               : const SizedBox.shrink(),
           !widget.isAddSubTask && !widget.isMeeting

@@ -45,7 +45,7 @@ class DynamicContainerProfileContent extends StatelessWidget {
                 horizontalSpace(12),
                 const CommonProfileColumn(
                     number: 142, taksType: 'Completed Task'),
-                horizontalSpace(32),
+                horizontalSpace(22),
                 const CommonProfileColumn(
                   number: 13,
                   taksType: 'Ongoing Task',
