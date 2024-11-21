@@ -39,23 +39,9 @@ class DynamicContainerProfileContent extends StatelessWidget {
               ],
             ),
             verticalSpace(12),
-            Row(
-              children: [
-                horizontalSpace(8),
-                const CommonProfileColumn(
-                    number: 142, taksType: 'Completed Task'),
-                const Spacer(),
-                CircleAvatar(
-                  radius: 48.sp,
-                  backgroundImage: const AssetImage(AppImages.github),
-                ),
-                const Spacer(),
-                const CommonProfileColumn(
-                  number: 13,
-                  taksType: 'Ongoing Task',
-                ),
-                horizontalSpace(8),
-              ],
+            CircleAvatar(
+              radius: 48.sp,
+              backgroundImage: const AssetImage(AppImages.github),
             ),
             verticalSpace(14),
             Text(
@@ -73,6 +59,21 @@ class DynamicContainerProfileContent extends StatelessWidget {
                 color: AppColors.grey.shade400,
                 fontWeight: FontWeightHelper.extraBold,
               ),
+            ),
+            verticalSpace(16),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                horizontalSpace(12),
+                const CommonProfileColumn(
+                    number: 142, taksType: 'Completed Task'),
+                horizontalSpace(32),
+                const CommonProfileColumn(
+                  number: 13,
+                  taksType: 'Ongoing Task',
+                ),
+                horizontalSpace(12),
+              ],
             ),
             verticalSpace(22),
             CustomEditProfileButton(

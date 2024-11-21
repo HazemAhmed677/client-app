@@ -25,7 +25,7 @@ Icon iconHelperInCheckBoard(IconData icon, Color color) {
   return Icon(
     icon,
     color: color,
-    size: 18.sp,
+    size: 16.sp,
   );
 }
 
@@ -35,7 +35,7 @@ Text textHelperInCheckBoard(String text,
     text,
     style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
       fontWeight: FontWeightHelper.extraBold,
-      fontSize: 14.sp,
+      fontSize: 12.sp,
       color: color,
     ),
   );

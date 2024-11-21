@@ -86,12 +86,19 @@ class _CalendarViewBodyState extends State<CalendarMiddleSection> {
           fontSize: 14.sp,
         ),
         defaultTextStyle: AppStyles.nexaBoldNoColor18.copyWith(
-          color: AppColors.bottomNavBarColor,
+          color: AppColors.grey.shade600,
           fontSize: 14.sp,
+          fontWeight: FontWeightHelper.extraBold,
         ),
         outsideTextStyle: AppStyles.nexaBoldNoColor18.copyWith(
-          color: AppColors.grey,
+          color: AppColors.grey.shade400,
           fontSize: 14.sp,
+          fontWeight: FontWeightHelper.extraBold,
+        ),
+        selectedTextStyle: AppStyles.nexaBoldNoColor18.copyWith(
+          fontSize: 14.sp,
+          color: AppColors.white,
+          fontWeight: FontWeightHelper.extraBold,
         ),
         selectedDecoration: const BoxDecoration(
           color: AppColors.secondary,
