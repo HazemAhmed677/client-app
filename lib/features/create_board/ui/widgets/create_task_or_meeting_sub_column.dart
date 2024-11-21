@@ -6,6 +6,7 @@ import 'package:client_app/features/create_board/ui/widgets/common_text_for_comm
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'add_task_or_sub_task_dividers.dart';
 import 'attach_file_widget.dart';
 import 'common_list_tile.dart';
 import 'projects_dialog.dart';
@@ -78,6 +79,15 @@ class _CreateTaskOrMeetingSubColumnState
                   leadingIcon: FontAwesomeIcons.list,
                   title: 'Add Sub Tasks',
                   trailing: IconButton(
+                    // padding: EdgeInsets.zero,
+                    style: ButtonStyle(
+                      minimumSize: WidgetStateProperty.all<Size>(
+                        const Size(0, 0),
+                      ),
+                      padding:
+                          WidgetStateProperty.all<EdgeInsets>(EdgeInsets.zero),
+                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    ),
                     onPressed: () {
                       isToggle = !isToggle;
                       setState(() {});
@@ -93,6 +103,11 @@ class _CreateTaskOrMeetingSubColumnState
                             size: 30.sp,
                           ),
                   ),
+                )
+              : const SizedBox.shrink(),
+          isToggle && !widget.isAddSubTask
+              ? AddTaskOrSubTaskDividers(
+                  isAddSubTask: widget.isAddSubTask,
                 )
               : const SizedBox.shrink(),
           !widget.isAddSubTask && !widget.isMeeting

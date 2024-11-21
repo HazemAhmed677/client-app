@@ -4,6 +4,7 @@ import 'package:client_app/features/create_board/ui/widgets/common_text_field_co
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'add_task_or_sub_task_dividers.dart';
 import 'attach_file_widget.dart';
 import 'common_list_tile.dart';
 import 'task_or_meeting_or_project_sub_details_middle.dart';
@@ -34,27 +35,23 @@ class _CreateProjectSubColumnState extends State<CreateProjectSubColumn> {
                 isToggle = !isToggle;
                 setState(() {});
               },
-              icon: AnimatedSwitcher(
-                duration: const Duration(milliseconds: 800),
-                transitionBuilder: (Widget child, Animation<double> animation) {
-                  return ScaleTransition(
-                    scale: animation,
-                    child: child,
-                  );
-                },
-                child: (isToggle)
-                    ? Icon(
-                        FontAwesomeIcons.toggleOn,
-                        size: 30.sp,
-                        color: AppColors.primary,
-                      )
-                    : Icon(
-                        FontAwesomeIcons.toggleOff,
-                        size: 30.sp,
-                      ),
-              ),
+              icon: (isToggle)
+                  ? Icon(
+                      FontAwesomeIcons.toggleOn,
+                      size: 30.sp,
+                      color: AppColors.primary,
+                    )
+                  : Icon(
+                      FontAwesomeIcons.toggleOff,
+                      size: 30.sp,
+                    ),
             ),
           ),
+          isToggle
+              ? const AddTaskOrSubTaskDividers(
+                  isAddSubTask: false,
+                )
+              : const SizedBox.shrink(),
           verticalSpace(22),
           const AttachFileWidget(),
           verticalSpace(22),
