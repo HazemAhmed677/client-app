@@ -45,7 +45,9 @@ class ProfileGridView extends StatelessWidget {
               ),
               shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadiusDirectional.only(
-                    topStart: Radius.circular(20), topEnd: Radius.circular(20)),
+                  topStart: Radius.circular(20),
+                  topEnd: Radius.circular(20),
+                ),
               ),
               context: context,
               builder: (context) => const CustomBottomModalSheet(),
