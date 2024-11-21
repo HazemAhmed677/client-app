@@ -30,9 +30,7 @@ class InProgressListView extends StatelessWidget {
                 22.sp,
               ),
               onTap: () {
-                context.push(
-                  Routes.taskDetailsView,
-                );
+                context.push(Routes.taskDetailsView, extra: true);
               },
               child: const InProgressItem()),
         ),
