@@ -1,3 +1,4 @@
+import 'package:client_app/core/helpers/logger.dart';
 import 'package:client_app/core/helpers/spacing.dart';
 import 'package:client_app/features/home/ui/widgets/home_view_header.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +13,7 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    loggerError(MediaQuery.sizeOf(context).height.toString());
     return SafeArea(
       child: Padding(
         padding: EdgeInsets.symmetric(
@@ -47,7 +49,8 @@ class HomeViewBody extends StatelessWidget {
             ),
             const ProjectsListView(),
             SliverToBoxAdapter(
-              child: verticalSpace(72),
+              child: verticalSpace(
+                  MediaQuery.sizeOf(context).height > 521 ? 72 : 112),
             )
           ],
         ),

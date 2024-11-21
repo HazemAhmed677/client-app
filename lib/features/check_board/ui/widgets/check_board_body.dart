@@ -64,7 +64,10 @@ class _CheckBoardBodyState extends State<CheckBoardBody> {
           SliverToBoxAdapter(
             child: KeyboardVisibilityBuilder(
               builder: (context, visible) {
-                return !visible ? verticalSpace(88) : verticalSpace(92);
+                return !visible
+                    ? verticalSpace(
+                        MediaQuery.sizeOf(context).height > 521 ? 88 : 122)
+                    : verticalSpace(92);
               },
             ),
           ),

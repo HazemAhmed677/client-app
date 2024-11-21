@@ -21,7 +21,9 @@ class SettingsViewBody extends StatelessWidget {
             children: [
               const SettingsBehindContainer(),
               Positioned(
-                top: MediaQuery.sizeOf(context).height * 0.15.h,
+                top: MediaQuery.sizeOf(context).height > 592
+                    ? MediaQuery.sizeOf(context).height * 0.15.h
+                    : MediaQuery.sizeOf(context).height * 0.22.h,
                 left: 0,
                 right: 0,
                 child: const CommonAboveContainer(

@@ -42,7 +42,7 @@ class TotalPriceContainer extends StatelessWidget {
             ),
             const Spacer(),
             Text(
-              '$price EG ',
+              price,
               style: AppStyles.nexaBoldNoColor18.copyWith(
                 fontSize: 17.sp,
                 color: AppColors.white,
