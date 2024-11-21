@@ -28,10 +28,8 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  bloc: ^8.1.4
   cupertino_icons: ^1.0.8
   curved_navigation_bar: ^1.0.6
-  device_preview: ^1.2.0
   expandable_page_view: ^1.0.17
   fl_chart: ^0.69.0
   flutter:
@@ -72,26 +70,6 @@ flutter:
 
   # example:
   fonts:
-    - family: AfacadFlux
-      fonts:
-        - asset: assets/fonts/AfacadFlux-Regular.ttf
-
-    - family: Gilroy
-      fonts:
-        - asset: assets/fonts/Gilroy-Regular.ttf
-
-    - family: Inter
-      fonts:
-        - asset: assets/fonts/Inter_18pt-Medium.ttf
-
-    - family: Poppins
-      fonts:
-        - asset: assets/fonts/Poppins-Medium.ttf
-
-    - family: RobotoMono
-      fonts:
-        - asset: assets/fonts/RobotoMono-Bold.ttf
-
     - family: Nexa
       fonts:
         - asset: assets/fonts/NexaBold.otf
