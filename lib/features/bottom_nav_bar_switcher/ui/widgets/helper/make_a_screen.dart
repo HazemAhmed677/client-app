@@ -6,7 +6,7 @@ import '../../../../notification/ui/notification_view.dart';
 import '../../../../profile/ui/profile_view.dart';
 import '../../../logic/switch_views_cubit/switch_views_cubit.dart';
 
-const screens = <Widget>[
+const screens = [
   HomeView(),
   CheckBoardView(),
   NotificationView(),

@@ -1,14 +1,12 @@
-import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:client_app/features/profile/ui/helper/edit_profile_dailog.dart';
 import 'package:client_app/core/helpers/spacing.dart';
 import 'package:client_app/core/theming/app_colors.dart';
 import 'package:client_app/core/theming/app_styles.dart';
+import 'package:client_app/features/profile/ui/widgets/container_profile_content_middle_section.dart';
 import 'package:client_app/features/profile/ui/widgets/custom_edit_profile_button.dart';
 import 'package:client_app/features/profile/ui/widgets/common_profile_column.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../core/theming/app_images.dart';
 import '../../../../core/widgets/calendar_icon.dart';
 
 class DynamicContainerProfileContent extends StatelessWidget {
@@ -39,27 +37,7 @@ class DynamicContainerProfileContent extends StatelessWidget {
               ],
             ),
             verticalSpace(12),
-            CircleAvatar(
-              radius: 48.sp,
-              backgroundImage: const AssetImage(AppImages.github),
-            ),
-            verticalSpace(14),
-            Text(
-              'Hazem Ahmed',
-              style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
-                fontSize: 20.sp,
-                color: AppColors.black,
-                // fontWeight: FontWeightHelper.extraBold,
-              ),
-            ),
-            Text(
-              'Software engineer',
-              style: AppStyles.nexaSemiBoldDarkGrey18.copyWith(
-                fontSize: 14.sp,
-                color: AppColors.grey.shade400,
-                fontWeight: FontWeightHelper.extraBold,
-              ),
-            ),
+            const ContainerProfileContentMiddleSection(),
             verticalSpace(16),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

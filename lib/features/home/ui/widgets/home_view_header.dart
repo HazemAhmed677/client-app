@@ -1,10 +1,12 @@
 import 'package:client_app/core/helpers/spacing.dart';
 import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_images.dart';
 import '../../../../core/theming/app_styles.dart';
+import '../../../bottom_nav_bar_switcher/logic/switch_views_cubit/switch_views_cubit.dart';
 
 class HomeViewHeader extends StatelessWidget {
   const HomeViewHeader({super.key});
@@ -13,9 +15,15 @@ class HomeViewHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        CircleAvatar(
-          radius: 24.sp,
-          backgroundImage: const AssetImage(AppImages.github),
+        InkWell(
+          borderRadius: BorderRadius.circular(8.sp),
+          onTap: () {
+            BlocProvider.of<SwitchViewsCubit>(context).emitViews(4);
+          },
+          child: CircleAvatar(
+            radius: 24.sp,
+            backgroundImage: const AssetImage(AppImages.github),
+          ),
         ),
         horizontalSpace(12),
         Column(

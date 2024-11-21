@@ -9,6 +9,8 @@ class SwitchViewsCubit extends Cubit<SwitchViewsState> {
       emit(HomeState());
     } else if (currentIndex == 1) {
       emit(CheckBoardState());
+    } else if (currentIndex == 2) {
+      emit(CreateBoardState());
     } else if (currentIndex == 3) {
       emit(NotificationState());
     } else if (currentIndex == 4) {

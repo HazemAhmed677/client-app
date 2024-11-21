@@ -22,7 +22,7 @@ class _SwitcherViewState extends State<SwitcherView> {
   int previousScreenIdx = 0;
   bool flag = false;
   bool isAbsorbing = false;
-
+  SwitchViewsState currentState = HomeState();
   @override
   void initState() {
     // set home default (change place)
@@ -34,54 +34,88 @@ class _SwitcherViewState extends State<SwitcherView> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      body: BlocBuilder<SwitchViewsCubit, SwitchViewsState>(
-        builder: (context, state) => Stack(
-          alignment: Alignment.bottomCenter,
-          children: [
-            ModalProgressHUD(
-              color: AppColors.darkGrey,
-              blur: 1,
-              inAsyncCall: isAbsorbing,
-              progressIndicator: const SizedBox.shrink(),
-              child: AbsorbPointer(
-                absorbing: isAbsorbing,
-                child: AnimatedSwitcher(
-                  duration: const Duration(milliseconds: 400),
-                  child: theScreen(state),
-                ),
-              ),
-            ),
-            CurvedNavigationBar(
-              height: 64,
-              key: bottomNavigationKey,
-              index: currentScreenIdx,
-              items: curevedNavBarItems(
-                currentScreenIdx: currentScreenIdx,
-                flag: flag,
-              ),
-              color: AppColors.bottomNavBarColor,
-              buttonBackgroundColor:
-                  flag ? AppColors.redDegree : AppColors.bottomNavBarColor,
-              backgroundColor: Colors.transparent,
-              animationCurve: Curves.easeInOut,
-              animationDuration: const Duration(
-                milliseconds: 350,
-              ),
-              onTap: logicOfCurrAndPrevIndex,
-              letIndexChange: (index) => true,
-            ),
-            SizedBox(
-              height: 240.h,
-              width: MediaQuery.sizeOf(context).width,
-              child: Center(
-                child: SwitchMicro(
-                  currentScreenIdx: currentScreenIdx,
-                  flag: flag,
-                ),
-              ),
-            )
-          ],
-        ),
+      body: BlocConsumer<SwitchViewsCubit, SwitchViewsState>(
+        listener: (context, state) {
+          if (state is! CreateBoardState) currentState = state;
+        },
+        builder: (context, state) {
+          return BlocBuilder<SwitchViewsCubit, SwitchViewsState>(
+            builder: (context, state) {
+              return Stack(
+                alignment: Alignment.bottomCenter,
+                children: [
+                  ModalProgressHUD(
+                    color: AppColors.darkGrey,
+                    blur: 1.5.sp,
+                    inAsyncCall: isAbsorbing,
+                    progressIndicator: const SizedBox.shrink(),
+                    child: AbsorbPointer(
+                      absorbing: isAbsorbing,
+                      child: AnimatedSwitcher(
+                        duration: const Duration(milliseconds: 400),
+                        child: theScreen(currentState),
+                      ),
+                    ),
+                  ),
+                  CurvedNavigationBar(
+                    height: 64,
+                    key: bottomNavigationKey,
+                    index: state is HomeState
+                        ? 0
+                        : state is CheckBoardState
+                            ? 1
+                            : state is CreateBoardState
+                                ? 2
+                                : (state is NotificationState)
+                                    ? 3
+                                    : 4,
+                    items: curevedNavBarItems(
+                      currentScreenIdx: state is HomeState
+                          ? 0
+                          : state is CheckBoardState
+                              ? 1
+                              : state is CreateBoardState
+                                  ? 2
+                                  : state is NotificationState
+                                      ? 3
+                                      : 4,
+                      flag: flag,
+                    ),
+                    color: AppColors.bottomNavBarColor,
+                    buttonBackgroundColor: flag
+                        ? AppColors.redDegree
+                        : AppColors.bottomNavBarColor,
+                    backgroundColor: Colors.transparent,
+                    animationCurve: Curves.easeInOut,
+                    animationDuration: const Duration(
+                      milliseconds: 350,
+                    ),
+                    onTap: logicOfCurrAndPrevIndex,
+                    letIndexChange: (index) => true,
+                  ),
+                  SizedBox(
+                    height: 240.h,
+                    width: MediaQuery.sizeOf(context).width,
+                    child: Center(
+                      child: SwitchMicro(
+                        currentScreenIdx: state is HomeState
+                            ? 0
+                            : state is CheckBoardState
+                                ? 1
+                                : state is CreateBoardState
+                                    ? 2
+                                    : state is NotificationState
+                                        ? 3
+                                        : 4,
+                        flag: flag,
+                      ),
+                    ),
+                  )
+                ],
+              );
+            },
+          );
+        },
       ),
     );
   }
@@ -101,10 +135,11 @@ class _SwitcherViewState extends State<SwitcherView> {
         isAbsorbing = false;
         currentScreenIdx = previousScreenIdx;
       }
+      BlocProvider.of<SwitchViewsCubit>(context).emitViews(currentScreenIdx);
     } else {
-      BlocProvider.of<SwitchViewsCubit>(context).emitViews(index);
       isAbsorbing = false;
       flag = false;
+      BlocProvider.of<SwitchViewsCubit>(context).emitViews(index);
     }
     setState(() {});
     // loggerWarning(
