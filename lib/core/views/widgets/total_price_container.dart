@@ -7,9 +7,13 @@ import '../../theming/app_colors.dart';
 
 class TotalPriceContainer extends StatelessWidget {
   const TotalPriceContainer(
-      {super.key, required this.title, required this.price});
+      {super.key,
+      required this.title,
+      required this.price,
+      required this.isPrice});
   final String title;
   final String price;
+  final bool isPrice;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -42,7 +46,7 @@ class TotalPriceContainer extends StatelessWidget {
             ),
             const Spacer(),
             Text(
-              price,
+              isPrice ? '$price EG' : price,
               style: AppStyles.nexaBoldNoColor18.copyWith(
                 fontSize: 17.sp,
                 color: AppColors.white,

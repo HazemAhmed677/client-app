@@ -32,8 +32,11 @@ class _MicroBottomNavBarStackState extends State<MicroBottomNavBarStack> {
       angle[i] = angleStep * i;
       x1[i] = widget.radius + widget.radius * cos(angle[i]); // X position
       y[i] = widget.radius - widget.radius * sin(angle[i]); // Y position
-      x11[i] =
-          -(widget.radius + widget.radius * cos(angle[i])); // Offset adjustment
+      x11[i] = -(widget.radius +
+          widget.radius *
+              cos(
+                angle[i],
+              )); // Offset adjustment
     }
   }
 

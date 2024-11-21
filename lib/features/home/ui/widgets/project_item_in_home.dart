@@ -1,6 +1,7 @@
 import 'package:client_app/core/helpers/icons_and_texts.dart';
 import 'package:client_app/core/helpers/spacing.dart';
 import 'package:client_app/core/theming/app_colors.dart';
+import 'package:client_app/core/theming/font_weight_helper.dart';
 import 'package:client_app/features/home/ui/widgets/custom_pie_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -86,8 +87,9 @@ class ProjectItemInHome extends StatelessWidget {
                       aspectRatio: 1,
                       child: CustomPieChart(
                         pieChartColor: AppColors.projectColor2,
-                        textColor: AppColors.black,
+                        textColor: AppColors.grey.shade700,
                         radius: 5.sp,
+                        fontWeight: FontWeightHelper.extraBold,
                         fontSize: 13.sp,
                         percentage: 70,
                         pieChartColorSection2:
