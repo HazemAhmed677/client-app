@@ -9,8 +9,8 @@ import 'create_something_detailed_column.dart';
 import 'create_something_header.dart';
 
 class CreateTaskBody extends StatefulWidget {
-  const CreateTaskBody({super.key});
-
+  const CreateTaskBody({super.key, required this.isAddSubTask});
+  final bool isAddSubTask;
   @override
   State<CreateTaskBody> createState() => _CreateTaskBodyState();
 }
@@ -28,10 +28,10 @@ class _CreateTaskBodyState extends State<CreateTaskBody> {
             children: [
               SizedBox(
                 height: 100.sp,
-                child: const DynamicContainer(
+                child: DynamicContainer(
                   isBoardered: true,
                   child: CreateSomethingHeader(
-                    title: 'Add Task',
+                    title: widget.isAddSubTask ? 'Add Sub Task' : 'Add Task',
                   ),
                 ),
               ),
@@ -40,17 +40,27 @@ class _CreateTaskBodyState extends State<CreateTaskBody> {
               ),
               CreateSomethingDetailedColumn(
                 formKey: formKey,
-                text1: 'Task Title',
-                text2: 'Task Details',
-                hintText1: 'Task Title',
-                hintText2: 'Task Details Here...',
+                text1: widget.isAddSubTask ? 'Sub Task Title' : 'Task Title',
+                text2:
+                    widget.isAddSubTask ? 'Sub Task Details' : 'Task Details',
+                hintText1:
+                    widget.isAddSubTask ? 'Sub Task Title' : 'Task Title',
+                hintText2: widget.isAddSubTask
+                    ? 'Sub Task Details'
+                    : 'Task Details Here...',
               ),
             ],
           ),
         ),
-        const SliverToBoxAdapter(
-          child: CreateTaskOrMeetingSubColumn(),
-        ),
+        !widget.isAddSubTask
+            ? SliverToBoxAdapter(
+                child: CreateTaskOrMeetingSubColumn(
+                  isAddSubTask: widget.isAddSubTask,
+                ),
+              )
+            : const SliverToBoxAdapter(
+                child: SizedBox.shrink(),
+              ),
         SliverToBoxAdapter(
           child: Padding(
             padding: EdgeInsets.symmetric(
@@ -66,7 +76,7 @@ class _CreateTaskBodyState extends State<CreateTaskBody> {
                 }
                 setState(() {});
               },
-              text: 'Add Task',
+              text: widget.isAddSubTask ? 'Add Sub Task' : 'Add Task',
             ),
           ),
         ),

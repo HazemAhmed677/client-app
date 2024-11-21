@@ -33,7 +33,8 @@ class TodayWord extends StatelessWidget {
               text2,
               style: AppStyles.nexaBoldNoColor18.copyWith(
                 fontSize: 16.sp,
-                color: AppColors.grey.shade600,
+                color: AppColors.grey.shade500,
+                fontWeight: FontWeightHelper.extraBold,
               ),
             ),
           ),

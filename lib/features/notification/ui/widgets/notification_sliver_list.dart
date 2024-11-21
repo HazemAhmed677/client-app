@@ -26,7 +26,7 @@ class NotificationSliverList extends StatelessWidget {
                 // redirect
                 isMeeting
                     ? context.push(Routes.meetingDetailsView)
-                    : context.push(Routes.taskDetailsView);
+                    : context.push(Routes.taskDetailsView, extra: true);
               },
               child: Padding(
                 padding: EdgeInsets.symmetric(

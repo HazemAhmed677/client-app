@@ -9,7 +9,7 @@ List<Widget> curevedNavBarItems(
     {required int currentScreenIdx, required bool flag}) {
   return [
     Icon(
-      (currentScreenIdx == 0) ? IconlyBold.home : IconlyLight.home,
+      (currentScreenIdx == 0 && !flag) ? IconlyBold.home : IconlyLight.home,
       size: 24.sp,
       color: AppColors.white,
     ),
@@ -33,23 +33,18 @@ List<Widget> curevedNavBarItems(
     ),
     Padding(
       padding: EdgeInsets.all(1.0.sp),
-      child: Badge(
-        backgroundColor: AppColors.primary,
-        label: CircleAvatar(
-          radius: 3.sp,
-          backgroundColor: AppColors.white,
-        ),
-        child: Icon(
-          (currentScreenIdx == 3)
-              ? IconlyBold.notification
-              : IconlyLight.notification,
-          size: 25.sp,
-          color: AppColors.white,
-        ),
+      child: Icon(
+        (currentScreenIdx == 3 && !flag)
+            ? IconlyBold.notification
+            : IconlyLight.notification,
+        size: 25.sp,
+        color: AppColors.white,
       ),
     ),
     Icon(
-      (currentScreenIdx == 4) ? IconlyBold.profile : IconlyLight.profile,
+      (currentScreenIdx == 4 && !flag)
+          ? IconlyBold.profile
+          : IconlyLight.profile,
       size: 26.sp,
       color: AppColors.white,
     ),

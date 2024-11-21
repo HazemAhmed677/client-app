@@ -86,12 +86,19 @@ class _CalendarViewBodyState extends State<CalendarMiddleSection> {
           fontSize: 14.sp,
         ),
         defaultTextStyle: AppStyles.nexaBoldNoColor18.copyWith(
-          color: AppColors.bottomNavBarColor,
+          color: AppColors.grey.shade600,
           fontSize: 14.sp,
+          fontWeight: FontWeightHelper.extraBold,
         ),
         outsideTextStyle: AppStyles.nexaBoldNoColor18.copyWith(
-          color: AppColors.grey,
+          color: AppColors.grey.shade400,
           fontSize: 14.sp,
+          fontWeight: FontWeightHelper.extraBold,
+        ),
+        selectedTextStyle: AppStyles.nexaBoldNoColor18.copyWith(
+          fontSize: 14.sp,
+          color: AppColors.white,
+          fontWeight: FontWeightHelper.extraBold,
         ),
         selectedDecoration: const BoxDecoration(
           color: AppColors.secondary,
@@ -173,36 +180,42 @@ class _CalendarViewBodyState extends State<CalendarMiddleSection> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          (_currentYear != 2021)
-              ? IconButton(
-                  icon: const Icon(Icons.arrow_back_ios_new_sharp),
-                  onPressed: () {
+          IconButton(
+            icon: Icon(
+              Icons.arrow_back_ios_new_sharp,
+              color: (_currentYear != 2021) ? null : Colors.transparent,
+            ),
+            onPressed: (_currentYear != 2021)
+                ? () {
                     setState(() {
                       if (_currentYear > 2021) {
                         _currentYear--;
                       } // Go to the previous year
                     });
-                  },
-                )
-              : const SizedBox.shrink(),
+                  }
+                : null,
+          ),
           Text('$_currentYear',
               style: AppStyles.nexaBoldNoColor20.copyWith(
                 fontSize: 18.sp,
                 color: AppColors.grey.shade600,
                 fontWeight: FontWeightHelper.extraBold,
               )),
-          (_currentYear < 2030)
-              ? IconButton(
-                  icon: const Icon(Icons.arrow_forward_ios_sharp),
-                  onPressed: () {
+          IconButton(
+            icon: Icon(
+              Icons.arrow_forward_ios_sharp,
+              color: (_currentYear < 2030) ? null : Colors.transparent,
+            ),
+            onPressed: (_currentYear < 2030)
+                ? () {
                     setState(() {
                       if (_currentYear < 2030) {
                         _currentYear++;
                       } // Go to the next year
                     });
-                  },
-                )
-              : const SizedBox.shrink(),
+                  }
+                : null,
+          )
         ],
       ),
     );

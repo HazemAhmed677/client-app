@@ -57,11 +57,13 @@ class AppRouter {
           child: const SwitcherView(),
         ),
       ),
+
       // home
       GoRoute(
         path: Routes.homeView,
         builder: (context, state) => const HomeView(),
       ),
+
       // calendar details
       GoRoute(
         path: Routes.calendarView,
@@ -71,6 +73,7 @@ class AppRouter {
           duration: 300,
         ),
       ),
+
       // project details
       GoRoute(
         path: Routes.projectDetailsView,
@@ -80,15 +83,19 @@ class AppRouter {
           duration: 300,
         ),
       ),
+
       // task details
       GoRoute(
         path: Routes.taskDetailsView,
         pageBuilder: (context, state) => CustomSliderTransition(
-          child: const TaskDetailsView(),
+          child: TaskDetailsView(
+            isAddSubTask: state.extra as bool,
+          ),
           key: state.pageKey,
           duration: 300,
         ),
       ),
+
       // meeting details
       GoRoute(
         path: Routes.meetingDetailsView,
@@ -98,6 +105,7 @@ class AppRouter {
           duration: 300,
         ),
       ),
+
       // profile
       GoRoute(
         path: Routes.documentView,
@@ -107,6 +115,7 @@ class AppRouter {
           duration: 300,
         ),
       ),
+
       // report
       GoRoute(
         path: Routes.reportView,
@@ -116,6 +125,7 @@ class AppRouter {
           duration: 300,
         ),
       ),
+
       // settings
       GoRoute(
         path: Routes.settingsView,
@@ -125,14 +135,20 @@ class AppRouter {
           duration: 300,
         ),
       ),
+
+      // create task or sub task
       GoRoute(
         path: Routes.createTaskView,
         pageBuilder: (context, state) => CustomSliderTransition(
-          child: const CreareTaskView(),
+          child: CreareTaskView(
+            isAddSubTask: state.extra as bool,
+          ),
           key: state.pageKey,
           duration: 300,
         ),
       ),
+
+      // create project
       GoRoute(
         path: Routes.createProjectView,
         pageBuilder: (context, state) => CustomSliderTransition(
@@ -141,6 +157,8 @@ class AppRouter {
           duration: 300,
         ),
       ),
+
+      // create document
       GoRoute(
         path: Routes.createDocumentView,
         pageBuilder: (context, state) => CustomSliderTransition(
@@ -149,6 +167,8 @@ class AppRouter {
           duration: 300,
         ),
       ),
+
+      // create meeting
       GoRoute(
         path: Routes.createMeetinfView,
         pageBuilder: (context, state) => CustomSliderTransition(

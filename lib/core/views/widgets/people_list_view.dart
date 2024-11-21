@@ -9,7 +9,7 @@ class PeopleListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 64.h,
+      height: MediaQuery.sizeOf(context).height > 592 ? 64.h : 102.h,
       child: ListView.builder(
         clipBehavior: Clip.none,
         scrollDirection: Axis.horizontal,

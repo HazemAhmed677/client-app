@@ -58,7 +58,6 @@ class _SettingsContainerHeaderState extends State<SettingsContainerHeader> {
               tapTargetSize: MaterialTapTargetSize.shrinkWrap,
             ),
             onPressed: () async {
-              setState(() {});
               await selectImage();
             },
             highlightColor: AppColors.grey.shade400.withOpacity(
