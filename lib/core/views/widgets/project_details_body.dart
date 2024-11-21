@@ -32,6 +32,7 @@ class ProjectDetailsBody extends StatelessWidget {
                 const TotalPriceContainer(
                   title: 'Total Price: ',
                   price: '8500',
+                  isPrice: true,
                 ),
                 verticalSpace(24),
               ],

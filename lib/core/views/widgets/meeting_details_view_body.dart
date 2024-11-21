@@ -29,6 +29,7 @@ class MeetingDetailsBody extends StatelessWidget {
                 const TotalPriceContainer(
                   title: 'Due Date:  ',
                   price: 'Tuesday 09/07/2024',
+                  isPrice: false,
                 ),
                 verticalSpace(24),
               ],
