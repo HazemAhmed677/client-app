@@ -46,9 +46,11 @@ class _ContainerProfileContentMiddleSectionState
           },
           child: CircleAvatar(
             radius: 48.sp,
-            backgroundImage: AssetImage(
-              selectedImage != null ? selectedImage!.path : AppImages.github,
-            ),
+            backgroundImage: selectedImage != null
+                ? FileImage(selectedImage!)
+                : const AssetImage(
+                    AppImages.github,
+                  ),
           ),
         ),
         verticalSpace(14),
